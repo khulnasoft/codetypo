@@ -1,4 +1,4 @@
-DICTIONARIES := codetypo_lib/data/dictionary*.txt codetypo_lib/tests/data/*.wordlist
+DICTIONARIES := codetypo/data/dictionary*.txt codetypo/tests/data/*.wordlist
 
 PHONY := all check check-dictionaries sort-dictionaries trim-dictionaries check-dist pytest pypi ruff clean
 
@@ -18,7 +18,7 @@ check-dictionaries:
 		fi; \
 	done
 	@if command -v pytest > /dev/null; then \
-		pytest codetypo_lib/tests/test_dictionary.py; \
+		pytest codetypo/tests/test_dictionary.py; \
 	else \
 		echo "Test dependencies not present, install using 'pip install -e \".[dev]\"'"; \
 		exit 1; \
@@ -43,7 +43,7 @@ ruff:
 
 pytest:
 	@if command -v pytest > /dev/null; then \
-		pytest codetypo_lib; \
+		pytest codetypo; \
 	else \
 		echo "Test dependencies not present, install using 'pip install -e \".[dev]\"'"; \
 		exit 1; \

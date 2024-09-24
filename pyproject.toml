@@ -58,7 +58,7 @@ types = [
 ]
 
 [project.scripts]
-codetypo = "codetypo_lib:_script_main"
+codetypo = "codetypo:_script_main"
 
 [project.urls]
 homepage = "https://github.com/khulnasoft/codetypo"
@@ -69,7 +69,7 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools>=64", "setuptools_scm[toml]>=6.2, != 8.0.0"]
 
 [tool.setuptools_scm]
-write_to = "codetypo_lib/_version.py"
+write_to = "codetypo/_version.py"
 
 [tool.setuptools.packages.find]
 exclude = [
@@ -78,7 +78,7 @@ exclude = [
 ]
 
 [tool.setuptools.package-data]
-codetypo_lib = [
+codetypo = [
     "data/dictionary*.txt",
     "data/linux-kernel.exclude",
     "py.typed",
@@ -88,7 +88,7 @@ codetypo_lib = [
 #[tool.codetypo]
 #builtin = ["clear","rare","informal","usage","code","names"]
 #ignore-words-list = ["uint"]
-#skip=[ "./.*","codetypo_lib/data/*","codetypo_lib/tests/*"]
+#skip=[ "./.*","codetypo/data/*","codetypo/tests/*"]
 
 [tool.mypy]
 pretty = true
@@ -99,10 +99,10 @@ enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
 
 [tool.pytest.ini_options]
 minversion = "6"
-testpaths = ["codetypo_lib/tests"]
+testpaths = ["codetypo/tests"]
 log_cli_level = "INFO"
 xfail_strict = true
-addopts = ["--cov=codetypo_lib", "-rs", "--strict-config", "--strict-markers", "--cov-report=", "--tb=short", "--junit-xml=junit-results.xml"]
+addopts = ["--cov=codetypo", "-rs", "--strict-config", "--strict-markers", "--cov-report=", "--tb=short", "--junit-xml=junit-results.xml"]
 filterwarnings = ["error"]
 
 [tool.ruff]
@@ -162,9 +162,9 @@ select = [
 max-complexity = 45
 
 [tool.ruff.lint.per-file-ignores]
-"codetypo_lib/_codetypo.py" = ["A003"]
-"codetypo_lib/tests/test_*" = ["S101"]
-"codetypo_lib/tests/test_basic.py" = ["ANN401", "N802"]
+"codetypo/_codetypo.py" = ["A003"]
+"codetypo/tests/test_*" = ["S101"]
+"codetypo/tests/test_basic.py" = ["ANN401", "N802"]
 
 [tool.ruff.lint.pylint]
 allow-magic-value-types = ["bytes", "int", "str",]

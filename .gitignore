@@ -11,6 +11,6 @@ codetypo.egg-info
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
-codetypo_lib/_version.py
+codetypo/_version.py
 junit-results.xml
 *.egg-info/

@@ -1,4 +1,4 @@
 [run]
 branch = True
-source = codetypo_lib
-omit = */codetypo_lib/tests/*
+source = codetypo
+omit = */codetypo/tests/*

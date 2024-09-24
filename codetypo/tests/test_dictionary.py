@@ -7,7 +7,7 @@ from typing import Any, Dict, Iterable, Optional, Set, Tuple
 
 import pytest
 
-from codetypo_lib._codetypo import (
+from codetypo._codetypo import (
     _builtin_dictionaries,
     supported_languages,
     word_regex_def,

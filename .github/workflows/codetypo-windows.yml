@@ -24,7 +24,7 @@ jobs:
           pip install -e .[dev]
       - run: codetypo --help
       - run: codetypo --version
-      - run: pytest codetypo_lib
+      - run: pytest codetypo
       - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

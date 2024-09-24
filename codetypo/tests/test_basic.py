@@ -13,8 +13,8 @@ from unittest import mock
 
 import pytest
 
-import codetypo_lib as cs_
-from codetypo_lib._codetypo import (
+import codetypo as cs_
+from codetypo._codetypo import (
     EX_CONFIG,
     EX_DATAERR,
     EX_OK,

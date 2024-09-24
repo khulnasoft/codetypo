@@ -107,7 +107,7 @@ after applying them in projects like Linux Kernel, EFL, oFono among others.
 You can provide your own version of the dictionary, but patches for
 new/different entries are very welcome.
 
-Want to know if a word you're proposing exists in codetypo already? It is possible to test a word against the current set dictionaries that exist in ``codetypo_lib/data/dictionary*.txt`` via:
+Want to know if a word you're proposing exists in codetypo already? It is possible to test a word against the current set dictionaries that exist in ``codetypo/data/dictionary*.txt`` via:
 
 .. code-block:: sh
 
@@ -364,18 +364,18 @@ In the scenario where the user prefers not to follow the development version of 
 
 .. code-block:: sh
 
-    wget https://raw.githubusercontent.com/khulnasoft/codetypo/master/codetypo_lib/data/dictionary.txt
+    wget https://raw.githubusercontent.com/khulnasoft/codetypo/master/codetypo/data/dictionary.txt
     codetypo -D dictionary.txt
 
 The above simply downloads the latest ``dictionary.txt`` file and then by utilizing the ``-D`` flag allows the user to specify the freshly downloaded ``dictionary.txt`` as the custom dictionary instead of the default one.
 
 You can also do the same thing for the other dictionaries listed here:
-    https://github.com/khulnasoft/codetypo/tree/master/codetypo_lib/data
+    https://github.com/khulnasoft/codetypo/tree/master/codetypo/data
 
 License
 -------
 
-The Python script ``codetypo`` with its library ``codetypo_lib`` is available
+The Python script ``codetypo`` with its library ``codetypo`` is available
 with the following terms:
 (*tl;dr*: `GPL v2`_)
 

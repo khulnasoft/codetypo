@@ -24,13 +24,13 @@ coverage*  @khulnasoft-bot
 Makefile  @khulnasoft-bot @nxpkg
 
 # Python code
-codetypo_lib/*.py  @khulnasoft-bot @nxpkg
+codetypo/*.py  @khulnasoft-bot @nxpkg
 bin/* @khulnasoft-bot @nxpkg
 
 # Dictionaries
-codetypo_lib/data/dictionary_code.txt @nxpkg
-codetypo_lib/data/dictionary_en-GB_to_en-US.txt @nxpkg
-codetypo_lib/data/dictionary_informal.txt @nxpkg
-codetypo_lib/data/dictionary_names.txt @nxpkg
-codetypo_lib/data/dictionary_rare.txt @nxpkg
+codetypo/data/dictionary_code.txt @nxpkg
+codetypo/data/dictionary_en-GB_to_en-US.txt @nxpkg
+codetypo/data/dictionary_informal.txt @nxpkg
+codetypo/data/dictionary_names.txt @nxpkg
+codetypo/data/dictionary_rare.txt @nxpkg
 # codepell_lib/data/*.txt  @luzpaz

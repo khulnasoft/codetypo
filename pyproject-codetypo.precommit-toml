@@ -3,5 +3,5 @@
 builtin = "clear,rare,informal,usage,code,names"
 #ignore-words-list = ["uint"]
 ignore-words-list = "adn,master,uint,wrod"
-#skip=[ "./.*","codetypo_lib/data/*","codetypo_lib/tests/*"]
-skip="./.*,codetypo_lib/data/*,codetypo_lib/tests/*"
+#skip=[ "./.*","codetypo/data/*","codetypo/tests/*"]
+skip="./.*,codetypo/data/*,codetypo/tests/*"
