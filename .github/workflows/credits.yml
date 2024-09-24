@@ -1,9 +1,9 @@
-# Inserts list of community members into ./README.md
+# Inserts list of community members into ./README.rst
 name: 💓 Inserts Contributors & Sponsors
 on:
   workflow_dispatch: # Manual dispatch
   schedule:
-    - cron: '45 1 * * 0' # At 01:45 on Sunday.
+    - cron: "45 1 * * 0" # At 01:45 on Sunday.
 
 jobs:
   # Job #1 - Fetches sponsors and inserts table into readme
@@ -17,7 +17,7 @@ jobs:
         uses: JamesIves/github-sponsors-readme-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          file: .github/README.md
+          file: .github/README.rst
 
   # Job #2 - Fetches contributors and inserts table into readme
   insert-contributors:
@@ -30,8 +30,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           image_size: 80
-          readme_path: .github/README.md
+          readme_path: .github/README.rst
           columns_per_row: 6
-          commit_message: 'docs: Updates contributors list'
+          commit_message: "docs: Updates contributors list"
           committer_username: khulnasoft-bot
           committer_email: khulnasoft-bot@khulnasoft.com
