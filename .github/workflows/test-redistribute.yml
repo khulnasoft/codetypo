@@ -3,7 +3,7 @@ name: Test Redistribute
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     types:
       - opened
@@ -30,7 +30,7 @@ jobs:
         run: pip install build
       - name: Build source distribution
         env:
-          TIANGOLO_BUILD_PACKAGE: ${{ matrix.package }}
+          KHULNASOFT_BUILD_PACKAGE: ${{ matrix.package }}
         run: python -m build --sdist
       - name: Decompress source distribution
         run: |
@@ -39,10 +39,9 @@ jobs:
       - name: Install test dependencies
         run: |
           cd dist/codetypo*/
-          pip install --upgrade pip setuptools setuptools_scm wheel
-          pip install -e ".[dev]"
+          pip install -r requirements/requirements-tests.txt
         env:
-          TIANGOLO_BUILD_PACKAGE: ${{ matrix.package }}
+          KHULNASOFT_BUILD_PACKAGE: ${{ matrix.package }}
       - name: Run source distribution tests
         run: |
           cd dist/codetypo*/
@@ -57,7 +56,7 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
 
   # https://github.com/marketplace/actions/alls-green#why
-  test-redistribute-alls-green:  # This job does nothing and is only used for the branch protection
+  test-redistribute-alls-green: # This job does nothing and is only used for the branch protection
     if: always()
     needs:
       - test-redistribute
