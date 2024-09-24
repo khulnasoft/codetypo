@@ -39,7 +39,8 @@ jobs:
       - name: Install test dependencies
         run: |
           cd dist/codetypo*/
-          pip install -r requirements-tests.txt
+          pip install --upgrade pip setuptools setuptools_scm wheel
+          pip install -e ".[dev]"
         env:
           TIANGOLO_BUILD_PACKAGE: ${{ matrix.package }}
       - name: Run source distribution tests
