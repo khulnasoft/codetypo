@@ -1,0 +1,16 @@
+.coverage
+.venv
+build
+dist
+ld
+codetypo.egg-info
+*.pyc
+*.orig
+.cache/
+.coverage.*
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+codetypo_lib/_version.py
+junit-results.xml
+*.egg-info/

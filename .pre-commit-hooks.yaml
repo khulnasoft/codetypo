@@ -1,0 +1,6 @@
+- id: codetypo
+  name: codetypo
+  description: Checks for common misspellings in text files.
+  entry: codetypo
+  language: python
+  types: [text]
