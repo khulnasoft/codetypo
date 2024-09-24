@@ -19,18 +19,18 @@
 *.cfg  @khulnasoft-bot
 codetypo.1.include @khulnasoft-bot @nxpkg
 coverage*  @khulnasoft-bot
-.github/*  @khulnasoft-bot @nxpkg
-.gitignore @khulnasoft-bot @nxpkg
-Makefile  @khulnasoft-bot @nxpkg
+.github/*  @khulnasoft-bot @nxpkg @fortishield
+.gitignore @khulnasoft-bot @nxpkg @fortishield
+Makefile  @khulnasoft-bot @nxpkg @fortishield
 
 # Python code
-codetypo/*.py  @khulnasoft-bot @nxpkg
-bin/* @khulnasoft-bot @nxpkg
+codetypo/*.py  @khulnasoft-bot @nxpkg @fortishield
+bin/* @khulnasoft-bot @nxpkg @fortishield
 
 # Dictionaries
-codetypo/data/dictionary_code.txt @nxpkg
-codetypo/data/dictionary_en-GB_to_en-US.txt @nxpkg
-codetypo/data/dictionary_informal.txt @nxpkg
-codetypo/data/dictionary_names.txt @nxpkg
-codetypo/data/dictionary_rare.txt @nxpkg
-# codepell_lib/data/*.txt  @luzpaz
+codetypo/data/dictionary_code.txt @nxpkg @fortishield
+codetypo/data/dictionary_en-GB_to_en-US.txt @nxpkg @fortishield
+codetypo/data/dictionary_informal.txt @nxpkg @fortishield
+codetypo/data/dictionary_names.txt @nxpkg @fortishield
+codetypo/data/dictionary_rare.txt @nxpkg @fortishield
+# codetypo/data/*.txt  @nxpkg
