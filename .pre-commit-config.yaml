@@ -68,7 +68,6 @@ repos:
       - id: prettier
         types_or: [yaml, markdown, html, css, scss, javascript, json]
   - repo: https://github.com/khulnasoft/codetypo
-    rev: v2.3.0
     hooks:
       - id: codetypo
         args: [--toml, pyproject-codetypo.precommit-toml]
