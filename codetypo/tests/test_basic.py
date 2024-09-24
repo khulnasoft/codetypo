@@ -1404,6 +1404,6 @@ def test_stdin(tmp_path: Path) -> None:
             args = ("--stdin-single-line",)
         # we expect 'input_file_lines' number of lines with
         # --stdin-single-line and input_file_lines * 2 lines without it
-        assert run_codetypo_stdin(
-            text, args=args, cwd=tmp_path
-        ) == input_file_lines * (2 - int(single_line_per_error))
+        assert run_codetypo_stdin(text, args=args, cwd=tmp_path) == input_file_lines * (
+            2 - int(single_line_per_error)
+        )
