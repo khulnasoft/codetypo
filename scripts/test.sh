@@ -3,5 +3,5 @@
 set -e
 set -x
 
-export PYTHONPATH=./codetypo/tests
+export PYTHONPATH=./codetypo
 coverage run -m pytest ${@}
