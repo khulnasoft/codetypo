@@ -3,7 +3,7 @@
 build
 dist
 ld
-*codetypo.egg-info
+codetypo.egg-info
 *.pyc
 *.orig
 .cache/
