@@ -31,7 +31,7 @@ jobs:
         uses: JamesIves/github-sponsors-readme-action@1.0.5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          file: "README.md"
+          file: ".github/README.md"
       - name: Generate Sponsors in Credits 💖
         uses: JamesIves/github-sponsors-readme-action@1.0.5
         with:
