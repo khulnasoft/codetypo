@@ -1,0 +1,174 @@
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+
+[project]
+name = "codetypo"
+description = "Fix common misspellings in text files"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+requires-python = ">=3.8"
+license = {text = "GPL-2.0-only"}
+authors = [
+    {name = "KhulnaSoft DevOps", email = "support@khulnasoft.com"},
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved",
+    "Programming Language :: Python",
+    "Topic :: Software Development",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "chardet",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "pytest-dependency",
+    "Pygments",
+    "ruff",
+    "tomli",
+    "twine"
+]
+hard-encoding-detection = [
+    "chardet"
+]
+toml = [
+    "tomli; python_version < '3.11'"
+]
+types = [
+    "chardet>=5.1.0",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "pytest-dependency",
+]
+
+[project.scripts]
+codetypo = "codetypo:_script_main"
+
+[project.urls]
+homepage = "https://github.com/khulnasoft/codetypo"
+repository = "https://github.com/khulnasoft/codetypo"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=64", "setuptools_scm[toml]>=6.2, != 8.0.0"]
+
+[tool.setuptools_scm]
+write_to = "codetypo/_version.py"
+
+[tool.setuptools.packages.find]
+exclude = [
+    "dist",
+    "snap",
+]
+
+[tool.setuptools.package-data]
+codetypo = [
+    "data/dictionary*.txt",
+    "data/linux-kernel.exclude",
+    "py.typed",
+]
+
+# TODO: reintegrate codetypo configuration after updating test cases
+#[tool.codetypo]
+#builtin = ["clear","rare","informal","usage","code","names"]
+#ignore-words-list = ["uint"]
+#skip=[ "./.*","codetypo/data/*","codetypo/tests/*"]
+
+[tool.mypy]
+pretty = true
+hide_error_codes = false
+strict = true
+warn_unused_ignores = false
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+
+[tool.pytest.ini_options]
+minversion = "6"
+testpaths = ["codetypo/tests"]
+log_cli_level = "INFO"
+xfail_strict = true
+addopts = ["--cov=codetypo", "-rs", "--strict-config", "--strict-markers", "--cov-report=", "--tb=short", "--junit-xml=junit-results.xml"]
+filterwarnings = ["error"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+ignore = [
+    "ANN101",
+    "B904",
+    "PLW2901",
+    "RET505",
+    "SIM105",
+    "SIM115",
+    # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "W191",
+    "E111",
+    "E114",
+    "E117",
+    "D206",
+    "D300",
+    "Q000",
+    "Q001",
+    "Q002",
+    "Q003",
+    "COM812",
+    "COM819",
+    "ISC001",
+    "ISC002",
+]
+select = [
+    "A",
+    "ANN",
+    "B",
+    "C40",
+    "C9",
+    "E",
+    "F",
+    "I",
+    "N",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PT",
+    "PLW",
+    "RET",
+    "RUF",
+    "S",
+    "SIM",
+    "TRY",
+    "U",
+    "UP",
+    "W",
+    "YTT",
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 45
+
+[tool.ruff.lint.per-file-ignores]
+"codetypo/_codetypo.py" = ["A003"]
+"codetypo/tests/test_*" = ["S101"]
+"codetypo/tests/test_basic.py" = ["ANN401", "N802"]
+
+[tool.ruff.lint.pylint]
+allow-magic-value-types = ["bytes", "int", "str",]
+max-args = 13
+max-branches = 48
+max-returns = 12
+max-statements = 119

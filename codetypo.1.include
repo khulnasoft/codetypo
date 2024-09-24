@@ -1,0 +1,17 @@
+[NAME]
+codetypo \- detect spelling mistakes in source code
+
+[SYNOPSIS]
+\fBcodetypo\fR [OPTIONS] [file1 file2 ... fileN]
+
+[DESCRIPTION]
+.PP
+codetypo is designed to find and fix common misspellings in text files.
+It is designed primarily for checking misspelled words in source code,
+but it can be used with other files as well.
+
+[AUTHOR]
+KhulnaSoft DevOps <support@khulnasoft.com>
+
+[SEE ALSO]
+https://github.com/khulnasoft/codetypo

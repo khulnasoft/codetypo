@@ -1,0 +1,19 @@
+name: codetypo
+version: git
+summary: Check code for common misspellings
+description: |
+  Codetypo fixes common misspellings in text files. It's designed
+  primarily for checking misspelled words in source code, but it can
+  be used with other files as well.
+grade: stable
+confinement: strict
+
+apps:
+  codetypo:
+    command: codetypo
+    plugs: [home, removable-media]
+
+parts:
+  codetypo:
+    source: .
+    plugin: python

@@ -1,0 +1,4 @@
+[run]
+branch = True
+source = codetypo
+omit = */codetypo/tests/*
