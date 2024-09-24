@@ -7,7 +7,7 @@ on:
       - completed
 
 permissions:
-  contents: write      
+  contents: write
 
 jobs:
   build:
@@ -15,15 +15,15 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     environment: Release
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-    - name: Getting Tag
-      id: tag_extractor
-      run: echo "latest_tag=$(git describe --tags --abbrev=0)" >> "$GITHUB_OUTPUT"
-  
-    - uses: ncipollo/release-action@v1
-      with:
-        name: CodeTypo ${{ steps.tag_extractor.outputs.latest_tag }}
-        generateReleaseNotes: true
-        tag: ${{ steps.tag_extractor.outputs.latest_tag }}
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Getting Tag
+        id: tag_extractor
+        run: echo "latest_tag=$(git describe --tags --abbrev=0)" >> "$GITHUB_OUTPUT"
+
+      - uses: ncipollo/release-action@v1
+        with:
+          name: CodeTypo ${{ steps.tag_extractor.outputs.latest_tag }}
+          generateReleaseNotes: true
+          tag: ${{ steps.tag_extractor.outputs.latest_tag }}
