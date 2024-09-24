@@ -1,9 +1,6 @@
 name: Smokeshow
 
-on:
-  workflow_run:
-    workflows: [Pytest]
-    types: [completed]
+on: [push, pull_request]
 
 permissions:
   statuses: write
