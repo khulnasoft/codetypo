@@ -34,7 +34,7 @@ def write_version(version):
 
 
 def update_version(version):
-    files = ["setup.py"]
+    files = ["pyproject.toml"]
     for file in files:
         with open(file, "r+") as f:
             content = f.read()
