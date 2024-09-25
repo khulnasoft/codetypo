@@ -1,4 +1,4 @@
 from ._codetypo import _script_main, main
 from ._version import __version__  # type: ignore[import-not-found]
 
-__all__ = ["_script_main", "main", "__version__"]
+__version__ = '0.2.0'  # fmt: skip
