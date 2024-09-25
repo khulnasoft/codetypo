@@ -2,7 +2,7 @@
 
 [project]
 name = "codetypo"
-version="0.2.0",
+version="0.2.0"
 description = "Fix common misspellings in text files"
 readme = { file = "README.rst", content-type = "text/x-rst" }
 requires-python = ">=3.8"
