@@ -1,58 +1,37 @@
-# Upload a Python Package using Twine when a release is created
+name: Release
 
-name: Build
 on:
-  release:
-    types: [published]
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  workflow_dispatch:
+    inputs:
+      release_type:
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
 
 permissions:
-  contents: read
-
+  contents: write
 jobs:
-  package:
+  run:
     runs-on: ubuntu-latest
+    if: contains('["khulnasoft-bot"]', github.actor)
+
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Set up Python
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install build twine
-      - name: Build package
-        run: python -m build
-      - name: Check package
-        run: twine check --strict dist/*
-      - name: Check env vars
-        run: |
-          echo "Triggered by: ${{ github.event_name }}"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist
+          python-version: 3.8
 
-  # PyPI on release
-  pypi:
-    needs: package
-    runs-on: ubuntu-latest
-    if: github.event_name == 'release'
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+      - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: Run Version Bump Script
+        run: python bump.py ${{ github.event.inputs.release_type }}
