@@ -630,6 +630,8 @@ acceleratio->acceleration, accelerator,
 accelerato->acceleration
 acceleratoin->acceleration
 acceleraton->acceleration
+acceleratored->accelerated
+acceleratoring->accelerating
 acceleratrion->acceleration
 acceleread->accelerated
 accelerte->accelerate
@@ -13505,6 +13507,7 @@ colission->collision
 colissions->collisions
 collaberative->collaborative
 collaberatively->collaboratively
+collable->callable
 collaboritave->collaborative
 collaboritavely->collaboratively
 collaction->collection
@@ -21277,6 +21280,8 @@ dictoinaries->dictionaries
 dictoinary->dictionary
 dictonaries->dictionaries
 dictonary->dictionary
+dictonnaries->dictionaries
+dictonnary->dictionary
 dictrionaries->dictionaries
 dictrionary->dictionary
 dicuss->discuss
@@ -24579,6 +24584,7 @@ entirly->entirely
 entite->entire, entity,
 entitee->entity
 entitees->entities
+entiteis->entities
 entites->entities
 entiti->entity
 entitie->entity
@@ -28490,6 +28496,7 @@ forcasters->forecasters
 forcasting->forecasting
 forcasts->forecasts
 forceably->forcibly
+forceing->forcing
 forcin->forcing
 forcot->forgot
 forcus->focus, forces,
@@ -29415,6 +29422,7 @@ generallly->generally
 generaly->generally
 generalyl->generally
 generalyse->generalise
+generaml->general
 generaor->generator
 generaors->generators
 generare->generate
@@ -35844,6 +35852,7 @@ larvays->larvae
 larvy->larvae
 laso->also, lasso,
 lasonya->lasagna
+lasr->laser, last,
 lastes->latest
 lastest->latest, last,
 lastr->last
@@ -36321,6 +36330,7 @@ linkely->likely
 linkes->links, linked, likes, lines,
 linkfy->linkify
 linnaena->linnaean
+lins->lines, links, lions, loins, limns,
 lintain->lintian
 lintin->linting, lint in,
 linz->lines
@@ -52319,6 +52329,7 @@ seemd->seemed
 seemes->seems
 seemless->seamless
 seemlessly->seamlessly
+seens->seems, seen, scenes,
 seesion->session
 seesions->sessions
 seethin->seething
@@ -53277,6 +53288,8 @@ shifed->shifted
 shifing->shifting
 shifs->shifts
 shiftin->shifting, shift in,
+shiiped->shipped
+shiiping->shipping
 shineing->shining
 shinin->shining, shin in,
 shiped->shipped
@@ -57735,6 +57748,8 @@ tarce->trace
 tarced->traced
 tarces->traces
 tarcing->tracing
+taregt->target
+taregts->targets
 tarffic->traffic
 targed->target
 targer->target, larger, tagger,
@@ -63858,7 +63873,7 @@ yuo->you
 yuor->your
 yur->your
 yymmetrical->symmetrical
-zar->czar
+zar->czar, Zarr,
 zars->czars
 zeebra->zebra
 zeebras->zebras
