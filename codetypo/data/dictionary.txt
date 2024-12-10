@@ -2800,6 +2800,7 @@ agonsticism->agnosticism
 agorithm->algorithm
 agorithmic->algorithmic
 agorithms->algorithms
+agos->ago, ages, egos, Lagos,
 agracultural->agricultural
 agrain->again
 agrandize->aggrandize
@@ -2810,6 +2811,7 @@ agravate->aggravate
 agravated->aggravated
 agravates->aggravates
 agravating->aggravating
+agrc->argc
 agre->agree
 agreable->agreeable
 agreableness->agreeableness
@@ -2890,6 +2892,7 @@ agruing->arguing
 agrument->argument
 agrumentative->argumentative
 agruments->arguments
+agrv->argv
 ags->tags, ages,
 agsinst->against
 agument->argument, augment,
@@ -28468,6 +28471,7 @@ footprinst->footprints
 foound->found
 foppy->floppy
 foppys->floppies
+forach->foreach, orach,
 foraign->foreign
 foraigner->foreigner
 foraigners->foreigners
@@ -35930,6 +35934,7 @@ lcuase->clause
 leaast->least
 leace->leave
 leack->leak
+leadin->leading, lead in,
 leagacy->legacy
 leagal->legal
 leagalise->legalise
@@ -42349,7 +42354,6 @@ overwridden->overridden, overwritten,
 overwride->overwrite, override,
 overwrides->overwrites, overrides,
 overwriding->overwriting, overriding,
-overwriteable->overwritable
 overwrited->overwritten, overwrote,
 overwriten->overwritten
 overwritin->overwriting
@@ -43307,6 +43311,8 @@ pattrn->pattern
 pattrns->patterns
 patttern->pattern
 pattterns->patterns
+pauload->payload
+pauloads->payloads
 pavillion->pavilion
 pavillions->pavilions
 pavin->paving, pain,
@@ -46775,6 +46781,7 @@ pulisher->publisher
 pulishers->publishers
 pulishes->publishes
 pulishing->publishing
+pullrequenst->pull requests, pull request,
 puls->pulse, plus,
 pumkin->pumpkin
 punctation->punctuation
@@ -57745,6 +57752,8 @@ tansverse->transverse
 tarbal->tarball
 tarbals->tarballs
 tarce->trace
+tarceback->traceback
+tarcebacks->tracebacks
 tarced->traced
 tarces->traces
 tarcing->tracing
