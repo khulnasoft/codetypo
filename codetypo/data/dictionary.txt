@@ -7740,13 +7740,6 @@ atends->attends
 atention->attention
 aternies->attorneys
 aterny->attorney
-atfer->after
-atfernoon->afternoon
-atfernoons->afternoons
-atferthought->afterthought
-atferthoughts->afterthoughts
-atferward->afterward
-atferwards->afterwards
 atheistical->atheistic
 athenean->Athenian
 atheneans->Athenians
@@ -44311,17 +44304,6 @@ pocesses->processes, possesses,
 pocessing->processing, possessing,
 pocession->procession, possession,
 podfie->podfile
-poduce->produce
-poduced->produced
-poduces->produces
-poducibility->producibility
-poducible->producible
-poducibly->producibly
-poducing->producing
-poduct->product
-poduction->production
-poductions->productions
-poducts->products
 podule->module
 poenis->penis
 poential->potential
@@ -51107,10 +51089,7 @@ reuqirement->requirement
 reuqirements->requirements
 reuqires->requires
 reuqiring->requiring
-reurn->return, rerun,
-reurned->returned, reran,
-reurning->returning, rerunning,
-reurns->returns, reruns,
+reurn->return
 reursively->recursively
 reuseable->reusable
 reusin->reusing, resin,
@@ -58486,7 +58465,6 @@ theread->thread, the read,
 thereaded->threaded
 thereading->threading, the reading,
 thereads->threads, the reads,
-thereatfer->thereafter
 thered->thread, the red,
 therem->there, theorem,
 thereom->theorem
