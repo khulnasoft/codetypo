@@ -1,23 +1,16 @@
-CodeTypo: Fixing Common Misspellings
+CodeTypo: Enhance Your Writing and Coding by Fixing Common Misspellings
 ======================================================================
 
-.. image:: https://img.shields.io/pypi/pyversions/codetypo
-   :alt: PyPI - Python Version
+.. raw:: html
 
-.. image:: https://img.shields.io/pypi/v/codetypo
-   :alt: PyPI
-
-.. image:: https://img.shields.io/github/license/khulnasoft/codetypo
-   :alt: GitHub
-
-.. image:: https://img.shields.io/github/issues/khulnasoft/codetypo
-   :alt: GitHub issues
-
-.. image:: https://img.shields.io/github/forks/khulnasoft/codetypo
-   :alt: GitHub forks
-
-.. image:: https://img.shields.io/github/stars/khulnasoft/codetypo
-   :alt: GitHub stars
+   <div align="left">
+     <img src="https://img.shields.io/pypi/pyversions/codetypo" alt="PyPI - Python Version" />
+     <img src="https://img.shields.io/pypi/v/codetypo" alt="PyPI" />
+     <img src="https://img.shields.io/github/license/khulnasoft/codetypo" alt="GitHub" />
+     <img src="https://img.shields.io/github/issues/khulnasoft/codetypo" alt="GitHub issues" />
+     <img src="https://img.shields.io/github/forks/khulnasoft/codetypo" alt="GitHub forks" />
+     <img src="https://img.shields.io/github/stars/khulnasoft/codetypo" alt="GitHub stars" />
+   </div>
 
 **Codetypo** is a lightweight tool designed to help developers and writers fix common misspellings in their text files. Specially optimized for source code, it skips backslash escapes, which helps maintain the integrity of your code's syntax by avoiding unintended modifications to escape sequences. While Codetypo doesn't rely on a complete dictionary, it detects a curated list of frequent misspellings, catching errors like "adn" while avoiding false positives with niche terms, such as "malloc" or "chmod," which are common in programming but not in general language usage. Whether you're reviewing code, documentation, or any text-based file, Codetypo streamlines the proofreading process, improving accuracy without unnecessary noise.
 
