@@ -1,4 +1,5 @@
 CodeTypo: Fixing Common Misspellings
+---------------------------------------------------------------------
 
 .. raw:: html
 
