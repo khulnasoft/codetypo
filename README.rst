@@ -1,12 +1,7 @@
-codetypo
+# Codetypo: Fix Common Misspellings in Text and Source Code Files
 =========
 
-Fix common misspellings in text files. It's designed primarily for checking
-misspelled words in source code (backslash escapes are skipped), but it can be used with other files as well.
-It does not check for word membership in a complete dictionary, but instead
-looks for a set of common misspellings. Therefore it should catch errors like
-"adn", but it will not catch "adnasdfasdf". This also means it shouldn't
-generate false-positives when you use a niche term it doesn't know about.
+**Codetypo** is a lightweight tool designed to help developers and writers fix common misspellings in their text files. Specially optimized for source code, it skips backslash escapes, ensuring that your code's syntax remains intact. While Codetypo doesn't rely on a complete dictionary, it detects a curated list of frequent misspellings, catching errors like "adn" while avoiding false positives with niche terms. Whether you're reviewing code, documentation, or any text-based file, Codetypo streamlines the proofreading process, improving accuracy without unnecessary noise.
 
 Useful links
 ------------
