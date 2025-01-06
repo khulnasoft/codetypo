@@ -2,7 +2,6 @@ CodeTypo: Fixing Common Misspellings
 ======================================================================
 
 .. raw:: html
-
    <div align="left">
      <img src="https://img.shields.io/pypi/pyversions/codetypo" alt="PyPI - Python Version" />
      <img src="https://img.shields.io/pypi/v/codetypo" alt="PyPI" />
