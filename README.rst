@@ -1,396 +1,126 @@
-CodeTypo: Fix Common Misspellings in Text and Source Code Files
-=========
+# CodeTypo: Fix Common Misspellings in Text and Source Code Files
 
-**Codetypo** is a lightweight tool designed to help developers and writers fix common misspellings in their text files. Specially optimized for source code, it skips backslash escapes, ensuring that your code's syntax remains intact. While Codetypo doesn't rely on a complete dictionary, it detects a curated list of frequent misspellings, catching errors like "adn" while avoiding false positives with niche terms. Whether you're reviewing code, documentation, or any text-based file, Codetypo streamlines the proofreading process, improving accuracy without unnecessary noise.
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/codetypo)
+![PyPI](https://img.shields.io/pypi/v/codetypo)
+![GitHub](https://img.shields.io/github/license/khulnasoft/codetypo)
+![GitHub issues](https://img.shields.io/github/issues/khulnasoft/codetypo)
+![GitHub forks](https://img.shields.io/github/forks/khulnasoft/codetypo)
+![GitHub stars](https://img.shields.io/github/stars/khulnasoft/codetypo)
 
-Useful links
-------------
+**Codetypo** is a lightweight tool designed to help developers and writers fix common misspellings in their text files. Specially optimized for source code, it skips backslash escapes, which helps maintain the integrity of your code's syntax by avoiding unintended modifications to escape sequences. While Codetypo doesn't rely on a complete dictionary, it detects a curated list of frequent misspellings, catching errors like "adn" while avoiding false positives with niche terms, such as "malloc" or "chmod," which are common in programming but not in general language usage. Whether you're reviewing code, documentation, or any text-based file, Codetypo streamlines the proofreading process, improving accuracy without unnecessary noise.
 
-* `GitHub project <https://github.com/khulnasoft/codetypo>`_
+## Useful Links
 
-* `Repository <https://github.com/khulnasoft/codetypo>`_
+- [GitHub Project](https://github.com/khulnasoft/codetypo)
+- [Repository](https://github.com/khulnasoft/codetypo)
+- [Releases](https://github.com/khulnasoft/codetypo/releases)
 
-* `Releases <https://github.com/khulnasoft/codetypo/releases>`_
+## Requirements
 
-Requirements
-------------
+- Python 3.8 or above
 
-Python 3.8 or above.
+## Installation
 
-Installation
-------------
+Install Codetypo using `pip`:
 
-You can use ``pip`` to install codetypo with e.g.:
+```sh
+pip install codetypo
+```
 
-.. code-block:: sh
+## Usage
 
-    pip install codetypo
+Below are some simple usage examples to demonstrate how the tool works. For exhaustive usage information, please check the output of `codetypo -h`.
 
-Usage
------
+Run Codetypo in all files of the current directory:
 
-Below are some simple usage examples to demonstrate how the tool works.
-For exhaustive usage information, please check the output of ``codetypo -h``.
+```sh
+codetypo
+```
 
-Run codetypo in all files of the current directory:
+Run Codetypo in specific files or directories (specified via their names or glob patterns):
 
-.. code-block:: sh
+```sh
+codetypo some_file some_dir/ *.ext
+```
 
-    codetypo
+### Noteworthy Flags
 
-Run codetypo in specific files or directories (specified via their names or glob patterns):
+- `-w, --write-changes`: Implement the changes recommended by Codetypo. Running without this flag is a dry run. It is recommended to run this with the `-i` or `--interactive` flag.
+- `-I FILE, --ignore-words=FILE`: Use a list of certain words to allow that are in the Codetypo dictionaries. The format of the file is one word per line.
+- `-L word1,word2,word3,word4`: Allow certain words that are comma-separated.
+- `-x FILE, --exclude-file=FILE`: Ignore whole lines that match those in `FILE`.
+- `-S, --skip=`: Comma-separated list of files to skip. It accepts globs as well.
 
-.. code-block:: sh
+### Useful Commands
 
-    codetypo some_file some_dir/ *.ext
+```sh
+codetypo -d -q 3 --skip="*.po,*.ts,./src/3rdParty,./src/Test"
+```
+List all typos found except translation files and some directories. Display them without terminal colors and with a quiet level of 3.
 
-Some noteworthy flags:
-
-.. code-block:: sh
-
-    codetypo -w, --write-changes
-
-The ``-w`` flag will actually implement the changes recommended by codetypo. Running without the ``-w`` flag is the same as doing a dry run. It is recommended to run this with the ``-i`` or ``--interactive`` flag.
-
-.. code-block:: sh
-
-    codetypo -I FILE, --ignore-words=FILE
-
-The ``-I`` flag can be used for a list of certain words to allow that are in the codetypo dictionaries. The format of the file is one word per line. Invoke using: ``codetypo -I path/to/file.txt`` to execute codetypo referencing said list of allowed words. See `Ignoring Words`_ for more details.
-
-.. code-block:: sh
-
-    codetypo -L word1,word2,word3,word4
-
-The ``-L`` flag can be used to allow certain words that are comma-separated placed immediately after it.  See `Ignoring Words`_ for more details.
-
-.. code-block:: sh
-
-    codetypo -x FILE, --exclude-file=FILE
-
-Ignore whole lines that match those in ``FILE``.  The lines in ``FILE`` should match the to-be-excluded lines exactly.
-
-.. code-block:: sh
-
-    codetypo -S, --skip=
-
-Comma-separated list of files to skip. It accepts globs as well.  Examples:
-
-* to skip .eps & .txt files, invoke ``codetypo --skip="*.eps,*.txt"``
-
-* to skip directories, invoke ``codetypo --skip="./src/3rd-Party,./src/Test"``
-
-
-Useful commands:
-
-.. code-block:: sh
-
-    codetypo -d -q 3 --skip="*.po,*.ts,./src/3rdParty,./src/Test"
-
-List all typos found except translation files and some directories.
-Display them without terminal colors and with a quiet level of 3.
-
-.. code-block:: sh
-
-    codetypo -i 3 -w
-
+```sh
+codetypo -i 3 -w
+```
 Run interactive mode level 3 and write changes to file.
 
-We ship a collection of dictionaries that are an improved version of the one available
-`on Wikipedia <https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings/For_machines>`_
-after applying them in projects like Linux Kernel, EFL, oFono among others.
-You can provide your own version of the dictionary, but patches for
-new/different entries are very welcome.
+## Ignoring Words
 
-Want to know if a word you're proposing exists in codetypo already? It is possible to test a word against the current set dictionaries that exist in ``codetypo/data/dictionary*.txt`` via:
+Spelling errors are *case-insensitive*, but words to ignore are *case-sensitive*. Use the `-I` or `-L` flag to specify words to ignore.
 
-.. code-block:: sh
+### Inline Ignore
 
-    echo "word" | codetypo -
-    echo "1stword,2ndword" | codetypo -
+Ignore a specific word in a specific location using comments in the source code:
 
-You can select the optional dictionaries with the ``--builtin`` option.
+```python
+def wrod(): # codetypo:ignore wrod
+    pass
+```
 
-Ignoring words
---------------
+## Using a Config File
 
-When ignoring false positives, note that spelling errors are *case-insensitive* but words to ignore are *case-sensitive*. For example, the dictionary entry ``wrod`` will also match the typo ``Wrod``, but to ignore it you must pass ``Wrod``.
+Command line options can also be specified in a config file. Codetypo checks the current directory for `setup.cfg` or `.codetyporc`, or a file specified via `--config`.
 
-The words to ignore can be passed in two ways:
+Example in `setup.cfg`:
 
-1. ``-I``: A file with a word per line to ignore:
+```ini
+[codetypo]
+skip = *.po,*.ts,./src/3rdParty,./src/Test
+count =
+quiet-level = 3
+```
 
-   .. code-block:: sh
+## Pre-commit Hook
 
-       codetypo -I FILE, --ignore-words=FILE
+Codetypo works with [pre-commit](https://pre-commit.com/):
 
-2. ``-L``: A comma separated list of words to ignore on the command line:
+```yaml
+- repo: https://github.com/khulnasoft/codetypo
+  rev: v2.2.4
+  hooks:
+  - id: codetypo
+```
 
-   .. code-block:: sh
+## Development Setup
 
-       codetypo -L word1,word2,word3,word4
+Ensure `pip`, `setuptools`, and `wheel` are up to date before installing from source:
 
-Inline ignore
--------------
+```sh
+pip install --upgrade pip setuptools setuptools_scm wheel
+```
 
-Some situation might require ignoring a specific word in a specific location. This can be achieved by adding a comment in the source code.
-You can either ignore a single word or a list of words. The comment should be in the format of ``codetypo:ignore <words>``.
-Words should be separated by a comma.
+Install required dependencies for development:
 
-1. ignore specific word:
+```sh
+pip install -e ".[dev]"
+```
 
-   .. code-block:: python
+Run tests:
 
-       def wrod() # codetypo:ignore wrod
-           pass
+```sh
+make check
+```
 
-2. ignore multiple words:
+---
 
-   .. code-block:: python
+Feel free to contribute, report issues, or suggest new features!
 
-       def wrod(wrods) # codetypo:ignore
-           pass
-
-Using a config file
--------------------
-
-Command line options can also be specified in a config file.
-
-When running ``codetypo``, it will check in the current directory for a file
-named ``setup.cfg`` or ``.codetyporc`` (or a file specified via ``--config``),
-containing an entry named ``[codetypo]``. Each command line argument can
-be specified in this file (without the preceding dashes), for example:
-
-.. code-block:: ini
-
-    [codetypo]
-    skip = *.po,*.ts,./src/3rdParty,./src/Test
-    count =
-    quiet-level = 3
-
-The ``.codetyporc`` file is an `INI file <https://en.wikipedia.org/wiki/INI_file>`_,
-which is read using Python's
-`configparser <https://docs.python.org/3/library/configparser.html#supported-ini-file-structure>`_.
-For example, comments are possible using ``;`` or ``#`` as the first character.
-
-Values in an INI file entry cannot start with a ``-`` character, so if you need to do this,
-structure your entries like this:
-
-.. code-block:: ini
-
-    [codetypo]
-    dictionary = mydict,-
-    ignore-words = bar,-foo
-
-instead of these invalid entries:
-
-.. code-block:: ini
-
-    [codetypo]
-    dictionary = -,mydict
-    ignore-words = -foo,bar
-
-Codetypo will also check in the current directory for a ``pyproject.toml``
-(or a path can be specified via ``--toml <filename>``) file, and the
-``[tool.codetypo]`` entry will be used, but only if the tomli_ package
-is installed for versions of Python prior to 3.11. For example:
-
-.. code-block:: toml
-
-    [tool.codetypo]
-    skip = '*.po,*.ts,./src/3rdParty,./src/Test'
-    count = true
-    quiet-level = 3
-
-These are both equivalent to running:
-
-.. code-block:: sh
-
-    codetypo --quiet-level 3 --count --skip "*.po,*.ts,./src/3rdParty,./src/Test"
-
-If several config files are present, they are read in the following order:
-
-#. ``pyproject.toml`` (only if the ``tomli`` library is available)
-#. ``setup.cfg``
-#. ``.codetyporc``
-#. any additional file supplied via ``--config``
-
-If a codetypo configuration is supplied in several of these files,
-the configuration from the most recently read file overwrites previously
-specified configurations.
-
-Any options specified in the command line will *override* options from the
-config files.
-
-.. _tomli: https://pypi.org/project/tomli/
-
-pre-commit hook
----------------
-
-codetypo also works with `pre-commit <https://pre-commit.com/>`_, using
-
-.. code-block:: yaml
-
-  - repo: https://github.com/khulnasoft/codetypo
-    rev: v2.2.4
-    hooks:
-    - id: codetypo
-
-If one configures codetypo using the `pyproject.toml` file instead use:
-
-.. code-block:: yaml
-
-  - repo: https://github.com/khulnasoft/codetypo
-    rev: v2.2.4
-    hooks:
-    - id: codetypo
-      additional_dependencies:
-        - tomli
-
-Dictionary format
------------------
-
-The format of the dictionaries was influenced by the one they originally came from,
-i.e. from Wikipedia. The difference is how multiple options are treated and
-that the last argument is an optional reason why a certain entry could not be
-applied directly, but should instead be manually inspected. E.g.:
-
-1. Simple entry: one wrong word / one suggestion::
-
-        calulated->calculated
-
-2. Entry with more than one suggested fix::
-
-       fiel->feel, field, file, phial,
-
-   Note the last comma! You need to use it, otherwise the last suggestion
-   will be discarded (see below for why). When there is more than one
-   suggestion, an automatic fix is not possible and the best we can do is
-   to give the user the file and line where the error occurred as well as
-   the suggestions.
-
-3. Entry with one word, but with automatic fix disabled::
-
-       clas->class, disabled because of name clash in c++
-
-   Note that there isn't a comma at the end of the line. The last argument is
-   treated as the reason why a suggestion cannot be automatically applied.
-
-   There can also be multiple suggestions but any automatic fix will again be
-   disabled::
-
-       clas->class, clash, disabled because of name clash in c++
-
-Development setup
------------------
-
-As suggested in the `Python Packaging User Guide`_, ensure ``pip``, ``setuptools``, and ``wheel`` are up to date before installing from source. Specifically you will need recent versions of ``setuptools`` and ``setuptools_scm``:
-
-.. code-block:: sh
-
-    pip install --upgrade pip setuptools setuptools_scm wheel
-
-You can install required dependencies for development by running the following within a checkout of the codetypo source:
-
-.. code-block:: sh
-
-       pip install -e ".[dev]"
-
-To run tests against the codebase run:
-
-.. code-block:: sh
-
-       make check
-
-.. _Python Packaging User Guide: https://packaging.python.org/en/latest/tutorials/installing-packages/#requirements-for-installing-packages
-
-Sending pull requests
----------------------
-
-If you have a suggested typo that you'd like to see merged please follow these steps:
-
-1. Make sure you read the instructions mentioned in the ``Dictionary format`` section above to submit correctly formatted entries.
-
-2. Choose the correct dictionary file to add your typo to. See `codetypo --help` for explanations of the different dictionaries.
-
-3. Sort the dictionaries. This is done by invoking (in the top level directory of ``codetypo/``):
-
-   .. code-block:: sh
-
-       make check-dictionaries
-
-   If the make script finds that you need to sort a dictionary, please then run:
-
-   .. code-block:: sh
-
-       make sort-dictionaries
-
-4. Only after this process is complete do we recommend you submit the PR.
-
-**Important Notes:**
-
-* If the dictionaries are submitted without being pre-sorted the PR will fail via our various CI tools.
-* Not all PRs will be merged. This is pending on the discretion of the devs, maintainers, and the community.
-
-Updating
---------
-
-To stay current with codetypo developments it is possible to build codetypo from GitHub via:
-
-.. code-block:: sh
-
-    pip install --upgrade git+https://github.com/khulnasoft/codetypo.git
-
-**Important Notes:**
-
-* Sometimes installing via ``pip`` will complain about permissions. If this is the case then run with:
-
-  .. code-block:: sh
-
-      pip install --user --upgrade git+https://github.com/khulnasoft/codetypo.git
-
-* It has been reported that after installing from ``pip``, codetypo can't be located. Please check the $PATH variable to see if ``~/.local/bin`` is present. If it isn't then add it to your path.
-* If you decide to install via ``pip`` then be sure to remove any previously installed versions of codetypo (via your platform's preferred app manager).
-
-Updating the dictionaries
--------------------------
-
-In the scenario where the user prefers not to follow the development version of codetypo yet still opts to benefit from the frequently updated dictionary files, we recommend running a simple set of commands to achieve this:
-
-.. code-block:: sh
-
-    wget https://raw.githubusercontent.com/khulnasoft/codetypo/master/codetypo/data/dictionary.txt
-    codetypo -D dictionary.txt
-
-The above simply downloads the latest ``dictionary.txt`` file and then by utilizing the ``-D`` flag allows the user to specify the freshly downloaded ``dictionary.txt`` as the custom dictionary instead of the default one.
-
-You can also do the same thing for the other dictionaries listed here:
-    https://github.com/khulnasoft/codetypo/tree/master/codetypo/data
-
-License
--------
-
-The Python script ``codetypo`` with its library ``codetypo`` is available
-with the following terms:
-(*tl;dr*: `GPL v2`_)
-
-   Copyright (C) 2010-2011  KhulnaSoft DevOps <support@khulnasoft.com>
-
-   Copyright (C) 2011  ProFUSION embedded systems
-
-   This program is free software; you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation; version 2 of the License.
-
-   This program is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-
-   You should have received a copy of the GNU General Public License
-   along with this program; if not, see
-   <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>.
-
-.. _GPL v2: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-
-``dictionary.txt`` and the other ``dictionary_*.txt`` files are derivative works of English Wikipedia and are released under the `Creative Commons Attribution-Share-Alike License 3.0 <https://creativecommons.org/licenses/by-sa/3.0/>`_.
