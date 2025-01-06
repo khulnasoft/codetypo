@@ -23,9 +23,8 @@
 
 Install Codetypo using `pip`:
 
-```sh
+```bash
 pip install codetypo
-```
 
 ## Usage
 
@@ -35,13 +34,11 @@ Run Codetypo in all files of the current directory:
 
 ```sh
 codetypo
-```
 
 Run Codetypo in specific files or directories (specified via their names or glob patterns):
 
 ```sh
 codetypo some_file some_dir/ *.ext
-```
 
 ### Noteworthy Flags
 
@@ -55,7 +52,7 @@ codetypo some_file some_dir/ *.ext
 
 ```sh
 codetypo -d -q 3 --skip="*.po,*.ts,./src/3rdParty,./src/Test"
-```
+
 List all typos found except translation files and some directories. Display them without terminal colors and with a quiet level of 3.
 
 ```sh
