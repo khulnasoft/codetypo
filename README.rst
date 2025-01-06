@@ -1,4 +1,4 @@
-# CodeTypo: Fix Common Misspellings in Text and Source Code Files
+# CodeTypo: Enhance Your Writing and Coding by Fixing Common Misspellings
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/codetypo)
 ![PyPI](https://img.shields.io/pypi/v/codetypo)
@@ -29,7 +29,7 @@ pip install codetypo
 
 ## Usage
 
-Below are some simple usage examples to demonstrate how the tool works. For exhaustive usage information, please check the output of `codetypo -h`.
+Below are some simple usage examples to demonstrate how the tool works, with brief explanations of what each command achieves for better context understanding. For exhaustive usage information, please check the output of `codetypo -h`.
 
 Run Codetypo in all files of the current directory:
 
@@ -61,7 +61,7 @@ List all typos found except translation files and some directories. Display them
 ```sh
 codetypo -i 3 -w
 ```
-Run interactive mode level 3 and write changes to file.
+Run interactive mode level 3, which allows you to review each suggested correction individually before applying it, and then write changes to file.
 
 ## Ignoring Words
 
