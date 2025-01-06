@@ -1,4 +1,4 @@
-CodeTypo: Enhance Your Writing and Coding by Fixing Common Misspellings
+CodeTypo: Fixing Common Misspellings
 ======================================================================
 
 .. image:: https://img.shields.io/pypi/pyversions/codetypo
