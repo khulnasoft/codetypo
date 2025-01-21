@@ -29,7 +29,7 @@ repos:
     rev: v5.0.0
     hooks:
       - id: no-commit-to-branch
-        args: [--branch, master]
+        args: [--branch, main]
       - id: check-yaml
         args: [--unsafe]
       - id: debug-statements
@@ -58,7 +58,7 @@ repos:
           - -d
           - "{extends: relaxed, rules: {line-length: {max: 90}}}"
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.6
+    rev: v0.9.1
     hooks:
       - id: ruff
       - id: ruff-format
@@ -67,6 +67,13 @@ repos:
     hooks:
       - id: prettier
         types_or: [yaml, markdown, html, css, scss, javascript, json]
+  - repo: https://github.com/khulnasoft/codetypo
+    rev: v2.3.0
+    hooks:
+      - id: codetypo
+        args: [--toml, pyproject-codetypo.precommit-toml]
+        additional_dependencies:
+          - tomli
   - repo: https://github.com/abravalheri/validate-pyproject
     rev: v0.23
     hooks:
@@ -80,3 +87,6 @@ repos:
           - pytest
           - tomli
           - types-chardet
+
+ci:
+  autoupdate_schedule: monthly
