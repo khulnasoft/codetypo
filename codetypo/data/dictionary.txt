@@ -206,8 +206,8 @@ aicraft->aircraft
 aiport->airport
 airbourne->airborne
 aircaft->aircraft
-aircrafts->aircraft
 aircrafts'->aircraft's
+aircrafts->aircraft
 airporta->airports
 airrcraft->aircraft
 aisian->asian
