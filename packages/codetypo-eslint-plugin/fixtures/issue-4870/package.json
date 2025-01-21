@@ -7,10 +7,10 @@
     "test": "eslint ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "ISC",
   "devDependencies": {
-    "@codetypo/eslint-plugin": "workspace:^",
-    "eslint": "^8.50.0"
+    "@codetypo/eslint-plugin": "workspace:*",
+    "eslint": "^9.18.0"
   }
 }

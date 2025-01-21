@@ -48,8 +48,8 @@
   },
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/hunspell-reader#readme",
   "dependencies": {
-    "@codetypo/codetypo-pipe": "workspace:^",
-    "@codetypo/codetypo-types": "workspace:^",
+    "@codetypo/codetypo-pipe": "workspace:*",
+    "@codetypo/codetypo-types": "workspace:*",
     "commander": "^13.0.0",
     "gensequence": "^7.0.0",
     "html-entities": "^2.5.2",

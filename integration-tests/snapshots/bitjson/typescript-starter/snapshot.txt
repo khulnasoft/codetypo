@@ -3,5 +3,446 @@ Repository: bitjson/typescript-starter
 Url: "https://github.com/bitjson/typescript-starter.git"
 Args: ["{README.md,.github/*.md,src/**/*.ts}"]
 Lines:
- CodeTypo: Files checked: 20, Issues found: 0 in 0 files.
- exit code: 0
+ Dictionary Error with (en_us) Error: ENOENT: no such file or directory, open './dictionaries/en_US/en_US.trie.gz'
+ exit code: 1
+-------------------------------------------
+-------------------------------------------
+.github/CONTRIBUTING.md:1:11      - Unknown word (Contributing) -- # Example Contributing Guidelines
+.github/CONTRIBUTING.md:1:24      - Unknown word (Guidelines)   -- Example Contributing Guidelines
+.github/CONTRIBUTING.md:1:3       - Unknown word (Example)    -- # Example Contributing Guidelines
+.github/CONTRIBUTING.md:3:12      - Unknown word (example)      -- This is an example of GitHub's contributing
+.github/CONTRIBUTING.md:3:205     - Unknown word (more)         -- repository-contributors/) for more information.
+.github/CONTRIBUTING.md:3:32      - Unknown word (contributing) -- example of GitHub's contributing guidelines file. Check
+.github/CONTRIBUTING.md:3:45      - Unknown word (guidelines)   -- GitHub's contributing guidelines file. Check out GitHub
+.github/CONTRIBUTING.md:3:82      - Unknown word (CONTRIBUTING) -- Check out GitHub's [CONTRIBUTING.md help center article
+.github/CONTRIBUTING.md:3:98      - Unknown word (help)         -- GitHub's [CONTRIBUTING.md help center article](https
+.github/ISSUE_TEMPLATE.md:1:9       - Unknown word (submitting) -- - **I'm submitting a ...**
+.github/ISSUE_TEMPLATE.md:4:16      - Unknown word (about)      -- [ ] question about the decisions made in
+.github/ISSUE_TEMPLATE.md:4:26      - Unknown word (decisions)  -- question about the decisions made in the repository
+.github/ISSUE_TEMPLATE.md:4:36      - Unknown word (made)       -- about the decisions made in the repository
+.github/ISSUE_TEMPLATE.md:4:7       - Unknown word (question)   -- [ ] question about the decisions
+.github/ISSUE_TEMPLATE.md:9:123     - Unknown word (have)        -- fix, links for us to have context, eg. StackOverflow
+.github/ISSUE_TEMPLATE.md:9:40      - Unknown word (explanation) -- information** (e.g. detailed explanation, stack traces, related
+.github/ISSUE_TEMPLATE.md:9:75      - Unknown word (issues)      -- stack traces, related issues, suggestions how to
+.github/PULL_REQUEST_TEMPLATE.md:1:10      - Unknown word (kind)       -- - **What kind of change does this
+.github/PULL_REQUEST_TEMPLATE.md:1:25      - Unknown word (does)       -- What kind of change does this PR introduce?*
+.github/PULL_REQUEST_TEMPLATE.md:1:38      - Unknown word (introduce)  -- change does this PR introduce?** (Bug fix, feature
+.github/PULL_REQUEST_TEMPLATE.md:1:5       - Unknown word (What)       -- - **What kind of change does
+.github/PULL_REQUEST_TEMPLATE.md:3:25      - Unknown word (behavior)   -- What is the current behavior?** (You can also link
+.github/PULL_REQUEST_TEMPLATE.md:3:46      - Unknown word (also)       -- behavior?** (You can also link to an open issue
+.github/PULL_REQUEST_TEMPLATE.md:3:73      - Unknown word (here)       -- link to an open issue here)
+CodeTypo: Files checked: 20, Issues found: 980 in 16 files with 4 errors.
+Dictionary Error with (en_us) Error: ENOENT: no such file or directory, open './dictionaries/en_US/en_US.trie.gz'
+Dictionary Error with (filetypes) Error: ENOENT: no such file or directory, open './dictionaries/filetypes/filetypes.txt.gz'
+Dictionary Error with (filetypes) Error: ENOENT: no such file or directory, open './dictionaries/filetypes/filetypes.txt.gz'
+Dictionary Error with (html-symbol-entities) Error: ENOENT: no such file or directory, open './dictionaries/html-symbol-entities/entities.txt.gz'
+Dictionary Error with (html-symbol-entities) Error: ENOENT: no such file or directory, open './dictionaries/html-symbol-entities/entities.txt.gz'
+Dictionary Error with (public-licenses) Error: ENOENT: no such file or directory, open './dictionaries/public-licenses/public-licenses.txt.gz'
+Dictionary Error with (public-licenses) Error: ENOENT: no such file or directory, open './dictionaries/public-licenses/public-licenses.txt.gz'
+Errors:
+README.md:104:66    - Unknown word (back)          -- coverage – source-mapped back to Typescript – and
+README.md:112:19    - Unknown word (analyzed)      -- The src folder is analyzed and documentation is
+README.md:112:63    - Unknown word (generated)     -- ocumentation is automatically generated using [TypeDoc](https
+README.md:118:14    - Unknown word (generates)     -- This command generates API documentation for
+README.md:118:78    - Unknown word (opens)         -- library in HTML format and opens it in a browser.
+README.md:11:13     - Unknown word (demo)       -- <img alt="demo of the typescript-starter
+README.md:120:17    - Unknown word (tracked)       -- Since types are tracked by Typescript, there
+README.md:120:40    - Unknown word (there's)       -- tracked by Typescript, there's no need to indicate
+README.md:120:59    - Unknown word (indicate)      -- there's no need to indicate types in JSDoc format
+README.md:122:55    - Unknown word (Pages)         -- documentation to [GitHub Pages](https://pages.github
+README.md:122:97    - Unknown word (following)     -- github.com/) use the following command:
+README.md:128:63    - Unknown word (proper)        -- be available at the proper GitHub Pages URL for
+README.md:134:79    - Unknown word (theme)         -- provide your own [TypeDoc theme](http://typedoc.org
+README.md:142:18    - Unknown word (that)          -- It's recommended that you install [`commitizen
+README.md:151:127   - Unknown word (managing)      -- nventional-changelog) to make managing releases easier. See
+README.md:151:136   - Unknown word (releases)      -- changelog) to make managing releases easier. See the [standard
+README.md:151:17    - Unknown word (tooled)        -- This project is tooled for [conventional changelog
+README.md:151:29    - Unknown word (conventional)  -- project is tooled for [conventional changelog](https://github
+README.md:158:122   - Unknown word (ready)         -- progress before you're ready to create a meaningful
+README.md:158:140   - Unknown word (meaningful)    -- re ready to create a meaningful commit.
+README.md:160:21    - Unknown word (preparation)   -- ## One-step publish preparation script
+README.md:162:1     - Unknown word (Bringing)      -- Bringing together many of the
+README.md:162:10    - Unknown word (together)      -- Bringing together many of the steps above
+README.md:162:37    - Unknown word (above)         -- together many of the steps above, this repo includes
+README.md:165:3     - Unknown word (Prepare)       -- # Prepare a standard release:
+README.md:166:9     - Unknown word (prepare)       -- npm run prepare-release
+README.md:16:127    - Unknown word (later)      -- nodejs.org/) `v10` or later.
+README.md:16:85     - Unknown word (need)       -- project generator. You'll need [Node](https://nodejs
+README.md:16:9      - Unknown word (simple)     -- Run one simple command to install and
+README.md:171:124   - Unknown word (could)         -- commit. (**Note: this could be destructive.**)
+README.md:171:133   - Unknown word (destructive)   -- Note: this could be destructive.**)
+README.md:171:17    - Unknown word (cleans)        -- - `hard-reset`: cleans the repo by removing
+README.md:171:36    - Unknown word (removing)      -- cleans the repo by removing all untracked files
+README.md:171:4     - Unknown word (hard)          -- - `hard-reset`: cleans the repo
+README.md:171:69    - Unknown word (resetting)     -- untracked files and resetting `--hard` to the latest
+README.md:171:95    - Unknown word (latest)        -- resetting `--hard` to the latest commit. (**Note: this
+README.md:177:140   - Unknown word (registry)      -- package on the `npm` registry:
+README.md:177:17    - Unknown word (finishes)      -- When the script finishes, it will log the final
+README.md:177:43    - Unknown word (final)         -- finishes, it will log the final command needed to push
+README.md:177:57    - Unknown word (needed)        -- log the final command needed to push the release
+README.md:180:12    - Unknown word (follow)        -- git push --follow-tags origin master;
+README.md:183:1     - Unknown word (Look)          -- Look over the release if
+README.md:183:74    - Unknown word (everything)    -- the command to publish everything.
+README.md:1:43      - Unknown word (starter)    -- "0" alt="typescript-starter dark logo" src="https
+README.md:1:51      - Unknown word (dark)       -- "typescript-starter dark logo" src="https://cloud
+README.md:1:56      - Unknown word (logo)       -- typescript-starter dark logo" src="https://cloud
+README.md:205:47    - Unknown word (pages)         -- push the docs to GitHub pages:
+README.md:211:12    - Unknown word (there)         -- ## Why are there two builds? (`main`
+README.md:213:115   - Unknown word (configured)    -- The `main` build is [configured to use the CommonJS
+README.md:213:258   - Unknown word (uses)          -- The `module` build [uses the new es6 module system
+README.md:213:38    - Unknown word (compiled)      -- typescript-starter` is compiled into two separate builds
+README.md:213:56    - Unknown word (separate)      -- is compiled into two separate builds: `main` and
+README.md:215:426   - Unknown word (giving)        -- the `module` field, giving them the ability to
+README.md:215:433   - Unknown word (them)          -- module` field, giving them the ability to statically
+README.md:215:442   - Unknown word (ability)       -- field, giving them the ability to statically analyze
+README.md:215:453   - Unknown word (statically)    -- them the ability to statically analyze your project
+README.md:215:507   - Unknown word (shake)         -- These tools can tree-shake your `module` build
+README.md:215:557   - Unknown word (they)          -- import only the code they need.
+README.md:215:72    - Unknown word (some)          -- the es6 module system, some projects which depend
+README.md:215:92    - Unknown word (depend)        -- some projects which depend on your project will
+README.md:219:4     - Unknown word (convention)    -- By convention, sample tests in this
+README.md:219:49    - Unknown word (adjacent)      -- in this project are adjacent to the files they test
+README.md:221:18    - Unknown word (easy)          -- - Such tests are easy to find.
+README.md:221:3     - Unknown word (Such)          -- - Such tests are easy to find
+README.md:222:16    - Unknown word (glance)       -- - You see at a glance if a part of your project
+README.md:222:49    - Unknown word (lacks)        -- part of your project lacks tests.
+README.md:223:20    - Unknown word (reveal)       -- - Nearby tests can reveal how a part works in
+README.md:223:3     - Unknown word (Nearby)       -- - Nearby tests can reveal how
+README.md:224:29    - Unknown word (inevitable)   -- you move the source (inevitable), you remember to move
+README.md:224:46    - Unknown word (remember)     -- source (inevitable), you remember to move the test.
+README.md:227:16    - Unknown word (taken)        -- (Bullet points taken from [the Angular Testing
+README.md:227:48    - Unknown word (Guide)        -- the Angular Testing Guide](https://angular.io
+README.md:22:21     - Unknown word (will)       -- The interactive CLI will help you create and
+README.md:22:56     - Unknown word (your)       -- create and configure your project automatically
+README.md:22:69     - Unknown word (automatically) -- configure your project automatically.
+README.md:231:100   - Unknown word (already)      -- desirable. This project is already configured to test any
+README.md:231:134   - Unknown word (spec)         -- configured to test any `*.spec.ts` files located in
+README.md:231:149   - Unknown word (located)      -- any `*.spec.ts` files located in the `src` directory
+README.md:231:184   - Unknown word (reorganize)   -- `src` directory, so reorganize your tests however you
+README.md:231:206   - Unknown word (however)      -- reorganize your tests however you'd like. You can
+README.md:231:25    - Unknown word (separating)   -- For some projects, separating tests from the code
+README.md:231:292   - Unknown word (than)         -- tests that test more than one file, or mix and
+README.md:231:324   - Unknown word (strategies)   -- file, or mix and match strategies (e.g. for other types
+README.md:231:73    - Unknown word (desirable)    -- code they test may be desirable. This project is already
+README.md:235:102   - Unknown word (alternative)  -- runtime (rather than an alternative like [ts-node](https
+README.md:235:24    - Unknown word (performed)    -- Tests are compiled and performed on the final builds
+README.md:235:285   - Unknown word (production)   -- are using [ts-node in production](https://github.com
+README.md:235:87    - Unknown word (rather)       -- standard Node.js runtime (rather than an alternative
+README.md:237:3     - Unknown word (However)      -- **However, if you're building
+README.md:237:63    - Unknown word (always)       -- library, you should always compile to javascript
+README.md:239:1     - Unknown word (Library)      -- Library authors sometimes make
+README.md:239:109   - Unknown word (seems)        -- typescript. Intuitively, this seems like a reasonable course
+README.md:239:122   - Unknown word (reasonable)   -- ntuitively, this seems like a reasonable course of action, especially
+README.md:239:133   - Unknown word (course)       -- seems like a reasonable course of action, especially
+README.md:239:151   - Unknown word (especially)   -- reasonable course of action, especially if all of your intended
+README.md:239:17    - Unknown word (sometimes)    -- Library authors sometimes make the mistake of
+README.md:239:177   - Unknown word (intended)     -- especially if all of your intended consumers will be using
+README.md:239:36    - Unknown word (mistake)      -- authors sometimes make the mistake of distributing their
+README.md:239:47    - Unknown word (distributing) -- make the mistake of distributing their libraries in typescript
+README.md:239:60    - Unknown word (their)        -- mistake of distributing their libraries in typescript
+README.md:239:66    - Unknown word (libraries)    -- of distributing their libraries in typescript. Intuitively
+README.md:239:9     - Unknown word (authors)      -- Library authors sometimes make the mistake
+README.md:239:91    - Unknown word (Intuitively)  -- libraries in typescript. Intuitively, this seems like a reasonable
+README.md:241:105   - Unknown word (major)        -- Upgrading to a new major version of TypeScript
+README.md:241:143   - Unknown word (requires)     -- TypeScript sometimes requires code changes, and must
+README.md:241:170   - Unknown word (must)         -- requires code changes, and must be done project-by-project
+README.md:241:178   - Unknown word (done)         -- changes, and must be done project-by-project.
+README.md:241:203   - Unknown word (Additionally) -- project-by-project. Additionally, if you're using the
+README.md:241:30    - Unknown word (different)    -- TypeScript has versions, and different versions of TypeScript
+README.md:241:327   - Unknown word (older)        -- consumers is using an older version in their application
+README.md:241:386   - Unknown word (unable)       -- their compiler will be unable to compile your library
+README.md:241:86    - Unknown word (Upgrading)    -- may not be compatible. Upgrading to a new major version
+README.md:247:1     - Unknown word (Previous)     -- Previous versions of `typescript
+README.md:247:136   - Unknown word (since)        -- rollup). This feature has since been removed, since
+README.md:247:142   - Unknown word (been)         -- This feature has since been removed, since very
+README.md:247:147   - Unknown word (removed)      -- feature has since been removed, since very few libraries
+README.md:247:200   - Unknown word (bundled)      -- libraries should ever be pre-bundled.
+README.md:247:43    - Unknown word (included)     -- typescript-starter` included browser bundling using
+README.md:249:105   - Unknown word (reliably)     -- nnecessary, since Node.js can reliably resolve dependencies
+README.md:249:178   - Unknown word (difficult)    -- make debugging more difficult.
+README.md:249:74    - Unknown word (unnecessary)  -- bundling is especially unnecessary, since Node.js can reliably
+README.md:24:119    - Unknown word (want)          -- this project if you want to contribute. If you
+README.md:24:127    - Unknown word (contribute)    -- project if you want to contribute. If you find this project
+README.md:24:146    - Unknown word (find)          -- to contribute. If you find this project useful
+README.md:24:164    - Unknown word (useful)        -- you find this project useful, please consider [leaving
+README.md:24:172    - Unknown word (please)        -- this project useful, please consider [leaving a
+README.md:24:179    - Unknown word (consider)      -- project useful, please consider [leaving a star](https
+README.md:24:189    - Unknown word (leaving)       -- useful, please consider [leaving a star](https://github
+README.md:24:19     - Unknown word (includes)      -- > Since this repo includes [the CLI and it's tests
+README.md:24:266    - Unknown word (others)        -- starter/stargazers) so others can find it. Thanks
+README.md:24:286    - Unknown word (Thanks)        -- others can find it. Thanks!
+README.md:24:3      - Unknown word (Since)         -- > Since this repo includes
+README.md:251:113   - Unknown word (Very)         -- own build tooling**. Very few serious applications
+README.md:251:122   - Unknown word (serious)      -- tooling**. Very few serious applications are manually
+README.md:251:147   - Unknown word (manually)     -- serious applications are manually bundling their javascript
+README.md:251:77    - Unknown word (likely)       -- pplication, **the application likely has its own build tooling
+README.md:253:1     - Unknown word (Your)         -- Your library is most useful
+README.md:253:155   - Unknown word (exact)        -- Consumers can import the exact es6 exports they need
+README.md:253:17    - Unknown word (most)         -- Your library is most useful to downstream
+README.md:253:58    - Unknown word (clean)        -- downstream consumers as a clean, modular codebase, properly
+README.md:253:65    - Unknown word (modular)      -- consumers as a clean, modular codebase, properly exporting
+README.md:253:83    - Unknown word (properly)     -- clean, modular codebase, properly exporting features using
+README.md:253:92    - Unknown word (exporting)    -- modular codebase, properly exporting features using es6 exports
+README.md:257:14    - Unknown word (complex)      -- In the past, complex javascript libraries
+README.md:257:163   - Unknown word (Most)         -- application for the browser. Most of these solutions work
+README.md:257:171   - Unknown word (these)        -- the browser. Most of these solutions work by allowing
+README.md:257:195   - Unknown word (allowing)     -- these solutions work by allowing library developers to
+README.md:257:212   - Unknown word (developers)   -- by allowing library developers to extensively configure
+README.md:257:226   - Unknown word (extensively)  -- library developers to extensively configure and manually
+README.md:257:270   - Unknown word (various)      -- and manually override various dependencies with respective
+README.md:257:296   - Unknown word (respective)   -- various dependencies with respective browser versions.
+README.md:257:8     - Unknown word (past)         -- In the past, complex javascript
+README.md:259:14    - Unknown word (where)        -- For example, where a Node.js application
+README.md:259:143   - Unknown word (would)        -- , a browser version would need to fall back to
+README.md:259:157   - Unknown word (fall)         -- version would need to fall back to a polyfill-like
+README.md:259:198   - Unknown word (dependency)   -- polyfill-like alternative dependency like [`crypto-browserify
+README.md:259:42    - Unknown word (might)        -- Node.js application might use Node.js' built-in
+README.md:261:149   - Unknown word (While)        -- different consumers. While browser consumers may
+README.md:261:186   - Unknown word (native)       -- consumers may import a native JavaScript crypto implementat
+README.md:261:211   - Unknown word (implementation) -- native JavaScript crypto implementation which your library exports
+README.md:261:272   - Unknown word (choose)         -- exports, Node.js users can choose to import a different
+README.md:261:54    - Unknown word (longer)       -- configuration is no longer necessary. Your library
+README.md:261:61    - Unknown word (necessary)    -- configuration is no longer necessary. Your library can now
+README.md:263:117   - Unknown word (Native)         -- sha256`, and `sha256Native`. Browser consumers
+README.md:263:156   - Unknown word (able)           -- consumers will not be able to import `sha256Native
+README.md:263:285   - Unknown word (throw)          -- (their bundler will throw an error). Node.js users
+README.md:263:352   - Unknown word (normally)       -- be able to import it normally. Each consumer can import
+README.md:263:86    - Unknown word (exported)       -- different functions are exported, `sha256`, and `sha
+README.md:265:135   - Unknown word (while)          -- sometimes import one feature while Node.js users import
+README.md:265:15    - Unknown word (downside)       -- One perceived downside of this solution is
+README.md:265:182   - Unknown word (argument)       -- another. While this argument has merit, we should
+README.md:265:195   - Unknown word (merit)          -- While this argument has merit, we should weigh it
+README.md:265:212   - Unknown word (weigh)          -- has merit, we should weigh it against the benefits
+README.md:265:221   - Unknown word (against)        -- we should weigh it against the benefits.
+README.md:265:233   - Unknown word (benefits)       -- weigh it against the benefits.
+README.md:265:5     - Unknown word (perceived)      -- One perceived downside of this solution
+README.md:265:52    - Unknown word (complicates)    -- solution is that it complicates the library's API. Browser
+README.md:265:68    - Unknown word (library's)      -- that it complicates the library's API. Browser consumers
+README.md:267:1     - Unknown word (Providing)      -- Providing a public API where consumer
+README.md:267:106   - Unknown word (comes)          -- is desirable, but it comes at the cost of significant
+README.md:267:127   - Unknown word (significant)    -- comes at the cost of significant configuration and complexity
+README.md:267:157   - Unknown word (complexity)     -- significant configuration and complexity. In many cases, it requires
+README.md:267:177   - Unknown word (cases)          -- complexity. In many cases, it requires that code
+README.md:267:209   - Unknown word (aware)          -- requires that code be aware of its environment at
+README.md:267:246   - Unknown word (requiring)      -- environment at runtime, requiring additional complexity
+README.md:267:51    - Unknown word (same)           -- consumer code is the same between browsers and
+README.md:267:64    - Unknown word (browsers)       -- is the same between browsers and Node.js is desirable
+README.md:269:109   - Unknown word (encourage)      -- environment, and then encourage the use of es6 import
+README.md:269:141   - Unknown word (aliasing)       -- the use of es6 import aliasing to standardize between
+README.md:269:153   - Unknown word (standardize)    -- import aliasing to standardize between them.
+README.md:269:3     - Unknown word (better)         -- A better way to provide this
+README.md:269:65    - Unknown word (similar)        -- experience is to provide similar APIs for each environment
+README.md:271:176   - Unknown word (loaders)        -- standard API without loaders or dependency substitution
+README.md:271:198   - Unknown word (substitution)   -- loaders or dependency substitution hacks.
+README.md:271:211   - Unknown word (hacks)          -- dependency substitution hacks.
+README.md:277:10    - Unknown word (portable)       -- // fully-portable code
+README.md:28:129    - Unknown word (finished)      -- tc39/proposals) or [finished](https://github.com
+README.md:28:48     - Unknown word (stable)        -- javascript** – with stable ESNext features – today
+README.md:28:73     - Unknown word (today)         -- stable ESNext features – today ([stage 3](https://github
+README.md:291:235   - Unknown word (formatted)      -- commit must be properly formatted.
+README.md:293:195   - Unknown word (keep)           -- typicode/husky). However, keep in mind that commit
+README.md:293:203   - Unknown word (mind)           -- husky). However, keep in mind that commit hooks can
+README.md:293:233   - Unknown word (confusing)      -- commit hooks can be confusing, especially for new
+README.md:293:263   - Unknown word (contributors)   -- especially for new contributors. They also interfere
+README.md:293:277   - Unknown word (They)           -- for new contributors. They also interfere with
+README.md:293:287   - Unknown word (interfere)      -- contributors. They also interfere with some development
+README.md:293:41    - Unknown word (conventions)    -- commits follow the proper conventions, you can use a package
+README.md:295:125   - Unknown word (Otherwise)      -- this may be a good fit. Otherwise, this setup may raise
+README.md:295:141   - Unknown word (setup)          -- fit. Otherwise, this setup may raise the barrier
+README.md:295:151   - Unknown word (raise)          -- Otherwise, this setup may raise the barrier to one-off
+README.md:295:161   - Unknown word (barrier)        -- setup may raise the barrier to one-off contributions
+README.md:295:194   - Unknown word (slightly)       -- one-off contributions slightly.
+README.md:295:37    - Unknown word (primarily)      -- is private, or will primarily receive contributions
+README.md:295:55    - Unknown word (contributions)  -- will primarily receive contributions from long-running contributor
+README.md:297:12    - Unknown word (maintainer)     -- Note, as a maintainer, if you manage your
+README.md:297:158   - Unknown word (descriptive)    -- properly formatted, descriptive commit messages when
+README.md:297:191   - Unknown word (merging)        -- commit messages when merging each pull request. This
+README.md:297:244   - Unknown word (valuable)       -- is likely to be more valuable than trying to force
+README.md:297:258   - Unknown word (trying)         -- be more valuable than trying to force one-time contributor
+README.md:297:299   - Unknown word (adhere)         -- time contributors to adhere to commit conventions
+README.md:297:364   - Unknown word (consistent)     -- also maintain a more consistent language style. Because
+README.md:297:416   - Unknown word (choice)         -- Because this is the best choice for the vast majority
+README.md:297:431   - Unknown word (vast)           -- best choice for the vast majority of projects
+README.md:297:436   - Unknown word (majority)       -- choice for the vast majority of projects, `typescript
+README.md:29:123    - Unknown word (improve)       -- chance-2caaf7fabe61) to improve tooling, linting, and
+README.md:29:131    - Unknown word (tooling)       -- caaf7fabe61) to improve tooling, linting, and documentation
+README.md:29:140    - Unknown word (linting)       -- to improve tooling, linting, and documentation generation
+README.md:29:167    - Unknown word (generation)    -- linting, and documentation generation
+README.md:29:4      - Unknown word (Optionally)    -- - [Optionally use typescript](https
+README.md:304:104   - Unknown word (globally)       -- link` to install it globally.
+README.md:304:15    - Unknown word (welcome)        -- Pull Requests welcome! To work on the CLI
+README.md:30:113    - Unknown word (capable)       -- shakable** for consumers capable of using [es6 imports
+README.md:30:124    - Unknown word (using)         -- consumers capable of using [es6 imports](https
+README.md:30:195    - Unknown word (like)          -- rollup/wiki/pkg.module) (like [Rollup](http://rollupjs
+README.md:30:27     - Unknown word (module)        -- Export as a [javascript module](http://jsmodules.io
+README.md:30:58     - Unknown word (making)        -- http://jsmodules.io/), making your work **fully tree
+README.md:30:77     - Unknown word (fully)         -- making your work **fully tree-shakable** for
+README.md:30:88     - Unknown word (shakable)      -- your work **fully tree-shakable** for consumers capable
+README.md:314:5     - Unknown word (Manual)         -- ### Manual testing
+README.md:316:55    - Unknown word (STARTER)        -- use the `TYPESCRIPT_STARTER_REPO_URL` environment
+README.md:31:15     - Unknown word (declarations)  -- - Export type declarations to improve your downstream
+README.md:31:67     - Unknown word (experience)    -- downstream development experience
+README.md:324:70    - Unknown word (such)           -- to any valid Git URL, such as your fork of this
+README.md:32:3      - Unknown word (Backwards)     -- - Backwards compatibility for Node
+README.md:330:44    - Unknown word (provided)       -- REPO_BRANCH` is not provided, it will default to
+README.md:334:102   - Unknown word (allows)         -- launch configuration also allows you to immediately build
+README.md:334:116   - Unknown word (immediately)    -- figuration also allows you to immediately build and step through
+README.md:336:29    - Unknown word (Diffs)          -- Integration Test Result Diffs
+README.md:338:112   - Unknown word (applying)       -- cli` before and after applying your changes:
+README.md:33:19     - Unknown word (flexible)      -- - Both strict and flexible [typescript configurations
+README.md:33:3      - Unknown word (Both)          -- - Both strict and flexible
+README.md:33:8      - Unknown word (strict)        -- - Both strict and flexible [typescript
+README.md:344:108   - Unknown word (easily)         -- directory, allowing you to easily review the differences
+README.md:344:57    - Unknown word (committed)      -- test results will be committed to the `diff` directory
+README.md:349:5     - Unknown word (stash)          -- git stash && npm run check-cli
+README.md:35:16     - Unknown word (nice)          -- So we can have nice things:
+README.md:37:158    - Unknown word (maintain)      -- typescript-projects/) to maintain
+README.md:37:56     - Unknown word (mess)          -- or JSON) [without a mess of JSDoc tags](https
+README.md:38:23     - Unknown word (concurrent)    -- Collocated, atomic, concurrent unit tests with [AVA
+README.md:38:3      - Unknown word (Collocated)    -- - Collocated, atomic, concurrent
+README.md:39:10     - Unknown word (mapped)        -- - Source-mapped code coverage reports
+README.md:40:3      - Unknown word (Configurable)  -- - Configurable code coverage testing
+README.md:41:25     - Unknown word (formatting)    -- Automatic linting and formatting using [`typescript-eslint
+README.md:43:17     - Unknown word (good)          -- ## But first, a good editor
+README.md:45:1      - Unknown word (Before)        -- Before you start, consider
+README.md:47:108    - Unknown word (provide)       -- typescript support can provide helpful autocomplete
+README.md:47:116    - Unknown word (helpful)       -- support can provide helpful autocomplete, inline
+README.md:47:44     - Unknown word (below)         -- visualstudio.com/) (below) is a popular option
+README.md:47:56     - Unknown word (popular)       -- sualstudio.com/) (below) is a popular option. Editors with
+README.md:49:1      - Unknown word (Also)          -- Also consider installing
+README.md:49:15     - Unknown word (installing)    -- Also consider installing editor extensions for
+README.md:49:162    - Unknown word (These)         -- prettier/prettier-vscode). These extensions automatically
+README.md:49:238    - Unknown word (quickly)       -- time you save, and may quickly become invaluable.
+README.md:49:246    - Unknown word (become)        -- save, and may quickly become invaluable.
+README.md:49:253    - Unknown word (invaluable)    -- and may quickly become invaluable.
+README.md:55:3      - Unknown word (Developing)    -- # Developing with typescript-starter
+README.md:65:4      - Unknown word (another)       -- In another terminal tab/window
+README.md:6:4       - Unknown word (Travis)     -- [![Travis](https://img.shields
+README.md:71:36     - Unknown word (much)          -- tasks make development much faster and more interactive
+README.md:71:41     - Unknown word (faster)        -- make development much faster and more interactive
+README.md:71:70     - Unknown word (They're)       -- and more interactive. They're particularly helpful
+README.md:71:78     - Unknown word (particularly)  -- interactive. They're particularly helpful for [TDD](https
+README.md:73:136    - Unknown word (develop)       -- source files). As you develop, you can add tests for
+README.md:73:171    - Unknown word (functionality) -- can add tests for new functionality – which will initially
+README.md:73:198    - Unknown word (initially)     -- functionality – which will initially fail – before developing
+README.md:73:215    - Unknown word (before)        -- will initially fail – before developing the new functional
+README.md:73:222    - Unknown word (developing)    -- initially fail – before developing the new functionality
+README.md:73:296    - Unknown word (rebuilt)       -- any changes will be rebuilt and retested.
+README.md:73:308    - Unknown word (retested)      -- will be rebuilt and retested.
+README.md:73:44     - Unknown word (entire)        -- build and watch the entire project for changes
+README.md:73:75     - Unknown word (both)          -- project for changes (to both the library source files
+README.md:73:84     - Unknown word (library)       -- changes (to both the library source files and test
+README.md:76:20     - Unknown word (capture)       -- <!-- PR request: capture the magic of using a
+README.md:77:24     - Unknown word (starter's)     -- img alt="typescript-starter's watch task" src="https
+README.md:80:12     - Unknown word (changed)       -- Since only changed files are rebuilt and
+README.md:80:66     - Unknown word (remains)       -- retested, this workflow remains fast even for large
+README.md:80:79     - Unknown word (even)          -- workflow remains fast even for large projects.
+README.md:80:88     - Unknown word (large)         -- remains fast even for large projects.
+README.md:82:11     - Unknown word (stronger)      -- ## Enable stronger type checking (recommended
+README.md:82:25     - Unknown word (checking)      -- Enable stronger type checking (recommended)
+README.md:82:35     - Unknown word (recommended)   -- stronger type checking (recommended)
+README.md:84:144    - Unknown word (many)          -- get started without many warnings from Typescript
+README.md:84:149    - Unknown word (warnings)      -- started without many warnings from Typescript.
+README.md:84:17     - Unknown word (started)       -- To make getting started easier, the default
+README.md:84:25     - Unknown word (easier)        -- make getting started easier, the default `tsconfig
+README.md:84:72     - Unknown word (very)          -- tsconfig.json` is using a very flexible configuration
+README.md:84:9      - Unknown word (getting)       -- To make getting started easier, the
+README.md:86:11     - Unknown word (additional)    -- To enable additional Typescript type checking
+README.md:86:121    - Unknown word (commented)     -- projects), review the commented-out lines in your [typescript
+README.md:86:64     - Unknown word (idea)          -- checking features (a good idea for mission-critical
+README.md:8:11      - Unknown word (stars)      -- [![GitHub stars](https://img.shields
+src/cli/args.ts:100:7     - Unknown word (Consider)     -- Consider using 'npx typescript
+src/cli/args.ts:111:9     - Unknown word (important)    -- * (important for test performance
+src/cli/args.ts:20:32     - Unknown word (stricter)   -- strict enable stricter type-checking
+src/cli/args.ts:21:7      - Unknown word (travis)     -- --travis include Travis
+src/cli/args.ts:25:10     - Unknown word (cspell)     -- --no-cspell don't include
+src/cli/args.ts:26:10     - Unknown word (editorconfig) -- --no-editorconfig don't include .editorconfig
+src/cli/args.ts:27:10     - Unknown word (functional)   -- --no-functional don't enable eslint
+src/cli/args.ts:4:28      - Unknown word (Starter)    -- { Runner, TypescriptStarterArgsOptions, validateName
+src/cli/args.ts:99:45     - Unknown word (outdated)     -- typescript-starter is outdated.
+src/cli/cli.ts:4:10      - Unknown word (inquire)    -- import { inquire } from './inquire';
+src/cli/cli.ts:7:13      - Unknown word (Intro)      -- import { getIntro, hasCLIOptions, TypescriptSta
+src/cli/inquire.ts:130:18    - Unknown word (More)       -- message: '🚀 More fun stuff:',
+src/cli/inquire.ts:130:27    - Unknown word (stuff)      -- message: '🚀 More fun stuff:',
+src/cli/inquire.ts:132:12    - Unknown word (checkbox)   -- type: 'checkbox',
+src/cli/inquire.ts:19:5      - Unknown word (choices)    -- choices: [
+src/cli/inquire.ts:1:10      - Unknown word (Distinct)   -- import { DistinctQuestion, prompt } from
+src/cli/inquire.ts:60:84     - Unknown word (built)      -- to Node.js globals or built-in modules`,
+src/cli/inquire.ts:75:12     - Unknown word (answers)    -- when: (answers) => answers.type ==
+src/cli/tasks.ts:124:39    - Unknown word (bitjson)      -- commit\n\nCreated with bitjson/typescript-starter@
+src/cli/tasks.ts:13:13     - Unknown word (Placeholders) -- export enum Placeholders {
+src/cli/tasks.ts:145:22    - Unknown word (Installation) -- throw new Error(`Installation failed. You'll need
+src/cli/tasks.ts:14:12     - Unknown word (YOUR)         -- email = 'YOUR_EMAIL',
+src/cli/tasks.ts:151:39    - Unknown word (ensures)      -- than `master`. This ensures we get the exact files
+src/cli/tasks.ts:152:36    - Unknown word (cloned)       -- version of the CLI. (If we cloned master, changes merged
+src/cli/tasks.ts:152:59    - Unknown word (merged)       -- cloned master, changes merged to master, but
+src/cli/tasks.ts:153:32    - Unknown word (unexpected)   -- released, may cause unexpected results.)
+src/cli/tasks.ts:19:35     - Unknown word (factories)    -- implement these as function factories to make unit testing
+src/cli/tasks.ts:22:3      - Unknown word (spawner)      -- spawner: typeof execa,
+src/cli/tasks.ts:53:40     - Unknown word (Please)       -- installed on your PATH. Please install Git and try
+src/cli/tasks.ts:53:67     - Unknown word (again)        -- install Git and try again.
+src/cli/tasks.ts:78:3      - Unknown word (fetcher)      -- fetcher: any
+src/cli/tests/cli.integration.spec.ts:10:8      - Unknown word (relevant)   -- * the relevant hash below. You may
+src/cli/tests/cli.integration.spec.ts:117:13    - Unknown word (trimmed)    -- const trimmedNormalizedFilePath =
+src/cli/tests/cli.integration.spec.ts:11:14     - Unknown word (certain)    -- * between a certain file in each test project
+src/cli/tests/cli.integration.spec.ts:131:51    - Unknown word (guarantees) -- file fingerprint tests guarantees that every
+src/cli/tests/cli.integration.spec.ts:134:12    - Unknown word (trade)      -- * Here we trade complete assurance that
+src/cli/tests/cli.integration.spec.ts:134:27    - Unknown word (assurance)  -- Here we trade complete assurance that `package.json`
+src/cli/tests/cli.integration.spec.ts:134:4     - Unknown word (Here)       -- * Here we trade complete assurance
+src/cli/tests/cli.integration.spec.ts:134:60    - Unknown word (correct)    -- that `package.json` is correct for much less
+src/cli/tests/cli.integration.spec.ts:135:4     - Unknown word (noisy)      -- * noisy build results.
+src/cli/tests/cli.integration.spec.ts:142:31    - Unknown word (parses)     -- TestDirectories.one}: parses CLI arguments, handles
+src/cli/tests/cli.integration.spec.ts:142:53    - Unknown word (handles)    -- parses CLI arguments, handles default options`, async
+src/cli/tests/cli.integration.spec.ts:148:16    - Unknown word (entered)    -- // (user entered `-d='example description
+src/cli/tests/cli.integration.spec.ts:2:23      - Unknown word (actually)   -- Tests in this file actually run the CLI and attempt
+src/cli/tests/cli.integration.spec.ts:2:48      - Unknown word (attempt)    -- actually run the CLI and attempt to validate its behavior
+src/cli/tests/cli.integration.spec.ts:32:51     - Unknown word (Proceed)    -- tests make real changes. Proceed with caution.
+src/cli/tests/cli.integration.spec.ts:32:64     - Unknown word (caution)    -- changes. Proceed with caution.
+src/cli/tests/cli.integration.spec.ts:32:8      - Unknown word (mocked)     -- * not mocked, and these tests make
+src/cli/tests/cli.integration.spec.ts:376:7     - Unknown word (silence)    -- const silenceConsole = (console: Console
+src/cli/tests/cli.integration.spec.ts:379:8     - Unknown word (mock)       -- // mock console.log to silence
+src/cli/tests/cli.integration.spec.ts:40:6      - Unknown word (symbolic)   -- '--symbolic-full-name',
+src/cli/tests/cli.integration.spec.ts:41:6      - Unknown word (abbrev)     -- '--abbrev-ref',
+src/cli/tests/cli.integration.spec.ts:45:49     - Unknown word (providing)  -- detached HEAD state, providing --branch to `git clone
+src/cli/tests/cli.integration.spec.ts:5:75      - Unknown word (hashes)     -- test, and compare the hashes
+src/cli/tests/cli.integration.spec.ts:63:3      - Unknown word (four)       -- four = 'test-4',
+src/cli/tests/cli.integration.spec.ts:64:3      - Unknown word (five)       -- five = 'test-5',
+src/cli/tests/cli.integration.spec.ts:6:12      - Unknown word (approved)   -- * to the "approved" hashes in this file
+src/cli/tests/cli.integration.spec.ts:80:30     - Unknown word (collides)   -- errors if project name collides with an existing path
+src/cli/tests/cli.integration.spec.ts:88:40     - Unknown word (kebab)      -- project name is not in kebab-case', async (t) =>
+src/cli/tests/cli.integration.spec.ts:9:67      - Unknown word (simply)     -- the file for accuracy, simply update
+src/cli/tests/cli.unit.spec.ts:124:17    - Unknown word (shows)      -- test('ascii art shows if stdout has 85+ columns
+src/cli/tests/cli.unit.spec.ts:125:9     - Unknown word (jumbo)      -- const jumbo = getIntro(100);
+src/cli/tests/cli.unit.spec.ts:126:9     - Unknown word (snippet)    -- const snippet = `| __| | | | '_ \
+src/cli/tests/cli.unit.spec.ts:177:13    - Unknown word (Fetcher)    -- const mockFetcher = async (email: string
+src/cli/tests/cli.unit.spec.ts:203:20    - Unknown word (suppresses) -- test('getUserInfo: suppresses errors and returns empty
+src/cli/tests/cli.unit.spec.ts:231:22    - Unknown word (spawns)     -- test('initialCommit: spawns 3 times', async (t)
+src/cli/tests/cli.unit.spec.ts:251:77    - Unknown word (aren't)     -- STARTER_REPO_URL/BRANCH aren't set", async (t) =>
+src/cli/tests/cli.unit.spec.ts:35:7      - Unknown word (pretend)    -- const pretendLatestVersionIs = (version
+src/cli/tests/cli.unit.spec.ts:50:7      - Unknown word (doesn't)    -- test("doesn't error if not outdated
+src/cli/tests/cli.unit.spec.ts:57:33     - Unknown word (fails)      -- errors if update-notifier fails', async (t) => {
+src/cli/typescript-starter.ts:119:31    - Unknown word (spelling)   -- cspell ? {} : { 'test:spelling': undefined }),
+src/cli/typescript-starter.ts:148:18    - Unknown word (succeed)    -- spinnerPackage.succeed();
+src/cli/typescript-starter.ts:179:30    - Unknown word (Deleting)   -- spinnerDelete = ora('Deleting unnecessary files')
+src/cli/typescript-starter.ts:226:38    - Unknown word (Removing)   -- spinnerTsconfigModule = ora('Removing traces of the CLI')
+src/cli/typescript-starter.ts:324:33    - Unknown word (lite)       -- '"plugin:functional/lite",\n',
+src/cli/typescript-starter.ts:54:16     - Unknown word (Cloned)     -- ${chalk.dim(`Cloned at commit: ${commitHash
+src/cli/typescript-starter.ts:57:9      - Unknown word (spinner)    -- const spinnerPackage = ora('Updating
+src/cli/typescript-starter.ts:61:9      - Unknown word (kept)       -- const keptDevDeps: ReadonlyArray
+src/cli/typescript-starter.ts:88:22     - Unknown word (retain)     -- * dependencies to retain for Node.js applications
+src/cli/typescript-starter.ts:90:13     - Unknown word (Kept)       -- const nodeKeptDeps: ReadonlyArray<string
+src/cli/typescript-starter.ts:90:50     - Unknown word (bitauth)    -- ReadonlyArray<string> = ['@bitauth/libauth'];
+src/cli/typescript-starter.ts:90:58     - Unknown word (libauth)    -- string> = ['@bitauth/libauth'];
+src/cli/utils.ts:81:14     - Unknown word (Smaller)    -- const asciiSmaller = `
+src/cli/utils.ts:98:16     - Unknown word (normalizes) -- * This method normalizes with POSIX.
+src/lib/async.ts:21:18     - Unknown word (Slow)       -- const somethingSlow = (index: 0 | 1 | 2
+src/lib/async.ts:2:71      - Unknown word (leveling)   -- es7 async/await down-leveling).
+src/lib/hash.ts:6:4       - Unknown word (Calculate)  -- * Calculate the sha256 digest of
+src/lib/number.ts:18:27     - Unknown word (describing) -- param value - Comment describing the `value` parameter
+src/lib/number.ts:27:4      - Unknown word (Raise)      -- * Raise the value of the first
+src/lib/number.ts:2:4       - Unknown word (Multiplies) -- * Multiplies a value by 2. (Also
+src/lib/number.ts:43:30     - Unknown word (exponentiate) -- param base - the base to exponentiate
+src/types/example.d.ts:22:9      - Unknown word (whatever)    -- const whatever: any;
+src/types/example.d.ts:7:31      - Unknown word (Definitely) -- you can install the DefinitelyTyped
+src/types/example.d.ts:7:4       - Unknown word (Often)      -- * Often, you can install the
+src/types/example.d.ts:9:55      - Unknown word (contributed) -- However, if no one has yet contributed definitions

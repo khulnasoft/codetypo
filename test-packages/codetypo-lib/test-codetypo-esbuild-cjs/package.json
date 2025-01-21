@@ -16,7 +16,7 @@
     "test:esm": "node bin.mjs README.md",
     "test:cjs": "node bin.cjs"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "engines": {
     "node": ">=18"

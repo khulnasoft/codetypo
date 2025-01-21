@@ -3,5 +3,7 @@ Repository: typescript-eslint/typescript-eslint
 Url: "https://github.com/typescript-eslint/typescript-eslint.git"
 Args: ["--config=.codetypo.json","**/*.{md,ts,js}"]
 Lines:
- CodeTypo: Files checked: 1279, Issues found: 0 in 0 files.
- exit code: 0
+ Configuration Error: Failed to read config file: "./typescript-eslint/typescript-eslint/.codetypo.json"
+ exit code: 1
+-------------------------------------------
+CodeTypo: Files checked: 0, Issues found: 0 in 0 files with 1 error.

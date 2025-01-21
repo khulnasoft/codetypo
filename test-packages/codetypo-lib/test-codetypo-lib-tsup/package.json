@@ -14,7 +14,7 @@
     "clean-build": "pnpm run clean && pnpm run build",
     "test": "node ./test-bin.mjs"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "devDependencies": {
     "codetypo-lib": "workspace:*"

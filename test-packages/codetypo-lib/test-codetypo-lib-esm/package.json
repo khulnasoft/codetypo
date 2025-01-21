@@ -12,7 +12,7 @@
     "compile": "tsc -p .",
     "test": "node bin.mjs"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "codetypo-lib": "workspace:*"

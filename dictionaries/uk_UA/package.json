@@ -44,6 +44,6 @@
     "codetypo-ext.json"
   ],
   "devDependencies": {
-    "dictionary-uk": "^4.0.0"
+    "dictionary-uk": "workspace:*"
   }
 }

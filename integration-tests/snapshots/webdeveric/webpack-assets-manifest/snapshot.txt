@@ -3,5 +3,257 @@ Repository: webdeveric/webpack-assets-manifest
 Url: "https://github.com/webdeveric/webpack-assets-manifest.git"
 Args: ["./{.github,src,test}/**/*.{js,json}","./*.{md,js}","./package.json"]
 Lines:
- CodeTypo: Files checked: 19, Issues found: 0 in 0 files.
- exit code: 0
+ Dictionary Error with (en_us) Error: ENOENT: no such file or directory, open './dictionaries/en_US/en_US.trie.gz'
+ exit code: 1
+-------------------------------------------
+-------------------------------------------
+CONTRIBUTING.md:1:3       - Unknown word (Contributing) -- # Contributing
+CONTRIBUTING.md:20:43     - Unknown word (Please)       -- generate a coverage report. Please keep the code coverage
+CONTRIBUTING.md:20:50     - Unknown word (keep)         -- coverage report. Please keep the code coverage at
+CONTRIBUTING.md:28:123    - Unknown word (discussed)    -- issue first so it can be discussed.
+CONTRIBUTING.md:28:19     - Unknown word (welcome)      -- Pull requests are welcome. If you want to add
+CONTRIBUTING.md:28:35     - Unknown word (want)         -- are welcome. If you want to add a large feature
+CONTRIBUTING.md:28:49     - Unknown word (large)        -- If you want to add a large feature or breaking
+CONTRIBUTING.md:28:66     - Unknown word (breaking)     -- add a large feature or breaking change, please open
+CONTRIBUTING.md:28:83     - Unknown word (please)       -- or breaking change, please open an issue first
+CONTRIBUTING.md:3:4       - Unknown word (Setup)        -- ## Setup
+CONTRIBUTING.md:5:4       - Unknown word (bash)         -- ```bash
+CONTRIBUTING.md:9:16      - Unknown word (frozen)       -- pnpm install --frozen-lockfile
+CodeTypo: Files checked: 19, Issues found: 624 in 13 files with 4 errors.
+Dictionary Error with (en_us) Error: ENOENT: no such file or directory, open './dictionaries/en_US/en_US.trie.gz'
+Dictionary Error with (filetypes) Error: ENOENT: no such file or directory, open './dictionaries/filetypes/filetypes.txt.gz'
+Dictionary Error with (filetypes) Error: ENOENT: no such file or directory, open './dictionaries/filetypes/filetypes.txt.gz'
+Dictionary Error with (html-symbol-entities) Error: ENOENT: no such file or directory, open './dictionaries/html-symbol-entities/entities.txt.gz'
+Dictionary Error with (html-symbol-entities) Error: ENOENT: no such file or directory, open './dictionaries/html-symbol-entities/entities.txt.gz'
+Dictionary Error with (public-licenses) Error: ENOENT: no such file or directory, open './dictionaries/public-licenses/public-licenses.txt.gz'
+Dictionary Error with (public-licenses) Error: ENOENT: no such file or directory, open './dictionaries/public-licenses/public-licenses.txt.gz'
+Errors:
+SECURITY.md:13:16     - Unknown word (Vulnerability) -- ## Reporting a Vulnerability
+SECURITY.md:13:4      - Unknown word (Reporting)  -- ## Reporting a Vulnerability
+SECURITY.md:15:12     - Unknown word (issues)        -- Report any issues to me at `eric@webdeveric
+SECURITY.md:5:14      - Unknown word (major)      -- The last two major versions will be supported
+package.json:22:6      - Unknown word (subresource) -- "subresource",
+package.json:35:20     - Unknown word (cspell)      -- "spellcheck": "cspell --no-progress './{.github
+package.json:35:6      - Unknown word (spellcheck)  -- "spellcheck": "cspell --no-progress
+package.json:37:27     - Unknown word (reporter)    -- test:report": "nyc --reporter=lcov --reporter=text
+package.json:37:36     - Unknown word (lcov)        -- report": "nyc --reporter=lcov --reporter=text mocha
+package.json:43:68     - Unknown word (must)        -- progress --no-summary --no-must-find-files",
+package.json:43:73     - Unknown word (find)        -- no-summary --no-must-find-files",
+package.json:4:109     - Unknown word (hashed)     -- original filename with the hashed version.",
+package.json:4:39      - Unknown word (will)       -- This Webpack plugin will generate a JSON file
+package.json:4:65      - Unknown word (that)       -- generate a JSON file that matches the original
+package.json:4:70      - Unknown word (matches)    -- generate a JSON file that matches the original filename
+package.json:51:14     - Unknown word (Eric)        -- "name": "Eric King",
+package.json:54:17     - Unknown word (webdeveric)  -- "prettier": "@webdeveric/prettier-config",
+package.json:76:11     - Unknown word (spies)       -- "chai-spies": "^1.1.0",
+readme.md:107:11    - Unknown word (true)         -- Default: `true`
+readme.md:117:41    - Unknown word (relative)     -- save the manifest file relative to your webpack `output
+readme.md:117:9     - Unknown word (where)        -- This is where to save the manifest
+readme.md:125:9     - Unknown word (stored)       -- Data is stored in this object.
+readme.md:129:41    - Unknown word (passing)      -- between instances by passing in your own object in
+readme.md:131:20    - Unknown word (multi)        -- This is useful in [multi-compiler mode](https
+readme.md:131:35    - Unknown word (mode)         -- useful in [multi-compiler mode](https://github.com
+readme.md:131:9     - Unknown word (useful)       -- This is useful in [multi-compiler mode
+readme.md:134:28    - Unknown word (null)         -- data = Object.create(null);
+readme.md:149:11    - Unknown word (false)        -- Default: `false`
+readme.md:159:11    - Unknown word (spaces)       -- Number of spaces to use for pretty printing
+readme.md:159:29    - Unknown word (pretty)       -- of spaces to use for pretty printing.
+readme.md:159:36    - Unknown word (printing)     -- spaces to use for pretty printing.
+readme.md:161:6     - Unknown word (replacer)     -- ### `replacer`
+readme.md:167:2     - Unknown word (Replacer)     -- [Replacer reference](https://developer
+readme.md:169:50    - Unknown word (instead)      -- the `transform` hook instead.
+readme.md:169:8     - Unknown word (probably)     -- You'll probably want to use the `transform
+readme.md:177:13    - Unknown word (regular)      -- This is the regular expression used to find
+readme.md:177:78    - Unknown word (never)        -- extensions. You'll probably never need to change this
+readme.md:177:84    - Unknown word (need)         -- You'll probably never need to change this.
+readme.md:185:28    - Unknown word (using)        -- the manifest to disk using `fs`.
+readme.md:187:119   - Unknown word (during)       -- process your assets during development,
+readme.md:187:27    - Unknown word (another)      -- warning: If you're using another language for your site
+readme.md:187:53    - Unknown word (site)         -- another language for your site and you're using `webpack
+readme.md:188:101   - Unknown word (actually)     -- the manifest file is actually written to disk and
+readme.md:188:110   - Unknown word (written)      -- manifest file is actually written to disk and not kept
+readme.md:188:134   - Unknown word (kept)         -- written to disk and not kept only in memory.
+readme.md:188:147   - Unknown word (memory)       -- and not kept only in memory.
+readme.md:188:40    - Unknown word (provide)      -- writeToDisk: true` and provide an absolute path in
+readme.md:188:51    - Unknown word (absolute)     -- true` and provide an absolute path in `output` so
+readme.md:196:24    - Unknown word (alphabetically) -- The manifest is sorted alphabetically by default. You can
+readme.md:196:59    - Unknown word (turn)           -- by default. You can turn off sorting by setting
+readme.md:196:68    - Unknown word (sorting)        -- default. You can turn off sorting by setting `sortManifest
+readme.md:198:13    - Unknown word (more)           -- If you want more control over how the
+readme.md:199:2     - Unknown word (comparison)     -- [comparison function](https://developer
+readme.md:200:38    - Unknown word (example)        -- examples/sorted.js) example.
+readme.md:216:22    - Unknown word (already)        -- If the `output` file already exists and you'd like
+readme.md:216:47    - Unknown word (like)           -- already exists and you'd like to add to it, use `merge
+readme.md:217:13    - Unknown word (behavior)       -- The default behavior is to use the existing
+readme.md:217:36    - Unknown word (existing)       -- behavior is to use the existing keys/values without
+readme.md:217:65    - Unknown word (modification)   -- keys/values without modification.
+readme.md:226:16    - Unknown word (customize)      -- If you need to customize during merge, use `merge
+readme.md:228:113   - Unknown word (Merging)        -- can check `manifest.isMerging`.
+readme.md:228:16    - Unknown word (know)           -- If you want to know if `customize` was called
+readme.md:228:40    - Unknown word (called)         -- know if `customize` was called when merging with an
+readme.md:228:52    - Unknown word (merging)        -- customize` was called when merging with an existing manifest
+readme.md:235:13    - Unknown word (something)      -- // Do something
+readme.md:25:12     - Unknown word (finding)      -- - Supports finding [asset modules](https
+readme.md:25:27     - Unknown word (modules)      -- Supports finding [asset modules](https://webpack.js
+readme.md:25:3      - Unknown word (Supports)     -- - Supports finding [asset modules
+readme.md:263:18    - Unknown word (have)           -- If you'd like to have more control, use a
+readme.md:26:29     - Unknown word (prevent)      -- Updated options schema to prevent additional properties
+readme.md:26:3      - Unknown word (Updated)      -- - Updated options schema to prevent
+readme.md:26:37     - Unknown word (additional)   -- options schema to prevent additional properties. This helps
+readme.md:26:65     - Unknown word (helps)        -- additional properties. This helps with catching typos
+readme.md:26:76     - Unknown word (catching)     -- properties. This helps with catching typos in option names
+readme.md:26:85     - Unknown word (typos)        -- helps with catching typos in option names.
+readme.md:288:54    - Unknown word (added)          -- entrypoints` will be added to the root of the manifest
+readme.md:28:22     - Unknown word (confusion)    -- This is to prevent confusion when working with [Web
+readme.md:28:59     - Unknown word (manifests)    -- working with [Web app manifests](https://developer.mozilla
+readme.md:296:104   - Unknown word (just)           -- be customized and not just a `string` file path
+readme.md:296:59    - Unknown word (means)          -- from `assets`, which means the values could be
+readme.md:296:76    - Unknown word (could)          -- which means the values could be customized and not
+readme.md:296:85    - Unknown word (customized)     -- the values could be customized and not just a `string
+readme.md:299:6     - Unknown word (integrity)      -- ### `integrity`
+readme.md:307:15    - Unknown word (Hashes)         -- ### `integrityHashes`
+readme.md:313:29    - Unknown word (generating)     -- algorithms to use when generating SRI. For browsers, the
+readme.md:313:49    - Unknown word (browsers)       -- generating SRI. For browsers, the currently the allowed
+readme.md:313:63    - Unknown word (currently)      -- SRI. For browsers, the currently the allowed integrity
+readme.md:313:95    - Unknown word (hashes)         -- the allowed integrity hashes are `sha256`, `sha3
+readme.md:316:8     - Unknown word (were)           -- If you were to create a tool to
+readme.md:327:41    - Unknown word (multiple)       -- so that you can have multiple instances of this plugin
+readme.md:327:88    - Unknown word (them)           -- plugin and not have them overwrite the `currentAsset
+readme.md:327:93    - Unknown word (overwrite)      -- plugin and not have them overwrite the `currentAsset.integrity
+readme.md:329:102   - Unknown word (different)      -- this plugin to create different manifests.
+readme.md:32:3      - Unknown word (Requires)     -- - Requires Node 10+.
+readme.md:337:1     - Unknown word (Callback)       -- Callback to run after setup is
+readme.md:337:23    - Unknown word (setup)          -- Callback to run after setup is complete.
+readme.md:347:111   - Unknown word (easier)         -- img` keys so that it's easier to use them with a template
+readme.md:347:70    - Unknown word (below)          -- example. In the sample below, we adjust `img` keys
+readme.md:34:3      - Unknown word (Added)        -- - Added options: [`enabled`
+readme.md:34:99     - Unknown word (Relative)     -- trypointsUseAssets), [`contextRelativeKeys`](#contextRelativeKeys
+readme.md:352:19    - Unknown word (starts)         -- if (entry.key.startsWith('img/')) {
+readme.md:361:119   - Unknown word (merged)         -- The result is then merged into a whole manifest
+readme.md:361:43    - Unknown word (provides)       -- called per each entry and provides you a way to intercept
+readme.md:361:65    - Unknown word (intercept)      -- provides you a way to intercept and rewrite each object
+readme.md:361:79    - Unknown word (rewrite)        -- way to intercept and rewrite each object. The result
+readme.md:363:51    - Unknown word (what)           -- customized.js) to see what else you can do with
+readme.md:36:22     - Unknown word (various)      -- Use lock files for various operations.
+readme.md:371:27    - Unknown word (entire)         -- Callback to transform the entire manifest.
+readme.md:37:4      - Unknown word (done)         -- - `done` hook is now an `AsyncSeriesH
+readme.md:387:63    - Unknown word (automatically)  -- and `done` options are automatically tapped into the appropriate
+readme.md:387:77    - Unknown word (tapped)         -- options are automatically tapped into the appropriate
+readme.md:387:93    - Unknown word (appropriate)    -- automatically tapped into the appropriate hook.
+readme.md:389:51    - Unknown word (signature)      -- | Callback signature
+readme.md:38:147    - Unknown word (included)     -- an entrypoint are now included in an `assets` property
+readme.md:38:57     - Unknown word (been)         -- entrypoints` data has been updated to include
+readme.md:38:62     - Unknown word (updated)      -- entrypoints` data has been updated to include `preload
+readme.md:392:25    - Unknown word (Waterfall)      -- customize` | `SyncWaterfallHook` | `function(entry
+readme.md:394:68    - Unknown word (stats)          -- async function(manifest, stats){}` |
+readme.md:398:6     - Unknown word (Tapping)        -- #### Tapping into hooks
+readme.md:400:60    - Unknown word (shown)          -- method on the hook as shown below.
+readme.md:402:31    - Unknown word (exactly)        -- want more control over exactly what gets added to your
+readme.md:402:44    - Unknown word (gets)           -- control over exactly what gets added to your manifest
+readme.md:403:51    - Unknown word (transformed)    -- customized.js) and [transformed](examples/transformed
+readme.md:40:3      - Unknown word (Example)      -- Example:
+readme.md:410:17    - Unknown word (some)           -- manifest.set("some-key", "some-value")
+readme.md:437:3     - Unknown word (await)          -- await yourAsyncOperation(
+readme.md:441:1     - Unknown word (These)          -- These hooks can also be set
+readme.md:441:17    - Unknown word (also)           -- These hooks can also be set by passing them
+readme.md:441:52    - Unknown word (constructor)    -- passing them in the constructor options.
+readme.md:454:29    - Unknown word (passed)         -- manifest instance is passed to a hook, you can use
+readme.md:454:63    - Unknown word (following)      -- hook, you can use the following methods to manage what
+readme.md:454:96    - Unknown word (goes)           -- methods to manage what goes into the manifest.
+readme.md:63:25     - Unknown word (require)      -- your webpack config, require the plugin then add
+readme.md:63:4      - Unknown word (your)         -- In your webpack config, require
+readme.md:69:1      - Unknown word (module)       -- module.exports = {
+readme.md:6:64      - Unknown word (original)   -- file that matches the original filename with the hashed
+readme.md:71:8      - Unknown word (Your)         -- // Your entry points
+readme.md:76:27     - Unknown word (chunkhash)    -- chunkFilename: "[id]-[chunkhash].js",
+readme.md:76:5      - Unknown word (chunk)        -- chunkFilename: "[id]-[chunkhash
+readme.md:79:13     - Unknown word (loader)       -- // Your loader rules go here.
+readme.md:79:29     - Unknown word (here)         -- Your loader rules go here.
+readme.md:8:4       - Unknown word (Installation) -- ## Installation
+readme.md:95:11     - Unknown word (logo)         -- "images/logo.svg": "images/logo-b
+src/WebpackAssetsManifest.js:156:27    - Unknown word (Customize)  -- customize: null, // Customize each entry in the manifest
+src/WebpackAssetsManifest.js:176:50    - Unknown word (being)      -- manifest data is currently being merged.
+src/WebpackAssetsManifest.js:207:14    - Unknown word (backslash)  -- * Replace backslash with forward slash.
+src/WebpackAssetsManifest.js:216:33    - Unknown word (modifying)  -- item to assets without modifying the key or value.
+src/WebpackAssetsManifest.js:237:67    - Unknown word (correct)    -- it should already be correct.
+src/WebpackAssetsManifest.js:266:37    - Unknown word (returned)   -- integrity should be returned but the entry value
+src/WebpackAssetsManifest.js:267:25    - Unknown word (lets)       -- // not customized lets do that now so it includes
+src/WebpackAssetsManifest.js:278:16    - Unknown word (Unexpected) -- warn.once(`Unexpected customize() return type
+src/WebpackAssetsManifest.js:284:27    - Unknown word (exist)      -- Determine if an item exist in the manifest.
+src/WebpackAssetsManifest.js:35:10     - Unknown word (MERGING)    -- const IS_MERGING = Symbol('isMerging
+src/WebpackAssetsManifest.js:434:22    - Unknown word (Analyse)    -- handleProcessAssetsAnalyse(compilation /* , assets
+src/WebpackAssetsManifest.js:469:68    - Unknown word (sometimes)  -- loaderContext.emitFile sometimes doesn't
+src/WebpackAssetsManifest.js:469:78    - Unknown word (doesn't)    -- derContext.emitFile sometimes doesn't
+src/WebpackAssetsManifest.js:470:48    - Unknown word (recorded)   -- asset names are not recorded. To work around this
+src/WebpackAssetsManifest.js:470:66    - Unknown word (around)     -- not recorded. To work around this, lets
+src/WebpackAssetsManifest.js:471:6     - Unknown word (loops)      -- * loops over the stats.assets
+src/WebpackAssetsManifest.js:634:11    - Unknown word (maintained) -- // is maintained incase the `assets`
+src/WebpackAssetsManifest.js:634:22    - Unknown word (incase)     -- // is maintained incase the `assets` is being
+src/WebpackAssetsManifest.js:666:50    - Unknown word (above)      -- the manifest output is above the compiler outputPath
+src/WebpackAssetsManifest.js:694:21    - Unknown word (Loader)     -- handleNormalModuleLoader(compilation, loaderContext
+src/WebpackAssetsManifest.js:722:9     - Unknown word (Subresource) -- recordSubresourceIntegrity(compilation
+src/WebpackAssetsManifest.js:750:78    - Unknown word (ANALYSE)     -- PROCESS_ASSETS_STAGE_ANALYSE,
+src/WebpackAssetsManifest.js:784:49    - Unknown word (vars)        -- / WEBPACK_SERVE env vars cannot be relied upon
+src/WebpackAssetsManifest.js:784:54    - Unknown word (cannot)      -- WEBPACK_SERVE env vars cannot be relied upon.
+src/WebpackAssetsManifest.js:784:64    - Unknown word (relied)      -- SERVE env vars cannot be relied upon.
+src/WebpackAssetsManifest.js:784:71    - Unknown word (upon)        -- vars cannot be relied upon.
+src/WebpackAssetsManifest.js:858:11    - Unknown word (allows)      -- * This allows you to use `[]` to manage
+src/WebpackAssetsManifest.js:97:19     - Unknown word (happening)  -- // Is a merge happening?
+src/helpers.js:100:4     - Unknown word (Determine)  -- * Determine if the argument is an
+src/helpers.js:143:47    - Unknown word (mapper)     -- group: string) => any} mapper
+src/helpers.js:193:7     - Unknown word (retries)    -- retries: 100,
+src/helpers.js:75:68     - Unknown word (hashing)    -- you want to use when hashing `content`
+src/options-schema.json:163:25    - Unknown word (place)      -- "description": "A place to put your arbitrary
+src/options-schema.json:35:12     - Unknown word (minimum)    -- "minimum": 0
+test/WebpackAssetsManifest-test.js:1000:20   - Unknown word (thrown)      -- it('Error is thrown if options schema validation
+test/WebpackAssetsManifest-test.js:1000:56   - Unknown word (fails)       -- options schema validation fails', function () {
+test/WebpackAssetsManifest-test.js:1027:35   - Unknown word (taps)        -- manifest.hooks.apply.taps.length).to.be.at.least
+test/WebpackAssetsManifest-test.js:1027:57   - Unknown word (least)       -- taps.length).to.be.at.least(1);
+test/WebpackAssetsManifest-test.js:1062:26   - Unknown word (altered)     -- it('Options can be altered with a hook', function
+test/WebpackAssetsManifest-test.js:1112:9    - Unknown word (writes)      -- it('writes to disk', async ()
+test/WebpackAssetsManifest-test.js:1124:31   - Unknown word (unable)      -- compiler has error if unable to create directory
+test/WebpackAssetsManifest-test.js:1175:15   - Unknown word (Handles)     -- describe('Handles complex configurations
+test/WebpackAssetsManifest-test.js:1203:39   - Unknown word (others)      -- const { entrypoints, ...others } = assets;
+test/WebpackAssetsManifest-test.js:1279:12   - Unknown word (Pretend)     -- // Pretend like assetNames is empty
+test/WebpackAssetsManifest-test.js:1357:7    - Unknown word (quiet)       -- quiet: true,
+test/WebpackAssetsManifest-test.js:1389:20   - Unknown word (Above)       -- assert.isAbove(res.text.length, 0,
+test/WebpackAssetsManifest-test.js:13:28     - Unknown word (fixtures)   -- configs = require('./fixtures/configs');
+test/WebpackAssetsManifest-test.js:1503:9    - Unknown word (Correct)     -- it('Correct filenames are used'
+test/WebpackAssetsManifest-test.js:1523:9    - Unknown word (adds)        -- it('adds gz filenames to the
+test/WebpackAssetsManifest-test.js:1537:17   - Unknown word (specify)     -- // also specify `integrityPropertyName
+test/WebpackAssetsManifest-test.js:202:28    - Unknown word (backslashes) -- it('should transform backslashes to slashes', function
+test/WebpackAssetsManifest-test.js:219:29    - Unknown word (fixing)      -- it('Uses keys without fixing them', function ()
+test/WebpackAssetsManifest-test.js:261:11    - Unknown word (removes)     -- it('removes an asset from the manifest
+test/WebpackAssetsManifest-test.js:291:11    - Unknown word (Identifies)  -- it('Identifies `webpack serve` from
+test/WebpackAssetsManifest-test.js:324:35    - Unknown word (prototypes)  -- Works correct with null prototypes outputFileSystem', function
+test/WebpackAssetsManifest-test.js:365:11    - Unknown word (clears)      -- it('clears data', async () =>
+test/WebpackAssetsManifest-test.js:485:43    - Unknown word (LOGO)        -- {"logo.svg":"IMAGES/LOGO.SVG"}', manifest.toString
+test/WebpackAssetsManifest-test.js:507:21    - Unknown word (sharable)    -- it('should be sharable', function () {
+test/WebpackAssetsManifest-test.js:571:17    - Unknown word (skips)       -- it('merge skips customize()', async
+test/WebpackAssetsManifest-test.js:572:15    - Unknown word (mock)        -- const mock = chai.spy();
+test/WebpackAssetsManifest-test.js:591:27    - Unknown word (photo)       -- const img = 'images/photo.jpg';
+test/WebpackAssetsManifest-test.js:634:16    - Unknown word (prefixes)    -- it('only prefixes strings', function
+test/WebpackAssetsManifest-test.js:664:11    - Unknown word (customizes)  -- it('customizes the key and value',
+test/WebpackAssetsManifest-test.js:712:25    - Unknown word (unless)      -- it('has no effect unless an object or false is
+test/WebpackAssetsManifest-test.js:725:17    - Unknown word (adding)      -- it('skips adding asset if false is returned
+test/WebpackAssetsManifest-test.js:766:11    - Unknown word (Assigns)     -- it('Assigns SRI hashes to currentAsset
+test/WebpackAssetsManifest-test.js:834:27    - Unknown word (prefixed)    -- it('entrypoints are prefixed with publicPath when
+test/WebpackAssetsManifest-test.js:954:23    - Unknown word (shouldn't)   -- // The plugin shouldn't write to disk if the
+test/WebpackAssetsManifest-test.js:980:11    - Unknown word (Holds)       -- it('Holds arbitrary data', async
+test/fixtures/client.js:3:19      - Unknown word (Ginger)     -- require('./images/Ginger.asset.jpg');
+test/fixtures/configs.js:136:25    - Unknown word (copied)     -- to: './readme-copied.md',
+test/fixtures/configs.js:173:10    - Unknown word (complex)    -- function complex()
+test/fixtures/configs.js:86:9      - Unknown word (Mini)       -- const MiniCssExtractPlugin = require
+test/helpers-test.js:146:9     - Unknown word (finds)      -- it('finds all keys that have the
+test/helpers-test.js:150:17    - Unknown word (Wilson)     -- data.set('Wilson', 'Eric');
+test/helpers-test.js:151:17    - Unknown word (Oliver)     -- data.set('Oliver', 'Amy');
+test/helpers-test.js:152:17    - Unknown word (Andy)       -- data.set('Andy', 'Amy');
+test/helpers-test.js:153:17    - Unknown word (Francis)    -- data.set('Francis', 'Amy');
+test/helpers-test.js:155:17    - Unknown word (Pets)       -- const findPetsFor = findMapKeysByValue
+test/helpers-test.js:166:13    - Unknown word (grouped)    -- const grouped = group(
+test/helpers-test.js:167:26    - Unknown word (dinosaur)   -- [ 'cat', 'dog', 'dinosaur' ],
+test/helpers-test.js:197:30    - Unknown word (DINOSAUR)   -- d: [ 'DOG-group-d', 'DINOSAUR-group-d' ],
+test/helpers-test.js:37:9      - Unknown word (wraps)      -- it('wraps non array input with
+test/helpers-test.js:66:30     - Unknown word (provided)   -- returns empty if not provided an array of hash algorithms
+test/helpers-test.js:76:28     - Unknown word (filtered)   -- 'Invalid values are filtered', function() {
+test/helpers-test.js:77:37     - Unknown word (fake)       -- filterHashes( [ 'some-fake-algorithm' ] ) ).to

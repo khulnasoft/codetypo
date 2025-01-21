@@ -19,7 +19,7 @@
     "test:esm": "node bin.mjs",
     "test:cjs": "node bin.cjs"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-bundled-dicts": "workspace:*",

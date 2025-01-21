@@ -8,13 +8,13 @@
     "test-build-docs": "typedoc --out ./temp/docs ",
     "test": "echo No tests needed."
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
     "typedoc": "^0.27.6",
-    "typedoc-plugin-markdown": "4.4.1"
+    "typedoc-plugin-markdown": "^4.4.1"
   }
 }

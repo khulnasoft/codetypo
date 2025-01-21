@@ -20,7 +20,7 @@
     "test:smoke": "node ./bin.mjs && node ./bin.cjs",
     "test:unit": "vitest run"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-pipe": "workspace:*"

@@ -14,7 +14,7 @@
     "test:smoke": "node ./bin.mjs",
     "test:unit": "vitest run"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-pipe": "workspace:*",

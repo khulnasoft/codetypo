@@ -9,7 +9,7 @@
     "test": "pnpm eslint ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "devDependencies": {
     "@codetypo/eslint-plugin": "workspace:*",

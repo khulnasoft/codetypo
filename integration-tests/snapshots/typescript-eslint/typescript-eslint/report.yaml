@@ -3,10 +3,11 @@ Repository: typescript-eslint/typescript-eslint
 Url: https://github.com/typescript-eslint/typescript-eslint.git
 Args: '["--config=.codetypo.json","**/*.{md,ts,js}"]'
 Summary:
-  files: 1279
+  files: 0
   filesWithIssues: 0
   issues: 0
-  errors: 0
-Errors: []
+  errors: 1
+Errors:
+  - Configuration
 
 issues: []

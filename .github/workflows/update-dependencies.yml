@@ -127,4 +127,4 @@ jobs:
       title: ${{ needs.update-dependencies.outputs.title }}
     secrets:
       app_id: ${{ secrets.AUTOMATION_APP_ID }}
-      private_key: ${{ secrets.AUTOMATION_PRIVATE_KEY }}
+      private_key: ${{ secrets.ORG_REPO_TOKEN }}

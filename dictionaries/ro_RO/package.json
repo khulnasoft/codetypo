@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/ro_RO#readme",
   "devDependencies": {
-    "dictionary-ro": "^3.0.0"
+    "dictionary-ro": "workspace:*"
   },
   "files": [
     "dict/ro-ro.trie",

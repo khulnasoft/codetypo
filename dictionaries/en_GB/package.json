@@ -50,7 +50,7 @@
     "test": "tests"
   },
   "devDependencies": {
-    "@codetypo/dict-en-shared": "workspace:^",
+    "@codetypo/dict-en-shared": "workspace:*",
     "aoo-mozilla-en-dict": "github:marcoagpinto/aoo-mozilla-en-dict"
   }
 }

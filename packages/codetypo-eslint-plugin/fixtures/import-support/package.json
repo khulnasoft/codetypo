@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "devDependencies": {
     "@internal/fixture-test-dictionary": "workspace:*"

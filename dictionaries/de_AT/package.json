@@ -47,6 +47,6 @@
     "src/hunspell/license"
   ],
   "devDependencies": {
-    "dictionary-de-at": "^3.0.0"
+    "dictionary-de-at": "workspace:*"
   }
 }

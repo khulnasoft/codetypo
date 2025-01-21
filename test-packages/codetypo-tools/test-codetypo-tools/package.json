@@ -14,7 +14,7 @@
     "test-codetypo": "codetypo -c codetypo.json \"src/*\"",
     "test": "pnpm run test-dist && pnpm run test-codetypo"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-tools": "workspace:*",

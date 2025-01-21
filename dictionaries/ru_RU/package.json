@@ -48,6 +48,6 @@
     "codetypo-ext.json"
   ],
   "devDependencies": {
-    "dictionary-ru": "^3.0.0"
+    "dictionary-ru": "workspace:*"
   }
 }

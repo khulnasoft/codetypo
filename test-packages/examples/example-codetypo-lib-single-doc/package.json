@@ -13,7 +13,7 @@
     "compile": "tsc -p .",
     "test": "node bin.js src/index.ts"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "codetypo-lib": "workspace:*"

@@ -354,4 +354,4 @@ jobs:
           title: 'fix: Workflow Bot -- Update Dictionaries (${{ env.REF_BRANCH }})'
           body: ${{ steps.body.outputs.body }}
           app_id: ${{ secrets.AUTOMATION_APP_ID }}
-          app_private_key: ${{ secrets.AUTOMATION_PRIVATE_KEY }}
+          app_private_key: ${{ secrets.ORG_REPO_TOKEN }}

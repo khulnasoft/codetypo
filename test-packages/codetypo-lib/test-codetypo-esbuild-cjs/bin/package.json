@@ -12,7 +12,7 @@
     "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
     "test": "node bin.cjs"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-bundled-dicts": "workspace:*"

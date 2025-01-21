@@ -61,11 +61,6 @@ export const optionsSchema = {
       "markdownDescription": "Spell check strings",
       "type": "boolean"
     },
-    "configFile": {
-      "description": "Path to the codetypo configuration file. Relative paths, will be relative to the current working directory.",
-      "markdownDescription": "Path to the codetypo configuration file.\nRelative paths, will be relative to the current working directory.",
-      "type": "string"
-    },
     "codetypo": {
       "additionalProperties": false,
       "description": "CodeTypo options to pass to the spell checker.",
@@ -338,6 +333,11 @@ export const optionsSchema = {
       ],
       "description": "Specify the root path of the codetypo configuration. It is used to resolve `imports` found in  {@link  codetypo } .\n\nexample: ```js codetypoOptionsRoot: import.meta.url // or codetypoOptionsRoot: __filename ```",
       "markdownDescription": "Specify the root path of the codetypo configuration.\nIt is used to resolve `imports` found in  {@link  codetypo } .\n\nexample:\n```js\ncodetypoOptionsRoot: import.meta.url\n// or\ncodetypoOptionsRoot: __filename\n```"
+    },
+    "configFile": {
+      "description": "Path to the codetypo configuration file. Relative paths, will be relative to the current working directory.",
+      "markdownDescription": "Path to the codetypo configuration file.\nRelative paths, will be relative to the current working directory.",
+      "type": "string"
     },
     "customWordListFile": {
       "anyOf": [

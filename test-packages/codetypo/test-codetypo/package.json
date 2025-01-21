@@ -11,7 +11,7 @@
     "compile": "tsc -p .",
     "test": "node dist"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-types": "workspace:*",

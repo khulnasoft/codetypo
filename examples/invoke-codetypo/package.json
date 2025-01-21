@@ -8,7 +8,7 @@
     "test": "node index.mjs"
   },
   "keywords": [],
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "codetypo": "workspace:*"

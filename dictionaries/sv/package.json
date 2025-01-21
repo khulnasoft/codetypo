@@ -44,6 +44,6 @@
     "codetypo-ext.json"
   ],
   "devDependencies": {
-    "dictionary-sv": "^4.0.0"
+    "dictionary-sv": "workspace:*"
   }
 }

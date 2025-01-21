@@ -13,6 +13,6 @@
     "update:codetypo-eslint-plugin": "cd codetypo-eslint-plugin && corepack use yarn@stable && corepack yarn update:dep"
   },
   "keywords": [],
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT"
 }

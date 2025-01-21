@@ -3,15 +3,21 @@
     "singleQuote": true,
     "overrides": [
         {
-            "files": "**/*.{jsonc,json,md,code-workspace}",
+            "files": "**/*.{jsonc,json,md,code-workspace,yaml,yml}",
             "options": {
-                "trailingComma": "none"
+                "trailingComma": "none",
+                "singleQuote": true
             }
         },
         {
-            "files": ["**/src/GlobMatcher.test.ts", "packages/codetypo-filetypes/**/definitions.ts"],
+            "files": [
+                "**/src/GlobMatcher.test.ts",
+                "packages/codetypo-filetypes/**/definitions.ts",
+                "dictionaries/npm/**/*.json"
+            ],
             "options": {
-                "printWidth": 180
+                "printWidth": 180,
+                "tabWidth": 2
             }
         }
     ]

@@ -22,7 +22,7 @@
     "test:smoke": "node ./bin.mjs && node ./bin.rollup.mjs && node ./bin.rollup.cjs",
     "test:unit": "vitest run"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "codetypo-trie-lib": "workspace:*"

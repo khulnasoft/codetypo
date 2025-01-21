@@ -20,6 +20,6 @@
     "update:yarn-sci": "cd test-yarn-sci && corepack use yarn@stable && corepack yarn update:dep",
     "update-yarn": "pnpm update:eslint-plugin && pnpm update:yarn-med && pnpm update:yarn-sci"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT"
 }

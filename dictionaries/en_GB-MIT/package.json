@@ -49,6 +49,6 @@
     "test": "tests"
   },
   "devDependencies": {
-    "@codetypo/dict-en-shared": "workspace:^"
+    "@codetypo/dict-en-shared": "workspace:*"
   }
 }

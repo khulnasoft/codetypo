@@ -1,24 +1,14 @@
----
 packages:
-  - 'packages/*'
-  - 'dictionaries/*'
-  - 'packages/*/scripts'
-  - 'codetypo-dict-file-checker/*'
-  - 'generator-codetypo-dicts/*'
-  - 'packages/codetypo-eslint-plugin/fixtures/import-support'
-  - 'packages/codetypo-eslint-plugin/fixtures/simple'
-  - 'rfc/*'
-  - 'rfc/drafts/*'
-  - 'test-fixtures/dictionaries/*'
-  - 'test-fixtures/issues/issue-5034'
-  - 'test-fixtures/issues/issue-5034/frontend'
-  - 'test-packages/*/*'
-  - 'test-packages/*/*/bin'
-  - 'test-packages/*/*/source'
-  - 'test-packages/yarn'
+  - 'packages/**/*'  # Includes all subdirectories and files under packages
+  - 'rfc/**/*'  # Includes all subdirectories and files under rfc
+  - 'test-fixtures/**/*'  # Includes all subdirectories and files under test-fixtures
+  - 'test-packages/**/*'  # Includes all subdirectories and files under test-packages
   - 'tools/*'
-  - doc-generator
-  - examples/*
-  - integration-tests
-  - scripts
-  - website
+  - 'doc-generator'
+  - 'examples/*'
+  - 'integration-tests'
+  - 'scripts'
+  - 'website'
+  - 'codetypo-dict-file-checker/*'
+  - 'dictionaries/**/*'  # Includes all subdirectories and files under dictionaries
+  - 'generator-codetypo-dicts'

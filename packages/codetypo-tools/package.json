@@ -53,7 +53,7 @@
   "dependencies": {
     "@codetypo/codetypo-pipe": "workspace:*",
     "commander": "^13.0.0",
-    "cosmiconfig": "9.0.0",
+    "cosmiconfig": "^9.0.0",
     "codetypo-trie-lib": "workspace:*",
     "glob": "^10.4.5",
     "hunspell-reader": "workspace:*",

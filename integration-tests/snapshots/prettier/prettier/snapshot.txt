@@ -3,5 +3,100 @@ Repository: prettier/prettier
 Url: "https://github.com/prettier/prettier.git"
 Args: []
 Lines:
- CodeTypo: Files checked: 2208, Issues found: 0 in 0 files.
- exit code: 0
+                                ".codetypocache")
+                                "content")
+                                (choices: "content", "metadata", default:
+                                (period) when matching globs.
+                                --issue-template for details.
+                                .gitignore files.
+                                Note: the format is 1 file path per line.
+                                and French, or "en-GB" for British English.
+                                by the [globs...].
+                                checked and the configuration.
+                                codetypo.json files.
+                                dictionaries.
+                                dictionaries.
+                                directory.
+                                extensions. i.e. "php" or "scala"
+                                found in the dictionaries.
+                                list is filtered against the glob file patterns.
+                                looks for codetypo.json in the current
+                                multiple globs.
+                                of relative to the root.
+                                option can be used multiple times to add
+                                root.
+        "@codetypo/codetypo-json-reporter".
+        Only spell check the "/*.md" files in $FILES,
+        Spell check only check "README.md" but NOT "CHANGELOG.md".
+        This will force the default reporter to be used overriding
+        This will spell check all ".js" files recursively and use
+        Use a custom reporter. See API for details.
+        any reporters defined in the configuration.
+        where $FILES is a shell variable that contains the list of files.
+    cat LICENSE | codetypo stdin      Check stdin
+    codetypo "**/*.js"                Check all .js files recursively
+    codetypo "**/*.js" --reporter @codetypo/codetypo-json-reporter
+    codetypo "**/*.txt" "**/*.js"     Check both .js and .txt files.
+    codetypo "**/*.{txt,js,md}"       Check .txt, .js, and .md files.
+    codetypo "*.js"                   Check all .js files in the current directory
+    codetypo "*.md" --exclude CHANGELOG.md --files README.md CHANGELOG.md
+    codetypo "/*.md" --no-must-find-files --files $FILES
+    codetypo "src/**/*.js"            Only check .js under src
+    codetypo .                        Recursively check all files.
+    codetypo . --reporter ./<path>/reporter.cjs
+    codetypo . --reporter default
+    codetypo lint .                   The same as "codetypo ."
+    codetypo stdin://docs/doc.md      Check stdin as if it was "./docs/doc.md"
+    https://codetypo.khulnasoft.com
+    https://github.com/khulnasoft/codetypo
+  --cache                       Use cache to only check changed files.
+  --cache-location <path>       Path to the cache file or directory. (default:
+  --cache-reset                 Reset the cache file.
+  --cache-strategy <strategy>   Strategy to use for detecting changed files.
+  --color                       Force color.
+  --debug                       Output information useful for debugging
+  --dot                         Include files and directories starting with `.`
+  --fail-fast                   Exit after first file with an issue or error.
+  --file [file...]              Specify files to spell check. They are filtered
+  --file-list <path or stdin>   Specify a list of files to be spell checked. The
+  --gitignore                   Ignore files matching glob patterns found in
+  --gitignore-root <path>       Prevent searching for .gitignore files past
+  --issue-template [template]   Use a custom issue template. See --help
+  --language-id <file-type>     Force programming language for unknown
+  --locale <locale>             Set language locales. i.e. "en,fr" for English
+  --no-cache                    Do not use cache.
+  --no-color                    Turn off color.
+  --no-default-configuration    Do not load the default configuration and
+  --no-exit-code                Do not return an exit code if issues are found.
+  --no-gitignore                Do NOT use .gitignore files.
+  --no-issues                   Do not show the spelling errors.
+  --no-must-find-files          Do not error if no files are found.
+  --no-progress                 Turn off progress messages
+  --no-relative                 Issues are displayed with absolute path instead
+  --no-show-suggestions         Do not show spelling suggestions or fixes.
+  --no-summary                  Turn off summary message in console.
+  --quiet                       Only show spelling issues or errors.
+  --reporter <module|path>      Specify one or more reporters to use.
+  --show-context                Show the surrounding text around an issue.
+  --show-suggestions            Show spelling suggestions.
+  --validate-directives         Validate in-document CodeTypo directives.
+  --words-only                  Only output the words not found in the
+  -c, --config <codetypo.json>  Configuration file to use.  By default codetypo
+  -e, --exclude <glob>          Exclude files matching the glob pattern. This
+  -h, --help                    display help for command
+  -r, --root <root folder>      Root directory, defaults to current directory.
+  -s, --silent                  Silent mode, suppress error messages.
+  -u, --unique                  Only output the first instance of a word not
+  -v, --verbose                 Display more information about the files being
+  exit code: 1
+ - [file://<path>]       Check the file at <path>
+ - [globs...]            Glob Patterns
+ - [stdin://<path>]      Read from "stdin", use <path> for file type and config.
+ - [stdin]               Read from "stdin" assume text file.
+Check spelling
+Examples:
+More Examples:
+Options:
+Patterns:
+References:
+Usage: codetypo lint [options] [globs...] [file://<path> ...] [stdin[://<path>]]

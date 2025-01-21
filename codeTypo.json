@@ -1,0 +1,5 @@
+{
+    "import": [
+        "./codetypo.config.yaml"
+    ]
+}

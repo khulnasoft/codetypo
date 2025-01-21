@@ -3,30 +3,423 @@ Repository: wireapp/wire-desktop
 Url: "https://github.com/wireapp/wire-desktop.git"
 Args: ["*.md","electron/renderer/**/*.jsx","electron/src/**/*.ts","electron/html/*.html"]
 Lines:
- CodeTypo: Files checked: 43, Issues found: 28 in 6 files.
+ Dictionary Error with (en_us) Error: ENOENT: no such file or directory, open './dictionaries/en_US/en_US.trie.gz'
  exit code: 1
-electron/src/locale/index.ts:114:8     - Unknown word (Čeština)    -- cs: 'Čeština',
-electron/src/locale/index.ts:115:8     - Unknown word (Dansk)      -- da: 'Dansk',
-electron/src/locale/index.ts:116:8     - Unknown word (Deutsch)    -- de: 'Deutsch',
-electron/src/locale/index.ts:117:8     - Unknown word (Ελληνικά)   -- el: 'Ελληνικά',
-electron/src/locale/index.ts:118:8     - Unknown word (Eesti)      -- et: 'Eesti',
-electron/src/locale/index.ts:119:8     - Unknown word (Español)    -- es: 'Español',
-electron/src/locale/index.ts:120:8     - Unknown word (Français)   -- fr: 'Français',
-electron/src/locale/index.ts:121:8     - Unknown word (Hrvatski)   -- hr: 'Hrvatski',
-electron/src/locale/index.ts:122:8     - Unknown word (Italiano)   -- it: 'Italiano',
-electron/src/locale/index.ts:123:8     - Unknown word (Lietuvos)   -- lt: 'Lietuvos',
-electron/src/locale/index.ts:125:8     - Unknown word (Nederlands) -- nl: 'Nederlands',
-electron/src/locale/index.ts:126:8     - Unknown word (Polski)     -- pl: 'Polski',
-electron/src/locale/index.ts:127:8     - Unknown word (Português)  -- pt: 'Português do Brasil',
-electron/src/locale/index.ts:128:8     - Unknown word (Română)     -- ro: 'Română',
-electron/src/locale/index.ts:129:8     - Unknown word (Русский)    -- ru: 'Русский',
-electron/src/locale/index.ts:131:8     - Unknown word (Slovenčina) -- sk: 'Slovenčina',
+-------------------------------------------
+-------------------------------------------
+CodeTypo: Files checked: 51, Issues found: 1888 in 51 files with 4 errors.
+Dictionary Error with (en_us) Error: ENOENT: no such file or directory, open './dictionaries/en_US/en_US.trie.gz'
+Dictionary Error with (filetypes) Error: ENOENT: no such file or directory, open './dictionaries/filetypes/filetypes.txt.gz'
+Dictionary Error with (filetypes) Error: ENOENT: no such file or directory, open './dictionaries/filetypes/filetypes.txt.gz'
+Dictionary Error with (html-symbol-entities) Error: ENOENT: no such file or directory, open './dictionaries/html-symbol-entities/entities.txt.gz'
+Dictionary Error with (html-symbol-entities) Error: ENOENT: no such file or directory, open './dictionaries/html-symbol-entities/entities.txt.gz'
+Dictionary Error with (public-licenses) Error: ENOENT: no such file or directory, open './dictionaries/public-licenses/public-licenses.txt.gz'
+Dictionary Error with (public-licenses) Error: ENOENT: no such file or directory, open './dictionaries/public-licenses/public-licenses.txt.gz'
+Errors:
+README.md:102:5     - Unknown word (Troubleshooting) -- ### Troubleshooting
+README.md:104:12    - Unknown word (having)          -- If you are having troubles building Wire
+README.md:104:149   - Unknown word (might)           -- wiki/Troubleshooting) might be of help.
+README.md:104:161   - Unknown word (help)            -- Troubleshooting) might be of help.
+README.md:104:19    - Unknown word (troubles)        -- If you are having troubles building Wire for Desktop
+README.md:104:65    - Unknown word (troubleshooting) -- for Desktop, then [our troubleshooting page](https://github
+README.md:106:5     - Unknown word (Translations)    -- ### Translations
+README.md:108:10    - Unknown word (translations)    -- All Wire translations are crowdsourced via
+README.md:108:27    - Unknown word (crowdsourced)    -- Wire translations are crowdsourced via [Crowdin](https
+README.md:112:12    - Unknown word (course)          -- You can of course use the webapp in your
+README.md:112:62    - Unknown word (prefer)          -- browser, but if you prefer to install wire-desktop
+README.md:11:142    - Unknown word (cause)      -- web application, and cause that application to
+README.md:11:199    - Unknown word (purposes)   -- our servers for any purposes, we refer to that resulting
+README.md:11:212    - Unknown word (refer)      -- for any purposes, we refer to that resulting application
+README.md:11:226    - Unknown word (resulting)  -- purposes, we refer to that resulting application as an “Open
+README.md:11:298    - Unknown word (subject)    -- Open Source Apps are subject to, and may only be
+README.md:11:338    - Unknown word (commercialized) -- only be used and/or commercialized in accordance with,
+README.md:11:356    - Unknown word (accordance)     -- or commercialized in accordance with, the Terms of Use
+README.md:11:390    - Unknown word (applicable)     -- with, the Terms of Use applicable to the Wire Application
+README.md:11:41     - Unknown word (that)       -- open source software that we make available from
+README.md:11:439    - Unknown word (found)          -- Application, which can be found at https://wire.com
+README.md:11:479    - Unknown word (Additionally)   -- wire.com/legal/#terms. Additionally, if you choose to build
+README.md:11:500    - Unknown word (choose)         -- Additionally, if you choose to build an Open Source
+README.md:11:536    - Unknown word (certain)        -- an Open Source App, certain restrictions apply,
+README.md:11:544    - Unknown word (restrictions)   -- Source App, certain restrictions apply, as follows:
+README.md:11:567    - Unknown word (follows)        -- restrictions apply, as follows:
+README.md:11:85     - Unknown word (develop)    -- from time to time to develop your own mobile, desktop
+README.md:13:117    - Unknown word (weaken)         -- b. You agree not to weaken any of the security
+README.md:13:246    - Unknown word (than)           -- data for purposes other than the intended and original
+README.md:13:255    - Unknown word (intended)       -- purposes other than the intended and original functionality
+README.md:13:268    - Unknown word (original)       -- than the intended and original functionality of the
+README.md:13:277    - Unknown word (functionality)  -- intended and original functionality of the Open Source App
+README.md:13:347    - Unknown word (solely)         -- acknowledge that you are solely responsible for any
+README.md:13:354    - Unknown word (responsible)    -- that you are solely responsible for any and all updates
+README.md:13:56     - Unknown word (connects)       -- the Open Source App connects and interacts with our
+README.md:13:69     - Unknown word (interacts)      -- Source App connects and interacts with our servers; b
+README.md:13:8      - Unknown word (agree)          -- a. You agree not to change the way
+README.md:15:251    - Unknown word (will)           -- then that application will not be deemed an Open
+README.md:15:263    - Unknown word (deemed)         -- application will not be deemed an Open Source App and
+README.md:15:297    - Unknown word (foregoing)      -- Open Source App and the foregoing will not apply to that
+README.md:15:5      - Unknown word (clarity)        -- For clarity, if you compile the
+README.md:17:104    - Unknown word (owned)          -- will continue to be owned exclusively by Wire
+README.md:17:110    - Unknown word (exclusively)    -- continue to be owned exclusively by Wire Swiss GmbH.
+README.md:17:15     - Unknown word (granted)        -- No license is granted to the Wire trademark
+README.md:17:203    - Unknown word (expressly)      -- associated logos is expressly prohibited without the
+README.md:17:213    - Unknown word (prohibited)     -- associated logos is expressly prohibited without the express
+README.md:17:244    - Unknown word (prior)          -- without the express prior written consent of Wire
+README.md:17:250    - Unknown word (written)        -- without the express prior written consent of Wire Swiss
+README.md:17:258    - Unknown word (consent)        -- express prior written consent of Wire Swiss GmbH.
+README.md:17:35     - Unknown word (trademark)      -- granted to the Wire trademark and its associated logos
+README.md:17:64     - Unknown word (logos)          -- trademark and its associated logos, all of which will continue
+README.md:21:29     - Unknown word (wrapping)       -- platform desktop app, wrapping the [wire-webapp](https
+README.md:23:5      - Unknown word (Prerequisites)  -- ### Prerequisites
+README.md:28:121    - Unknown word (recommended)    -- not using the package recommended by apt-get)
+README.md:28:27     - Unknown word (official)       -- Yarn (Install using the official instructions at https
+README.md:28:36     - Unknown word (instructions)   -- Install using the official instructions at https://yarnpkg.com
+README.md:5:121     - Unknown word (contacting) -- https://wire.com) or by contacting opensource@wire.com
+README.md:5:61      - Unknown word (find)       -- code of Wire. You can find more information at
+README.md:61:30     - Unknown word (varies)         -- Feature development) | (varies) | commit | x.y+3 (e
+README.md:62:6      - Unknown word (Nightly)        -- | 2 (Nightly test automation) |
+README.md:63:27     - Unknown word (staging)        -- Internal release) | [staging](https://github.com
+README.md:63:6      - Unknown word (Internal)       -- | 3 (Internal release) | [staging
+README.md:86:14     - Unknown word (like)           -- If you would like to build for another
+README.md:86:32     - Unknown word (another)        -- would like to build for another Linux target, run the
+README.md:86:62     - Unknown word (following)      -- Linux target, run the following command:
+README.md:93:192    - Unknown word (Multiple)       -- the available targets. Multiple targets can be combined
+README.md:93:216    - Unknown word (combined)       -- Multiple targets can be combined by comma separation
+README.md:93:234    - Unknown word (separation)     -- be combined by comma separation (e.g. `rpm,deb`). Note
+README.md:93:283    - Unknown word (offer)          -- Note that we cannot offer support for uncommon
+README.md:93:301    - Unknown word (uncommon)       -- cannot offer support for uncommon targets.
+README.md:93:59     - Unknown word (Have)           -- target (e.g. `rpm`). Have a look at the [documentation
+README.md:93:66     - Unknown word (look)           -- e.g. `rpm`). Have a look at the [documentation
+README.md:95:1      - Unknown word (Furthermore)    -- Furthermore, you can disable [asar
+README.md:95:149    - Unknown word (needed)         -- recommended, but e.g. needed for target `dir`) by
+README.md:95:193    - Unknown word (ASAR)           -- by setting `ENABLE_ASAR="false"` before building
+README.md:95:199    - Unknown word (false)          -- setting `ENABLE_ASAR="false"` before building. Example
+README.md:95:207    - Unknown word (before)         -- ENABLE_ASAR="false"` before building. Example:
+README.md:95:224    - Unknown word (Example)        -- false"` before building. Example:
+README.md:95:31     - Unknown word (asar)           -- Furthermore, you can disable [asar packaging](https://www
+README.md:9:5       - Unknown word (licensing)  -- For licensing information, see the
+SECURITY.md:1:1       - Unknown word (Please)     -- Please check Wire's [global
+electron/html/about.html:11:42     - Unknown word (about)      -- ><span data-string="aboutVersion"></span> <span
+electron/html/about.html:20:90     - Unknown word (Releases)   -- span data-string="aboutReleases"></span></a>
+electron/html/proxy-prompt.html:11:55     - Unknown word (Headline)   -- data-string="proxyPromptHeadline"></span></p>
+electron/src/auth/ProxyAuth.test.main.ts:10:20     - Unknown word (distributed)  -- * This program is distributed in the hope that it
+electron/src/auth/ProxyAuth.test.main.ts:10:39     - Unknown word (hope)         -- is distributed in the hope that it will be useful
+electron/src/auth/ProxyAuth.test.main.ts:10:60     - Unknown word (useful)       -- hope that it will be useful,
+electron/src/auth/ProxyAuth.test.main.ts:11:20     - Unknown word (WARRANTY)     -- * but WITHOUT ANY WARRANTY; without even the implied
+electron/src/auth/ProxyAuth.test.main.ts:11:38     - Unknown word (even)         -- ANY WARRANTY; without even the implied warranty
+electron/src/auth/ProxyAuth.test.main.ts:11:47     - Unknown word (implied)      -- WARRANTY; without even the implied warranty of
+electron/src/auth/ProxyAuth.test.main.ts:11:55     - Unknown word (warranty)     -- without even the implied warranty of
+electron/src/auth/ProxyAuth.test.main.ts:12:23     - Unknown word (FITNESS)      -- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
+electron/src/auth/ProxyAuth.test.main.ts:12:37     - Unknown word (PARTICULAR)   -- CHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+electron/src/auth/ProxyAuth.test.main.ts:12:48     - Unknown word (PURPOSE)      -- FITNESS FOR A PARTICULAR PURPOSE. See the
+electron/src/auth/ProxyAuth.test.main.ts:13:35     - Unknown word (more)         -- General Public License for more details.
+electron/src/auth/ProxyAuth.test.main.ts:16:4      - Unknown word (along)        -- * along with this program. If
+electron/src/auth/ProxyAuth.test.main.ts:27:29     - Unknown word (using)        -- generates a proxy URL using the operating system
+electron/src/auth/ProxyAuth.test.main.ts:27:39     - Unknown word (operating)    -- proxy URL using the operating system's proxy settings
+electron/src/auth/ProxyAuth.test.main.ts:27:7      - Unknown word (generates)    -- it("generates a proxy URL using the
+electron/src/auth/ProxyAuth.test.main.ts:29:14     - Unknown word (wireproxy)    -- host: 'wireproxy.com',
+electron/src/auth/ProxyAuth.test.main.ts:2:4       - Unknown word (Wire)       -- * Wire
+electron/src/auth/ProxyAuth.test.main.ts:43:51     - Unknown word (passwords)    -- characters like slashes in passwords', () => {
+electron/src/auth/ProxyAuth.test.main.ts:59:23     - Unknown word (wire)         -- username: 'user@wire',
+electron/src/auth/ProxyAuth.test.main.ts:5:43      - Unknown word (redistribute) -- free software: you can redistribute it and/or modify
+electron/src/auth/ProxyAuth.test.main.ts:72:18     - Unknown word (myuser)       -- username: 'myuser',
+electron/src/auth/ProxyAuth.test.main.ts:7:34      - Unknown word (either)       -- Software Foundation, either version 3 of the License
+electron/src/auth/ProxyAuth.test.main.ts:8:25      - Unknown word (later)        -- at your option) any later version.
+electron/src/auth/ProxyAuth.test.main.ts:8:8       - Unknown word (your)         -- * (at your option) any later version
+electron/src/auth/ProxyAuth.ts:43:17     - Unknown word (Defaulting) -- logger.log('Defaulting to HTTP proxy');
+electron/src/calling/PictureInPictureCall.ts:22:45     - Unknown word (WIRE)       -- PICTURE_CALL_FRAME_NAME = 'WIRE_PICTURE_IN_PICTURE_CALL
+electron/src/calling/PictureInPictureCall.ts:34:5      - Unknown word (fullscreenable) -- fullscreenable: true,
+electron/src/calling/PictureInPictureCall.ts:35:5      - Unknown word (maximizable)    -- maximizable: true,
+electron/src/calling/PictureInPictureCall.ts:37:5      - Unknown word (minimizable)    -- minimizable: true,
+electron/src/lib/CertificateVerifyProcManager.ts:104:60    - Unknown word (ability)      -- message box with the ability to save the certificate
+electron/src/lib/CertificateVerifyProcManager.ts:114:28    - Unknown word (chosen)       -- const {filePath: chosenPath} = await dialog
+electron/src/lib/CertificateVerifyProcManager.ts:156:12    - Unknown word (checkbox)     -- const {checkboxChecked, response} =
+electron/src/lib/CertificateVerifyProcManager.ts:171:51    - Unknown word (pinning)      -- disabled certificate pinning');
+electron/src/lib/CertificateVerifyProcManager.ts:175:12    - Unknown word (Postpone)     -- // Postpone unlocking of the dialog
+electron/src/lib/CertificateVerifyProcManager.ts:175:21    - Unknown word (unlocking)    -- // Postpone unlocking of the dialog so the
+electron/src/lib/CertificateVerifyProcManager.ts:200:20    - Unknown word (validated)    -- const {hostname, validatedCertificate, verificationResul
+electron/src/lib/CertificateVerifyProcManager.ts:217:40    - Unknown word (Pinned)       -- tificateUtils.hostnameShouldBePinned(hostname) && CertificateVerif
+electron/src/lib/CertificateVerifyProcManager.ts:223:62    - Unknown word (Displaying)   -- inningResults.errorMessage}". Displaying certificate pinning
+electron/src/lib/CertificateVerifyProcManager.ts:25:37     - Unknown word (wireapp)    -- certificateUtils from '@wireapp/certificate-check';
+electron/src/lib/CertificateVerifyProcManager.ts:34:3      - Unknown word (bypass)     -- bypassDialogLock: boolean;
+electron/src/lib/CertificateVerifyProcManager.ts:35:5      - Unknown word (Checkbox)   -- isCheckboxChecked: boolean;
+electron/src/lib/CertificateVerifyProcManager.ts:36:5      - Unknown word (Chromium)   -- isChromiumError: boolean;
+electron/src/lib/CertificateVerifyProcManager.ts:40:29     - Unknown word (disables)   -- Indicates success and disables Certificate Transparency
+electron/src/lib/CertificateVerifyProcManager.ts:40:50     - Unknown word (Transparency) -- disables Certificate Transparency verification */
+electron/src/lib/CertificateVerifyProcManager.ts:40:7      - Unknown word (Indicates)  -- /** Indicates success and disables
+electron/src/lib/CertificateVerifyProcManager.ts:43:7      - Unknown word (CHROMIUM)     -- USE_CHROMIUM_VALIDATION = -3,
+electron/src/lib/CertificateVerifyProcManager.ts:59:35     - Unknown word (Pinning)      -- static bypassCertificatePinning = false;
+electron/src/lib/CertificateVerifyProcManager.ts:71:23     - Unknown word (PINNING)      -- SHOW_DETAILS_TEXT_PINNING: getText('certificateVerifyPr
+electron/src/lib/CertificateVerifyProcManager.ts:73:13     - Unknown word (BYPASS)       -- WARNING_BYPASS: getText('certificateVerifyPr
+electron/src/lib/CertificateVerifyProcManager.ts:73:65     - Unknown word (Bypass)       -- ficateVerifyProcManagerWarningBypass'),
+electron/src/lib/CoreProtocol.test.main.ts:40:16     - Unknown word (conversation) -- it('forwards conversation deep links to the WebApp
+electron/src/lib/CoreProtocol.test.main.ts:43:21     - Unknown word (called)       -- sendActionSpy.calledWith(
+electron/src/lib/CoreProtocol.test.main.ts:57:20     - Unknown word (logins)       -- it('forwards SSO logins', async () => {
+electron/src/lib/CoreProtocol.ts:101:20    - Unknown word (Joining)      -- logger.info('Joining conversation ...');
+electron/src/lib/CoreProtocol.ts:132:75    - Unknown word (registered)   -- customProtocolName}" already registered`);
+electron/src/lib/CoreProtocol.ts:134:20    - Unknown word (Registering)  -- logger.info(`Registering custom protocol "${config
+electron/src/lib/CoreProtocol.ts:145:31    - Unknown word (looking)      -- logger.info('App ready, looking for deep link in arguments
+electron/src/lib/CoreProtocol.ts:155:38    - Unknown word (detected)     -- info('Second instance detected, looking for deep link
+electron/src/lib/CoreProtocol.ts:25:9      - Unknown word (shorten)    -- import {shortenText} from './ElectronUtil
+electron/src/lib/CoreProtocol.ts:39:12     - Unknown word (CONVERSATION) -- const JOIN_CONVERSATION_FLOW = 'conversation
+electron/src/lib/CoreProtocol.ts:47:18     - Unknown word (Dispatching)  -- logger.info('Dispatching deep link ...');
+electron/src/lib/CoreProtocol.ts:55:41     - Unknown word (ignoring)     -- 'Invalid deep link, ignoring');
+electron/src/lib/CoreProtocol.ts:62:47     - Unknown word (triggering)   -- link is a SSO link, triggering SSO login ...');
+electron/src/lib/CoreProtocol.ts:66:30     - Unknown word (Conversation) -- await this.handleJoinConversation(route);
+electron/src/lib/CoreProtocol.ts:72:22     - Unknown word (Triggering)   -- logger.info('Triggering hash location change
+electron/src/lib/CoreProtocol.ts:89:20     - Unknown word (Starting)     -- logger.info('Starting SSO flow ...');
+electron/src/lib/CoreProtocol.ts:94:23     - Unknown word (Cannot)       -- logger.error(`Cannot start SSO flow: ${error
+electron/src/lib/ElectronUtil.ts:22:54     - Unknown word (snippet)    -- xecuteJavaScriptWithoutResult(snippet: string, target: WebContents
+electron/src/lib/ElectronUtil.ts:23:11     - Unknown word (removes)    -- // This removes all trailing `;` and
+electron/src/lib/ElectronUtil.ts:23:40     - Unknown word (adds)       -- all trailing `;` and adds `;0` at the end of the
+electron/src/lib/LocalAccountDeletion.ts:42:9      - Unknown word (truncated)  -- const truncatedId = truncate(accountId
+electron/src/lib/LocalAccountDeletion.ts:48:24     - Unknown word (Unable)     -- throw new Error(`Unable to find webview content
+electron/src/lib/LocalAccountDeletion.ts:51:60     - Unknown word (wiped)      -- can have its storage wiped');
+electron/src/lib/LocalAccountDeletion.ts:53:17     - Unknown word (Deleting)   -- logger.log(`Deleting session data for account
+electron/src/lib/LocalAccountDeletion.ts:62:6      - Unknown word (therefore)  -- // therefore partitionId is optional
+electron/src/lib/download.test.main.ts:25:16     - Unknown word (colons)     -- it('converts colons to dashes because colons
+electron/src/lib/download.test.main.ts:25:26     - Unknown word (dashes)     -- 'converts colons to dashes because colons cannot
+electron/src/lib/download.test.main.ts:25:33     - Unknown word (because)    -- converts colons to dashes because colons cannot be used
+electron/src/lib/download.test.main.ts:25:48     - Unknown word (cannot)     -- dashes because colons cannot be used in filenames
+electron/src/lib/download.test.main.ts:25:7      - Unknown word (converts)   -- it('converts colons to dashes because
+electron/src/lib/download.ts:26:34     - Unknown word (commons)    -- DateUtil} from '@wireapp/commons';
+electron/src/lib/download.ts:37:16     - Unknown word (formatted)  -- const {date: formattedDate, time: formattedTime
+electron/src/lib/eventType.ts:101:5     - Unknown word (RELAUNCH)   -- RELAUNCH: 'EVENT_TYPE.WRAPPER
+electron/src/lib/eventType.ts:21:3      - Unknown word (ABOUT)      -- ABOUT: {
+electron/src/lib/eventType.ts:68:5      - Unknown word (REDO)       -- REDO: 'EVENT_TYPE.EDIT.REDO
+electron/src/lib/eventType.ts:70:5      - Unknown word (UNDO)       -- UNDO: 'EVENT_TYPE.EDIT.UNDO
+electron/src/lib/eventType.ts:76:5      - Unknown word (UNREAD)     -- UNREAD_COUNT: 'EVENT_TYPE.LIFECYCLE
+electron/src/lib/eventType.ts:86:5      - Unknown word (SUBMITTED)  -- SUBMITTED: 'EVENT_TYPE.PROXY_PROMPT
+electron/src/lib/eventType.ts:91:5      - Unknown word (THEME)      -- THEME_UPDATE: 'EVENT_TYPE
+electron/src/lib/eventType.ts:99:3      - Unknown word (WRAPPER)    -- WRAPPER: {
+electron/src/lib/openGraph.test.main.ts:104:7     - Unknown word (saves)      -- it('saves cookies on requests
+electron/src/lib/openGraph.test.main.ts:30:25     - Unknown word (Привет)     -- const russianMessage = 'Привет из нока!';
+electron/src/lib/openGraph.test.main.ts:30:35     - Unknown word (нока)       -- russianMessage = 'Привет из нока!';
+electron/src/lib/openGraph.test.main.ts:30:7      - Unknown word (russian)    -- const russianMessage = 'Привет из
+electron/src/lib/openGraph.test.main.ts:57:21     - Unknown word (reqheaders) -- nock(exampleUrl, {reqheaders: {Cookie: cookieText
+electron/src/lib/openGraph.test.main.ts:70:7      - Unknown word (decodes)    -- it('decodes a text encoded with
+electron/src/lib/openGraph.test.main.ts:85:35     - Unknown word (charsets)   -- defaults to utf8 on invalid charsets', async () => {
+electron/src/lib/openGraph.test.main.ts:98:28     - Unknown word (didn't)     -- assert.fail(`Request didn't throw`);
+electron/src/lib/openGraph.ts:123:56    - Unknown word (generation) -- format for open graph generation (Content-Type is "$
+electron/src/lib/openGraph.ts:131:40    - Unknown word (must)       -- 'end' event handler must be first: https://github
+electron/src/lib/openGraph.ts:172:25    - Unknown word (Twitterbot) -- config.userAgent = 'Twitterbot/1.0';
+electron/src/lib/openGraph.ts:34:16     - Unknown word (adapter)    -- axios.defaults.adapter = require('axios/lib
+electron/src/lib/openGraph.ts:34:45     - Unknown word (adapters)   -- require('axios/lib/adapters/http'); // always use
+electron/src/lib/openGraph.ts:36:7      - Unknown word (arrayify)   -- const arrayify = <T>(value: T[] | T
+electron/src/locale/index.ts:113:8     - Unknown word (English)     -- en: 'English',
+electron/src/locale/index.ts:114:8     - Unknown word (Čeština)     -- cs: 'Čeština',
+electron/src/locale/index.ts:115:8     - Unknown word (Dansk)       -- da: 'Dansk',
+electron/src/locale/index.ts:116:8     - Unknown word (Deutsch)     -- de: 'Deutsch',
+electron/src/locale/index.ts:117:8     - Unknown word (Ελληνικά)    -- el: 'Ελληνικά',
+electron/src/locale/index.ts:118:8     - Unknown word (Eesti)       -- et: 'Eesti',
+electron/src/locale/index.ts:119:8     - Unknown word (Español)     -- es: 'Español',
+electron/src/locale/index.ts:120:8     - Unknown word (Français)    -- fr: 'Français',
+electron/src/locale/index.ts:121:8     - Unknown word (Hrvatski)    -- hr: 'Hrvatski',
+electron/src/locale/index.ts:122:8     - Unknown word (Italiano)    -- it: 'Italiano',
+electron/src/locale/index.ts:123:8     - Unknown word (Lietuvos)    -- lt: 'Lietuvos',
+electron/src/locale/index.ts:124:8     - Unknown word (Magyar)      -- hu: 'Magyar',
+electron/src/locale/index.ts:125:8     - Unknown word (Nederlands)  -- nl: 'Nederlands',
+electron/src/locale/index.ts:126:8     - Unknown word (Polski)      -- pl: 'Polski',
+electron/src/locale/index.ts:127:8     - Unknown word (Português)   -- pt: 'Português do Brasil',
+electron/src/locale/index.ts:128:8     - Unknown word (Română)      -- ro: 'Română',
+electron/src/locale/index.ts:129:8     - Unknown word (Русский)     -- ru: 'Русский',
+electron/src/locale/index.ts:131:8     - Unknown word (Slovenčina)  -- sk: 'Slovenčina',
 electron/src/locale/index.ts:132:8     - Unknown word (Slovenščina) -- sl: 'Slovenščina',
+electron/src/locale/index.ts:133:8     - Unknown word (Suomi)       -- fi: 'Suomi',
 electron/src/locale/index.ts:134:8     - Unknown word (Türkçe)      -- tr: 'Türkçe',
 electron/src/locale/index.ts:135:8     - Unknown word (Українська)  -- uk: 'Українська',
+electron/src/locale/index.ts:155:13    - Unknown word (Replacements) -- const customReplacements: Record<string, string
+electron/src/locale/index.ts:170:9     - Unknown word (replacements) -- const replacements: Record<string, string
+electron/src/locale/index.ts:48:50     - Unknown word (Persistence) -- settings/ConfigurationPersistence';
+electron/src/logging/getLogger.ts:21:13     - Unknown word (logdown)    -- import * as logdown from 'logdown';
+electron/src/logging/getLogger.ts:35:47     - Unknown word (production) -- config.environment !== 'production';
+electron/src/logging/loggerUtils.ts:33:68     - Unknown word (Symbolic)   -- absolute, cwd: base, followSymbolicLinks: false, onlyFiles
+electron/src/main.ts:117:32    - Unknown word (enforced)   -- title: locale.getText('enforcedDownloadComplete'),
+electron/src/main.ts:119:65    - Unknown word (downloads)  -- DownloadPath) ?? app.getPath('downloads'),
+electron/src/main.ts:138:20    - Unknown word (Using)      -- logger.info(`Using proxy server URL from
+electron/src/main.ts:141:20    - Unknown word (socks)      -- if (!/^(https?|socks[45]):$/.test(proxyInfoArg
+electron/src/main.ts:153:23    - Unknown word (logo)       -- const iconFileName = `logo.${EnvironmentUtil.platform
+electron/src/main.ts:155:18    - Unknown word (stay)       -- // This needs to stay global, see
+electron/src/main.ts:155:9     - Unknown word (needs)      -- // This needs to stay global, see
+electron/src/main.ts:157:5     - Unknown word (tray)       -- let tray: TrayHandler;
+electron/src/main.ts:160:7     - Unknown word (Quitting)   -- let isQuitting = false;
+electron/src/main.ts:169:4     - Unknown word (Squirrel)   -- // Squirrel setup
 electron/src/main.ts:172:15    - Unknown word (mdns)       -- // do not use mdns for local ip obfuscation
-electron/src/main.ts:173:73    - Unknown word (Mdns)       -- WebRtcHideLocalIpsWithMdns');
-electron/src/menu/developer.ts:71:27     - Unknown word (Availeble)  -- const environments = getAvailebleEnvironments();
+electron/src/main.ts:172:33    - Unknown word (obfuscation) -- use mdns for local ip obfuscation to prevent windows firewall
+electron/src/main.ts:172:64    - Unknown word (firewall)    -- bfuscation to prevent windows firewall prompt
+electron/src/main.ts:173:73    - Unknown word (Mdns)        -- WebRtcHideLocalIpsWithMdns');
+electron/src/main.ts:192:64    - Unknown word (Flash)       -- event, {count, ignoreFlash}: {count?: number; ignoreFlas
+electron/src/main.ts:193:14    - Unknown word (Unread)      -- tray.showUnreadCount(main, count, ignoreFlash
+electron/src/main.ts:200:59    - Unknown word (relaunch)    -- RELAUNCH, () => lifecycle.relaunch());
+electron/src/main.ts:210:31    - Unknown word (locally)     -- save the downloadPath locally
+electron/src/main.ts:218:16    - Unknown word (still)       -- // if a user still has the old config version
+electron/src/main.ts:218:70    - Unknown word (maximized)   -- and had the window maximized last time
+electron/src/main.ts:219:32    - Unknown word (Maximized)   -- typeof mainWindowState.isMaximized === 'undefined' && isFullScre
+electron/src/main.ts:220:10    - Unknown word (maximize)    -- main.maximize();
+electron/src/main.ts:280:17    - Unknown word (Throttling)  -- backgroundThrottling: false,
+electron/src/main.ts:281:14    - Unknown word (Isolation)   -- contextIsolation: false,
+electron/src/main.ts:30:10     - Unknown word (Capturer)   -- desktopCapturer,
+electron/src/main.ts:312:109   - Unknown word (exist)       -- ". Does the account exist?`),
+electron/src/main.ts:336:30    - Unknown word (Shortcuts)   -- systemMenu.registerGlobalShortcuts();
+electron/src/main.ts:337:10    - Unknown word (flash)       -- main.flashFrame(false);
+electron/src/main.ts:350:42    - Unknown word (leaving)     -- Fullscreen detected, leaving full screen before hiding
+electron/src/main.ts:350:69    - Unknown word (hiding)      -- leaving full screen before hiding...');
+electron/src/main.ts:35:19     - Unknown word (Keeper)     -- import windowStateKeeper from 'electron-window
+electron/src/main.ts:360:26    - Unknown word (gone)        -- app.on('render-process-gone', async (event, _, details
+electron/src/main.ts:361:31    - Unknown word (crashed)     -- logger.error('WebContents crashed. Will reload the window
+electron/src/main.ts:416:50    - Unknown word (applying)    -- system proxy settings, applying settings on the main
+electron/src/main.ts:426:40    - Unknown word (submitted)   -- log('Proxy info was submitted via prompt');
+electron/src/main.ts:448:65    - Unknown word (here)        -- mode: 'auto_detect'` here
+electron/src/main.ts:504:15    - Unknown word (Workarounds) -- const addLinuxWorkarounds = (): void => {
+electron/src/main.ts:506:30    - Unknown word (Unity)       -- Fix indicator icon on Unity
+electron/src/main.ts:512:38    - Unknown word (Gnome)       -- nvironmentUtil.linuxDesktop.isGnomeX11
+electron/src/main.ts:519:13    - Unknown word (Portable)    -- const handlePortableFlags = (): void =>
+electron/src/main.ts:520:67    - Unknown word (PORTABLE)    -- argv[config.ARGUMENT.PORTABLE]) {
+electron/src/main.ts:523:31    - Unknown word (APPIMAGE)    -- path.join(process.env.APPIMAGE || process.execPath
+electron/src/main.ts:525:17    - Unknown word (Saving)      -- logger.log(`Saving user data to "${USER
+electron/src/main.ts:533:11    - Unknown word (Socks)       -- const isSocksProxy = proxyProtocol
+electron/src/main.ts:536:28    - Unknown word (NTLM)        -- webContents.session.allowNTLMCredentialsForDomains
+electron/src/main.ts:542:15    - Unknown word (Wrapper)     -- class ElectronWrapperInit {
+electron/src/main.ts:577:16    - Unknown word (hardening)   -- // <webview> hardening
+electron/src/main.ts:621:8     - Unknown word (Keeping)     -- // Keeping this Function for future
+electron/src/main.ts:625:26    - Unknown word (Navigating)  -- this.logger.log(`Navigating inside <webview>. URL
+electron/src/main.ts:636:44    - Unknown word (everything)  -- Windows by default on everything
+electron/src/main.ts:647:40    - Unknown word (Insecure)    -- webPreferences.allowRunningInsecureContent = false;
+electron/src/main.ts:64:9      - Unknown word (Tray)       -- import {TrayHandler} from './menu
+electron/src/main.ts:673:19    - Unknown word (styling)     -- const stylingRegex = /(color:#|font
+electron/src/main.ts:72:9      - Unknown word (About)      -- import {AboutWindow} from './window
+electron/src/main.ts:749:16    - Unknown word (entire)      -- // Reloads the entire view when a `relaunch
+electron/src/main.ts:749:4     - Unknown word (Reloads)     -- // Reloads the entire view when
+electron/src/main.ts:750:14    - Unknown word (Relaunch)    -- lifecycle.addRelaunchListeners(async () =
+electron/src/main.ts:755:9     - Unknown word (further)     -- // Stop further execution on update
+electron/src/main.ts:85:46     - Unknown word (wrapper)    -- join(APP_PATH, 'css/wrapper.css');
+electron/src/menu/TrayHandler.test.main.ts:101:65    - Unknown word (been)       -- the window has already been flashed', async ()
+electron/src/menu/TrayHandler.test.main.ts:101:70    - Unknown word (flashed)    -- window has already been flashed', async () => {
+electron/src/menu/TrayHandler.test.main.ts:28:7      - Unknown word (fixtures)   -- const fixturesDir = path.join(__dirname
+electron/src/menu/TrayHandler.test.main.ts:29:11     - Unknown word (Mock)       -- const TrayMock = new Tray(path.join
+electron/src/menu/TrayHandler.test.main.ts:47:41     - Unknown word (stops)      -- the badge counter and stops flashing the app frame
+electron/src/menu/TrayHandler.test.main.ts:47:47     - Unknown word (flashing)   -- badge counter and stops flashing the app frame when app
+electron/src/menu/TrayHandler.test.main.ts:83:11     - Unknown word (flashes)    -- it('flashes the app frame when app
+electron/src/menu/TrayHandler.ts:104:21    - Unknown word (leads)      -- flashFrame() leads to a constant bouncing
+electron/src/menu/TrayHandler.ts:104:41    - Unknown word (bouncing)   -- leads to a constant bouncing of the dock icon on
+electron/src/menu/TrayHandler.ts:104:57    - Unknown word (dock)       -- constant bouncing of the dock icon on macOS.
+electron/src/menu/TrayHandler.ts:105:37    - Unknown word (directly)   -- calling the dock.bounce() directly, we avoid this behavior
+electron/src/menu/TrayHandler.ts:105:50    - Unknown word (avoid)      -- bounce() directly, we avoid this behavior. the
+electron/src/menu/TrayHandler.ts:105:76    - Unknown word (informational) -- this behavior. the "informational"
+electron/src/menu/TrayHandler.ts:106:35    - Unknown word (makes)         -- optional (default), but makes it easier to read
+electron/src/menu/TrayHandler.ts:106:44    - Unknown word (easier)        -- default), but makes it easier to read
+electron/src/menu/TrayHandler.ts:130:56    - Unknown word (unread)        -- overlayImage, locale.getText('unreadMessages'));
+electron/src/menu/TrayHandler.ts:50:52     - Unknown word (gnome)      -- linuxDesktop.isGnomeX11 ? '.gnome' : '@3x'}.png`;
+electron/src/menu/TrayHandler.ts:55:37     - Unknown word (taskbar)    -- path.join(IMAGE_ROOT, 'taskbar.overlay.png'),
+electron/src/menu/developer.ts:23:12     - Unknown word (Availeble)  -- import {getAvailebleEnvironments, setEnvironment
+electron/src/menu/system.ts:192:34    - Unknown word (Undo)       -- locale.getText('menuUndo'),
+electron/src/menu/system.ts:197:34    - Unknown word (Redo)       -- locale.getText('menuRedo'),
+electron/src/menu/system.ts:21:23     - Unknown word (Shortcut)   -- import {dialog, globalShortcut, ipcMain, Menu, MenuItemConst
+electron/src/menu/system.ts:229:34    - Unknown word (Minimize)   -- locale.getText('menuMinimize'),
+electron/src/menu/system.ts:230:14    - Unknown word (minimize)   -- role: 'minimize',
+electron/src/menu/system.ts:270:14    - Unknown word (removing)   -- // TODO: removing these temporarily until
+electron/src/menu/system.ts:270:23    - Unknown word (these)      -- // TODO: removing these temporarily until such
+electron/src/menu/system.ts:270:29    - Unknown word (temporarily) -- TODO: removing these temporarily until such a time as
+electron/src/menu/system.ts:316:38    - Unknown word (Others)      -- locale.getText('menuHideOthers'),
+electron/src/menu/system.ts:391:30    - Unknown word (Later)       -- locale.getText('restartLater'),
+electron/src/menu/system.ts:43:7      - Unknown word (launcher)   -- const launcher = new autoLaunch({
+electron/src/menu/system.ts:499:42    - Unknown word (shortcut)    -- Registering global mute shortcut "${muteAccelerator}
+electron/src/menu/system.ts:507:47    - Unknown word (switching)   -- Registering global account switching shortcut "${switchAccelerator
+electron/src/menu/system.ts:518:43    - Unknown word (shortcuts)   -- Unregistering all global shortcuts ...');
+electron/src/menu/system.ts:83:7      - Unknown word (spelling)   -- const spellingTemplate: MenuItemConstructorO
+electron/src/preload/menu/preload-about.test.renderer.ts:31:7      - Unknown word (publishes)  -- it('publishes labels', done => {
+electron/src/preload/menu/preload-context.ts:107:41    - Unknown word (Misspelling) -- webContents.replaceMisspelling(suggestion),
+electron/src/preload/menu/preload-context.ts:148:23    - Unknown word (consist)     -- // Code block can consist of many tags: CODE,
+electron/src/preload/preload-app.ts:46:62     - Unknown word (accountid)  -- WebviewTag>(`.Webview[data-accountid="${id}"]`);
+electron/src/preload/preload-app.ts:84:68     - Unknown word (redo)       -- getSelectedWebview()?.redo());
+electron/src/preload/preload-app.ts:86:68     - Unknown word (undo)       -- getSelectedWebview()?.undo());
+electron/src/preload/preload-webview.ts:146:77    - Unknown word (theme)      -- UPDATE.INTERFACE.THEME, (theme: Theme) => {
+electron/src/preload/preload-webview.ts:158:41    - Unknown word (SHORTCUT)   -- publish(WebAppEvents.SHORTCUT.ADD_PEOPLE);
+electron/src/preload/preload-webview.ts:196:50    - Unknown word (SILENCE)    -- WebAppEvents.SHORTCUT.SILENCE);
+electron/src/preload/preload-webview.ts:25:52     - Unknown word (messaging)  -- from '@wireapp/protocol-messaging';
+electron/src/preload/preload-webview.ts:263:25    - Unknown word (improved)   -- @todo: This can be improved by polyfilling getDisplayMedi
 electron/src/preload/preload-webview.ts:263:37    - Unknown word (polyfilling) -- This can be improved by polyfilling getDisplayMedia function
 electron/src/preload/preload-webview.ts:279:91    - Unknown word (Popout)      -- VERSION, supportsCallingPopoutWindow: true};
+electron/src/preload/preload-webview.ts:286:26    - Unknown word (MILLIS)      -- const HALF_SECOND_IN_MILLIS = 500;
+electron/src/preload/preload-webview.ts:288:20    - Unknown word (Attempting)  -- logger.info('Attempting to register event handlers
+electron/src/preload/preload-webview.ts:309:4     - Unknown word (overwrite)   -- // overwrite window.close() to prevent
+electron/src/preload/preload-webview.ts:309:60    - Unknown word (itself)      -- webapp from closing itself
 electron/src/preload/preload-webview.ts:310:8     - Unknown word (SQSERVICES)  -- // see SQSERVICES-1882 and SQSERVICES
+electron/src/preload/preload-webview.ts:35:3      - Unknown word (accent)     -- accentID: number;
+electron/src/preload/preload-webview.ts:37:3      - Unknown word (dark)       -- darkMode: boolean;
+electron/src/preload/preload-webview.ts:45:6      - Unknown word (Theme)      -- type Theme = 'dark' | 'default
+electron/src/preload/preload-webview.ts:52:16     - Unknown word (Dark)       -- const useDarkMode = remote.nativeTheme
+electron/src/preload/preload-webview.ts:53:20     - Unknown word (Switching)  -- logger.info(`Switching dark mode ${useDarkMode
+electron/src/preload/preload-webview.ts:54:75     - Unknown word (DARK)       -- UPDATE.INTERFACE.USE_DARK_MODE, useDarkMode);
+electron/src/runtime/EnvironmentUtil.ts:101:4     - Unknown word (Gives)      -- * Gives all the environments
+electron/src/runtime/EnvironmentUtil.ts:103:74    - Unknown word (against)    -- environment the app can run against
+electron/src/runtime/EnvironmentUtil.ts:31:3      - Unknown word (PRODUCTION) -- PRODUCTION = 'PRODUCTION',
+electron/src/runtime/EnvironmentUtil.ts:46:36     - Unknown word (Production) -- PRODUCTION]: {name: 'Production', server: ServerType
+electron/src/runtime/EnvironmentUtil.ts:90:7      - Unknown word (there)      -- * If there is a custom url set
+electron/src/runtime/lifecycle.ts:100:16    - Unknown word (Exiting)    -- logger.info('Exiting ...');
+electron/src/runtime/lifecycle.ts:105:16    - Unknown word (Relaunching) -- logger.info('Relaunching the app ...');
+electron/src/runtime/lifecycle.ts:108:28    - Unknown word (possible)    -- on MacOS, it is not possible to relaunch the app
+electron/src/runtime/lifecycle.ts:108:61    - Unknown word (just)        -- relaunch the app, so just fallback
+electron/src/runtime/lifecycle.ts:109:11    - Unknown word (reloading)   -- * to reloading all the webviews
+electron/src/runtime/lifecycle.ts:31:38     - Unknown word (squirrel)   -- Squirrel from '../update/squirrel';
+electron/src/runtime/lifecycle.ts:87:16     - Unknown word (Initiating) -- logger.info('Initiating app quit ...');
+electron/src/runtime/lifecycle.ts:91:18     - Unknown word (Clearing)   -- logger.info('Clearing cache ...');
+electron/src/settings/ConfigurationPersistence.ts:25:15     - Unknown word (Updater)    -- import {SchemaUpdater} from './SchemaUpdater
+electron/src/settings/ConfigurationPersistence.ts:57:23     - Unknown word (Restoring)  -- this.logger.info(`Restoring "${name}"`);
+electron/src/settings/ConfigurationPersistence.ts:70:35     - Unknown word (occurred)   -- logger.error('An error occurred while persisting the
+electron/src/settings/ConfigurationPersistence.ts:70:50     - Unknown word (persisting) -- error occurred while persisting the configuration',
+electron/src/settings/ConfigurationPersistence.ts:83:65     - Unknown word (sensible)   -- the latest schema with sensible defaults:
+electron/src/settings/SettingsType.ts:21:32     - Unknown word (Wire's)     -- Settings that can be set in Wire's "init.json" file to
+electron/src/settings/SettingsType.ts:31:41     - Unknown word (wearezeta)  -- Library/Containers/com.wearezeta.zclient.mac/Data/Library
+electron/src/settings/SettingsType.ts:31:51     - Unknown word (zclient)    -- Containers/com.wearezeta.zclient.mac/Data/Library/Application
+electron/src/settings/SettingsType.ts:37:39     - Unknown word (premise)    -- app URL to use in on-premise deployments. The "env
+electron/src/settings/SettingsType.ts:49:7      - Unknown word (Defines)    -- /** Defines the proxy server url
+electron/src/settings/SettingsType.ts:57:35     - Unknown word (shall)      -- which part of the screen shall the app be initially
+electron/src/settings/SettingsType.ts:57:52     - Unknown word (initially)  -- screen shall the app be initially rendered? */
+electron/src/settings/config.ts:60:15     - Unknown word (portable)   -- PORTABLE = 'portable',
+electron/src/settings/config.ts:65:13     - Unknown word (dlpath)     -- DLPATH = 'dlpath',
+electron/src/settings/config.ts:65:3      - Unknown word (DLPATH)     -- DLPATH = 'dlpath',
+electron/src/settings/config.ts:77:108    - Unknown word (Safari)     -- Chrome/69.0.3497.100 Safari/537.36',
+electron/src/settings/config.ts:77:68     - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Chrome
+electron/src/settings/config.ts:77:80     - Unknown word (Gecko)      -- 537.36 (KHTML, like Gecko) Chrome/69.0.3497.1
+electron/src/sso/AutomatedSingleSignOn.ts:27:3      - Unknown word (reached)    -- reachedMaximumAccounts?: boolean
+electron/src/sso/AutomatedSingleSignOn.ts:38:54     - Unknown word (Singular)   -- wrapperAddAccountErrorMessageSingular');
+electron/src/sso/SingleSignOn.ts:103:50    - Unknown word (otherwise)  -- create the window before otherwise it does not work
+electron/src/sso/SingleSignOn.ts:141:43    - Unknown word (pages)      -- windows (open external pages in OS browser)
+electron/src/sso/SingleSignOn.ts:193:13    - Unknown word (authenticity) -- // Ensure authenticity of the window from within
+electron/src/sso/SingleSignOn.ts:212:59    - Unknown word (zuid)         -- cookies.get({name: 'zuid'});
+electron/src/sso/SingleSignOn.ts:246:62    - Unknown word (consumed)     -- not be set or has been consumed');
+electron/src/sso/SingleSignOn.ts:269:13    - Unknown word (Registered)   -- const isRegistered = session.protocol.isProtocol
+electron/src/sso/SingleSignOn.ts:304:28    - Unknown word (provided)     -- Ensure guest window provided type is valid
+electron/src/sso/SingleSignOn.ts:307:47    - Unknown word (aborting)     -- Invalid type detected, aborting.');
+electron/src/sso/SingleSignOn.ts:310:8     - Unknown word (Fake)         -- // Fake postMessage to the webview
+electron/src/sso/SingleSignOn.ts:62:16     - Unknown word (SESS)       -- AUTH_ERROR_SESS_NOT_AVAILABLE: 'AUTH
+electron/src/sso/SingleSignOn.ts:88:17     - Unknown word (ephemeral)  -- // Create a ephemeral and isolated session
+electron/src/types/globals.d.ts:39:102    - Unknown word (them)       -- Array (and try to parse them as base64)
+electron/src/types/globals.d.ts:39:51     - Unknown word (would)      -- encrypt/decrypt methods would take and return Uint
+electron/src/types/globals.d.ts:40:76     - Unknown word (assumption) -- and return string (no assumption on the format (base
+electron/src/update/shortcuts.ts:31:61     - Unknown word (Explorer)   -- 'Microsoft/Internet Explorer/Quick Launch/User Pinned
+electron/src/update/shortcuts.ts:33:74     - Unknown word (Programs)   -- Microsoft/Windows/Start Menu/Programs', linkName),
+electron/src/update/shortcuts.ts:39:9      - Unknown word (documented) -- // As documented in https://github.com
+electron/src/update/shortcuts.ts:40:46     - Unknown word (clicks)     -- problems with notification clicks on Windows 10.
+electron/src/update/shortcuts.ts:41:10     - Unknown word (easiest)    -- // The easiest workaround is to create
+electron/src/update/shortcuts.ts:41:18     - Unknown word (workaround) -- // The easiest workaround is to create shortcuts
+electron/src/update/squirrel.ts:50:6      - Unknown word (SQUIRREL)   -- enum SQUIRREL_EVENT {
+electron/src/update/squirrel.ts:61:11     - Unknown word (spawned)    -- const spawnedProcess = childProcess
+electron/src/update/squirrel.ts:92:24     - Unknown word (updater)    -- logger.info(`Running updater with args ${JSON.stringify
+electron/src/window/AboutWindow.ts:92:25     - Unknown word (broken)     -- // will-navigate is broken with sandboxed env,
+electron/src/window/AboutWindow.ts:92:52     - Unknown word (intercepting) -- with sandboxed env, intercepting requests instead
+electron/src/window/AboutWindow.ts:92:74     - Unknown word (instead)      -- intercepting requests instead
+electron/src/window/AboutWindow.ts:95:21     - Unknown word (those)        -- // Only allow those URLs to be opened within
+electron/src/window/WindowManager.ts:52:27     - Unknown word (Minimized)  -- if (browserWindow.isMinimized()) {
+electron/src/window/WindowManager.ts:88:67     - Unknown word (want)       -- queue the action we want to send. It will be
+electron/src/window/WindowManager.ts:88:92     - Unknown word (flushed)    -- to send. It will be flushed later on by the flushActionsQ
+electron/src/window/WindowUtil.test.main.ts:21:20     - Unknown word (Stub)       -- import {stub, SinonStub} from 'sinon';
+electron/src/window/WindowUtil.test.main.ts:21:9      - Unknown word (stub)       -- import {stub, SinonStub} from 'sinon
+electron/src/window/WindowUtil.test.main.ts:42:27     - Unknown word (externally) -- it('opens secure URLs externally', async () => {
+electron/src/window/WindowUtil.test.main.ts:42:9      - Unknown word (opens)      -- it('opens secure URLs externally
+electron/src/window/WindowUtil.test.main.ts:50:15     - Unknown word (insecure)   -- it('opens insecure URLs externally if allowed
+electron/src/window/WindowUtil.test.main.ts:58:9      - Unknown word (doesn't)    -- it(`doesn't open insecure URLs externally
+electron/src/window/WindowUtil.test.main.ts:67:26     - Unknown word (attacker)   -- const url = 'smb://attacker.tld/public/pwn.desktop
+electron/src/window/WindowUtil.ts:130:3     - Unknown word (movable)    -- movable: true,
+electron/src/window/WindowUtil.ts:32:11     - Unknown word (Rectangle)  -- interface Rectangle {
+electron/src/window/WindowUtil.ts:39:59     - Unknown word (rectangle)  -- point: [number, number], rectangle: Rectangle): boolean
+electron/src/window/WindowUtil.ts:40:11     - Unknown word (Coordinate) -- const [xCoordinate, yCoordinate] = point

@@ -12,6 +12,18 @@
     "version": {
       "allowBranch": "main",
       "conventionalCommits": true
+    },
+    "publish": {
+      "conventionalCommits": true,
+      "ignoreChanges": [
+        "*.md",
+        "package-lock.json",
+        "codetypo.json"
+      ]
     }
+  },
+  "changelogPreset": {
+    "name": "conventionalcommits",
+    "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}"
   }
 }

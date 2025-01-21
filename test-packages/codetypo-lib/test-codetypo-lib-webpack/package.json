@@ -11,12 +11,12 @@
     "compile": "webpack --mode=production",
     "test": "node dist/main.js"
   },
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-bundled-dicts": "workspace:*",
     "codetypo-lib": "workspace:*",
-    "import-fresh": "3.3.0"
+    "import-fresh": "^3.3.0"
   },
   "keywords": [],
   "devDependencies": {

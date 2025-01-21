@@ -45,6 +45,6 @@
     "src/hunspell/license"
   ],
   "devDependencies": {
-    "dictionary-da": "^6.0.0"
+    "dictionary-da": "workspace:*"
   }
 }

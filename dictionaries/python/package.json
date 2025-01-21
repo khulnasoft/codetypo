@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/python#readme",
   "dependencies": {
-    "@codetypo/dict-data-science": "workspace:^"
+    "@codetypo/dict-data-science": "workspace:*"
   },
   "files": [
     "dict/python.txt",

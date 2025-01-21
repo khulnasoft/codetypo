@@ -43,6 +43,6 @@
     "codetypo-ext.json"
   ],
   "devDependencies": {
-    "dictionary-it": "^2.0.0"
+    "dictionary-it": "workspace:*"
   }
 }

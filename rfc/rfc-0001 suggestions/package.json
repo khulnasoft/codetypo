@@ -8,7 +8,7 @@
     "test": ""
   },
   "files": [],
-  "author": "",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-types": "workspace:*"
