@@ -3,3 +3,5 @@ changelog:
     authors:
       - dependabot
       - pre-commit-ci
+      - khulnasoft-bot
+      - nxpkg
