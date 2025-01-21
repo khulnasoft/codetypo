@@ -1,0 +1,46 @@
+{
+  "name": "@codetypo/dict-cpp",
+  "version": "6.0.3",
+  "description": "C/C++ Dictionary dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "test": "pnpm test-samples && pnpm test-src",
+    "test-samples": "codetypo samples",
+    "test-src": "shx head -n 10000 \"src/cpp.txt\" | codetypo -c ./codetypo-ext.json --locale=* --languageId=cpp stdin",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/cpp"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "cpp",
+    "C++",
+    "C",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/cpp#readme",
+  "files": [
+    "dict/*.txt",
+    "codetypo-ext.json"
+  ]
+}

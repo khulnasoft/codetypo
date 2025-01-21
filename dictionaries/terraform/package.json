@@ -1,0 +1,50 @@
+{
+  "name": "@codetypo/dict-terraform",
+  "version": "1.1.0",
+  "description": "Terraform dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 codetypo-tools-cli build",
+    "test": "pnpm run test:words && pnpm run test:samples",
+    "test:samples": "codetypo samples",
+    "test:words": "head -n 1000 \"src/terraform.txt\" | codetypo -c ./codetypo-ext.json \"--locale=*\" \"--languageId=terraform\" stdin",
+    "prepublishOnly": "echo OK",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasofto-dicts",
+    "directory": "dictionaries/terraform"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "terraform",
+    "Terraform",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasofto-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/terraform#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "files": [
+    "dict/terraform.txt",
+    "codetypo-ext.json",
+    "*.js",
+    "*.d.ts"
+  ]
+}

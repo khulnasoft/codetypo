@@ -1,0 +1,8 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "version": "0.2",
+    "import": [
+        "@codetypo/dict-fr-fr/codetypo-ext.json",
+        "@codetypo/dict-nl-nl/codetypo-ext.json"
+    ]
+}

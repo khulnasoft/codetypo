@@ -1,0 +1,150 @@
+name: ' 🔥 Smoke Test'
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/smoke-test.yml'
+      - '*-lock.yaml'
+      - 'package.json'
+      - 'packages/**/*.cjs'
+      - 'packages/**/*.cts'
+      - 'packages/**/*.js'
+      - 'packages/**/*.mjs'
+      - 'packages/**/*.mts'
+      - 'packages/**/*.ts'
+      - 'packages/**/package.json'
+      - 'packages/**/tsconfig.json'
+      - 'tsconfig*.json'
+      - '!docs/**'
+      - '!website/**'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**'
+
+permissions:
+  contents: read
+
+jobs:
+  build-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pre-build and cache
+        id: build-and-cache
+        uses: ./.github/actions/build
+        with:
+          show-summary: true
+          use-setup: true
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pre-build and cache
+        id: build-and-cache
+        uses: ./.github/actions/build
+        with:
+          show-summary: true
+          use-setup: true
+
+  smoke-test-ubuntu:
+    runs-on: ${{ matrix.os }}
+    needs:
+      - build-ubuntu
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          - 18.x
+          - 20.x
+          - 22.x
+          - 23.x
+
+        os:
+          - ubuntu-latest
+
+        use_codetypo_cache:
+          - true
+          - ''
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install
+        uses: ./.github/actions/setup
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Build
+        id: build
+        uses: ./.github/actions/build
+        with:
+          show-summary: true
+
+      - name: Cached Results
+        env:
+          BUILD_RESULTS: ${{ toJson(steps.build.outputs) }}
+        run: |
+          echo "Build Cache:
+            $BUILD_RESULTS
+          "
+
+      - name: Smoke Tests
+        uses: ./.github/actions/smoke-test
+        with:
+          use_codetypo_cache: ${{ matrix.use_codetypo_cache }}
+
+  smoke-test-windows:
+    runs-on: ${{ matrix.os }}
+    needs:
+      - build-windows
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          - 22.x
+
+        os:
+          - windows-latest
+
+        use_codetypo_cache:
+          - true
+          - ''
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install
+        uses: ./.github/actions/setup
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Build
+        id: build
+        uses: ./.github/actions/build
+        with:
+          show-summary: true
+
+      - name: Cached Results
+        env:
+          BUILD_RESULTS: ${{ toJson(steps.build.outputs) }}
+        run: |
+          echo "Build Cache:
+            $BUILD_RESULTS
+          "
+
+      - name: Smoke Tests
+        uses: ./.github/actions/smoke-test
+        with:
+          use_codetypo_cache: ${{ matrix.use_codetypo_cache }}

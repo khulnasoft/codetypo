@@ -1,0 +1,49 @@
+{
+  "name": "@codetypo/dict-it-it",
+  "version": "3.1.4",
+  "description": "Italian dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "sync": "pnpm cpy \"node_modules/dictionary-it/**\" src/hunspell",
+    "conditional-build": "pnpm sync && pnpm build --conditional",
+    "test-samples": "codetypo -c ./codetypo-ext.json --locale=it,en \"samples/**\"",
+    "test-dict": "pipe-cmds \"hunspell-reader words -n 1000 \\\"src/hunspell/index.dic\\\"\" \"codetypo -c ./codetypo-ext.json \\\"--locale=it,it-IT\\\" \\\"--languageId=*\\\" stdin\"",
+    "test": "pnpm run test-samples && pnpm run test-dict",
+    "prepublishOnly": "echo pre-publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasofto-dicts",
+    "directory": "dictionaries/it_IT"
+  },
+  "keywords": [
+    "codetypo",
+    "it_IT",
+    "Italian",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/khulnasofto-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/it_IT#readme",
+  "files": [
+    "dict/it-it.trie",
+    "src/hunspell/license",
+    "codetypo-ext.json"
+  ],
+  "devDependencies": {
+    "dictionary-it": "^2.0.0"
+  }
+}

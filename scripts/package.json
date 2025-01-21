@@ -1,0 +1,32 @@
+{
+  "name": "@internal/scripts",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Tools and Scripts",
+  "type": "module",
+  "bin": {
+    "update-release-please": "./update-release-please.mjs",
+    "build-codetypo-schema": "./build-codetypo-schema.mjs",
+    "update-package-json": "./update-package-json.mjs",
+    "remove-zero-width-space": "./remove-zero-width-space.mjs",
+    "update-contributors": "./update-contributors.mjs"
+  },
+  "scripts": {
+    "#build:ts-json-schema-generator": "pnpm esbuild ../../../code/clones/ts-json-schema-generator/dist/index.js --bundle --outfile=lib/ts-json-schema-generator.cjs --platform=node --external:typescript",
+    "test": "echo Ok"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  },
+  "dependencies": {
+    "globby": "^14.0.2",
+    "safe-stable-stringify": "^2.5.0",
+    "ts-json-schema-generator": "^2.3.0"
+  }
+}

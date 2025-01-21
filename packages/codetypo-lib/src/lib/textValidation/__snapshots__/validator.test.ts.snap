@@ -1,0 +1,111 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Validator > validateText with suggestions 1`] = `
+[
+  {
+    "isFlagged": false,
+    "isFound": false,
+    "line": {
+      "offset": 1,
+      "text": "            Here is a bit of text witth a feww mistaks.
+",
+    },
+    "offset": 35,
+    "suggestions": [
+      "with",
+      "witt",
+      "width",
+      "witch",
+      "witty",
+    ],
+    "suggestionsEx": [
+      {
+        "word": "with",
+      },
+      {
+        "word": "witt",
+      },
+      {
+        "word": "width",
+      },
+      {
+        "word": "witch",
+      },
+      {
+        "word": "witty",
+      },
+    ],
+    "text": "witth",
+  },
+  {
+    "isFlagged": false,
+    "isFound": false,
+    "line": {
+      "offset": 1,
+      "text": "            Here is a bit of text witth a feww mistaks.
+",
+    },
+    "offset": 43,
+    "suggestions": [
+      "few",
+      "flew",
+      "faw",
+      "dew",
+      "hew",
+    ],
+    "suggestionsEx": [
+      {
+        "word": "few",
+      },
+      {
+        "word": "flew",
+      },
+      {
+        "word": "faw",
+      },
+      {
+        "word": "dew",
+      },
+      {
+        "word": "hew",
+      },
+    ],
+    "text": "feww",
+  },
+  {
+    "isFlagged": false,
+    "isFound": false,
+    "line": {
+      "offset": 1,
+      "text": "            Here is a bit of text witth a feww mistaks.
+",
+    },
+    "offset": 48,
+    "suggestions": [
+      "mistake",
+      "mistakes",
+      "mists",
+      "mist's",
+      "mintaka",
+    ],
+    "suggestionsEx": [
+      {
+        "word": "mistake",
+      },
+      {
+        "word": "mistakes",
+      },
+      {
+        "word": "mists",
+      },
+      {
+        "word": "mist's",
+      },
+      {
+        "word": "mintaka",
+      },
+    ],
+    "text": "mistaks",
+  },
+]
+`;

@@ -1,0 +1,15 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "dist": true
+    },
+    "codeTypo.ignoreWords": [],
+    "json.schemas": [
+        {
+            "fileMatch": ["codetypo.json", ".codetypo.json", "codeTypo.json"],
+            "url": "../../codetypo.schema.json"
+        }
+    ]
+}

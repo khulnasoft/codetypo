@@ -1,0 +1,44 @@
+name: smoke_test
+description: Run the smoke tests
+inputs:
+  shell:
+    required: false
+    description: Shell to use, defaults to (bash || powershell)
+  use_codetypo_cache:
+    required: false
+    description: Load the CodeTypo cache
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Show inputs
+      env:
+        INPUTS: ${{ toJSON(inputs) }}
+        OS: ${{ runner.os }}
+      run: |
+        echo "$INPUTS"
+        echo "$OS"
+        node -v
+      shell: bash
+
+    - name: Restore CodeTypo cache
+      uses: actions/cache@v4.2.0
+      if: ${{ inputs.use_codetypo_cache == 'true' }}
+      with:
+        key: codetypo-cache-${{ runner.os }}-smoke-test-${{ hashFiles('**/*.ts', '**/*.md') }}
+        path: |
+          .codetypocache
+        restore-keys: |
+          codetypo-cache-${{ runner.os }}-smoke-test-
+
+    - name: verify trace command
+      run: pnpm run test:bin-trace
+      shell: ${{ inputs.shell }}
+
+    - name: verify the spell checker runs
+      run: pnpm run test:bin-spell
+      shell: ${{ inputs.shell }}
+
+    - name: verify the check command
+      run: pnpm run test:bin-check
+      shell: ${{ inputs.shell }}

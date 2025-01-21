@@ -1,0 +1,227 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Validate the application > app --help 1`] = `
+{
+  "error": "",
+  "log": "",
+}
+`;
+
+exports[`Validate the application > app -V 1`] = `
+{
+  "error": "",
+  "log": "",
+}
+`;
+
+exports[`Validate the application > app compile compound 1`] = `
+"
+# codetypo-tools: keep-case no-split
+
+London
+Los Angeles
+Mexico City
+New Amsterdam
+New Delhi
+New York
+Paris
+San Francisco
+~london
+~los angeles
+~mexico city
+~new amsterdam
+~new delhi
+~new york
+~paris
+~san francisco
+"
+`;
+
+exports[`Validate the application > app compile merge 1`] = `
+"
+# codetypo-tools: keep-case no-split
+
+Amsterdam
+Angeles
+City
+Delhi
+Francisco
+London
+Los
+Mexico
+New
+Paris
+San
+York
+hello
+rework
+reworked
+tried
+try
+work
+worked
+"
+`;
+
+exports[`Validate the application > app compile merge legacy 1`] = `
+"
+# codetypo-tools: keep-case no-split
+
+amsterdam
+angeles
+city
+delhi
+francisco
+hello
+london
+los
+mexico
+new
+paris
+rework
+reworked
+san
+tried
+try
+work
+worked
+york
+"
+`;
+
+exports[`Validate the application > app compile merge with defaults --keep-raw-case 1`] = `
+"
+# codetypo-tools: keep-case no-split
+
+London
+Los Angeles
+Mexico City
+New Amsterdam
+New Delhi
+New York
+Paris
+San Francisco
+hello
+rework
+reworked
+tried
+try
+work
+worked
+"
+`;
+
+exports[`Validate the application > app compile merge with defaults 1`] = `
+"
+# codetypo-tools: keep-case no-split
+
+London
+Los Angeles
+Mexico City
+New Amsterdam
+New Delhi
+New York
+Paris
+San Francisco
+hello
+rework
+reworked
+tried
+try
+work
+worked
+"
+`;
+
+exports[`Validate the application > app compile with compression 1`] = `
+"
+# codetypo-tools: keep-case no-split
+
+London
+Los Angeles
+Mexico City
+New Amsterdam
+New Delhi
+New York
+Paris
+San Francisco
+"
+`;
+
+exports[`Validate the application > app compile-trie compound 1`] = `
+"#!/usr/bin/env codetypo-trie reader
+TrieXv3
+base=10
+# Built by codetypo-tools.
+# Data:
+__DATA__
+L
+o
+ndon$4s Angeles$9<2
+M
+e
+xico City$9<2
+N
+e
+w Amsterdam$9Delhi$5York$8
+P
+a
+ri#13;<4
+S
+a
+n Francisco$9<4
+\\~
+l
+on#3;<s a#8;<5
+m
+exico c#21;<8
+n
+ew a#28;<d#36;<y#40;<5
+p#43;<s
+an f#50;<6
+"
+`;
+
+exports[`Validate the application > app no args 1`] = `
+{
+  "error": "",
+  "log": "",
+}
+`;
+
+exports[`Validate the application > app shasum 1`] = `
+{
+  "error": "",
+  "log": "%s,477e8bc9954033392e432fd66f0d4278884bde38  cities.txt",
+}
+`;
+
+exports[`Validate the application > app shasum check failed 1`] = `
+{
+  "error": "",
+  "log": "%s,cities.trie: OK
+cities.trie.gz: OK
+cities.txt: OK
+colors.trie: FAILED
+colors.txt: OK
+sampleCodeDic.txt: OK
+shasum: WARNING: 1 computed checksum did NOT match",
+}
+`;
+
+exports[`Validate the application > app shasum file not found 1`] = `
+{
+  "error": "",
+  "log": "%s,477e8bc9954033392e432fd66f0d4278884bde38  cities.txt
+shasum: unknown.txt: Unable to read file.",
+}
+`;
+
+exports[`Validate the application > app shasum update 1`] = `
+{
+  "error": "",
+  "log": "%s,477e8bc9954033392e432fd66f0d4278884bde38  cities.txt
+3a6b55a089d018878e8b904f8f19391f2e30b66c  colors.txt
+",
+}
+`;

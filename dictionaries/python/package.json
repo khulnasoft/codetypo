@@ -1,0 +1,50 @@
+{
+  "name": "@codetypo/dict-python",
+  "version": "4.2.15",
+  "description": "Python dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "pnpm codetypo-tools-cli build",
+    "test-dictionary": "codetypo -c ./codetypo-ext.json --locale=en --languageId=python \"src/python/py*.txt\"",
+    "test-samples": "codetypo -c ./codetypo-ext.json \"samples/**/*{.py,.txt}\"",
+    "test": "pnpm run test-dictionary && pnpm run test-samples",
+    "update-python-lib": "./scripts/fetch-python.sh",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasofto-dicts",
+    "directory": "dictionaries/python"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "python",
+    "Python",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasofto-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/python#readme",
+  "dependencies": {
+    "@codetypo/dict-data-science": "workspace:^"
+  },
+  "files": [
+    "dict/python.txt",
+    "dict/python-common.txt",
+    "codetypo-ext.json"
+  ]
+}

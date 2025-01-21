@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/khulnasofto/main/packages/codetypo-tools/codetypo-tools.config.schema.json
+
+targets:
+  - name: 'google'
+    sources:
+      - filename: 'src/google.txt'
+        split: true
+      - filename: 'src/misc.txt'
+        split: true
+      - src/legacy.txt
+    format: 'plaintext'
+    targetDirectory: './dict'
+    generateNonStrict: false
+    compress: false
+checksumFile: true

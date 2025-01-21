@@ -1,0 +1,9 @@
+{
+    "extends": "../../tsconfig.esm.json",
+    "compilerOptions": {
+        "declaration": false,
+        "declarationMap": false,
+        "sourceMap": false
+    },
+    "files": ["codetypo-default.config.ts"]
+}

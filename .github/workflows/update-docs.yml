@@ -1,0 +1,37 @@
+name: Build Docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/codetypo-types/**/*.ts'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-docs:
+    if: github.repository_owner == 'khulnasoft'
+    runs-on: ubuntu-latest
+    env:
+      NEW_BRANCH: 'update-docs'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build Docs
+        run: |
+          pnpm run build-codetypo-types-docs
+
+      - name: PR
+        uses: ./.github/actions/pr
+        with:
+          commit-message: 'ci: Workflow Bot -- Build Docs'
+          branch: ${{ env.NEW_BRANCH }}
+          app_id: ${{ secrets.AUTOMATION_APP_ID }}
+          app_private_key: ${{ secrets.AUTOMATION_PRIVATE_KEY }}

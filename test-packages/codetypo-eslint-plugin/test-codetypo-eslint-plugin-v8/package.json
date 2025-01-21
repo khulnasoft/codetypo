@@ -1,0 +1,23 @@
+{
+  "name": "test-codetypo-eslint-plugin-v8",
+  "version": "8.17.2",
+  "description": "Pure testing package for @codetypo/eslint-plugin-codetypo.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test:eslint": "eslint . -c eslint.config.mjs",
+    "test": "pnpm test:eslint"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [],
+  "devDependencies": {
+    "@codetypo/eslint-plugin": "workspace:*",
+    "@eslint/js": "^8.57.1",
+    "eslint": "8.57.0"
+  }
+}

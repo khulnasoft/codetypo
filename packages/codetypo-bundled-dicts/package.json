@@ -1,0 +1,117 @@
+{
+  "name": "@codetypo/codetypo-bundled-dicts",
+  "version": "8.17.2",
+  "description": "Dictionaries bundled with codetypo",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "codetypo-default.json",
+  "files": [
+    "codetypo-default.json",
+    "codetypo-default.config.js",
+    "codetypo-compatibility.json",
+    "compatibility-words.txt.gz"
+  ],
+  "exports": {
+    ".": "./codetypo-default.config.js",
+    "./codetypo-default.config.js": "./codetypo-default.config.js",
+    "./codetypo-default.json": "./codetypo-default.json"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "build-dict": "codetypo-tools-cli compile compatibility-words.txt",
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "watch": "pnpm run build --watch",
+    "test": "node ../../bin.mjs \"**/*.{txt,md,ts}\"",
+    "update-fix-en-gb": "pnpm add @codetypo/dict-en-gb@1.1.33",
+    "update-dictionaries": "pnpm update --latest \"@codetypo/dict-*\" \"!@codetypo/dict-en-gb\" --depth 1 --filter-prod . && pnpm update-fix-en-gb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/codetypo-bundled-dicts"
+  },
+  "keywords": [
+    "spell",
+    "checker",
+    "codetypo",
+    "dictionaries"
+  ],
+  "author": "Jason Dent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-bundled-dicts"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-bundled-dicts#readme",
+  "dependencies": {
+    "@codetypo/dict-ada": "workspace:*",
+    "@codetypo/dict-al": "workspace:*",
+    "@codetypo/dict-aws": "workspace:*",
+    "@codetypo/dict-bash": "workspace:*",
+    "@codetypo/dict-companies": "workspace:*",
+    "@codetypo/dict-cpp": "workspace:*",
+    "@codetypo/dict-cryptocurrencies": "workspace:*",
+    "@codetypo/dict-csharp": "workspace:*",
+    "@codetypo/dict-css": "workspace:*",
+    "@codetypo/dict-dart": "workspace:*",
+    "@codetypo/dict-data-science": "workspace:*",
+    "@codetypo/dict-django": "^4.1.4",
+    "@codetypo/dict-docker": "^1.1.12",
+    "@codetypo/dict-dotnet": "^5.0.9",
+    "@codetypo/dict-elixir": "^4.0.7",
+    "@codetypo/dict-en-common-misspellings": "^2.0.9",
+    "@codetypo/dict-en-gb": "1.1.33",
+    "@codetypo/dict-en_us": "^4.3.30",
+    "@codetypo/dict-filetypes": "^3.0.10",
+    "@codetypo/dict-flutter": "^1.1.0",
+    "@codetypo/dict-fonts": "^4.0.4",
+    "@codetypo/dict-fsharp": "^1.1.0",
+    "@codetypo/dict-fullstack": "^3.2.3",
+    "@codetypo/dict-gaming-terms": "^1.1.0",
+    "@codetypo/dict-git": "^3.0.4",
+    "@codetypo/dict-golang": "^6.0.18",
+    "@codetypo/dict-google": "^1.0.7",
+    "@codetypo/dict-haskell": "^4.0.5",
+    "@codetypo/dict-html": "^4.0.11",
+    "@codetypo/dict-html-symbol-entities": "^4.0.3",
+    "@codetypo/dict-java": "^5.0.11",
+    "@codetypo/dict-julia": "^1.1.0",
+    "@codetypo/dict-k8s": "^1.0.10",
+    "@codetypo/dict-kotlin": "^1.1.0",
+    "@codetypo/dict-latex": "^4.0.3",
+    "@codetypo/dict-lorem-ipsum": "^4.0.4",
+    "@codetypo/dict-lua": "^4.0.7",
+    "@codetypo/dict-makefile": "^1.0.4",
+    "@codetypo/dict-markdown": "^2.0.9",
+    "@codetypo/dict-monkeyc": "^1.0.10",
+    "@codetypo/dict-node": "^5.0.6",
+    "@codetypo/dict-npm": "^5.1.23",
+    "@codetypo/dict-php": "^4.0.14",
+    "@codetypo/dict-powershell": "^5.0.14",
+    "@codetypo/dict-public-licenses": "^2.0.13",
+    "@codetypo/dict-python": "^4.2.15",
+    "@codetypo/dict-r": "^2.1.0",
+    "@codetypo/dict-ruby": "^5.0.7",
+    "@codetypo/dict-rust": "^4.0.11",
+    "@codetypo/dict-scala": "workspace:*",
+    "@codetypo/dict-shell": "workspace:*",
+    "@codetypo/dict-software-terms": "workspace:*",
+    "@codetypo/dict-sql": "workspace:*",
+    "@codetypo/dict-svelte": "workspace:*",
+    "@codetypo/dict-swift": "workspace:*",
+    "@codetypo/dict-terraform": "workspace:*",
+    "@codetypo/dict-typescript": "workspace:*",
+    "@codetypo/dict-vue": "workspace:*"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@codetypo/codetypo-tools": "workspace:*",
+    "@codetypo/codetypo-types": "workspace:*"
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "version": "0.2",
+    "dictionaries": [
+        "typescript",
+        "custom-dictionary",
+        "ignore-words"
+    ],
+    "noSuggestDictionaries": [
+        "ignore-words-2"
+    ],
+    "import": [
+        "@codetypo/dict-python/codetypo-ext.json"
+    ],
+    "dictionaryDefinitions": [
+        {
+            "name": "custom-dictionary",
+            "path": "./.codetypo/custom-dictionary.txt",
+            "addWords": true
+        },
+        {
+            "name": "ignore-words",
+            "path": "./.codetypo/ignore-words.txt",
+            "addWords": true,
+            "noSuggest": true
+        },
+        {
+            "name": "ignore-words-2",
+            "path": "./.codetypo/ignore-words-2.txt",
+            "addWords": true
+        }
+    ]
+}

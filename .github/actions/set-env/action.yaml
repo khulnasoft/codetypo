@@ -1,0 +1,25 @@
+name: Set Environment Variable
+description: Sets an Environment Variable
+inputs:
+  name:
+    description: The name of the variable.
+    required: true
+  value:
+    description: The value to set.
+    required: true
+outputs:
+  value:
+    description: The value
+    value: ${{ steps.set-env.outputs.value }}
+runs:
+  using: 'composite'
+  steps:
+    - name: Set Env ${{ inputs.name }}
+      id: set-env
+      shell: bash
+      env:
+        VALUE: ${{ inputs.value }}
+      run: |
+        echo "${{ inputs.name }}<<_@@_SET_ENV_@@_" >> $GITHUB_ENV
+        echo $VALUE >> $GITHUB_ENV
+        echo "_@@_SET_ENV_@@_" >> $GITHUB_ENV

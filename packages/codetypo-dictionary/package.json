@@ -1,0 +1,66 @@
+{
+  "name": "codetypo-dictionary",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "version": "8.17.2",
+  "description": "A spelling dictionary library useful for checking words and getting suggestions.",
+  "type": "module",
+  "sideEffects": false,
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildInfo",
+    "!**/__mocks__",
+    "!**/test/**",
+    "!**/*.test.*",
+    "!**/*.spec.*",
+    "!**/*.map"
+  ],
+  "scripts": {
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "build": "tsc -p .",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test": "vitest run",
+    "test:perf": "pnpm test:perf:js --all",
+    "test:perf:ts": "NODE_ENV=production NODE_OPTIONS=--import=@swc-node/register/esm-register insight  --file \"**/*.perf.{mts,ts}\" -t 500",
+    "test:perf:js": "NODE_ENV=production insight -t 500",
+    "test:perf:prof": "NODE_ENV=production node --cpu-prof  ../../node_modules/perf-insight/bin.mjs",
+    "watch": "tsc -p . -w "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/codetypo-dictionary"
+  },
+  "keywords": [
+    "codetypo"
+  ],
+  "author": "Jason Dent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-dictionary"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-dictionary#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@codetypo/codetypo-pipe": "workspace:*",
+    "@codetypo/codetypo-types": "workspace:*",
+    "codetypo-trie-lib": "workspace:*",
+    "fast-equals": "^5.2.2"
+  },
+  "devDependencies": {
+    "gensequence": "^7.0.0",
+    "lorem-ipsum": "^2.0.8"
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "version": "0.2",
+    "globRoot": "${cwd}",
+    "ignorePaths": [
+        "**/timezonedb.h",
+        "**/data_file.c",
+        "**/lexbor/encoding",
+        "**/sljit",
+        "parse_date.c",
+        "itab.c",
+        "itab.h",
+        "pcre2_jit_compile.c",
+        "unicode_data.h",
+        "unicode_table*.h",
+        "zend_vm_execute.h",
+        "zend_vm_handlers.h"
+    ],
+    "dictionaryDefinitions": [
+        {
+            "name": "mnemonics",
+            "path": "./mnemonics.txt"
+        },
+        {
+            "name": "Mime Types",
+            "path": "./mime-types.txt"
+        }
+    ],
+    "dictionaries": ["mnemonics", "Mime Types"],
+    "ignoreWords": ["itab", "pcre", "timezonedb", "lexbor", "sljit"],
+    "overrides": [{ "filename": "**/*.{c,cpp,cxx,h,md}", "dictionaries": ["php"] }],
+    "import": ["../../../codetypo.json"]
+}

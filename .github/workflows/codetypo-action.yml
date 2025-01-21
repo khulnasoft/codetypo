@@ -1,0 +1,29 @@
+name: codetypo-action
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  codetypo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: pnpm
+
+      - run: pnpm -v
+
+      - run: pnpm run prepare-codetypo-action
+      - uses: khulnasoft/codetypo-action@v6

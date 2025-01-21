@@ -1,0 +1,10 @@
+{
+    "version": "0.2",
+    "files": [
+        "**/*.{md,txt}"
+    ],
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "overrides": [{ "filename": "**/*.{md,txt}", "dictionaries": ["elisp"]}]
+}

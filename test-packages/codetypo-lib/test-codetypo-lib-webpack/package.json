@@ -1,0 +1,28 @@
+{
+  "name": "test-codetypo-lib-webpack",
+  "version": "8.17.2",
+  "description": "Pure testing package for codetypo-lib",
+  "private": true,
+  "scripts": {
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "build": "pnpm run compile",
+    "build-dev": "webpack --mode=development",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "compile": "webpack --mode=production",
+    "test": "node dist/main.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@codetypo/codetypo-bundled-dicts": "workspace:*",
+    "codetypo-lib": "workspace:*",
+    "import-fresh": "3.3.0"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@codetypo/codetypo-types": "workspace:*",
+    "ts-loader": "^9.5.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "name": "config with relative glob root",
+    "version": "0.2",
+    "ignorePaths": [
+        "node_modules"
+    ],
+    "globRoot": "../../..",
+    "words": [
+        "aa"
+    ],
+    "import": [
+        "../codetypo.config.json"
+    ]
+}

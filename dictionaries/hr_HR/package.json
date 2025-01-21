@@ -1,0 +1,46 @@
+{
+  "name": "@codetypo/dict-hr-hr",
+  "version": "3.0.4",
+  "description": "Croatian dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "build:conditional": "codetypo-tools-cli build --conditional && pnpm gz",
+    "gz": "codetypo-tools-cli gzip \"dict/*.trie\"",
+    "test": "codetypo samples --no-progress",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm gz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/hr_HR"
+  },
+  "keywords": [
+    "codetypo",
+    "hr_HR",
+    "Croatian",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft.nl>",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/hr_HR#readme",
+  "files": [
+    "dict/hr_HR.trie.gz",
+    "codetypo-ext.json",
+    "src/README.md",
+    "src/README_hr_HR.txt"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@codetypo/dict-sv",
+  "version": "2.2.3",
+  "description": "Swedish dictionary for CSpell.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "sync": "pnpm cpy \"node_modules/dictionary-sv/**\" src/hunspell",
+    "conditional-build": "pnpm sync && pnpm build --conditional",
+    "test-sv": "pipe-cmds \"hunspell-reader words -n 1000 \\\"src/ooo-swedish-dict-2-42/dictionaries/sv_SE.dic\\\"\" \"shx tail -n 200\" \"codetypo -c ./codetypo-ext.json --locale=sv --languageId=* stdin\"",
+    "test-samples": "codetypo -c ./codetypo-ext.json --locale=sv,en \"samples/**\"",
+    "test": "pnpm run test-sv && pnpm run test-samples",
+    "prepare:dictionary": "codetypo-tools-cli gzip \"*.trie\"",
+    "prepublishOnly": "pnpm run conditional-build && pnpm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasofto-dicts",
+    "directory": "dictionaries/sv"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "sv",
+    "Swedish",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/khulnasofto-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/sv#readme",
+  "files": [
+    "Swedish.trie.gz",
+    "codetypo-ext.json"
+  ],
+  "devDependencies": {
+    "dictionary-sv": "^4.0.0"
+  }
+}

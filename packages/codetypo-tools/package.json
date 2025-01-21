@@ -1,0 +1,70 @@
+{
+  "name": "@codetypo/codetypo-tools",
+  "version": "8.17.2",
+  "description": "Tools to assist with the development of codeTypo",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "type": "module",
+  "sideEffects": false,
+  "bin": {
+    "codetypo-tools-cli": "bin.mjs"
+  },
+  "scripts": {
+    "build": "pnpm run build-schema && pnpm run compile",
+    "build-schema": "ts-json-schema-generator --no-top-ref --path src/config/config.ts --type RunConfig --validation-keywords deprecated  -o  ./codetypo-tools.config.schema.json",
+    "compile": "tsc -p .",
+    "watch": "tsc -p . -w",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test": "vitest run",
+    "update-snapshot": "vitest run -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/codetypo-tools"
+  },
+  "keywords": [
+    "codeTypo",
+    "Word",
+    "List",
+    "Compiler"
+  ],
+  "files": [
+    "bin.mjs",
+    "dist",
+    "codetypo-tools.config.schema.json",
+    "!**/*.tsbuildInfo",
+    "!**/__mocks__",
+    "!**/*.test.*",
+    "!**/*.spec.*",
+    "!**/*.map"
+  ],
+  "author": "Jason Dent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-tools"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-tools#readme",
+  "dependencies": {
+    "@codetypo/codetypo-pipe": "workspace:*",
+    "commander": "^13.0.0",
+    "cosmiconfig": "9.0.0",
+    "codetypo-trie-lib": "workspace:*",
+    "glob": "^10.4.5",
+    "hunspell-reader": "workspace:*",
+    "yaml": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "lorem-ipsum": "^2.0.8",
+    "ts-json-schema-generator": "^2.3.0"
+  },
+  "module": "bin.mjs"
+}

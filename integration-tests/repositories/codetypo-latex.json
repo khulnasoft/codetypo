@@ -1,0 +1,23 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "version": "0.2",
+    "import": ["@codetypo/dict-de-de/codetypo-ext.json"],
+    "ignoreWords": ["MartinThoma", "emph", "enquote"],
+    "languageSettings": [],
+    "overrides": [
+        {
+            "filename": "temp/MartinThoma/LaTeX-examples/**/*.{md,tex}",
+            "dictionaries": ["latex"]
+        },
+        {
+            "filename": ["temp/MartinThoma/LaTeX-examples/**/*"],
+            "language": "en,de,lorem-ipsum",
+            "languageSettings": [
+                {
+                    "locale": "de",
+                    "caseSensitive": false
+                }
+            ]
+        }
+    ]
+}

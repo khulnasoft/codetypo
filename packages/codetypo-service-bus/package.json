@@ -1,0 +1,56 @@
+{
+  "name": "@codetypo/codetypo-service-bus",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "version": "8.17.2",
+  "description": "A Library for connecting requests to services that can fulfill them.",
+  "keywords": [
+    "codetypo"
+  ],
+  "author": "Jason Dent <jason@khulnasoft.nl>",
+  "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-service-bus#readme",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildInfo",
+    "!**/__mocks__",
+    "!**/*.spec.*",
+    "!**/*.test.*",
+    "!**/test/**",
+    "!**/*.map"
+  ],
+  "scripts": {
+    "build": "tsc -b . -f",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:clean": "pnpm run clean && pnpm run build",
+    "watch": "tsc -b . -w -f",
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "clean-build": "pnpm build:clean",
+    "coverage": "vitest run --coverage",
+    "test-watch": "vitest --watch",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/codetypo-service-bus"
+  },
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-service-bus"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

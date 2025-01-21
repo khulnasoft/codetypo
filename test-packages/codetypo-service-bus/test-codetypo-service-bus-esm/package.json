@@ -1,0 +1,27 @@
+{
+  "name": "test-codetypo-service-bus-esm",
+  "version": "8.17.2",
+  "description": "Pure testing package for @codetypo/codetypo-service-bus.",
+  "private": true,
+  "bin": "./bin.mjs",
+  "type": "module",
+  "scripts": {
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "build": "pnpm run compile",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "compile": "tsc -p .",
+    "test": "pnpm test:unit && pnpm test:smoke",
+    "test:smoke": "node ./bin.mjs",
+    "test:unit": "vitest run"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@codetypo/codetypo-service-bus": "workspace:*"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "engines": {
+    "node": ">=18"
+  }
+}

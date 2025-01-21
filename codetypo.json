@@ -1,0 +1,93 @@
+{
+    "$schema": "./codetypo.schema.json",
+    "version": "0.2",
+    "cache": {
+        "useCache": true,
+        "cacheLocation": "./.codetypo/.codetypocache",
+        "cacheStrategy": "content"
+    },
+    "dictionaryDefinitions": [
+        {
+            "name": "workspace",
+            "path": "./codetypo-dict.txt",
+            "description": "Custom Workspace Dictionary",
+            "addWords": true
+        },
+        {
+            "name": "ignore words",
+            "path": "./codetypo-ignore-words.txt",
+            "description": "Words to be Ignored",
+            "addWords": true,
+            "noSuggest": true
+        }
+    ],
+    "dictionaries": ["workspace", "ignore words"],
+    "ignorePaths": [
+        ".eslintignore",
+        ".git",
+        ".gitattributes",
+        ".gitignore",
+        ".github/integrations.json",
+        ".pnp.{js,cjs}",
+        ".prettierignore",
+        ".yarn",
+        "__snapshots__",
+        "*.{png,jpg,pdf,svg}",
+        "*.cpuprofile",
+        "*.heapprofile",
+        "emoji*.txt",
+        "**/.docusaurus/**",
+        "**/.gitignore",
+        "**/.vscode/**",
+        "**/{codetypo.*,codeTypo.*,.codetypo.*,codetypo.config.*}",
+        "**/*.schema.json",
+        "**/*.snap",
+        "**/*.trie",
+        "**/coverage/**",
+        "**/dist/**",
+        "**/src/generated/**",
+        "**/jest.config.js",
+        "**/node_modules/**",
+        "**/tsconfig.json",
+        "/tools/*/lib/**",
+        "/codetypo-dict.txt",
+        "/codetypo-ignore-words.txt",
+        "/docs/docsV2/**",
+        "/docs/types/codetypo-types",
+        "examples/yarn/**",
+        "/.codetypo",
+        "codetypo*.{json,yaml}",
+        "integration-tests/config/config.json",
+        "integration-tests/config/repositories/**",
+        "integration-tests/perf/**",
+        "integration-tests/repositories/**",
+        "integration-tests/snapshots/**",
+        "lcov.info",
+        "lib-bundled",
+        "package.json",
+        "*-lock.{json,yaml}",
+        "packages/*/fixtures/**",
+        "packages/*/Samples/**",
+        "packages/*/samples/**",
+        "packages/Samples/**",
+        "packages/codetypo-lib/fixtures/**",
+        "temp",
+        "test-fixtures/**",
+        "test-packages/*/test-codetypo-eslint-plugin*/**",
+        "test-packages/examples/example-codetypo-lib-single-doc/samples/**",
+        "test-packages/*/test-codetypo-tools/src/*.txt",
+        "test-packages/yarn/yarn2/test-eslint-plugin/**"
+    ],
+    "useGitignore": true,
+    "flagWords": [],
+    "ignoreWords": ["commitcomment"],
+    "features": {
+        "weighted-suggestions": true
+    },
+    "overrides": [
+        {
+            "filename": "**/CHANGELOG.md",
+            "words": ["webm"]
+        }
+    ]
+}

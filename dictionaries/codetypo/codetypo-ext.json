@@ -1,0 +1,117 @@
+{
+    "id": "codetypo-bundle",
+    "version": "0.2",
+    "name": "CSpell Dictionaries Bundle",
+    "description": "Dictionaries included with the CSpell Command Line tool.",
+    "readonly": true,
+    "import": [
+        "@codetypo/dict-ada/codetypo-ext.json",
+        "@codetypo/dict-al/codetypo-ext.json",
+        "@codetypo/dict-aws/codetypo-ext.json",
+        "@codetypo/dict-bash/codetypo-ext.json",
+        "@codetypo/dict-companies/codetypo-ext.json",
+        "@codetypo/dict-cpp/codetypo-ext.json",
+        "@codetypo/dict-cryptocurrencies/codetypo-ext.json",
+        "@codetypo/dict-csharp/codetypo-ext.json",
+        "@codetypo/dict-css/codetypo-ext.json",
+        "@codetypo/dict-dart/codetypo-ext.json",
+        "@codetypo/dict-django/codetypo-ext.json",
+        "@codetypo/dict-docker/codetypo-ext.json",
+        "@codetypo/dict-dotnet/codetypo-ext.json",
+        "@codetypo/dict-elixir/codetypo-ext.json",
+        "@codetypo/dict-en-common-misspellings/codetypo-ext.json",
+        "@codetypo/dict-en_us/codetypo-ext.json",
+        "@codetypo/dict-filetypes/codetypo-ext.json",
+        "@codetypo/dict-flutter/codetypo-ext.json",
+        "@codetypo/dict-fonts/codetypo-ext.json",
+        "@codetypo/dict-fsharp/codetypo-ext.json",
+        "@codetypo/dict-fullstack/codetypo-ext.json",
+        "@codetypo/dict-gaming-terms/codetypo-ext.json",
+        "@codetypo/dict-git/codetypo-ext.json",
+        "@codetypo/dict-golang/codetypo-ext.json",
+        "@codetypo/dict-google/codetypo-ext.json",
+        "@codetypo/dict-haskell/codetypo-ext.json",
+        "@codetypo/dict-html-symbol-entities/codetypo-ext.json",
+        "@codetypo/dict-html/codetypo-ext.json",
+        "@codetypo/dict-java/codetypo-ext.json",
+        "@codetypo/dict-julia/codetypo-ext.json",
+        "@codetypo/dict-k8s/codetypo-ext.json",
+        "@codetypo/dict-latex/codetypo-ext.json",
+        "@codetypo/dict-lorem-ipsum/codetypo-ext.json",
+        "@codetypo/dict-lua/codetypo-ext.json",
+        "@codetypo/dict-makefile/codetypo-ext.json",
+        "@codetypo/dict-markdown/codetypo-ext.json",
+        "@codetypo/dict-monkeyc/codetypo-ext.json",
+        "@codetypo/dict-node/codetypo-ext.json",
+        "@codetypo/dict-npm/codetypo-ext.json",
+        "@codetypo/dict-php/codetypo-ext.json",
+        "@codetypo/dict-powershell/codetypo-ext.json",
+        "@codetypo/dict-public-licenses/codetypo-ext.json",
+        "@codetypo/dict-python/codetypo-ext.json",
+        "@codetypo/dict-r/codetypo-ext.json",
+        "@codetypo/dict-ruby/codetypo-ext.json",
+        "@codetypo/dict-rust/codetypo-ext.json",
+        "@codetypo/dict-scala/codetypo-ext.json",
+        "@codetypo/dict-software-terms/codetypo-ext.json",
+        "@codetypo/dict-sql/codetypo-ext.json",
+        "@codetypo/dict-svelte/codetypo-ext.json",
+        "@codetypo/dict-swift/codetypo-ext.json",
+        "@codetypo/dict-terraform/codetypo-ext.json",
+        "@codetypo/dict-typescript/codetypo-ext.json",
+        "@codetypo/dict-vue/codetypo-ext.json"
+    ],
+    "languageSettings": [
+        {
+            "languageId": "javascript,javascriptreact",
+            "dictionaries": ["typescript", "node", "npm"]
+        },
+        {
+            "languageId": "typescript,typescriptreact,mdx",
+            "dictionaries": ["typescript", "node", "npm"]
+        },
+        {
+            "languageId": "javascriptreact,typescriptreact,mdx",
+            "dictionaries": ["html", "html-symbol-entities", "css", "fonts"]
+        },
+        {
+            "languageId": "markdown,asciidoc",
+            "dictionaries": ["npm", "html", "html-symbol-entities"]
+        },
+        {
+            "languageId": "html,pug,jade,php,handlebars",
+            "dictionaries": ["html", "fonts", "typescript", "css", "npm", "html-symbol-entities"]
+        },
+        {
+            "languageId": "json,jsonc",
+            "dictionaries": ["node", "npm"]
+        },
+        {
+            "languageId": "php",
+            "dictionaries": ["php"]
+        },
+        {
+            "languageId": "css,less,scss",
+            "dictionaries": ["fonts", "css"]
+        },
+        {
+            "languageId": "map",
+            "enabled": false
+        },
+        {
+            "languageId": "image",
+            "enabled": false
+        },
+        {
+            "languageId": "binary",
+            "enabled": false
+        },
+        {
+            "languageId": "markdown,html,mdx",
+            "ignoreRegExpList": ["HTML-symbol-entity"]
+        },
+        {
+            "languageId": "html",
+            "ignoreRegExpList": ["href"]
+        }
+    ]
+}

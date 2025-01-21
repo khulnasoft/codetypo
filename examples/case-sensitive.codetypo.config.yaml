@@ -1,0 +1,9 @@
+---
+$schema: https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json
+languageSettings:
+  - languageId: # if the file type matches
+      - javascript
+      - dockerfile
+      - yaml
+    # apply settings
+    caseSensitive: false

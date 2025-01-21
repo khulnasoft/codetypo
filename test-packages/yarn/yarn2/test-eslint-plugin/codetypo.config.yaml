@@ -1,0 +1,11 @@
+usePnP: true
+import:
+  - '@codetypo/dict-medicalterms/codetypo-ext.json'
+words:
+  - medicalterms
+  - corepack
+ignorePaths:
+  - '.yarn'
+  - '.pnp.js'
+  - '.php.cjs'
+  - 'yarn.lock'

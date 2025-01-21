@@ -1,0 +1,24 @@
+{
+  "name": "test-codetypo-esbuild-cjs",
+  "version": "8.17.2",
+  "description": "Pure testing package for codetypo-lib.",
+  "bin": {
+    "build": "build.mjs",
+    "mjs": "bin.mjs",
+    "csj": "bin.cjs"
+  },
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "pnpm test:esm && pnpm test:cjs",
+    "test:esm": "node bin.mjs README.md",
+    "test:cjs": "node bin.cjs build.mjs"
+  },
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "codetypo": {},
+  "keywords": []
+}

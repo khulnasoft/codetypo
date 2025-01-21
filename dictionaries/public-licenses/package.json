@@ -1,0 +1,54 @@
+{
+  "name": "@codetypo/dict-public-licenses",
+  "version": "2.0.13",
+  "description": "Common Public Licenses dictionary for codetypo.",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "pnpm run generate && pnpm run compile",
+    "generate": "node ./src/extract.js",
+    "checksum": "codetypo-tools-cli shasum -c checksum.txt",
+    "compile": "codetypo-tools-cli build",
+    "conditional-build": "pnpm run --silent checksum || pnpm run build && pnpm run gen-checksum",
+    "test-dict": "codetypo -c ./codetypo-ext.json --locale=en --languageId=* --file-list source-files.txt",
+    "gen-checksum": "codetypo-tools-cli shasum -u checksum.txt --list-file source-files.txt source-dependencies.txt",
+    "test": "pnpm run test-dict",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/public-licenses"
+  },
+  "keywords": [
+    "codetypo",
+    "public-licenses",
+    "Common Public Licenses",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/public-licenses#readme",
+  "devDependencies": {
+    "spdx-license-ids": "^3.0.21"
+  },
+  "files": [
+    "public-licenses.txt.gz",
+    "codetypo-ext.json",
+    "*.js",
+    "*.d.ts"
+  ]
+}

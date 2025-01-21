@@ -1,0 +1,47 @@
+{
+  "name": "@codetypo/dict-redis",
+  "version": "1.0.5",
+  "description": "Redis dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 codetypo-tools-cli build",
+    "test": "shx head -n 1000 \"src/redis-commands.txt\" | codetypo -c ./codetypo.json \"--locale=*\" \"--languageId=*\" stdin",
+    "prepublishOnly": "echo OK",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasofto-dicts",
+    "directory": "dictionaries/redis"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "redis",
+    "redis",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasofto-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/redis#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "files": [
+    "dict/redis.txt",
+    "codetypo-ext.json",
+    "*.js",
+    "*.d.ts"
+  ]
+}

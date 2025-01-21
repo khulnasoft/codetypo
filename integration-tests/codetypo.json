@@ -1,0 +1,5 @@
+{
+    "version": "0.2",
+    "ignorePaths": ["repositories/**", "snapshots/**", "config/config.json"],
+    "import": ["../codetypo.json"]
+}

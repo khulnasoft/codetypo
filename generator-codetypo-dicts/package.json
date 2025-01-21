@@ -1,0 +1,48 @@
+{
+  "name": "generator-codetypo-dicts",
+  "version": "0.1.1",
+  "description": "Generate codetypo dictionary subprojects.",
+  "homepage": "https://github.com/khulnasofto-dicts",
+  "type": "module",
+  "private": true,
+  "author": "Jason Dent <jason@khulnasoft
+  "files": [
+    "generators"
+  ],
+  "main": "generators/app/index.js",
+  "bin": {
+    "run": "./run.js"
+  },
+  "keywords": [
+    "codetypo dictionary generator",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "yeoman-environment": "^4.4.3",
+    "yeoman-generator": "^7.4.0",
+    "yosay": "^3.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "test": "echo no tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khulnasofto-dicts.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasofto-dicts/issues"
+  },
+  "codetypo": {
+    "words": [
+      "appname",
+      "mkdir",
+      "subprojects",
+      "yosay"
+    ]
+  }
+}

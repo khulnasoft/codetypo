@@ -1,0 +1,51 @@
+{
+  "name": "@codetypo/dict-golang",
+  "version": "6.0.18",
+  "description": "Go Language dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "sync": "pnpm cpy \"node_modules/go-words/**\" \"src/go-words\" --flat",
+    "conditional-build": "pnpm run sync && pnpm run build",
+    "build": "codetypo-tools-cli build",
+    "test": "shx head -n 100 src/go.txt | codetypo -c ./codetypo-ext.json --locale=* --languageId=go stdin",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasofto-dicts",
+    "directory": "dictionaries/golang"
+  },
+  "keywords": [
+    "codetypo",
+    "golang",
+    "Go Language",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft
+  "contributors": [
+    "Alexey Palazhchenko",
+    "Jason Dent <jason@khulnasoft
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasofto-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/golang#readme",
+  "files": [
+    "./dict/go.txt",
+    "codetypo-ext.json"
+  ],
+  "devDependencies": {
+    "go-words": "github:AlekSi/go-words"
+  }
+}

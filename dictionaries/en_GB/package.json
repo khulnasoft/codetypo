@@ -1,0 +1,56 @@
+{
+  "name": "@codetypo/dict-en-gb",
+  "version": "4.1.54",
+  "description": "British English dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "sync": "pnpm cpy \"node_modules/aoo-mozilla-en-dict/en_GB*/**\" \"src/aoo-mozilla-en-dict\" --flat && pnpm sync-clean",
+    "sync-clean": "shx rm -rf \"src/*/wordlist*.txt\" \"src/*/*speller*.txt\"",
+    "conditional-build": "pnpm run sync && pnpm build --conditional && pnpm gz",
+    "gz": "codetypo-tools-cli gzip \"*.trie\"",
+    "prepare:dictionary": "pnpm gz",
+    "prepublishOnly": "echo pre-publish",
+    "test-dict": "shx head -n 1000 \"./src/wordsEnGb.txt\" | codetypo -c ./codetypo-ext.json --locale=en_gb --languageId=* stdin",
+    "test-text": "codetypo -c ./codetypo-ext.json --locale=en_gb --languageId=* \"tests/*.txt\"",
+    "test": "pnpm run test-dict && pnpm run test-text"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/en_GB"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "en_GB",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft.nl>",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/en_GB#readme",
+  "files": [
+    "en_GB.trie.gz",
+    "codetypo-ext.json",
+    "src/**/README_en_GB.txt"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@codetypo/dict-en-shared": "workspace:^",
+    "aoo-mozilla-en-dict": "github:marcoagpinto/aoo-mozilla-en-dict"
+  }
+}

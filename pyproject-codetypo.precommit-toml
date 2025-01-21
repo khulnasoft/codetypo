@@ -1,7 +1,0 @@
-[tool.codetypo]
-#builtin = ["clear","rare","informal","usage","code","names"]
-builtin = "clear,rare,informal,usage,code,names"
-#ignore-words-list = ["uint"]
-ignore-words-list = "adn,master,uint,wrod"
-#skip=[ "./.*","codetypo/data/*","codetypo/tests/*"]
-skip="./.*,codetypo/data/*,codetypo/tests/*"

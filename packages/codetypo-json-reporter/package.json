@@ -1,0 +1,55 @@
+{
+  "name": "@codetypo/codetypo-json-reporter",
+  "version": "8.17.2",
+  "description": "JSON reporter for CodeTypo",
+  "author": "Jason Dent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-json-reporter"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-json-reporter#readme",
+  "type": "module",
+  "sideEffects": false,
+  "types": "dist/esm/index.d.ts",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildInfo",
+    "!**/__mocks__",
+    "!**/test/**",
+    "!**/*.test.*",
+    "!**/*.spec.*",
+    "!**/*.map"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/codetypo-json-reporter"
+  },
+  "scripts": {
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "build": "tsc -b . -f",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test": "vitest run && pnpm test:run",
+    "test:run": "node ../../bin.mjs . --config codeTypo.example.mjs",
+    "watch": "tsc -b . -w -f"
+  },
+  "dependencies": {
+    "@codetypo/codetypo-types": "workspace:*"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

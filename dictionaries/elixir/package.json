@@ -1,0 +1,42 @@
+{
+  "name": "@codetypo/dict-elixir",
+  "version": "4.0.7",
+  "description": "Elixir dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli compile --keep-raw-case src/elixir.txt --no-compress -o ./dict",
+    "test": "shx head -n 100 src/elixir.txt | codetypo -c ./codetypo-ext.json --locale=* --languageId=elixir stdin",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasofto-dicts",
+    "directory": "dictionaries/elixir"
+  },
+  "keywords": [
+    "codetypo",
+    "elixir",
+    "elixir",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasofto-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/elixir#readme",
+  "files": [
+    "dict/elixir.txt",
+    "codetypo-ext.json"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "codetypo-integration-tests",
+  "private": true,
+  "version": "8.17.2",
+  "description": "Integration tests for codetypo. It will execute codetypo against various repositories and compare the results.",
+  "bin": {
+    "codetypo-integration-tests": "tester.js",
+    "normalize-output": "scripts/normalize-output.mjs"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . --watch",
+    "clean": "pnpm run clean-dist && pnpm run clean-repos",
+    "clean-dist": "shx rm -rf dist coverage \"*.tsbuildInfo\"",
+    "clean-repos": "shx rm -rf repositories/temp temp",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "add-repo": "node tester.js add -t $(gh auth token)",
+    "tester": "node tester.js check -t $(gh auth token)",
+    "integration-tests": "node tester.js check -f",
+    "test-vitest": "vitest run",
+    "update-snapshots-only": "node tester.js check --update-snapshots",
+    "update-repositories": "node tester.js check --update-repositories"
+  },
+  "author": "Jason Dent",
+  "license": "MIT",
+  "dependencies": {
+    "@codetypo/codetypo-types": "workspace:*",
+    "@octokit/rest": "^21.1.0",
+    "ansi-escapes": "^7.0.0",
+    "chalk": "^5.4.1",
+    "commander": "^13.0.0",
+    "csv-parse": "^5.6.0",
+    "csv-stringify": "^6.5.2",
+    "jest-diff": "^29.7.0",
+    "shelljs": "^0.8.5",
+    "simple-git": "^3.27.0",
+    "vscode-uri": "^3.0.8",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@codetypo/codetypo-bundled-dicts": "workspace:*",
+    "@codetypo/dict-de-de": "workspace:*",
+    "@types/jest": "^29.5.14",
+    "@types/shelljs": "^0.8.15",
+    "codetypo": "workspace:*",
+    "jest": "^29.7.0"
+  },
+  "main": "tester.js",
+  "keywords": [],
+  "files": [
+    "dist",
+    "scripts",
+    "tester.js",
+    "custom-reporter.js"
+  ]
+}

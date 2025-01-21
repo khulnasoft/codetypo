@@ -1,0 +1,31 @@
+{
+  "name": "test-codetypo-types-esbuild",
+  "version": "8.17.2",
+  "description": "Pure testing package for @codetypo/codetypo-types. Its purpose is to verify @codetypo/codetypo-types dependencies.",
+  "private": true,
+  "bin": {
+    "test-bin": "test-bin.mjs",
+    "build": "build.mjs"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.cjs",
+  "type": "module",
+  "scripts": {
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "build": "node build.mjs",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "test": "node ./test-bin.mjs"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@codetypo/codetypo-types": "workspace:*"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  }
+}

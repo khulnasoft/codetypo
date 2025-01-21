@@ -1,0 +1,22 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "id": "include-regex-example",
+    "languageSettings": [
+        {
+            "description": "This one works with python",
+            "languageId": "python",
+            "includeRegExpList": [
+                // Python Comments
+                "/#.*|(?:('''|\"\"\")[^\\1]+?\\1)/g"
+            ]
+        },
+        {
+            "description": "this one works with javascript, C, typescript, etc.",
+            "languageId": "javascript",
+            "includeRegExpList": [
+                // Javascript Comments
+                "/(?:\\/\\/.*)|(?:\\/\\*[\\s\\S]+?\\*\\/)/g"
+            ]
+        }
+    ]
+}

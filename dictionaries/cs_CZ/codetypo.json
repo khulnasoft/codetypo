@@ -1,0 +1,27 @@
+{
+    "files": [
+        "**/*.{md,txt}"
+    ],
+    "dictionaries": [
+        "cs-cz"
+    ],
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "ignoreWords": [
+        "ceskem",
+        "slovniku",
+        "Kolar",
+        "Všianský",
+        "HYPH",
+        "hyph",
+        "lingucomponent",
+        "lingucomponent",
+        "LGPL",
+        "SISSL",
+        "Gnomovision",
+        "Gnomovision",
+        "Yoyodyne",
+        "Gnomovision"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "version": "0.2",
+    "language": "en,sv",
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "overrides": [
+        {
+            "filename": "samples/**/*.md",
+            "caseSensitive": true
+        }
+    ],
+    "words": [
+        "LGPL"
+    ]
+}

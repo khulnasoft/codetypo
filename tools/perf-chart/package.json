@@ -1,0 +1,37 @@
+{
+  "name": "perf-chart",
+  "private": true,
+  "version": "8.3.2",
+  "description": "Generate performance charts from codetypo performance data.",
+  "bin": {
+    "codetypo-integration-tests": "bin.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "pnpm run build:tsc && pnpm run build:esbuild",
+    "build:esbuild": "esbuild --bundle --packages=bundle --platform=node --target=node18 --outfile=lib/app.cjs src/app.ts",
+    "build:tsc": "tsc -p .",
+    "clean": "shx rm -rf dist coverage \"*.tsbuildInfo\"",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "test-vitest": "vitest run",
+    "watch": "tsc -p . -w"
+  },
+  "author": "Jason Dent",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.0.0",
+    "csv-parse": "^5.6.0",
+    "thistogram": "^1.1.1"
+  },
+  "keywords": [],
+  "files": [
+    "lib",
+    "bin.js"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  }
+}

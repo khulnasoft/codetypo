@@ -1,0 +1,349 @@
+
+Repository: liriliri/licia
+Url: "https://github.com/liriliri/licia.git"
+Args: ["**/*.*"]
+Lines:
+ CodeTypo: Files checked: 1434, Issues found: 342 in 84 files.
+ exit code: 1
+CHANGELOG.md:335:26    - Unknown word (unenumerable) -- feat(allKeys): support unenumerable and symbol
+DOC.md:10029:2   - Unknown word (metas)            -- |metas|Object of name content
+DOC.md:10033:8   - Unknown word (metas)            -- Remove metas.
+DOC.md:10832:29  - Unknown word (babca)            -- abc', 5, 'ab'); // -> 'babca'
+DOC.md:10833:28  - Unknown word (ababa)            -- ab', 5, 'ab'); // -> 'ababa'
+DOC.md:11160:30  - Unknown word (pointerdown)      -- pointerEvent('down'); // -> 'pointerdown' if supported
+DOC.md:11501:28  - Unknown word (cbbcb)            -- randomId(5, 'abc'); // -> 'cbbcb'
+DOC.md:11987:30  - Unknown word (abcab)            -- abc', 5, 'ab'); // -> 'abcab'
+DOC.md:12958:9   - Unknown word (unenumerable)     -- unenumerable?: boolean;
+DOC.md:12980:2   - Unknown word (unenumerable)     -- |unenumerable=false|Include unenumerable
+DOC.md:13021:20  - Unknown word (mcake)            -- stripAnsi('\u001b[4mcake\u001b[0m'); // -> 'cake
+DOC.md:13043:16  - Unknown word (Flicia)           -- stripBom('\uFEFFlicia'); // -> 'licia'
+DOC.md:13087:22  - Unknown word (mred)             -- stripColor('\u001b[31mred\u001b[39m'); // ->
+DOC.md:13825:43  - Unknown word (mouseup)          -- getElementById('test'), 'mouseup');
+DOC.md:14253:9   - Unknown word (Uppercased)       -- |return|Uppercased string|
+DOC.md:14441:38  - Unknown word (Hwcqx)            -- 456, 789]); // -> '2HwcqxB'
+DOC.md:14443:14  - Unknown word (Hwcqx)            -- vlq.decode('2HwcqxB'); // -> [123, 456
+DOC.md:14574:9   - Unknown word (Workerized)       -- |return|Workerized Function|
+DOC.md:1586:9    - Unknown word (lastname)         -- lastname: 'Su',
+DOC.md:1587:9    - Unknown word (firstname)        -- firstname: 'RedHood'
+DOC.md:1594:19   - Unknown word (firstname)        -- return author.firstname + author.lastname;
+DOC.md:1594:38   - Unknown word (lastname)         -- author.firstname + author.lastname;
+DOC.md:1621:5    - Unknown word (unshift)          -- unshift(val: any): number;
+DOC.md:1657:5    - Unknown word (unshift)          -- ### unshift
+DOC.md:1903:6    - Unknown word (unmatch)          -- #### unmatch
+DOC.md:2135:18   - Unknown word (hashlru)          -- Inspired by the [hashlru algorithm](https://github
+DOC.md:2325:5    - Unknown word (desdendants)      -- Get desdendants of current matched elements
+DOC.md:3466:9    - Unknown word (unenumerable)     -- unenumerable?: boolean;
+DOC.md:3492:2    - Unknown word (unenumerable)     -- |unenumerable=false|Include unenumerable
+DOC.md:3492:29   - Unknown word (unenumerable)     -- unenumerable=false|Include unenumerable keys|
+DOC.md:4061:5    - Unknown word (cpuset)           -- cpuset: {
+DOC.md:4062:9    - Unknown word (cpus)             -- cpus(): {
+DOC.md:4353:55   - Unknown word (falsey)           -- undefined, and NaN are falsey.
+DOC.md:5209:9    - Unknown word (Deburred)         -- |return|Deburred string |
+DOC.md:5828:22   - Unknown word (touchstart)       -- el.addEventListener('touchstart', () => {}, false);
+DOC.md:6171:36   - Unknown word (pollyfill)        -- not a complete fetch pollyfill.
+DOC.md:756:1     - Unknown word (Interconnectable) -- Interconnectable Message channel.
+DOC.md:8000:44   - Unknown word (Fdvcmxk)          -- plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D'); // -> true
+DOC.md:9727:30   - Unknown word (ababc)            -- abc', 5, 'ab'); // -> 'ababc'
+DOC_CN.md:10022:2   - Unknown word (metas)        -- |metas|包含所有 meta 键值对的对象|
+DOC_CN.md:10823:29  - Unknown word (babca)        -- abc', 5, 'ab'); // -> 'babca'
+DOC_CN.md:10824:28  - Unknown word (ababa)        -- ab', 5, 'ab'); // -> 'ababa'
+DOC_CN.md:11151:30  - Unknown word (pointerdown)  -- pointerEvent('down'); // -> 'pointerdown' if supported
+DOC_CN.md:11492:28  - Unknown word (cbbcb)        -- randomId(5, 'abc'); // -> 'cbbcb'
+DOC_CN.md:11978:30  - Unknown word (abcab)        -- abc', 5, 'ab'); // -> 'abcab'
+DOC_CN.md:12949:9   - Unknown word (unenumerable) -- unenumerable?: boolean;
+DOC_CN.md:12971:2   - Unknown word (unenumerable) -- |unenumerable=false|包含不可枚举值|
+DOC_CN.md:13012:20  - Unknown word (mcake)        -- stripAnsi('\u001b[4mcake\u001b[0m'); // -> 'cake
+DOC_CN.md:13034:16  - Unknown word (Flicia)       -- stripBom('\uFEFFlicia'); // -> 'licia'
+DOC_CN.md:13078:22  - Unknown word (mred)         -- stripColor('\u001b[31mred\u001b[39m'); // ->
+DOC_CN.md:13814:43  - Unknown word (mouseup)      -- getElementById('test'), 'mouseup');
+DOC_CN.md:14430:38  - Unknown word (Hwcqx)        -- 456, 789]); // -> '2HwcqxB'
+DOC_CN.md:14432:14  - Unknown word (Hwcqx)        -- vlq.decode('2HwcqxB'); // -> [123, 456
+DOC_CN.md:1578:9    - Unknown word (lastname)   -- lastname: 'Su',
+DOC_CN.md:1579:9    - Unknown word (firstname)  -- firstname: 'RedHood'
+DOC_CN.md:1586:19   - Unknown word (firstname)  -- return author.firstname + author.lastname;
+DOC_CN.md:1586:38   - Unknown word (lastname)   -- author.firstname + author.lastname;
+DOC_CN.md:1613:5    - Unknown word (unshift)    -- unshift(val: any): number;
+DOC_CN.md:1649:5    - Unknown word (unshift)    -- ### unshift
+DOC_CN.md:1895:6    - Unknown word (unmatch)    -- #### unmatch
+DOC_CN.md:2127:5    - Unknown word (hashlru)    -- 参考 [hashlru 算法](https://github.com
+DOC_CN.md:3458:9    - Unknown word (unenumerable) -- unenumerable?: boolean;
+DOC_CN.md:3484:2    - Unknown word (unenumerable) -- |unenumerable=false|包含不可枚举键名|
+DOC_CN.md:4053:5    - Unknown word (cpuset)       -- cpuset: {
+DOC_CN.md:4054:9    - Unknown word (cpus)         -- cpus(): {
+DOC_CN.md:5820:22   - Unknown word (touchstart)   -- el.addEventListener('touchstart', () => {}, false);
+DOC_CN.md:6164:17   - Unknown word (pollyfill)    -- 注意：这并不是 fetch 的 pollyfill。
+DOC_CN.md:7993:44   - Unknown word (Fdvcmxk)      -- plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D'); // -> true
+DOC_CN.md:9720:30   - Unknown word (ababc)        -- abc', 5, 'ab'); // -> 'ababc'
+README.md:33:141    - Unknown word (mout)       -- such as underscore, mout, which strictly separates
+demo/MediaQuery.demo.html:7:20      - Unknown word (unmatch)    -- mediaQuery.on('unmatch', () => console.log
+demo/MediaQuery.demo.html:7:49      - Unknown word (unmatch)    -- () => console.log('unmatch'));
+demo/scrollTo.demo.html:52:40     - Unknown word (arrrived)   -- console.log('Section 2 arrrived!');
+demo/stringifyAll.demo.html:29:26     - Unknown word (unenumerable) -- console.time('window unenumerable');
+demo/stringifyAll.demo.html:31:9      - Unknown word (unenumerable) -- unenumerable: true
+demo/stringifyAll.demo.html:33:29     - Unknown word (unenumerable) -- console.timeEnd('window unenumerable');
+demo/stringifyAll.demo.html:49:9      - Unknown word (unenumerable) -- unenumerable: true,
+demo/stringifyAll.demo.html:57:9      - Unknown word (unenumerable) -- unenumerable: true,
+docker-compose.yml:13:11     - Unknown word (cpus)       -- cpus: '1.5'
+i18n/LinkedList.md:30:5      - Unknown word (unshift)    -- ### unshift
+i18n/MediaQuery.md:27:6      - Unknown word (unmatch)    -- #### unmatch
+i18n/QuickLru.md:5:5       - Unknown word (hashlru)    -- 参考 [hashlru 算法](https://github.com
+i18n/allKeys.md:16:2      - Unknown word (unenumerable) -- |unenumerable=false|包含不可枚举键名|
+i18n/fetch.md:5:17      - Unknown word (pollyfill)  -- 注意：这并不是 fetch 的 pollyfill。
+i18n/meta.md:21:2      - Unknown word (metas)      -- |metas|包含所有 meta 键值对的对象|
+i18n/stringifyAll.md:15:2      - Unknown word (unenumerable) -- |unenumerable=false|包含不可枚举值|
+index.json:276:25    - Unknown word (Interconnectable) -- "description": "Interconnectable Message channel.",
+lib/tpl/karma.conf.tpl:19:32     - Unknown word (lcovonly)   -- reports: ['html', 'lcovonly', 'text', 'text-summary
+lib/tpl/karma.conf.tpl:4:45      - Unknown word (jquery)     -- mocha', 'chai', 'chai-jquery', 'jquery-1.8.3'],
+lib/tpl/karma.conf.tpl:4:55      - Unknown word (jquery)     -- chai', 'chai-jquery', 'jquery-1.8.3'],
+lib/tpl/karma.conf.tpl:9:20      - Unknown word (jquery)     -- 'karma-jquery',
+lib/tpl/karma.sauce.tpl:21:45     - Unknown word (jquery)     -- mocha', 'chai', 'chai-jquery', 'jquery-1.8.3'],
+lib/tpl/karma.sauce.tpl:21:55     - Unknown word (jquery)     -- chai', 'chai-jquery', 'jquery-1.8.3'],
+lib/tpl/karma.sauce.tpl:27:20     - Unknown word (jquery)     -- 'karma-jquery',
+lib/tpl/karma.sauce.tpl:33:30     - Unknown word (saucelabs)  -- reporters: ['dots', 'saucelabs'],
+src/Channel.js:1:4       - Unknown word (Interconnectable) -- /* Interconnectable Message channel.
+src/HeapSnapshot.js:104:23    - Unknown word (detachedness) -- case 'detachedness':
+src/JsonTransformer.js:75:12     - Unknown word (lastname)   -- * lastname: 'Su',
+src/JsonTransformer.js:76:12     - Unknown word (firstname)  -- * firstname: 'RedHood'
+src/JsonTransformer.js:83:22     - Unknown word (firstname)  -- * return author.firstname + author.lastname;
+src/JsonTransformer.js:83:41     - Unknown word (lastname)   -- author.firstname + author.lastname;
+src/MediaQuery.js:25:9      - Unknown word (unmatch)    -- * #### unmatch
+src/MediaQuery.js:59:51     - Unknown word (unmatch)    -- isMatch() ? 'match' : 'unmatch');
+src/Promise.js:171:33    - Unknown word (deferreds)  -- let i = 0, len = self._deferreds.length; i < len; i+
+src/Promise.js:172:28    - Unknown word (deferreds)  -- handle(self, self._deferreds[i]);
+src/Promise.js:175:11    - Unknown word (deferreds)  -- self._deferreds = null;
+src/Promise.js:181:49    - Unknown word (deferreds)  -- pending')) return self._deferreds.push(deferred);
+src/Promise.js:62:19     - Unknown word (deferreds)  -- this._deferreds = [];
+src/QuickLru.js:3:21      - Unknown word (hashlru)    -- * Inspired by the [hashlru algorithm](https://github
+src/Select.js:11:8      - Unknown word (desdendants) -- * Get desdendants of current matched elements
+src/allKeys.js:14:32     - Unknown word (unenumerable) -- unenumerable=false|Include unenumerable keys|
+src/allKeys.js:14:5      - Unknown word (unenumerable) -- * |unenumerable=false|Include unenumerable
+src/allKeys.js:34:12     - Unknown word (unenumerable) -- * unenumerable?: boolean;
+src/allKeys.js:54:25     - Unknown word (unenumerable) -- { prototype = true, unenumerable = false, symbol = false
+src/allKeys.js:58:10     - Unknown word (unenumerable) -- if ((unenumerable || symbol) && getOwnPropertyN
+src/cgroup.js:22:8      - Unknown word (cpuset)     -- * cpuset: {
+src/cgroup.js:46:39     - Unknown word (usec)       -- = toNum(data['usage_usec']);
+src/cgroup.js:49:44     - Unknown word (cpuacct)    -- Math.round(toNum(read('cpuacct/cpuacct.usage')) /
+src/cgroup.js:49:52     - Unknown word (cpuacct)    -- toNum(read('cpuacct/cpuacct.usage')) / 1000);
+src/cgroup.js:79:7      - Unknown word (cpuset)     -- const cpuset = {
+src/cgroup.js:82:18     - Unknown word (cpuset)     -- let p = 'cpuset/cpuset.effective_cpus
+src/cgroup.js:82:25     - Unknown word (cpuset)     -- let p = 'cpuset/cpuset.effective_cpus';
+src/cgroup.js:85:18     - Unknown word (cpuset)     -- p = 'cpuset.cpus.effective';
+src/compact.js:3:58      - Unknown word (falsey)     -- undefined, and NaN are falsey.
+src/container.js:29:19     - Unknown word (cpuset)     -- return cgroup.cpuset.cpus().effective.length
+src/container.js:61:25     - Unknown word (cpuset)     -- const cpus = cgroup.cpuset.cpus().effective;
+src/crc1.js:37:9      - Unknown word (accum)      -- let accum = 0;
+src/crc1.js:41:9      - Unknown word (accum)      -- accum += byte;
+src/crc1.js:43:12     - Unknown word (accum)      -- crc += accum % 256;
+src/cssPriority.js:79:36     - Unknown word (ELEMS)      -- if (contain(PSEUDO_ELEMS, value.replace(/:/g
+src/cssPriority.js:96:14     - Unknown word (ELEMS)      -- const PSEUDO_ELEMS = [
+src/dateFormat.js:147:61    - Unknown word (SZWN)       -- ?|([HhMsTt])\1?|[LloSZWN]|"[^"]*"|'[^']*'/g;
+src/dateFormat.js:148:28    - Unknown word (PMCEA)      -- regTimezone = /\b(?:[PMCEA][SDP]T|(?:Pacific|Mountain
+src/deburr.js:24:35     - Unknown word (deburred)   -- replace(regLatin, key => deburredLetters[key])
+src/deburr.js:34:7      - Unknown word (deburred)   -- const deburredLetters = {
+src/deburr.js:6:12      - Unknown word (Deburred)   -- * |return|Deburred string |
+src/detectBrowser.js:80:17     - Unknown word (chrom)      -- chrome: /(?!chrom.*opr)chrom(?:e|ium)
+src/detectBrowser.js:80:28     - Unknown word (chrom)      -- chrome: /(?!chrom.*opr)chrom(?:e|ium)\/([0-9.]+)
+src/detectOs.js:50:17     - Unknown word (OSTYPE)     -- env.OSTYPE === 'cygwin' ||
+src/detectOs.js:51:17     - Unknown word (OSTYPE)     -- env.OSTYPE === 'msys'
+src/detectOs.js:51:29     - Unknown word (msys)       -- env.OSTYPE === 'msys'
+src/dpr.js:39:48     - Unknown word (dppx)       -- resolution: ${get()}dppx)`);
+src/dpr.js:53:36     - Unknown word (dppx)       -- `(resolution: ${dpr}dppx)`);
+src/dpr.js:57:7      - Unknown word (unmatch)    -- m.on('unmatch', change);
+src/fetch.js:3:39      - Unknown word (pollyfill)  -- not a complete fetch pollyfill.
+src/fullscreen.js:86:10     - Unknown word (mozfullscreenchange) -- 'mozfullscreenchange',
+src/fullscreen.js:87:10     - Unknown word (mozfullscreenerror)  -- 'mozfullscreenerror'
+src/highlight.js:114:31    - Unknown word (subtmpl)    -- str = str.replace(/___subtmpl\d+___/g, function($tmpl
+src/highlight.js:114:58    - Unknown word (tmpl)       -- subtmpl\d+___/g, function($tmpl) {
+src/highlight.js:115:33    - Unknown word (tmpl)       -- const i = parseInt($tmpl.replace(/___subtmpl
+src/highlight.js:115:50    - Unknown word (subtmpl)    -- parseInt($tmpl.replace(/___subtmpl(\d+)___/, '$1'), 10
+src/highlight.js:62:39     - Unknown word (subtmpl)    -- return $1.replace($2, '___subtmpl' + (subLangSi - 1)
+src/highlight.js:74:30     - Unknown word (subtmpl)    -- str.replace(/___(?!subtmpl)\w+?___/g, function
+src/isDataUrl.js:11:47     - Unknown word (Fdvcmxk)    -- plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D'); // -> true
+src/isDocker.js:23:24     - Unknown word (dockerenv)  -- fs.statSync('/.dockerenv');
+src/isDocker.js:29:68     - Unknown word (mountinfo)  -- hasDocker('/proc/self/mountinfo');
+src/isMobile.js:23:107    - Unknown word (hiptop)     -- compal|elaine|fennec|hiptop|iemobile|ip(hone|od
+src/isMobile.js:23:114    - Unknown word (iemobile)   -- elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle
+src/isMobile.js:23:152    - Unknown word (maemo)      -- od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox
+src/isMobile.js:23:158    - Unknown word (midp)       -- iris|kindle|lge |maemo|midp|mmp|mobile.+firefox
+src/isMobile.js:23:183    - Unknown word (netfront)   -- mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm
+src/isMobile.js:23:269    - Unknown word (symbian)    -- pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link
+src/isMobile.js:23:277    - Unknown word (treo)       -- series(4|6)0|symbian|treo|up\.(browser|link)|vodafone
+src/isMobile.js:23:329    - Unknown word (xiino)      -- vodafone|wap|windows ce|xda|xiino/i;
+src/isMobile.js:23:38     - Unknown word (meego)      -- egMobileAll = /(android|bb\d+|meego).+mobile|avantgo|bada
+src/isMobile.js:23:53     - Unknown word (avantgo)    -- bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer
+src/isMobile.js:23:61     - Unknown word (bada)       -- meego).+mobile|avantgo|bada\/|blackberry|blazer
+src/isMobile.js:24:1006   - Unknown word (pdxg)       -- owg1|p800|pan(a|d|t)|pdxg|pg(13|-([1-8]|c))|phil
+src/isMobile.js:24:1034   - Unknown word (pire)       -- 13|-([1-8]|c))|phil|pire|pl(ay|uc)|pn-2|po(ck
+src/isMobile.js:24:1072   - Unknown word (psio)       -- 2|po(ck|rt|se)|prox|psio|pt-g|qa-a|qc(07|12|
+src/isMobile.js:24:1116   - Unknown word (qtek)       -- 21|32|60|-[2-7]|i-)|qtek|r380|r600|raks|rim9
+src/isMobile.js:24:1131   - Unknown word (raks)       -- |i-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\
+src/isMobile.js:24:114    - Unknown word (amoi)       -- ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar
+src/isMobile.js:24:1231   - Unknown word (shar)       -- )|47|mc|nd|ri)|sgh-|shar|sie(-|m)|sk-0|sl(45
+src/isMobile.js:24:132    - Unknown word (aptu)       -- co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)
+src/isMobile.js:24:1422   - Unknown word (utst)       -- |tx-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg
+src/isMobile.js:24:1437   - Unknown word (veri)       -- |si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0
+src/isMobile.js:24:1474   - Unknown word (voda)       -- vk(40|5[0-3]|-v)|vm40|voda|vulc|vx(52|53|60|61
+src/isMobile.js:24:1479   - Unknown word (vulc)       -- [0-3]|-v)|vm40|voda|vulc|vx(52|53|60|61|70|8
+src/isMobile.js:24:1527   - Unknown word (webc)       -- |83|85|98)|w3c(-| )|webc|whit|wi(g |nc|nw)|wmlb
+src/isMobile.js:24:1550   - Unknown word (wmlb)       -- webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas-|your
+src/isMobile.js:24:1555   - Unknown word (wonu)       -- whit|wi(g |nc|nw)|wmlb|wonu|x700|yas-|your|zeto
+src/isMobile.js:24:157    - Unknown word (attw)       -- ar(ch|go)|as(te|us)|attw|au(di|-m|r |s )|avan
+src/isMobile.js:24:1575   - Unknown word (zeto)       -- wonu|x700|yas-|your|zeto|zte-/i;
+src/isMobile.js:24:178    - Unknown word (avan)       -- attw|au(di|-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd
+src/isMobile.js:24:225    - Unknown word (bumb)       -- |bl(ac|az)|br(e|v)w|bumb|bw-(n|u)|c55\/|capi
+src/isMobile.js:24:245    - Unknown word (capi)       -- bumb|bw-(n|u)|c55\/|capi|ccwa|cdm-|cell|chtm
+src/isMobile.js:24:250    - Unknown word (ccwa)       -- bw-(n|u)|c55\/|capi|ccwa|cdm-|cell|chtm|cldc
+src/isMobile.js:24:265    - Unknown word (chtm)       -- capi|ccwa|cdm-|cell|chtm|cldc|cmd-|co(mp|nd)
+src/isMobile.js:24:270    - Unknown word (cldc)       -- ccwa|cdm-|cell|chtm|cldc|cmd-|co(mp|nd)|craw
+src/isMobile.js:24:308    - Unknown word (dbte)       -- nd)|craw|da(it|ll|ng)|dbte|dc-s|devi|dica|dmob
+src/isMobile.js:24:323    - Unknown word (dica)       -- ll|ng)|dbte|dc-s|devi|dica|dmob|do(c|p)o|ds(12
+src/isMobile.js:24:328    - Unknown word (dmob)       -- dbte|dc-s|devi|dica|dmob|do(c|p)o|ds(12|-d)|el
+src/isMobile.js:24:407    - Unknown word (fetc)       -- ez([4-7]0|os|wa|ze)|fetc|fly(-|_)|g1 u|g560|gene
+src/isMobile.js:24:467    - Unknown word (haie)       -- go(\.w|od)|gr(ad|un)|haie|hcit|hd-(m|p|t)|hei
+src/isMobile.js:24:472    - Unknown word (hcit)       -- w|od)|gr(ad|un)|haie|hcit|hd-(m|p|t)|hei-|hi(pt
+src/isMobile.js:24:584    - Unknown word (ibro)       -- ma)|i230|iac( |-|\/)|ibro|idea|ig01|ikom|im1k
+src/isMobile.js:24:599    - Unknown word (ikom)       -- |\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris
+src/isMobile.js:24:609    - Unknown word (inno)       -- idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro
+src/isMobile.js:24:614    - Unknown word (ipaq)       -- ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu
+src/isMobile.js:24:633    - Unknown word (jbro)       -- inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji
+src/isMobile.js:24:638    - Unknown word (jemu)       -- ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt(
+src/isMobile.js:24:653    - Unknown word (keji)       -- jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt
+src/isMobile.js:24:668    - Unknown word (klon)       -- kddi|keji|kgt( |\/)|klon|kpt |kwc-|kyo(c|k)|le
+src/isMobile.js:24:73     - Unknown word (abac)       -- -6]i|770s|802s|a wa|abac|ac(er|oo|s-)|ai(ko|rn
+src/isMobile.js:24:732    - Unknown word (libw)       -- k|l|u)|50|54|-[a-w])|libw|lynx|m1-w|m3ga|m50\
+src/isMobile.js:24:812    - Unknown word (mmef)       -- rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t
+src/isMobile.js:24:863    - Unknown word (mwbp)       -- v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2
+src/isMobile.js:24:868    - Unknown word (mywa)       -- zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n
+src/isMobile.js:24:960    - Unknown word (nzph)       -- tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran
+src/isRetina.js:19:138    - Unknown word (dppx)       -- min-resolution: 1.25dppx)';
+src/kill.js:29:20     - Unknown word (taskkill)   -- cmd = `taskkill /pid ${pid} /T /F`;
+src/lpad.js:15:33     - Unknown word (ababc)      -- abc', 5, 'ab'); // -> 'ababc'
+src/meta.js:19:5      - Unknown word (metas)      -- * |metas|Object of name content
+src/meta.js:23:11     - Unknown word (metas)      -- * Remove metas.
+src/meta.js:68:9      - Unknown word (metas)      -- let metas = name;
+src/meta.js:69:16     - Unknown word (metas)      -- if (!isObj(metas)) {
+src/meta.js:70:9      - Unknown word (metas)      -- metas = {};
+src/mime.js:42:22     - Unknown word (photoshop)  -- 'image/vnd.adobe.photoshop': ['psd'],
+src/mime.js:47:21     - Unknown word (mpga)       -- 'audio/mpeg': ['mpga', 'mp2', 'mp2a', 'mp
+src/mime.js:52:14     - Unknown word (matroska)   -- 'video/x-matroska': ['mkv'],
+src/mime.js:54:14     - Unknown word (msvideo)    -- 'video/x-msvideo': ['avi'],
+src/mime.js:55:12     - Unknown word (quicktime)  -- 'video/quicktime': ['qt', 'mov'],
+src/mime.js:87:18     - Unknown word (msword)     -- 'application/msword': ['doc', 'docx', 'dot
+src/naturalSort.js:50:17     - Unknown word (chunkb)     -- let chunka, chunkb, anum, bnum;
+src/naturalSort.js:50:25     - Unknown word (anum)       -- let chunka, chunkb, anum, bnum;
+src/naturalSort.js:50:31     - Unknown word (bnum)       -- chunka, chunkb, anum, bnum;
+src/naturalSort.js:50:9      - Unknown word (chunka)     -- let chunka, chunkb, anum, bnum
+src/naturalSort.js:63:9      - Unknown word (chunka)     -- chunka = a.match(chunk)[0]
+src/naturalSort.js:64:9      - Unknown word (chunkb)     -- chunkb = b.match(chunk)[0]
+src/naturalSort.js:65:28     - Unknown word (chunka)     -- anum = !root.isNaN(chunka);
+src/naturalSort.js:65:9      - Unknown word (anum)       -- anum = !root.isNaN(chunka
+src/naturalSort.js:66:28     - Unknown word (chunkb)     -- bnum = !root.isNaN(chunkb);
+src/naturalSort.js:66:9      - Unknown word (bnum)       -- bnum = !root.isNaN(chunkb
+src/naturalSort.js:67:13     - Unknown word (anum)       -- if (anum && !bnum) {
+src/naturalSort.js:67:22     - Unknown word (bnum)       -- if (anum && !bnum) {
+src/naturalSort.js:70:13     - Unknown word (bnum)       -- if (bnum && !anum) {
+src/naturalSort.js:70:22     - Unknown word (anum)       -- if (bnum && !anum) {
+src/naturalSort.js:73:13     - Unknown word (anum)       -- if (anum && bnum) {
+src/naturalSort.js:73:21     - Unknown word (bnum)       -- if (anum && bnum) {
+src/naturalSort.js:74:26     - Unknown word (chunka)     -- const diff = chunka - chunkb;
+src/naturalSort.js:74:35     - Unknown word (chunkb)     -- const diff = chunka - chunkb;
+src/naturalSort.js:78:17     - Unknown word (chunka)     -- if (chunka.length !== chunkb.length
+src/naturalSort.js:78:35     - Unknown word (chunkb)     -- if (chunka.length !== chunkb.length) {
+src/normalizeHeader.js:43:8      - Unknown word (dnsprefetch) -- 'x-dnsprefetch-control': 'X-DNSPrefetch
+src/pad.js:15:32     - Unknown word (babca)      -- abc', 5, 'ab'); // -> 'babca'
+src/pad.js:16:31     - Unknown word (ababa)      -- ab', 5, 'ab'); // -> 'ababa'
+src/randomId.js:12:31     - Unknown word (cbbcb)      -- randomId(5, 'abc'); // -> 'cbbcb'
+src/randomId.js:27:12     - Unknown word (Symbhas)    -- 'ModuleSymbhasOwnPr-0123456789ABCDEFGHIJKLNQ
+src/randomId.js:27:35     - Unknown word (ABCDEFGHIJKLNQRTUVWXYZ) -- ModuleSymbhasOwnPr-0123456789ABCDEFGHIJKLNQRTUVWXYZ_cfgijkpqtvxz';
+src/randomId.js:27:58     - Unknown word (cfgijkpqtvxz)           -- ABCDEFGHIJKLNQRTUVWXYZ_cfgijkpqtvxz';
+src/rpad.js:15:33     - Unknown word (abcab)      -- abc', 5, 'ab'); // -> 'abcab'
+src/slugify.js:43:2024   - Unknown word (shequel)    -- ₨ rupee,₩ won,₪ new shequel,₫ dong,€ euro,₭ kip
+src/stringifyAll.js:13:32     - Unknown word (unenumerable) -- unenumerable=false|Include unenumerable keys|
+src/stringifyAll.js:13:5      - Unknown word (unenumerable) -- * |unenumerable=false|Include unenumerable
+src/stringifyAll.js:48:12     - Unknown word (unenumerable) -- * unenumerable?: boolean;
+src/stringifyAll.js:71:9      - Unknown word (unenumerable) -- unenumerable = false,
+src/stringifyAll.js:80:9      - Unknown word (unenumerable) -- unenumerable,
+src/stripAnsi.js:10:23     - Unknown word (mcake)      -- stripAnsi('\u001b[4mcake\u001b[0m'); // -> 'cake
+src/stripAnsi.js:22:84     - Unknown word (nqry)       -- 0,4})*)?[0-9A-ORZcf-nqry=><]/g;
+src/stripColor.js:10:25     - Unknown word (mred)       -- stripColor('\u001b[31mred\u001b[39m'); // ->
+src/theme.js:50:7      - Unknown word (unmatch)    -- m.on('unmatch', () => exports.emit
+src/topoSort.js:65:19     - Unknown word (preds)      -- const preds = predecessors.concat
+src/topoSort.js:68:52     - Unknown word (preds)      -- nodes.indexOf(child), preds);
+src/ucs2.js:50:39     - Unknown word (nums)       -- map(chunk(arr, 32767), nums =>
+src/ucs2.js:51:48     - Unknown word (nums)       -- fromCodePoint.apply(String, nums)
+src/upperCase.js:6:12      - Unknown word (Uppercased) -- * |return|Uppercased string|
+src/vlq.js:24:41     - Unknown word (Hwcqx)      -- 456, 789]); // -> '2HwcqxB'
+src/vlq.js:26:17     - Unknown word (Hwcqx)      -- * vlq.decode('2HwcqxB'); // -> [123, 456
+src/workerize.js:6:12      - Unknown word (Workerized) -- * |return|Workerized Function|
+test/HeapSnapshot.js:30:9      - Unknown word (detachedness) -- detachedness: false
+test/JsonTransformer.js:14:13     - Unknown word (lastname)   -- lastname: 'Su',
+test/JsonTransformer.js:15:13     - Unknown word (firstname)  -- firstname: 'RedHood'
+test/JsonTransformer.js:22:23     - Unknown word (firstname)  -- return author.firstname + author.lastname;
+test/JsonTransformer.js:22:42     - Unknown word (lastname)   -- author.firstname + author.lastname;
+test/ReduceStore.js:55:11     - Unknown word (unscribe)   -- it('delay unscribe', function() {
+test/abbrev.js:18:10     - Unknown word (foom)       -- 'foom',
+test/abbrev.js:23:13     - Unknown word (foom)       -- foom: 'foom',
+test/abbrev.js:23:20     - Unknown word (foom)       -- foom: 'foom',
+test/abbrev.js:54:13     - Unknown word (foldi)      -- foldi: 'folding',
+test/abbrev.js:55:13     - Unknown word (foldin)     -- foldin: 'folding',
+test/abbrev.js:67:10     - Unknown word (acde)       -- 'acde',
+test/abbrev.js:74:18     - Unknown word (acde)       -- ac: 'acde',
+test/abbrev.js:75:19     - Unknown word (acde)       -- acd: 'acde',
+test/abbrev.js:76:13     - Unknown word (acde)       -- acde: 'acde'
+test/abbrev.js:76:20     - Unknown word (acde)       -- acde: 'acde'
+test/allKeys.js:33:5      - Unknown word (unenumerable) -- it('unenumerable', () => {
+test/allKeys.js:35:9      - Unknown word (unenumerable) -- unenumerable: true
+test/cgroup.js:4:14      - Unknown word (cpuset)     -- console.log('cpuset cpus', cgroup.cpuset
+test/cgroup.js:4:35      - Unknown word (cpuset)     -- cpuset cpus', cgroup.cpuset.cpus());
+test/dataUrl.js:21:59     - Unknown word (Fdvcmxk)    -- plain;base64,SGVsbG8sIFdvcmxkIQ==')).to.eql(
+test/dataUrl.js:23:29     - Unknown word (Fdvcmxk)    -- data: 'SGVsbG8sIFdvcmxkIQ==',
+test/dataUrl.js:52:49     - Unknown word (Fdvcmxk)    -- plain;base64,SGVsbG8sIFdvcmxkIQ==');
+test/dataUrl.js:61:49     - Unknown word (Fdvcmxk)    -- plain;base64,SGVsbG8sIFdvcmxkIQ==');
+test/detectBrowser.js:37:63     - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Chrome
+test/detectBrowser.js:42:71     - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Chrome
+test/detectBrowser.js:52:76     - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Chrome
+test/detectBrowser.js:57:76     - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Chrome
+test/detectBrowser.js:98:76     - Unknown word (KHTML)      -- AppleWebKit/531.2+ (KHTML, like Gecko) Version
+test/detectOs.js:12:71     - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Chrome
+test/detectOs.js:24:82     - Unknown word (KHTML)      -- AppleWebKit/537.13+ (KHTML, like Gecko) Version
+test/detectOs.js:4:90      - Unknown word (KHTML)      -- AppleWebKit/601.1.46 (KHTML, like Gecko) Version
+test/detectOs.js:8:91      - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Chrome
+test/fileType.js:13:15     - Unknown word (AQABAAAAADs) -- ['R0lGODlhAQABAAAAADs=', 'gif'],
+test/fileType.js:14:13     - Unknown word (IAAABXRUJQ)  -- ['UklGRhIAAABXRUJQVlA4TAYAAAAvQWxvAGs=
+test/fileType.js:14:27     - Unknown word (TAYAAA)      -- UklGRhIAAABXRUJQVlA4TAYAAAAvQWxvAGs=', 'webp']
+test/fileType.js:16:21     - Unknown word (MAAAAAAAAAAAA) -- ['H4sIAK6G4VsCAwMAAAAAAAAAAAA=', 'gz'],
+test/fileUrl.js:3:38      - Unknown word (Fbar)       -- , 'file:///%23foo/%3Fbar'],
+test/fileUrl.js:4:30      - Unknown word (redhood)    -- redhood·su', 'file:///redhood%C2%B7su'],
+test/fileUrl.js:4:8       - Unknown word (redhood)    -- ['/redhood·su', 'file:///redhood
+test/isDataUrl.js:4:39      - Unknown word (Fdvcmxk)    -- plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D', true],
+test/isMobile.js:10:84     - Unknown word (KHTML)      -- AppleWebKit/601.1.46 (KHTML, like Gecko) Version
+test/isMobile.js:12:177    - Unknown word (Miui)       -- Safari/537.36 XiaoMi/MiuiBrowser/8.0.11';
+test/isMobile.js:12:51     - Unknown word (Redmi)      -- Android 5.0.2; zh-cn; Redmi Note 2 Build/LRX22G
+test/isMobile.js:12:98     - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Version
+test/isMobile.js:2:74      - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Chrome
+test/isMobile.js:4:68      - Unknown word (KHTML)      -- AppleWebKit/537.36 (KHTML, like Gecko) Chrome
+test/isMobile.js:8:76      - Unknown word (KHTML)      -- AppleWebKit/601.6.17 (KHTML, like Gecko) Version
+test/lpad.js:5:23      - Unknown word (ababc)      -- ['abc', 5, 'ab', 'ababc'],
+test/pad.js:5:23      - Unknown word (babca)      -- ['abc', 5, 'ab', 'babca'],
+test/pad.js:6:22      - Unknown word (babab)      -- ['ab', 5, 'ab', 'babab'],
+test/rpad.js:5:23      - Unknown word (abcab)      -- ['abc', 5, 'ab', 'abcab'],
+test/stringifyAll.js:149:9     - Unknown word (inifinity)    -- inifinity: Number.POSITIVE_INFINITY
+test/stringifyAll.js:150:17    - Unknown word (Inifinity)    -- negativeInifinity: Number.NEGATIVE_INFINITY
+test/stringifyAll.js:158:33    - Unknown word (unenumerable) -- defineProperty(obj, 'unenumerable', {
+test/stringifyAll.js:159:17    - Unknown word (unenumerable) -- value: 'unenumerable',
+test/stringifyAll.js:170:16    - Unknown word (inifinity)    -- expect(obj.inifinity).to.equal(Number.POSITIVE
+test/stringifyAll.js:171:24    - Unknown word (Inifinity)    -- expect(obj.negativeInifinity).to.equal(Number.NEGATIVE
+test/stringifyAll.js:71:5      - Unknown word (unenumerable) -- it('unenumerable', () => {
+test/stringifyAll.js:77:9      - Unknown word (unenumerable) -- unenumerable: true
+test/stringifyAll.js:79:16     - Unknown word (unenumerable) -- expect(obj.unenumerable.one).to.equal(1);
+test/stripAnsi.js:1:16      - Unknown word (mcake)      -- test(['\u001b[4mcake\u001b[0m', 'cake'])
+test/stripColor.js:1:17      - Unknown word (mred)       -- test(['\u001b[31mred\u001b[39m', 'red'])
+test/table.js:105:52    - Unknown word (runzisu)    -- :00.01', 'login -fp runzisu']
+test/table.js:110:39    - Unknown word (VIRT)       -- USER PR  NI VIRT RES  SHR S %CPU %MEM
+test/table.js:127:14    - Unknown word (VIRT)       -- 'VIRT',
+test/table.js:84:46     - Unknown word (runzisu)    -- 0│0:00.01│login -fp runzisu│
+test/table.js:88:52     - Unknown word (runzisu)    -- :00.01', 'login -fp runzisu']
+test/table.js:94:48     - Unknown word (runzisu)    -- 0:00.01 login -fp runzisu`,
+test/through.js:11:51     - Unknown word (ifmmp)      -- 'ascii')).to.equal('ifmmp');
+test/vlq.js:2:48      - Unknown word (Hwcqx)      -- , 789])).to.equal('2HwcqxB');
+test/vlq.js:4:21      - Unknown word (Hwcqx)      -- expect(vlq.decode('2HwcqxB')).to.eql([123, 45

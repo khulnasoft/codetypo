@@ -1,0 +1,42 @@
+{
+  "name": "@codetypo/dict-ruby",
+  "version": "5.0.7",
+  "description": "For ruby and ruby on rails",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "test": "shx head -n 100 src/ruby.txt | codetypo -c ./codetypo-ext.json \"--locale=en\" \"--languageId=ruby\" stdin",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/ruby"
+  },
+  "keywords": [
+    "codetypo",
+    "ruby",
+    "Ruby",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/ruby#readme",
+  "files": [
+    "dict/ruby.txt",
+    "codetypo-ext.json"
+  ]
+}

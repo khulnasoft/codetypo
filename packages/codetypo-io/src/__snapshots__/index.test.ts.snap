@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`index > api 1`] = `
+[
+  "CFileReference => function",
+  "CFileResource => function",
+  "CodeTypoIONode => function",
+  "FSCapabilityFlags => object",
+  "VFileType => object",
+  "asyncIterableToArray => function",
+  "compareStats => function",
+  "createRedirectProvider => function",
+  "createTextFileResource => function",
+  "createVirtualFS => function",
+  "encodeDataUrl => function",
+  "getDefaultCodeTypoIO => function",
+  "getDefaultVirtualFs => function",
+  "getStat => function",
+  "getStatSync => function",
+  "isFileURL => function",
+  "isUrlLike => function",
+  "readFileText => function",
+  "readFileTextSync => function",
+  "renameFileReference => function",
+  "renameFileResource => function",
+  "toDataUrl => function",
+  "toFileURL => function",
+  "toURL => function",
+  "urlBasename => function",
+  "urlDirname => function",
+  "urlOrReferenceToUrl => function",
+  "writeToFile => function",
+  "writeToFileIterable => function",
+  "writeToFileIterableP => function",
+]
+`;

@@ -1,0 +1,6 @@
+---
+$schema: https://raw.githubusercontent.com/khulnasofto/main/codetypo.schema.json
+import:
+  - ./codetypo-ext.json
+dictionaries:
+  - fa_IR

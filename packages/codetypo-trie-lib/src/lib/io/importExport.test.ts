@@ -1,0 +1,64 @@
+import { readFile } from 'node:fs/promises';
+
+import { describe, expect, test } from 'vitest';
+
+import { resolveSample } from '../../test/samples.js';
+import * as Trie from '../index.js';
+import { importTrie, serializeTrie } from './importExport.js';
+
+describe('Import/Export', () => {
+    const pSampleWords = readFile(resolveSample('sample.txt'), 'utf8');
+
+    test.each`
+        version | base
+        ${1}    | ${10}
+        ${2}    | ${10}
+        ${3}    | ${10}
+        ${4}    | ${10}
+    `('tests serialize / deserialize version: $version, base: $base', async ({ version, base }) => {
+        const sampleWords = (await pSampleWords).split('\n').filter((a) => !!a);
+        const trie = Trie.createTrieRootFromList(sampleWords);
+        const data = [...serializeTrie(trie, { version, base })];
+        const root = importTrie(data);
+        const words = [...Trie.iteratorTrieWords(root)];
+        expect(words).toEqual([...sampleWords].sort());
+    });
+
+    test('tests serialize / deserialize V2', async () => {
+        const sampleWords = (await pSampleWords).split('\n').filter((a) => !!a);
+        const trie = Trie.createTrieRootFromList(sampleWords);
+        const data = [
+            ...serializeTrie(trie, {
+                version: 2,
+                base: 10,
+                comment: 'Sample Words',
+            }),
+        ];
+        const root = importTrie(data);
+        const words = [...Trie.iteratorTrieWords(root)];
+        expect(words).toEqual([...sampleWords].sort());
+    });
+
+    test('tests serialize unknown version', async () => {
+        const sampleWords = (await pSampleWords).split('\n').filter((a) => !!a);
+        const trie = Trie.createTrieRootFromList(sampleWords);
+        const dataFn = () =>
+            serializeTrie(trie, {
+                version: 99,
+                base: 10,
+                comment: 'Sample Words',
+            });
+        expect(dataFn).toThrow('Unknown version: 99');
+    });
+
+    test('bad format', async () => {
+        const data = ['One', 'Two'];
+        expect(() => importTrie(data)).toThrow('Unknown file format');
+    });
+
+    test('Unsupported version', async () => {
+        const sample = await readFile(resolveSample('sampleV2.trie'), 'utf8');
+        const data = sample.replace('TrieXv2', 'TrieXv9').split('\n');
+        expect(() => importTrie(data)).toThrow('Unsupported version: 9');
+    });
+});

@@ -1,0 +1,7 @@
+/api
+/src/lib/*.map
+/src/lib/*.d.cts
+/src/lib/*.cjs
+/dist.*/**
+/esm
+/dist

@@ -1,0 +1,44 @@
+{
+  "name": "@codetypo/dict-sk-sk",
+  "version": "1.1.5",
+  "description": "Slovak dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build && pnpm prepare:dictionary",
+    "build:conditional": "codetypo-tools-cli build --conditional && pnpm prepare:dictionary",
+    "test": "pipe-cmds \"hunspell-reader words -n 1000 src/Slovak.dic\" \"codetypo -c ./codetypo-ext.json --locale=sk --languageId=* stdin\"",
+    "prepare:dictionary": "codetypo-tools-cli gzip \"*.trie\"",
+    "prepublishOnly": "echo pre-publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/sk_SK"
+  },
+  "keywords": [
+    "codetypo",
+    "sk_SK",
+    "Slovak",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft.nl>",
+  "license": "MPL v2",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/sk_SK#readme",
+  "files": [
+    "Slovak.txt",
+    "Slovak.trie.gz",
+    "codetypo-ext.json"
+  ]
+}

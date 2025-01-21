@@ -1,0 +1,58 @@
+{
+  "name": "codetypo-config-lib",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "version": "8.17.2",
+  "description": "CodeTypo Config library",
+  "keywords": [
+    "codetypo",
+    "config"
+  ],
+  "author": "Jason Dent <jason@khulnasoft.nl>",
+  "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-config-lib#readme",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/*.tsbuildInfo",
+    "!**/__mocks__",
+    "!**/*.test.*",
+    "!**/*.spec.*",
+    "!**/*.map"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . -w",
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "coverage": "vitest run --coverage --pool=forks",
+    "test-watch": "vitest",
+    "test": "vitest run --pool=forks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/codetypo-config-lib"
+  },
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-config"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@codetypo/codetypo-types": "workspace:*",
+    "comment-json": "^4.2.5",
+    "yaml": "^2.7.0"
+  }
+}

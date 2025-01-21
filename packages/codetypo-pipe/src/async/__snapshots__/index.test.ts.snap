@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Pipe Sync API > pipe api 1`] = `
+[
+  "opAppend",
+  "opBuffer",
+  "opCombine",
+  "opConcatMap",
+  "opFilter",
+  "opFirst",
+  "opFlatten",
+  "opJoinStrings",
+  "opLast",
+  "opMap",
+  "opReduce",
+  "opSkip",
+  "opTake",
+  "opTap",
+  "opUnique",
+  "pipe",
+  "pipeAsync",
+  "reduce",
+  "toArray",
+]
+`;

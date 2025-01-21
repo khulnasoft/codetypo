@@ -1,0 +1,16 @@
+{
+  "name": "invoke-codetypo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Example of invoking codetypo programmatically",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "codetypo": "workspace:*"
+  }
+}

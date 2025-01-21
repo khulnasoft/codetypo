@@ -1,0 +1,79 @@
+{
+    "folders": [
+        {
+            "name": "codetypo-monorepo",
+            "path": "."
+        },
+        { "path": "docs" },
+        { "path": "packages/dynamic-import" },
+        { "path": "integration-tests" },
+        { "path": "packages/codetypo-bundled-dicts" },
+        { "path": "packages/codetypo-config-lib" },
+        { "path": "packages/codetypo-dictionary" },
+        { "path": "packages/codetypo-eslint-plugin" },
+        { "path": "packages/codetypo-filetypes" },
+        { "path": "packages/codetypo-gitignore" },
+        { "path": "packages/codetypo-glob" },
+        { "path": "packages/codetypo-grammar" },
+        { "path": "packages/codetypo-io" },
+        { "path": "packages/codetypo-json-reporter" },
+        { "path": "packages/codetypo-lib" },
+        { "path": "packages/codetypo-normalize-json" },
+        { "path": "packages/codetypo-pipe" },
+        { "path": "packages/codetypo-resolver" },
+        { "path": "packages/codetypo-service-bus" },
+        { "path": "packages/codetypo-strong-weak-map" },
+        { "path": "packages/codetypo-tools" },
+        { "path": "packages/codetypo-trie-lib" },
+        { "path": "packages/codetypo-trie" },
+        { "path": "packages/codetypo-types" },
+        { "path": "packages/codetypo-url" },
+        { "path": "packages/codetypo" },
+        { "path": "packages/hunspell-reader" },
+        { "path": "test-packages" },
+        { "path": "rfc" },
+        { "path": "website" }
+    ],
+    "launch": {
+        "configurations": [
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "ViTest: Current Test File",
+                "autoAttachChildProcesses": true,
+                "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+                "program": "${workspaceRoot:codetypo-monorepo}/node_modules/vitest/vitest.mjs",
+                "env": {
+                    "NODE_OPTIONS": "--enable-source-maps"
+                },
+                "args": [
+                    "run",
+                    "--testTimeout=600000",
+                    "--hideSkippedTests",
+                    "--reporter=basic",
+                    "--no-file-parallelism",
+                    "${relativeFile}"
+                ],
+                "cwd": "${fileWorkspaceFolder}",
+                "smartStep": true,
+                "console": "integratedTerminal"
+            }
+        ],
+        "compounds": []
+    },
+    "settings": {
+        "typescript.tsdk": "codetypo-monorepo/node_modules/typescript/lib",
+        "codeTypo.customDictionaries": {
+            "workspace": true
+        },
+        "codeTypo.enableFiletypes": ["shellscript"],
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "editor.formatOnSave": true
+    },
+    "extensions": {
+        "recommendations": ["khulnasoft.code-spell-checker", "dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+}

@@ -1,0 +1,13 @@
+ignorePaths: # glob patterns to ignore
+  - codetypo*.{yaml,json}
+  - node_modules
+words: # words to add to dictionary
+  - MyCompanyName
+ignoreWords: # words to ignore, but not suggest
+  - todos
+flagWords: # words to flag as forbidden with suggestions.
+  - blacklist->denylist
+  - whitelist->allowlist
+  - café->cafe
+  - bluelist->greenList
+  - Bluelist->GreenList

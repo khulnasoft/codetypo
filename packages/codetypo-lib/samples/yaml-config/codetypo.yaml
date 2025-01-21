@@ -1,0 +1,5 @@
+id: Yaml Example Config
+import:
+  - ./../codetypo-imports.json # Note this one does not exist on purpose.
+  - ./../codetypo-includes.json
+  - ../.codetypo.json

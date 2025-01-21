@@ -1,0 +1,16 @@
+{
+    "version": "0.2",
+    "files": [
+        "**/*.{md,txt}",
+        "package.json"
+    ],
+    "dictionaries": [
+        "google"
+    ],
+    "maxNumberOfProblems": 10000,
+    "overrides": [{ "filename": "samples/**", "dictionaries": ["google"], "minWordLength": 3 }],
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "words": ["titlecase"]
+}

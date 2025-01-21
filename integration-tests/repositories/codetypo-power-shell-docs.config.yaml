@@ -1,0 +1,7 @@
+$schema: https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json
+import:
+  - ./codetypo-reporter.json
+  - ./temp//MicrosoftDocs/PowerShell-Docs/.vscode/codeTypo.json
+ignorePaths:
+  - '*.mdb'
+  - '*.json'

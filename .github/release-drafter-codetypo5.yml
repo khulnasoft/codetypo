@@ -1,0 +1,103 @@
+name-template: 'CodeTypo5 v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+filter-by-commitish: true
+commitish: codetypo5
+
+categories:
+  - title: 'Features'
+    labels:
+      - 'feat'
+      - 'feature'
+      - 'enhancement'
+  - title: '**BREAKING**'
+    labels:
+      - 'breaking'
+  - title: 'Fixes'
+    labels:
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+  - title: 'Dictionary Updates'
+    labels:
+      - 'Update Dictionaries'
+  - title: 'Documentation'
+    labels:
+      - 'documentation'
+      - 'Documentation'
+  - title: 'Testing'
+    labels:
+      - 'test'
+  - title: 'Maintenance'
+    labels:
+      - 'chore'
+      - 'dependencies'
+
+change-template: |
+  <details>
+  <summary>$TITLE (#$NUMBER)</summary>
+
+  ### $TITLE (#$NUMBER)
+  $BODY
+
+  ---
+
+  </details>
+
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+version-resolver:
+  major:
+    labels:
+      - major
+  minor:
+    labels:
+      - minor
+      - feature
+  patch:
+    labels:
+      - patch
+  default: patch
+include-labels:
+  - 'codetypo5'
+exclude-labels:
+  - 'hide-from-release'
+autolabeler:
+  - label: 'Update Dictionaries'
+    title:
+      - '/Update Dictionaries/i'
+  - label: 'dependencies'
+    title:
+      - '/^ci: Workflow Bot.*Dependencies/i'
+  - label: 'chore'
+    title:
+      - '/chore/i'
+      - '/^ci[:](?! Workflow Bot)/i'
+  - label: 'documentation'
+    files:
+      - '/docs/**/*.md'
+    title:
+      - '/^docs?/i'
+  - label: 'fix'
+    title:
+      - '/^fix/i'
+      - '/^dev:/i'
+      - '/^refactor/i'
+  - label: 'feature'
+    title:
+      - '/^feat/i'
+  - label: 'test'
+    title:
+      - '/^test/i'
+  - label: 'breaking'
+    title:
+      - '/^fix[!]/i'
+      - '/^feat[!]/i'
+  - label: codetypo5
+    branch:
+      - '/./i' # only codetypo5 commits are in this branch
+
+template: |
+  ## Changes
+
+  $CHANGES
+
+# codetypo:ignore autolabeler commitish

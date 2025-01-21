@@ -1,0 +1,38 @@
+export interface CompileOptions {
+    /**
+     * Sort the words in the resulting dictionary.
+     * Does not apply to `trie` based formats.
+     */
+    sort: boolean;
+
+    /**
+     * Generate lower case / accent free versions of words.
+     */
+    generateNonStrict: boolean;
+
+    /**
+     * Optional filter function to filter out words.
+     * @param word the word to test
+     * @returns `true` to keep the word, `false` to exclude it.
+     */
+    filter?: (word: string) => boolean;
+
+    /**
+     * Injects `codetypo-dictionary` directives into the dictionary header.
+     *
+     * Example:
+     *
+     * ```ini
+     * # codetypo-dictionary: no-generate-alternatives
+     * ```
+     *
+     */
+    dictionaryDirectives?: string[] | undefined;
+
+    /**
+     * Remove duplicate words, favor lower case words over mixed case words.
+     * Combine compound prefixes where possible.
+     * @default false
+     */
+    removeDuplicates?: boolean;
+}

@@ -1,0 +1,37 @@
+name: ' 🚀 Publish: 2. Publish to NPM (automatic)'
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+  workflow_call:
+    secrets:
+      PUBLISH_NPM:
+        required: true
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup and Build
+        uses: ./.github/actions/install-build
+
+      - name: Version
+        run: |
+          echo "VERSION=$(jq .version lerna.json)" >> $GITHUB_ENV
+
+      # See: https://github.com/lerna/lerna/tree/main/commands/publish#bump-from-package
+      - name: Publish to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_NPM}}
+          DIST_TAG: ${{ contains(env.VERSION, 'alpha') && '--dist-tag next' || '' }}
+          NPM_CONFIG_PROVENANCE: true
+
+        run: pnpm lerna publish from-package --no-push --no-private --yes ${{ env.DIST_TAG }}

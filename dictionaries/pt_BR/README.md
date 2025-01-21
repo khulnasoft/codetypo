@@ -1,0 +1,46 @@
+# CSpell Brazilian Portuguese Dictionary
+
+Brazilian Portuguese dictionary for codetypo.
+
+This is a pre-built dictionary for use with codetypo.
+
+## Installation
+
+Global Install and add to codetypo global settings.
+
+```sh
+npm install -g @codetypo/dict-pt-br
+codetypo link add @codetypo/dict-pt-br
+```
+
+## Uninstall from codetypo
+
+```sh
+codetypo link remove @codetypo/dict-pt-br
+```
+
+## Manual Installation
+
+The `codetypo-ext.json` file in this package should be added to the import section in your codetypo.json file.
+
+```javascript
+{
+    // …
+    "import": ["@codetypo/dict-pt-br/codetypo-ext.json"],
+    // …
+}
+```
+
+## Building
+
+Building is only necessary if you want to modify the contents of the dictionary. Note: Building will take a few minutes for large files.
+
+```sh
+npm run build
+```
+
+## License
+
+[GPL-3.0-or-later](https://github.com/khulnasofto-dicts/blob/main/dictionaries/pt_BR/LICENSE)
+
+> Some packages may have other licenses included.

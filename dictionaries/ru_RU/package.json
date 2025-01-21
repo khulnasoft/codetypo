@@ -1,0 +1,53 @@
+{
+  "name": "@codetypo/dict-ru_ru",
+  "version": "2.2.4",
+  "description": "Russian dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "sync": "pnpm cpy \"node_modules/dictionary-ru/**\" src/hunspell",
+    "conditional-build": "pnpm run sync && pnpm run build --conditional",
+    "test-ru_ru": "pipe-cmds \"hunspell-reader words -n 1000 \\\"src/ru_ru.dic\\\"\" \"codetypo -c ./codetypo-ext.json --locale=ru --languageId=* stdin\"",
+    "test-russian": "pipe-cmds \"hunspell-reader words -n 1000 \\\"src/Russian.dic\\\"\" \"codetypo -c ./codetypo-ext.json --locale=ru --languageId=* stdin\"",
+    "test-samples": "codetypo -c ./codetypo-ext.json --locale=ru,en \"samples/**\"",
+    "test": "pnpm run test-ru_ru && pnpm run test-russian && pnpm run test-samples",
+    "prepare:dictionary": "codetypo-tools-cli gzip \"*.trie\"",
+    "prepublishOnly": "pnpm run conditional-build && pnpm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/ru_RU"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "ru_RU",
+    "Russian",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "Street Side Software <support@khulnasoft.nl>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/ru_RU#readme",
+  "files": [
+    "LICENSE.*",
+    "ru_ru.trie.gz",
+    "src/hunspell/license",
+    "codetypo-ext.json"
+  ],
+  "devDependencies": {
+    "dictionary-ru": "^3.0.0"
+  }
+}
