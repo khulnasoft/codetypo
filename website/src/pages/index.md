@@ -58,9 +58,9 @@ Some videos related to CodeTypo and the [Code Spell Checker](https://marketplace
 
 ## Related Packages
 
-- [codetypo-cli](https://github.com/khulnasoft/codetypo-cli) -- `codetypo-cli` is useful for including `codetypo` directly from GitHub.
+- [codetypo-cli](https://github.com/khulnasoft/codetypo) -- `codetypo-cli` is useful for including `codetypo` directly from GitHub.
 
-  Example install: `npm install -g git+https://github.com/khulnasoft/codetypo-cli`.
+  Example install: `npm install -g git+https://github.com/khulnasoft/codetypo`.
 
   This will add the `codetypo-cli` command, which is an alias of the `codetypo` command.
 

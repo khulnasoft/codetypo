@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khulnasoft/codetypo-cli.git"
+    "url": "git+https://github.com/khulnasoft/codetypo.git"
   },
   "keywords": [
     "codetypo"
@@ -21,9 +21,9 @@
   "author": "Md Sulaiman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasoft/codetypo-cli/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasoft/codetypo-cli#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo#readme",
   "dependencies": {
     "codetypo": "workspace:*"
   }

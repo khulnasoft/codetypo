@@ -51,7 +51,7 @@ npm install -g codetypo
 
 ### Docker
 
-There is a docker image at [Packages for codetypo](https://github.com/khulnasoft/codetypo-cli/pkgs/container/codetypo).
+There is a docker image at [Packages for codetypo](https://github.com/khulnasoft/codetypo/pkgs/container/codetypo).
 
 `codetypo` commands below can be run by replacing
 

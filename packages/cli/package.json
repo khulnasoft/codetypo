@@ -28,7 +28,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khulnasoft/codetypo-cli.git"
+    "url": "git+https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/cli"
   },
   "keywords": [
     "codetypo"
@@ -36,9 +37,9 @@
   "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasoft/codetypo-cli/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasoft/codetypo-cli#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo#readme",
   "files": [
     ".pre-commit-hooks.yaml",
     "index.js"

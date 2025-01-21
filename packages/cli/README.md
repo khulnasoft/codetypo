@@ -17,7 +17,7 @@ This repository enables using [codetypo](https://github.com/khulnasoft/codetypo)
 ```yaml
 # .pre-commit-config.yaml
 repos:
-  - repo: https://github.com/khulnasoft/codetypo-cli
+  - repo: https://github.com/khulnasoft/codetypo
     rev: v8.17.1
     hooks:
       - id: codetypo # Spell check changed files
@@ -72,18 +72,18 @@ If you installed the [Code Spell Checker extension](https://marketplace.visualst
 This repo also allows installing the `codetypo-cli` directly from GitHub:
 
 ```
-npm install -g git+https://github.com/khulnasoft/codetypo-cli
+npm install -g git+https://github.com/khulnasoft/codetypo
 ```
 
 ## Docker
 
-[Package codetypo](https://github.com/khulnasoft/codetypo-cli/pkgs/container/codetypo)
+[Package codetypo](https://github.com/khulnasoft/codetypo/pkgs/container/codetypo)
 
 ```sh
 docker run -v $PWD:/workdir ghcr.io/khulnasoft/codetypo:latest "**"
 ```
 
-See [Extending the Docker Container to include German](https://github.com/khulnasoft/codetypo-cli/tree/main/docker/german/README.md)
+See [Extending the Docker Container to include German](https://github.com/khulnasoft/codetypo/tree/main/docker/german/README.md)
 
 ## Usage
 
