@@ -4,7 +4,8 @@
     "./packages/*",
     "./rfc/*",
     "./test-packages/*/*",
-    "./integration-tests"
+    "./integration-tests",
+    "./dictionaries/*"
   ],
   "version": "8.17.2",
   "command": {
