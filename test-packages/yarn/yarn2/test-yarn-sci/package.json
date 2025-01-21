@@ -8,10 +8,10 @@
   "scripts": {
     "test": "yarn test:codetypo",
     "test:codetypo": "../../../../bin.mjs README.md",
-    "update:dep": "yarn add --dev @codetypo/dict-scientific-terms-us@workspace @codetypo/codetypo-types@workspace"
+    "update:dep": "yarn add --dev @codetypo/dict-scientific-terms-us@workspace:* @codetypo/codetypo-types@workspace:*"
   },
   "devDependencies": {
-    "@codetypo/codetypo-types": "workspace:*",
-    "@codetypo/dict-scientific-terms-us": "workspace:*"
+    "@codetypo/codetypo-types": "*",
+    "@codetypo/dict-scientific-terms-us": "*"
   }
 }

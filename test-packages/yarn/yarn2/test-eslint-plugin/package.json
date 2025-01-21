@@ -10,9 +10,9 @@
     "update:dep": "yarn add --dev @codetypo/dict-medicalterms@workspace:* @codetypo/codetypo-types@workspace:* @codetypo/eslint-plugin@workspace:*"
   },
   "devDependencies": {
-    "@codetypo/codetypo-types": "workspace:*",
-    "@codetypo/dict-medicalterms": "workspace:*",
-    "@codetypo/eslint-plugin": "workspace:*",
+    "@codetypo/codetypo-types": "*",
+    "@codetypo/dict-medicalterms": "*",
+    "@codetypo/eslint-plugin": "*",
     "@eslint/js": "^9.18.0",
     "eslint": "^9.18.0",
     "globals": "^15.14.0"
