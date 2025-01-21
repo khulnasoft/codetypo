@@ -1,0 +1,76 @@
+# GitHub recommends pinning actions to a commit SHA.
+# To get a newer version, you will need to update the SHA.
+# You can also reference a tag or branch, but the action may change without warning.
+
+name: " 📦 Publish Docker Images"
+
+on:
+  workflow_dispatch:
+    inputs:
+      dryRun:
+        description: "Dry Run"
+        type: choice
+        options:
+          - "yes"
+          - "no"
+        default: "no"
+        required: false
+  workflow_call:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: "khulnasoft/codetypo"
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+
+    env:
+      DEBUG: ${{ github.event.inputs.dryRun == 'yes'}}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: CodeTypo Version
+        run: |
+          export CODETYPO_VERSION=$(jq -r ".dependencies.codetypo | sub(\"[_^]\"; \"\")" package.json)
+          echo CODETYPO_VERSION=$CODETYPO_VERSION >> $GITHUB_ENV
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@369eb591f429131d6889c46b94e711f089e6ca96
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=semver,pattern={{version}},value=${{ env.CODETYPO_VERSION }}
+          labels: |
+            org.opencontainers.image.title=codetypo
+            org.opencontainers.image.description=CodeTypo command line spell checker for code and other documents.
+            org.opencontainers.image.vendor=Street Side Software
+
+      - name: Log Docker metadata
+        env:
+          META: $${{ toJSON(steps.meta.outputs) }}
+        run: echo "$META"
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@67a2d409c0a876cbe6b11854e3e25193efe4e62d
+        if: ${{ env.DEBUG != 'true' }}
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+# codetypo:ignore opencontainers
