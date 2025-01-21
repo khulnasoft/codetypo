@@ -37,8 +37,8 @@ describe('GitIgnoreServer', () => {
         ${__dirname}             | ${[packages]}     | ${[pkg]}
         ${__dirname}             | ${[pkg, gitRoot]} | ${[pkg]}
         ${p(samples, 'ignored')} | ${undefined}      | ${[gitRoot, pkg, samples]}
-        ${p(pkgCodeTypoLib)}       | ${[pkg]}          | ${[gitRoot, pkgCodeTypoLib]}
-        ${p(pkgCodeTypoLib)}       | ${[packages]}     | ${[pkgCodeTypoLib]}
+        ${p(pkgCodeTypoLib)}     | ${[pkg]}          | ${[gitRoot, pkgCodeTypoLib]}
+        ${p(pkgCodeTypoLib)}     | ${[packages]}     | ${[pkgCodeTypoLib]}
     `('findGitIgnoreHierarchy $dir $roots', async ({ dir, roots, expected }) => {
         const gs = new GitIgnore(roots);
         const r = await gs.findGitIgnoreHierarchy(dir);

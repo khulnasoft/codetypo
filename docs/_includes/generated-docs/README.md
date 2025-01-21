@@ -96,7 +96,7 @@ Tidelift will coordinate the fix and disclosure.
 | codetypo | 5.x     | 12.x    | Paid support only[^1] | -           | 2022-10-01          |
 | codetypo | 4.x     | 10.x    | Paid support only[^1] | -           | 2022-05-01          |
 
-[^1]: [Support - Street Side Software](https://khulnasoft.com/support/#maintenance-agreements)
+[^1]: [Support - KhulnaSoft Ltd](https://khulnasoft.com/support/#maintenance-agreements)
 
 ## Contributing
 
@@ -117,7 +117,7 @@ Contributions are welcome! See our [contribution notes](CONTRIBUTING.md). **Note
 
 ---
 
-<p align="center">Brought to you by<a href="https://khulnasoft.com" title="Street Side Software"><img width="16" alt="Street Side Software Logo" src="https://i.imgur.com/CyduuVY.png" /> Street Side Software</a></p>
+<p align="center">Brought to you by<a href="https://khulnasoft.com" title="KhulnaSoft Ltd"><img width="16" alt="KhulnaSoft Ltd Logo" src="https://i.imgur.com/CyduuVY.png" /> KhulnaSoft Ltd</a></p>
 
 <!---
 codetypo:ignore Houssem Dellai

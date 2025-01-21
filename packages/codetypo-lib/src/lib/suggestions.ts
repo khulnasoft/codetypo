@@ -106,7 +106,9 @@ export async function* suggestionsForWords(
     options?: SuggestionOptions,
     settings?: CodeTypoSettings,
 ): AsyncIterable<SuggestionsForWordResult> {
-    const codetypoSettings = satisfiesCodeTypoConfigFile(settings) ? await resolveConfigFileImports(settings) : settings;
+    const codetypoSettings = satisfiesCodeTypoConfigFile(settings)
+        ? await resolveConfigFileImports(settings)
+        : settings;
     for await (const word of words) {
         yield await suggestionsForWord(word, options, codetypoSettings);
     }
@@ -127,7 +129,9 @@ export async function suggestionsForWord(
     options: SuggestionOptions = emptySuggestionOptions,
     settings: CodeTypoSettings | ICodeTypoConfigFile = emptyCodeTypoSettings,
 ): Promise<SuggestionsForWordResult> {
-    const codetypoSettings = satisfiesCodeTypoConfigFile(settings) ? await resolveConfigFileImports(settings) : settings;
+    const codetypoSettings = satisfiesCodeTypoConfigFile(settings)
+        ? await resolveConfigFileImports(settings)
+        : settings;
     return memorizeSuggestions(options, codetypoSettings)(word);
 }
 

@@ -6,9 +6,9 @@ This is a pre-built dictionary for use with CodeTypo.
 
 ## Requirements
 
-| Tool                                                                                                                                 | Version |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| [codetypo](https://github.com/khulnasofto)                                                                               | `>= 6`  |
+| Tool                                                                                                                 | Version |
+| -------------------------------------------------------------------------------------------------------------------- | ------- |
+| [codetypo](https://github.com/khulnasofto)                                                                           | `>= 6`  |
 | [Code Spell Checker - Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=khulnasoftell-checker) | `>= 2`  |
 
 ## Installation

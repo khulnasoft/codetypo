@@ -1,5 +1,5 @@
 import { mkdir } from 'node:fs/promises';
-import { basename,dirname, extname, join, resolve } from 'node:path';
+import { basename, dirname, extname, join, resolve } from 'node:path';
 
 import chalk from 'chalk';
 import Generator from 'yeoman-generator';

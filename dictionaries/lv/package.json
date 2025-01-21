@@ -33,7 +33,8 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft",  "license": "LGPL-3.0+",
+  "author": "KhulnaSoft Ltd <support@khulnasoft",
+  "license": "LGPL-3.0+",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/issues"
   },

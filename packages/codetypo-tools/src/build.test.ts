@@ -20,14 +20,14 @@ describe('build action', () => {
     });
 
     test.each`
-        sourceRoot                       | config                                                    | target
-        ${f('build-single-target-json')} | ${undefined}                                              | ${tBuilds('build-single-target-json/colors.txt')}
+        sourceRoot                       | config                                                      | target
+        ${f('build-single-target-json')} | ${undefined}                                                | ${tBuilds('build-single-target-json/colors.txt')}
         ${'.'}                           | ${f('build-single-target-yaml/codetypo-tools.config.yaml')} | ${'my/colors.txt'}
-        ${f('build-single-trie')}        | ${undefined}                                              | ${tBuilds('build-single-trie/cities.trie')}
-        ${f('build-source-list')}        | ${undefined}                                              | ${tBuilds('build-source-list/source-list.txt')}
+        ${f('build-single-trie')}        | ${undefined}                                                | ${tBuilds('build-single-trie/cities.trie')}
+        ${f('build-source-list')}        | ${undefined}                                                | ${tBuilds('build-source-list/source-list.txt')}
         ${'.'}                           | ${f('build-combo/codetypo-tools.config.yaml')}              | ${'color-cities-code.txt'}
-        ${f('build-split-source')}       | ${undefined}                                              | ${tBuilds('build-split-source/split-colors.txt')}
-        ${f('build-exclude')}            | ${undefined}                                              | ${tBuilds('build-exclude/colors.txt')}
+        ${f('build-split-source')}       | ${undefined}                                                | ${tBuilds('build-split-source/split-colors.txt')}
+        ${f('build-exclude')}            | ${undefined}                                                | ${tBuilds('build-exclude/colors.txt')}
     `('build %#', async ({ sourceRoot, config, target }) => {
         await expect(build(undefined, { config, root: t(sourceRoot), cwd: t() })).resolves.toBeUndefined();
         const content = await readTextFile(t(target));

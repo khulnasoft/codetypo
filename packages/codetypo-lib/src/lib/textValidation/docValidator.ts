@@ -13,7 +13,10 @@ import { toFilePathOrHref, toFileURL } from '@codetypo/url';
 import { ICodeTypoConfigFile, satisfiesCodeTypoConfigFile } from 'codetypo-config-lib';
 
 import { getGlobMatcherForExcluding } from '../globs/getGlobMatcher.js';
-import type { CodeTypoSettingsInternal, CodeTypoSettingsInternalFinalized } from '../Models/CodeTypoSettingsInternalDef.js';
+import type {
+    CodeTypoSettingsInternal,
+    CodeTypoSettingsInternalFinalized,
+} from '../Models/CodeTypoSettingsInternalDef.js';
 import type { ExtendedSuggestion } from '../Models/Suggestion.js';
 import type { TextDocument, TextDocumentLine, TextDocumentRef } from '../Models/TextDocument.js';
 import { documentUriToURL, updateTextDocument } from '../Models/TextDocument.js';

@@ -46,13 +46,13 @@ describe('distance', () => {
     });
 
     test.each`
-        wordA                                | wordB       | expected
-        ${''}                                | ${''}       | ${0}
-        ${'ab'}                              | ${'ba'}     | ${100}
+        wordA                                  | wordB       | expected
+        ${''}                                  | ${''}       | ${0}
+        ${'ab'}                                | ${'ba'}     | ${100}
         ${'botle' /* codetypo:disable-line */} | ${'bottle'} | ${55}
-        ${'cafe'}                            | ${'café'}   | ${10}
-        ${'tee'}                             | ${'tea'}    | ${25}
-        ${'trie'}                            | ${'tree'}   | ${25}
+        ${'cafe'}                              | ${'café'}   | ${10}
+        ${'tee'}                               | ${'tea'}    | ${25}
+        ${'trie'}                              | ${'tree'}   | ${25}
     `('editDistance "$wordA" vs "$wordB"', ({ wordA, wordB, expected }) => {
         expect(editDistanceWeighted(wordA, wordB, weights)).toBe(expected);
         expect(editDistanceWeighted(wordB, wordA, weights)).toBe(expected);

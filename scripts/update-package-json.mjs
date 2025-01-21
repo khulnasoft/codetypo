@@ -23,8 +23,7 @@ async function updatePackageJson(pkgFile) {
     };
 
     pkg.repository = repository;
-    pkg.homepage =
-        homepages[directory] || 'https://github.com/khulnasoft/codetypo/tree/main/' + directory + '#readme';
+    pkg.homepage = homepages[directory] || 'https://github.com/khulnasoft/codetypo/tree/main/' + directory + '#readme';
 
     await fs.writeFile(pkgFile, JSON.stringify(pkg, undefined, 2) + '\n');
 }

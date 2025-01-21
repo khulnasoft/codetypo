@@ -54,7 +54,7 @@ describe('Uri', () => {
         ${fromStdinFilePath('D:\\home\\prj\\code.c')}       | ${{ ...u, scheme: 'stdin', path: '/D:/home/prj/code.c' }}
         ${fromStdinFilePath(__filename)}                    | ${{ ...u, scheme: 'stdin', path: normalizePath(__filename) }}
         ${'example.com/'}                                   | ${{ ...u, ...URIfile('example.com/') }}
-        ${'vsls:/codetypo.config.yaml'}                       | ${{ ...u, scheme: 'vsls', path: '/codetypo.config.yaml' }}
+        ${'vsls:/codetypo.config.yaml'}                     | ${{ ...u, scheme: 'vsls', path: '/codetypo.config.yaml' }}
     `('toUri $uri', ({ uri, expected }) => {
         const u = toUri(uri);
         expect(j(u)).toEqual(expected);

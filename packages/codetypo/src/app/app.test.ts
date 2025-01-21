@@ -157,55 +157,55 @@ describe('Validate cli', () => {
     const failFastRoot = pathSamples('fail-fast');
 
     test.each`
-        msg                                            | testArgs                                                                                       | errorCheck         | eError   | eLog     | eInfo
+        msg                                            | testArgs                                                                                         | errorCheck         | eError   | eLog     | eInfo
         ${'with errors and excludes'}                  | ${['-r', 'samples', '*', '-e', 'Dutch.txt', '-c', 'samples/.codetypo.json']}                     | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'no-args'}                                   | ${[]}                                                                                          | ${'outputHelp'}    | ${false} | ${false} | ${false}
-        ${'--help'}                                    | ${['--help']}                                                                                  | ${'outputHelp'}    | ${false} | ${false} | ${false}
-        ${'lint --help'}                               | ${['lint', '--help']}                                                                          | ${'outputHelp'}    | ${false} | ${false} | ${false}
-        ${'lint --help --verbose'}                     | ${['lint', '--help', '--verbose']}                                                             | ${'outputHelp'}    | ${false} | ${false} | ${false}
-        ${'lint --help --issue-template'}              | ${['lint', '--help', '--issue-template']}                                                      | ${'outputHelp'}    | ${false} | ${false} | ${false}
-        ${'current_file'}                              | ${[__filename]}                                                                                | ${undefined}       | ${true}  | ${false} | ${false}
-        ${'current_file --show-perf-summary'}          | ${[__filename, '--show-perf-summary']}                                                         | ${undefined}       | ${true}  | ${false} | ${false}
-        ${'with spelling errors Dutch.txt'}            | ${[pathSamples('Dutch.txt')]}                                                                  | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'with spelling errors Dutch.txt words only'} | ${[pathSamples('Dutch.txt'), '--wordsOnly']}                                                   | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'with spelling errors Dutch.txt --legacy'}   | ${[pathSamples('Dutch.txt'), '--legacy']}                                                      | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'with spelling errors --silent Dutch.txt'}   | ${['--silent', pathSamples('Dutch.txt')]}                                                      | ${app.CheckFailed} | ${false} | ${false} | ${false}
-        ${'current_file languageId'}                   | ${[__filename, '--languageId=typescript']}                                                     | ${undefined}       | ${true}  | ${false} | ${false}
-        ${'check help'}                                | ${['check', '--help']}                                                                         | ${'outputHelp'}    | ${false} | ${false} | ${false}
-        ${'check LICENSE'}                             | ${['check', pathRoot('LICENSE')]}                                                              | ${undefined}       | ${false} | ${true}  | ${false}
-        ${'check missing'}                             | ${['check', pathRoot('missing-file.txt')]}                                                     | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'check with spelling errors'}                | ${['check', pathSamples('Dutch.txt')]}                                                         | ${app.CheckFailed} | ${false} | ${true}  | ${false}
-        ${'LICENSE'}                                   | ${[pathRoot('LICENSE')]}                                                                       | ${undefined}       | ${true}  | ${false} | ${false}
-        ${'samples/Dutch.txt'}                         | ${[pathSamples('Dutch.txt')]}                                                                  | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'with forbidden words'}                      | ${[pathSamples('src/sample-with-forbidden-words.md')]}                                         | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'current_file --verbose'}                    | ${['--verbose', __filename]}                                                                   | ${undefined}       | ${true}  | ${false} | ${true}
-        ${'bad config'}                                | ${['-c', __filename, __filename]}                                                              | ${app.CheckFailed} | ${true}  | ${false} | ${false}
-        ${'not found error by default'}                | ${['*.not']}                                                                                   | ${app.CheckFailed} | ${true}  | ${false} | ${false}
-        ${'must find with error'}                      | ${['*.not', '--must-find-files']}                                                              | ${app.CheckFailed} | ${true}  | ${false} | ${false}
-        ${'must find force no error'}                  | ${['*.not', '--no-must-find-files']}                                                           | ${undefined}       | ${true}  | ${false} | ${false}
-        ${'codetypo-bad.json'}                           | ${['-c', pathSamples('codetypo-bad.json'), __filename]}                                          | ${undefined}       | ${true}  | ${false} | ${false}
-        ${'codetypo-import-missing.json'}                | ${['-c', pathSamples('linked/codetypo-import-missing.json'), __filename]}                        | ${app.CheckFailed} | ${true}  | ${false} | ${false}
-        ${'--fail-fast no option'}                     | ${['-r', failFastRoot, '*.txt']}                                                               | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'--fail-fast with option'}                   | ${['-r', failFastRoot, '--fail-fast', '*.txt']}                                                | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'--fail-fast with config'}                   | ${['-r', failFastRoot, '-c', failFastConfig, '*.txt']}                                         | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'--no-fail-fast with config'}                | ${['-r', failFastRoot, '--no-fail-fast', '-c', failFastConfig, '*.txt']}                       | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'issue-2998 --language-id'}                  | ${['-r', pathFix('issue-2998'), '-v', '--language-id=fix', 'fix-words.txt']}                   | ${undefined}       | ${true}  | ${false} | ${true}
-        ${'Explicit file://'}                          | ${['-r', pathFix('misc'), 'file://star-not.md']}                                               | ${undefined}       | ${true}  | ${false} | ${false}
-        ${'Explicit not found file://'}                | ${['-r', pathFix('misc'), 'file://not-fond.md']}                                               | ${app.CheckFailed} | ${true}  | ${false} | ${false}
-        ${'typos'}                                     | ${['-r', pathFix('features/typos'), '--no-progress', '.']}                                     | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'typos --color'}                             | ${['-r', pathFix('features/typos'), '--no-progress', '--color', '.']}                          | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'typos --no-color'}                          | ${['-r', pathFix('features/typos'), '--no-progress', '--no-color', '.']}                       | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'typos --no-show-suggestions'}               | ${['-r', pathFix('features/typos'), '--no-progress', '--no-show-suggestions', '.']}            | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'typos --show-suggestions'}                  | ${['-r', pathFix('features/typos'), '--no-progress', '--show-suggestions', '**']}              | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'typos --issue-template'}                    | ${['-r', pathFix('features/typos'), '--no-progress', '.', '--issue-template', '$text']}        | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'inline suggest'}                            | ${['-r', pathFix('features/inline-suggest'), '--no-progress', '--show-suggestions', '.']}      | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'no-args'}                                   | ${[]}                                                                                            | ${'outputHelp'}    | ${false} | ${false} | ${false}
+        ${'--help'}                                    | ${['--help']}                                                                                    | ${'outputHelp'}    | ${false} | ${false} | ${false}
+        ${'lint --help'}                               | ${['lint', '--help']}                                                                            | ${'outputHelp'}    | ${false} | ${false} | ${false}
+        ${'lint --help --verbose'}                     | ${['lint', '--help', '--verbose']}                                                               | ${'outputHelp'}    | ${false} | ${false} | ${false}
+        ${'lint --help --issue-template'}              | ${['lint', '--help', '--issue-template']}                                                        | ${'outputHelp'}    | ${false} | ${false} | ${false}
+        ${'current_file'}                              | ${[__filename]}                                                                                  | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'current_file --show-perf-summary'}          | ${[__filename, '--show-perf-summary']}                                                           | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'with spelling errors Dutch.txt'}            | ${[pathSamples('Dutch.txt')]}                                                                    | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'with spelling errors Dutch.txt words only'} | ${[pathSamples('Dutch.txt'), '--wordsOnly']}                                                     | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'with spelling errors Dutch.txt --legacy'}   | ${[pathSamples('Dutch.txt'), '--legacy']}                                                        | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'with spelling errors --silent Dutch.txt'}   | ${['--silent', pathSamples('Dutch.txt')]}                                                        | ${app.CheckFailed} | ${false} | ${false} | ${false}
+        ${'current_file languageId'}                   | ${[__filename, '--languageId=typescript']}                                                       | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'check help'}                                | ${['check', '--help']}                                                                           | ${'outputHelp'}    | ${false} | ${false} | ${false}
+        ${'check LICENSE'}                             | ${['check', pathRoot('LICENSE')]}                                                                | ${undefined}       | ${false} | ${true}  | ${false}
+        ${'check missing'}                             | ${['check', pathRoot('missing-file.txt')]}                                                       | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'check with spelling errors'}                | ${['check', pathSamples('Dutch.txt')]}                                                           | ${app.CheckFailed} | ${false} | ${true}  | ${false}
+        ${'LICENSE'}                                   | ${[pathRoot('LICENSE')]}                                                                         | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'samples/Dutch.txt'}                         | ${[pathSamples('Dutch.txt')]}                                                                    | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'with forbidden words'}                      | ${[pathSamples('src/sample-with-forbidden-words.md')]}                                           | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'current_file --verbose'}                    | ${['--verbose', __filename]}                                                                     | ${undefined}       | ${true}  | ${false} | ${true}
+        ${'bad config'}                                | ${['-c', __filename, __filename]}                                                                | ${app.CheckFailed} | ${true}  | ${false} | ${false}
+        ${'not found error by default'}                | ${['*.not']}                                                                                     | ${app.CheckFailed} | ${true}  | ${false} | ${false}
+        ${'must find with error'}                      | ${['*.not', '--must-find-files']}                                                                | ${app.CheckFailed} | ${true}  | ${false} | ${false}
+        ${'must find force no error'}                  | ${['*.not', '--no-must-find-files']}                                                             | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'codetypo-bad.json'}                         | ${['-c', pathSamples('codetypo-bad.json'), __filename]}                                          | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'codetypo-import-missing.json'}              | ${['-c', pathSamples('linked/codetypo-import-missing.json'), __filename]}                        | ${app.CheckFailed} | ${true}  | ${false} | ${false}
+        ${'--fail-fast no option'}                     | ${['-r', failFastRoot, '*.txt']}                                                                 | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'--fail-fast with option'}                   | ${['-r', failFastRoot, '--fail-fast', '*.txt']}                                                  | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'--fail-fast with config'}                   | ${['-r', failFastRoot, '-c', failFastConfig, '*.txt']}                                           | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'--no-fail-fast with config'}                | ${['-r', failFastRoot, '--no-fail-fast', '-c', failFastConfig, '*.txt']}                         | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'issue-2998 --language-id'}                  | ${['-r', pathFix('issue-2998'), '-v', '--language-id=fix', 'fix-words.txt']}                     | ${undefined}       | ${true}  | ${false} | ${true}
+        ${'Explicit file://'}                          | ${['-r', pathFix('misc'), 'file://star-not.md']}                                                 | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'Explicit not found file://'}                | ${['-r', pathFix('misc'), 'file://not-fond.md']}                                                 | ${app.CheckFailed} | ${true}  | ${false} | ${false}
+        ${'typos'}                                     | ${['-r', pathFix('features/typos'), '--no-progress', '.']}                                       | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'typos --color'}                             | ${['-r', pathFix('features/typos'), '--no-progress', '--color', '.']}                            | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'typos --no-color'}                          | ${['-r', pathFix('features/typos'), '--no-progress', '--no-color', '.']}                         | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'typos --no-show-suggestions'}               | ${['-r', pathFix('features/typos'), '--no-progress', '--no-show-suggestions', '.']}              | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'typos --show-suggestions'}                  | ${['-r', pathFix('features/typos'), '--no-progress', '--show-suggestions', '**']}                | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'typos --issue-template'}                    | ${['-r', pathFix('features/typos'), '--no-progress', '.', '--issue-template', '$text']}          | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'inline suggest'}                            | ${['-r', pathFix('features/inline-suggest'), '--no-progress', '--show-suggestions', '.']}        | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
         ${'reporter'}                                  | ${['-r', pathFix('features/reporter'), '-c', pathFix('features/reporter/codetypo.config.yaml')]} | ${undefined}       | ${false} | ${true}  | ${false}
-        ${'issue-4811 **/README.md'}                   | ${['-r', pIssues('issue-4811'), '--no-progress', '**/README.md']}                              | ${undefined}       | ${true}  | ${false} | ${false}
-        ${'issue-4811'}                                | ${['-r', pIssues('issue-4811'), '--no-progress', '.']}                                         | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'issue-6373 .'}                              | ${['-r', pathFix('issue-6373'), '--no-progress', '.']}                                         | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'issue-6373'}                                | ${['-r', pathFix('issue-6373'), '--no-progress']}                                              | ${undefined}       | ${true}  | ${false} | ${false}
-        ${'issue-6353'}                                | ${['-r', pathFix('issue-6353'), '--no-progress']}                                              | ${undefined}       | ${true}  | ${false} | ${true}
-        ${'verify globRoot works'}                     | ${['-r', pathFix('globRoot'), '.']}                                                            | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'issue-4811 **/README.md'}                   | ${['-r', pIssues('issue-4811'), '--no-progress', '**/README.md']}                                | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'issue-4811'}                                | ${['-r', pIssues('issue-4811'), '--no-progress', '.']}                                           | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'issue-6373 .'}                              | ${['-r', pathFix('issue-6373'), '--no-progress', '.']}                                           | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        ${'issue-6373'}                                | ${['-r', pathFix('issue-6373'), '--no-progress']}                                                | ${undefined}       | ${true}  | ${false} | ${false}
+        ${'issue-6353'}                                | ${['-r', pathFix('issue-6353'), '--no-progress']}                                                | ${undefined}       | ${true}  | ${false} | ${true}
+        ${'verify globRoot works'}                     | ${['-r', pathFix('globRoot'), '.']}                                                              | ${undefined}       | ${true}  | ${false} | ${false}
     `('app $msg Expect Error: $errorCheck', async ({ testArgs, errorCheck, eError, eLog, eInfo }: TestCase) => {
         chalk.level = 1;
         const commander = getCommander();
@@ -246,14 +246,14 @@ describe('Validate cli', () => {
 
     /* codetypo:ignore notinanydictionaryx */
     test.each`
-        msg                                         | testArgs                                                        | errorCheck         | eError   | eLog     | eInfo
-        ${'trace hello'}                            | ${['trace', 'hello']}                                           | ${undefined}       | ${false} | ${true}  | ${false}
-        ${'trace café'}                             | ${['trace', 'café'.normalize('NFD')]}                           | ${undefined}       | ${false} | ${true}  | ${false}
-        ${'trace hello'}                            | ${['trace', '--locale=en-gb', 'hello']}                         | ${undefined}       | ${false} | ${true}  | ${false}
-        ${'trace help'}                             | ${['trace', '-h']}                                              | ${'outputHelp'}    | ${false} | ${false} | ${false}
-        ${'trace not-in-any-dictionary'}            | ${['trace', 'notinanydictionaryx']}                             | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
+        msg                                         | testArgs                                                          | errorCheck         | eError   | eLog     | eInfo
+        ${'trace hello'}                            | ${['trace', 'hello']}                                             | ${undefined}       | ${false} | ${true}  | ${false}
+        ${'trace café'}                             | ${['trace', 'café'.normalize('NFD')]}                             | ${undefined}       | ${false} | ${true}  | ${false}
+        ${'trace hello'}                            | ${['trace', '--locale=en-gb', 'hello']}                           | ${undefined}       | ${false} | ${true}  | ${false}
+        ${'trace help'}                             | ${['trace', '-h']}                                                | ${'outputHelp'}    | ${false} | ${false} | ${false}
+        ${'trace not-in-any-dictionary'}            | ${['trace', 'notinanydictionaryx']}                               | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
         ${'trace missing dictionary'}               | ${['trace', 'hello', '-c', 'samples/codetypo-missing-dict.json']} | ${app.CheckFailed} | ${true}  | ${true}  | ${false}
-        ${'with spelling errors --debug Dutch.txt'} | ${['--relative', '--debug', pathSamples('Dutch.txt')]}          | ${app.CheckFailed} | ${true}  | ${true}  | ${true}
+        ${'with spelling errors --debug Dutch.txt'} | ${['--relative', '--debug', pathSamples('Dutch.txt')]}            | ${app.CheckFailed} | ${true}  | ${true}  | ${true}
         ${'trace flavour'}                          | ${['trace', 'flavour', '-c', pathSamples('.codetypo.json')]}      | ${undefined}       | ${false} | ${true}  | ${false}
     `('app $msg Expect Error: $errorCheck', async ({ testArgs, errorCheck, eError, eLog, eInfo }: TestCase) => {
         chalk.level = 0;
@@ -290,10 +290,10 @@ describe('Validate cli', () => {
     });
 
     test.each`
-        msg              | testArgs                                                 | errorCheck   | eError   | eLog    | eInfo
-        ${'link'}        | ${['link']}                                              | ${undefined} | ${false} | ${true} | ${false}
-        ${'link ls'}     | ${['link', 'ls']}                                        | ${undefined} | ${false} | ${true} | ${false}
-        ${'link list'}   | ${['link', 'list']}                                      | ${undefined} | ${false} | ${true} | ${false}
+        msg              | testArgs                                                     | errorCheck   | eError   | eLog    | eInfo
+        ${'link'}        | ${['link']}                                                  | ${undefined} | ${false} | ${true} | ${false}
+        ${'link ls'}     | ${['link', 'ls']}                                            | ${undefined} | ${false} | ${true} | ${false}
+        ${'link list'}   | ${['link', 'list']}                                          | ${undefined} | ${false} | ${true} | ${false}
         ${'link add'}    | ${['link', 'add', 'codetypo-dict-cpp/codetypo-ext.json']}    | ${undefined} | ${false} | ${true} | ${false}
         ${'link remove'} | ${['link', 'remove', 'codetypo-dict-cpp/codetypo-ext.json']} | ${undefined} | ${false} | ${true} | ${false}
     `('app $msg', async ({ testArgs, errorCheck, eError, eLog, eInfo }: TestCase) => {

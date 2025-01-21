@@ -90,7 +90,9 @@ export async function run(program: Command, argv: string[], flags?: FeatureFlags
 
     program.version(npmPackage.version);
 
-    addCompileOptions(program.command('compile [src...]').description('Compile words into a codetypo dictionary files.'))
+    addCompileOptions(
+        program.command('compile [src...]').description('Compile words into a codetypo dictionary files.'),
+    )
         .option('--trie', 'Compile into a trie file.', false)
         .option('--no-sort', 'Do not sort the result')
         .action((src: string[], options: CompileAppOptions) => {

@@ -22,7 +22,7 @@ describe('codetypoJson', () => {
 `;
 
     test.each`
-        uri                  | content                                    | expected
+        uri                    | content                                    | expected
         ${'codetypo.json'}     | ${'{}'}                                    | ${oc({ settings: {} })}
         ${'codetypo-ext.json'} | ${'{}'}                                    | ${oc({ settings: {} })}
         ${'.codetypo.json'}    | ${'{\n  // add words here\n  "words":[]}'} | ${oc({ settings: { words: [] } })}
@@ -31,8 +31,8 @@ describe('codetypoJson', () => {
     });
 
     test.each`
-        uri              | content | expected
-        ${''}            | ${''}   | ${'Unable to parse config file: "file:///"'}
+        uri                | content | expected
+        ${''}              | ${''}   | ${'Unable to parse config file: "file:///"'}
         ${'codetypo.js'}   | ${''}   | ${'Unable to parse config file: "file:///codetypo.js"'}
         ${'codetypo.yaml'} | ${''}   | ${'Unable to parse config file: "file:///codetypo.yaml"'}
         ${'codetypo.json'} | ${''}   | ${'Unable to parse file:///codetypo.json'}
@@ -44,10 +44,10 @@ describe('codetypoJson', () => {
     });
 
     test.each`
-        uri                  | content                   | expected
+        uri                    | content                   | expected
         ${'codetypo.json'}     | ${'{\n\t"name": "name"}'} | ${json({ name: 'name' }, '\t')}
         ${'codetypo.json?x=5'} | ${'{\n  "words":[]}'}     | ${json({ words: [] }, 2)}
-        ${'codetypo.jsonc'}    | ${sampleCodeTypoJson}       | ${sampleCodeTypoJson}
+        ${'codetypo.jsonc'}    | ${sampleCodeTypoJson}     | ${sampleCodeTypoJson}
     `('serialize $uri', ({ uri, content, expected }) => {
         const next = vi.fn();
         const file = serializerCodeTypoJson.deserialize({ url: new URL(uri, 'file:///'), content }, next);

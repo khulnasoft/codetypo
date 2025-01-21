@@ -36,7 +36,10 @@ export function getEnvironmentVariables(): CodeTypoEnvironmentVariables {
     return process.env as CodeTypoEnvironmentVariables;
 }
 
-export function setEnvironmentVariable<K extends EnvironmentKeys>(key: K, value: CodeTypoEnvironmentVariables[K]): void {
+export function setEnvironmentVariable<K extends EnvironmentKeys>(
+    key: K,
+    value: CodeTypoEnvironmentVariables[K],
+): void {
     process.env[key] = value;
 }
 

@@ -19,7 +19,7 @@ words:
 `;
 
     test.each`
-        uri                 | content                    | expected
+        uri                   | content                    | expected
         ${'codetypo.yaml'}    | ${''}                      | ${oc({ settings: {} })}
         ${'codetypo.yaml'}    | ${'---\n{}\n'}             | ${oc({ settings: {} })}
         ${'codetypo-ext.yml'} | ${'---\nversion: "0.2"\n'} | ${oc({ settings: { version: '0.2' } })}
@@ -29,8 +29,8 @@ words:
     });
 
     test.each`
-        uri              | content       | expected
-        ${''}            | ${''}         | ${'Unable to parse config file: "file:///"'}
+        uri                | content       | expected
+        ${''}              | ${''}         | ${'Unable to parse config file: "file:///"'}
         ${'codetypo.js'}   | ${''}         | ${'Unable to parse config file: "file:///codetypo.js"'}
         ${'codetypo.json'} | ${''}         | ${'Unable to parse config file: "file:///codetypo.json"'}
         ${'codetypo.yaml'} | ${'"version'} | ${'Missing closing'}
@@ -42,10 +42,10 @@ words:
     });
 
     test.each`
-        uri                  | content                   | expected
+        uri                    | content                   | expected
         ${'codetypo.yaml'}     | ${'{\n\t"name": "name"}'} | ${toYaml({ name: 'name' }, '\t')}
         ${'codetypo.yaml?x=5'} | ${'{\n  "words":[]}'}     | ${toYaml({ words: [] }, 2)}
-        ${'codetypo.yml'}      | ${sampleCodeTypoYaml}       | ${sampleCodeTypoYaml}
+        ${'codetypo.yml'}      | ${sampleCodeTypoYaml}     | ${sampleCodeTypoYaml}
     `('serialize $uri', ({ uri, content, expected }) => {
         const next = vi.fn();
         const file = serializerCodeTypoYaml.deserialize({ url: new URL(uri, 'file:///'), content }, next);

@@ -116,7 +116,7 @@ const config: Config = {
         navbar: {
             title: 'CodeTypo',
             logo: {
-                alt: 'Street Side Software Logo',
+                alt: 'KhulnaSoft Ltd Logo',
                 src: 'img/logo.png',
             },
             items: [
@@ -127,7 +127,7 @@ const config: Config = {
                     label: 'Docs',
                 },
                 { to: '/about', label: 'About', position: 'left' },
-                { label: 'Street Side Software', href: 'https://khulnasoft.com', position: 'right' },
+                { label: 'KhulnaSoft Ltd', href: 'https://khulnasoft.com', position: 'right' },
                 // {to: '/blog', label: 'Blog', position: 'left'},
                 {
                     href: 'https://github.com/khulnasoft/codetypo',
@@ -179,7 +179,7 @@ const config: Config = {
             //         ],
             //     },
             // ],
-            copyright: `Copyright © ${new Date().getFullYear()} Street Side Software`,
+            copyright: `Copyright © ${new Date().getFullYear()} KhulnaSoft Ltd`,
         },
         prism: {
             theme: prismThemes.github,

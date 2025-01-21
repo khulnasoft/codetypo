@@ -4,7 +4,7 @@
   "description": "English Word Frequency List",
   "private": true,
   "keywords": [],
-  "author": "Street Side Software",
+  "author": "KhulnaSoft Ltd",
   "license": "MIT",
   "bin": {
     "ngram": "./nGram.mjs"

@@ -1,4 +1,9 @@
-import type { BaseSetting, DictionaryDefinitionPreferred, DictionaryId, DictionaryPath } from '@codetypo/codetypo-types';
+import type {
+    BaseSetting,
+    DictionaryDefinitionPreferred,
+    DictionaryId,
+    DictionaryPath,
+} from '@codetypo/codetypo-types';
 
 interface ChangesToBase {
     type: 'suggestions' | 'words';

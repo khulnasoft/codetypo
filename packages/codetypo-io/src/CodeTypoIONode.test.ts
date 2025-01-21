@@ -131,9 +131,9 @@ describe('CodeTypoIONode', () => {
     });
 
     test.each`
-        url                                                                                 | expected
+        url                                                                           | expected
         ${'https://raw.githubusercontent.com/khulnasoft/codetypo/main/tsconfig.json'} | ${oc({ eTag: sc('W/') })}
-        ${__filename}                                                                       | ${oc({ mtimeMs: expect.any(Number) })}
+        ${__filename}                                                                 | ${oc({ mtimeMs: expect.any(Number) })}
     `('getStat $url', { timeout: 30_000 }, async ({ url, expected }) => {
         const codetypoIo = new CodeTypoIONode();
         const r = await codetypoIo.getStat(url);
@@ -141,9 +141,9 @@ describe('CodeTypoIONode', () => {
     });
 
     test.each`
-        url                                                                              | expected
+        url                                                                        | expected
         ${'https://raw.gitubusrcotent.com/khulnasoft/codetypo/main/tsconfig.json'} | ${oc({ code: 'ENOTFOUND' })}
-        ${ps(__dirname, 'not-found.nf')}                                                 | ${oc({ code: 'ENOENT' })}
+        ${ps(__dirname, 'not-found.nf')}                                           | ${oc({ code: 'ENOENT' })}
     `('getStat with error $url', { timeout: 30_000 }, async ({ url, expected }) => {
         const codetypoIo = new CodeTypoIONode();
         const r = codetypoIo.getStat(url);
@@ -160,9 +160,9 @@ describe('CodeTypoIONode', () => {
     });
 
     test.each`
-        url                                                                                 | expected
+        url                                                                           | expected
         ${'https://raw.githubusercontent.com/khulnasoft/codetypo/main/tsconfig.json'} | ${'The URL must be of scheme file'}
-        ${ps(__dirname, 'not-found.nf')}                                                    | ${oc({ code: 'ENOENT' })}
+        ${ps(__dirname, 'not-found.nf')}                                              | ${oc({ code: 'ENOENT' })}
     `('getStatSync with error $url', async ({ url, expected }) => {
         const codetypoIo = new CodeTypoIONode();
         expect(() => codetypoIo.getStatSync(url)).toThrow(expected);
@@ -182,67 +182,67 @@ describe('CodeTypoIONode', () => {
     });
 
     test.each`
-        filename                                                                          | expected
+        filename                                                                              | expected
         ${'https://raw.guc.com/sss/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'} | ${'https://raw.guc.com/sss/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'}
-        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}            | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
-        ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}      | ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}
+        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}                | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
+        ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}          | ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}
     `('toUrl $filename', ({ filename, expected }) => {
         const codetypoIo = new CodeTypoIONode();
         expect(codetypoIo.toURL(filename).toString()).toEqual(expected);
     });
 
     test.each`
-        filename                                                                          | relativeTo               | expected
-        ${'samples/cities.txt'}                                                           | ${'file:///usr/local/'}  | ${'file:///usr/local/samples/cities.txt'}
-        ${'samples/cities.txt'}                                                           | ${'https://example.com'} | ${'https://example.com/samples/cities.txt'}
+        filename                                                                              | relativeTo               | expected
+        ${'samples/cities.txt'}                                                               | ${'file:///usr/local/'}  | ${'file:///usr/local/samples/cities.txt'}
+        ${'samples/cities.txt'}                                                               | ${'https://example.com'} | ${'https://example.com/samples/cities.txt'}
         ${'https://raw.guc.com/sss/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'} | ${'file:///usr/local/'}  | ${'https://raw.guc.com/sss/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'}
-        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}            | ${'file:///usr/local/'}  | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
+        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}                | ${'file:///usr/local/'}  | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
     `('toUrl relativeTo $filename $relativeTo', ({ filename, relativeTo, expected }) => {
         const codetypoIo = new CodeTypoIONode();
         expect(codetypoIo.toURL(filename, relativeTo).toString()).toEqual(expected);
     });
 
     test.each`
-        filename                                                                          | expected
-        ${ps('samples/cities.txt')}                                                       | ${sc('samples/cities.txt')}
+        filename                                                                              | expected
+        ${ps('samples/cities.txt')}                                                           | ${sc('samples/cities.txt')}
         ${'https://raw.guc.com/sss/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'} | ${'https://raw.guc.com/sss/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'}
-        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}            | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
-        ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}      | ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}
+        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}                | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
+        ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}          | ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}
     `('toFileUrl $filename', ({ filename, expected }) => {
         const codetypoIo = new CodeTypoIONode();
         expect(codetypoIo.toFileURL(filename).toString()).toEqual(expected);
     });
 
     test.each`
-        filename                                                                          | relativeTo              | expected
-        ${ps('samples/cities.txt')}                                                       | ${'file:///usr/local/'} | ${sc('samples/cities.txt')}
-        ${'samples/cities.txt'}                                                           | ${'file:///usr/local/'} | ${'file:///usr/local/samples/cities.txt'}
-        ${'samples/cities.txt'}                                                           | ${ps()}                 | ${pathToFileURL(ps('samples/cities.txt')).toString()}
+        filename                                                                              | relativeTo              | expected
+        ${ps('samples/cities.txt')}                                                           | ${'file:///usr/local/'} | ${sc('samples/cities.txt')}
+        ${'samples/cities.txt'}                                                               | ${'file:///usr/local/'} | ${'file:///usr/local/samples/cities.txt'}
+        ${'samples/cities.txt'}                                                               | ${ps()}                 | ${pathToFileURL(ps('samples/cities.txt')).toString()}
         ${'https://raw.guc.com/sss/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'} | ${'file:///usr/local/'} | ${'https://raw.guc.com/sss/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'}
-        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}            | ${'file:///usr/local/'} | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
+        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}                | ${'file:///usr/local/'} | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
     `('toFileUrl relativeTo $filename $relativeTo', ({ filename, relativeTo, expected }) => {
         const codetypoIo = new CodeTypoIONode();
         expect(codetypoIo.toFileURL(filename, relativeTo).toString()).toEqual(expected);
     });
 
     test.each`
-        filename                                                                                                       | expected
-        ${ps('samples/cities.txt')}                                                                                    | ${'cities.txt'}
+        filename                                                                                                   | expected
+        ${ps('samples/cities.txt')}                                                                                | ${'cities.txt'}
         ${'https://raw.githubusercontent.com/khulnasoft/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'} | ${'cities.txt.gz'}
-        ${'https://example.com/examples/code/'}                                                                        | ${'code/'}
-        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}                                         | ${'hello.txt'}
-        ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}                                   | ${'text.plain'}
+        ${'https://example.com/examples/code/'}                                                                    | ${'code/'}
+        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}                                     | ${'hello.txt'}
+        ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}                               | ${'text.plain'}
     `('uriBasename $filename', ({ filename, expected }) => {
         const codetypoIo = new CodeTypoIONode();
         expect(codetypoIo.urlBasename(toFileURL(filename))).toEqual(expected);
     });
 
     test.each`
-        filename                                                                                                       | expected
-        ${ps('samples/cities.txt')}                                                                                    | ${sc('samples/')}
+        filename                                                                                                   | expected
+        ${ps('samples/cities.txt')}                                                                                | ${sc('samples/')}
         ${'https://raw.githubusercontent.com/khulnasoft/codetypo/main/packages/codetypo-io/samples/cities.txt.gz'} | ${'https://raw.githubusercontent.com/khulnasoft/codetypo/main/packages/codetypo-io/samples/'}
-        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}                                         | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
-        ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}                                   | ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}
+        ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}                                     | ${'data:text/plain;charset=utf8;filename=hello.txt,Hello%2C%20World!'}
+        ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}                               | ${'data:text/plain;charset=utf8;base64,SGVsbG8sIFdvcmxkISAlJSUlJCQkJCwsLCw'}
     `('uriDirname $filename', ({ filename, expected }) => {
         const codetypoIo = new CodeTypoIONode();
         expect(codetypoIo.urlDirname(toFileURL(filename)).toString()).toEqual(expected);

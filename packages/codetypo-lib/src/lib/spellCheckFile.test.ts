@@ -37,21 +37,21 @@ describe('Validate Spell Checking Files', () => {
     }
 
     test.each`
-        filename             | settings                                  | options                                         | expected
-        ${'src/not_found.c'} | ${{}}                                     | ${{}}                                           | ${{ checked: false, errors: [errNoEnt('src/not_found.c')] }}
-        ${'src/sample.c'}    | ${{}}                                     | ${{}}                                           | ${{ checked: true, issues: [], localConfigFilepath: es('.codetypo.json'), errors: undefined }}
-        ${'src/sample.c'}    | ${{}}                                     | ${{ noConfigSearch: true }}                     | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
-        ${'src/README.md'}   | ${{}}                                     | ${{}}                                           | ${{ checked: true, issues: [], localConfigFilepath: es('.codetypo.json'), errors: undefined }}
-        ${__filename}        | ${{}}                                     | ${{ noConfigSearch: true }}                     | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
-        ${__filename}        | ${toConfigFile({ noConfigSearch: true })} | ${{}}                                           | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
-        ${'src/sample.c'}    | ${{ noConfigSearch: true }}               | ${{}}                                           | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
+        filename             | settings                                  | options                                           | expected
+        ${'src/not_found.c'} | ${{}}                                     | ${{}}                                             | ${{ checked: false, errors: [errNoEnt('src/not_found.c')] }}
+        ${'src/sample.c'}    | ${{}}                                     | ${{}}                                             | ${{ checked: true, issues: [], localConfigFilepath: es('.codetypo.json'), errors: undefined }}
+        ${'src/sample.c'}    | ${{}}                                     | ${{ noConfigSearch: true }}                       | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
+        ${'src/README.md'}   | ${{}}                                     | ${{}}                                             | ${{ checked: true, issues: [], localConfigFilepath: es('.codetypo.json'), errors: undefined }}
+        ${__filename}        | ${{}}                                     | ${{ noConfigSearch: true }}                       | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
+        ${__filename}        | ${toConfigFile({ noConfigSearch: true })} | ${{}}                                             | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
+        ${'src/sample.c'}    | ${{ noConfigSearch: true }}               | ${{}}                                             | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
         ${__filename}        | ${{}}                                     | ${{ configFile: rpS('../codetypo.config.json') }} | ${{ checked: true, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
         ${__filename}        | ${{ noConfigSearch: true }}               | ${{ configFile: rpS('../codetypo.config.json') }} | ${{ checked: true, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
-        ${'src/sample.c'}    | ${{ noConfigSearch: true }}               | ${{ noConfigSearch: false }}                    | ${{ checked: true, localConfigFilepath: es('.codetypo.json'), errors: undefined }}
-        ${'src/sample.c'}    | ${{}}                                     | ${{}}                                           | ${{ document: expect.anything(), errors: undefined }}
+        ${'src/sample.c'}    | ${{ noConfigSearch: true }}               | ${{ noConfigSearch: false }}                      | ${{ checked: true, localConfigFilepath: es('.codetypo.json'), errors: undefined }}
+        ${'src/sample.c'}    | ${{}}                                     | ${{}}                                             | ${{ document: expect.anything(), errors: undefined }}
         ${'src/sample.c'}    | ${{}}                                     | ${{ configFile: rpS('../codeTypo.json') }}        | ${{ checked: false, localConfigFilepath: es('../codeTypo.json'), errors: [eFailed(rpS('../codeTypo.json'))] }}
-        ${'src/not_found.c'} | ${{}}                                     | ${{}}                                           | ${{ checked: false, errors: [errNoEnt('src/not_found.c')] }}
-        ${__filename}        | ${{}}                                     | ${{}}                                           | ${{ checked: true, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
+        ${'src/not_found.c'} | ${{}}                                     | ${{}}                                             | ${{ checked: false, errors: [errNoEnt('src/not_found.c')] }}
+        ${__filename}        | ${{}}                                     | ${{}}                                             | ${{ checked: true, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
     `(
         'spellCheckFile $filename $settings $options',
         async ({ filename, settings, options, expected }: TestSpellCheckFile) => {
@@ -132,30 +132,30 @@ describe('Validate Spell Checking Documents', async () => {
 
     // codetypo:ignore texxt eslintcache
     test.each`
-        uri                                               | text            | settings                       | options                                         | expected
-        ${f('src/not_found.c')}                           | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: false, errors: [errNoEnt('src/not_found.c')] }}
-        ${f('src/sample.c')}                              | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: true, issues: [], localConfigFilepath: es('.codetypo.json'), errors: undefined }}
-        ${f('src/sample.c')}                              | ${''}           | ${{}}                          | ${{ noConfigSearch: true }}                     | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
-        ${f('src/sample.c')}                              | ${''}           | ${{ noConfigSearch: true }}    | ${{}}                                           | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
+        uri                                               | text            | settings                       | options                                           | expected
+        ${f('src/not_found.c')}                           | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: false, errors: [errNoEnt('src/not_found.c')] }}
+        ${f('src/sample.c')}                              | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: true, issues: [], localConfigFilepath: es('.codetypo.json'), errors: undefined }}
+        ${f('src/sample.c')}                              | ${''}           | ${{}}                          | ${{ noConfigSearch: true }}                       | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
+        ${f('src/sample.c')}                              | ${''}           | ${{ noConfigSearch: true }}    | ${{}}                                             | ${{ checked: true, localConfigFilepath: undefined, errors: undefined }}
         ${f('src/sample.c')}                              | ${''}           | ${{}}                          | ${{ configFile: rpS('../codetypo.config.json') }} | ${{ checked: false, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
         ${f('src/sample.c')}                              | ${''}           | ${{ noConfigSearch: true }}    | ${{ configFile: rpS('../codetypo.config.json') }} | ${{ checked: false, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
         ${f(__filename)}                                  | ${''}           | ${{}}                          | ${{ configFile: rpS('../codetypo.config.json') }} | ${{ checked: true, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
         ${f(__filename)}                                  | ${''}           | ${{ noConfigSearch: true }}    | ${{ configFile: rpS('../codetypo.config.json') }} | ${{ checked: true, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
-        ${f('src/sample.c')}                              | ${''}           | ${{ noConfigSearch: true }}    | ${{ noConfigSearch: false }}                    | ${{ checked: true, localConfigFilepath: es('.codetypo.json'), errors: undefined }}
-        ${f('src/sample.c')}                              | ${''}           | ${{}}                          | ${{}}                                           | ${{ document: oc(d(f('src/sample.c'))), errors: undefined }}
+        ${f('src/sample.c')}                              | ${''}           | ${{ noConfigSearch: true }}    | ${{ noConfigSearch: false }}                      | ${{ checked: true, localConfigFilepath: es('.codetypo.json'), errors: undefined }}
+        ${f('src/sample.c')}                              | ${''}           | ${{}}                          | ${{}}                                             | ${{ document: oc(d(f('src/sample.c'))), errors: undefined }}
         ${f('src/sample.c')}                              | ${''}           | ${{}}                          | ${{ configFile: rpS('../codeTypo.json') }}        | ${{ checked: false, localConfigFilepath: es('../codeTypo.json'), errors: [eFailed(rpS('../codeTypo.json'))] }}
-        ${f('src/not_found.c')}                           | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: false, errors: [errNoEnt('src/not_found.c')] }}
-        ${f(__filename)}                                  | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: true, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
-        ${'stdin:///'}                                    | ${'some text'}  | ${{ languageId: 'plaintext' }} | ${{}}                                           | ${{ checked: true, issues: [], localConfigFilepath: undefined, errors: undefined }}
-        ${'stdin:///'}                                    | ${'some text'}  | ${{ languageId: 'plaintext' }} | ${{}}                                           | ${{ document: oc(d('stdin:///')) }}
-        ${'stdin:///'}                                    | ${'some texxt'} | ${{ languageId: 'plaintext' }} | ${{}}                                           | ${{ checked: true, issues: i('texxt'), localConfigFilepath: undefined, errors: undefined }}
-        ${'stdin:///'}                                    | ${''}           | ${{ languageId: 'plaintext' }} | ${{}}                                           | ${{ checked: false, issues: [], localConfigFilepath: undefined, errors: [err('Unsupported schema: "stdin", open "stdin:///"')] }}
-        ${f('src/big_image.jpeg')}                        | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: false, errors: undefined }}
-        ${f('.codetypocache')}                              | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: false, errors: undefined }}
-        ${f('.eslintcache')}                              | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: false, errors: undefined }}
-        ${d(f('src/big_image.txt'), undefined, 'binary')} | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: false, errors: undefined }}
-        ${d(f('src/data.dat'), '\u0000\u0000\u0000')}     | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: false, errors: undefined }}
-        ${f('./ruby/Gemfile')}                            | ${''}           | ${{}}                          | ${{}}                                           | ${{ checked: true, errors: undefined, settingsUsed: oc({ languageId: 'ruby' }) }}
+        ${f('src/not_found.c')}                           | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: false, errors: [errNoEnt('src/not_found.c')] }}
+        ${f(__filename)}                                  | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: true, localConfigFilepath: es('../codetypo.config.json'), errors: undefined }}
+        ${'stdin:///'}                                    | ${'some text'}  | ${{ languageId: 'plaintext' }} | ${{}}                                             | ${{ checked: true, issues: [], localConfigFilepath: undefined, errors: undefined }}
+        ${'stdin:///'}                                    | ${'some text'}  | ${{ languageId: 'plaintext' }} | ${{}}                                             | ${{ document: oc(d('stdin:///')) }}
+        ${'stdin:///'}                                    | ${'some texxt'} | ${{ languageId: 'plaintext' }} | ${{}}                                             | ${{ checked: true, issues: i('texxt'), localConfigFilepath: undefined, errors: undefined }}
+        ${'stdin:///'}                                    | ${''}           | ${{ languageId: 'plaintext' }} | ${{}}                                             | ${{ checked: false, issues: [], localConfigFilepath: undefined, errors: [err('Unsupported schema: "stdin", open "stdin:///"')] }}
+        ${f('src/big_image.jpeg')}                        | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: false, errors: undefined }}
+        ${f('.codetypocache')}                            | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: false, errors: undefined }}
+        ${f('.eslintcache')}                              | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: false, errors: undefined }}
+        ${d(f('src/big_image.txt'), undefined, 'binary')} | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: false, errors: undefined }}
+        ${d(f('src/data.dat'), '\u0000\u0000\u0000')}     | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: false, errors: undefined }}
+        ${f('./ruby/Gemfile')}                            | ${''}           | ${{}}                          | ${{}}                                             | ${{ checked: true, errors: undefined, settingsUsed: oc({ languageId: 'ruby' }) }}
     `(
         'spellCheckFile $uri $settings $options',
         async ({ uri, text, settings, options, expected }: TestSpellCheckFile) => {
@@ -227,11 +227,11 @@ describe('Validate Uri assumptions', () => {
     }
 
     test.each`
-        uri                                                      | expected                                                                                  | comment
-        ${u(__filename)}                                         | ${{ scheme: 'file', path: normalizePath(__filename) }}                                    | ${''}
-        ${'stdin:///'}                                           | ${{ scheme: 'stdin', path: '/' }}                                                         | ${''}
+        uri                                                | expected                                                                            | comment
+        ${u(__filename)}                                   | ${{ scheme: 'file', path: normalizePath(__filename) }}                              | ${''}
+        ${'stdin:///'}                                     | ${{ scheme: 'stdin', path: '/' }}                                                   | ${''}
         ${'https://github.com/khulnasoft/codetypo/issues'} | ${m(schema('https'), authority('github.com'), path('/khulnasoft/codetypo/issues'))} | ${''}
-        ${'C:\\home\\project\\file.js'}                          | ${m(schema('C'), path('\\home\\project\\file.js'))}                                       | ${'Windows path by "accident"'}
+        ${'C:\\home\\project\\file.js'}                    | ${m(schema('C'), path('\\home\\project\\file.js'))}                                 | ${'Windows path by "accident"'}
     `('URI assumptions uri: "$uri" $comment -- $expected', ({ uri, expected }: UriTestCase) => {
         const u = Uri.parse(uri);
         expect(u.toJSON()).toEqual(expect.objectContaining(expected));

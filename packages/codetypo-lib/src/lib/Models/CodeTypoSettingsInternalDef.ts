@@ -15,7 +15,8 @@ import { clean } from '../util/util.js';
 
 export const SymbolCodeTypoSettingsInternal = Symbol('CodeTypoSettingsInternal');
 
-export interface CodeTypoSettingsInternal extends Omit<AdvancedCodeTypoSettingsWithSourceTrace, 'dictionaryDefinitions'> {
+export interface CodeTypoSettingsInternal
+    extends Omit<AdvancedCodeTypoSettingsWithSourceTrace, 'dictionaryDefinitions'> {
     [SymbolCodeTypoSettingsInternal]: true;
     dictionaryDefinitions?: DictionaryDefinitionInternal[];
 }

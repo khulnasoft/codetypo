@@ -12,8 +12,8 @@ const next = defaultNextDeserializer;
 
 describe('packageJson', () => {
     test.each`
-        uri                   | content                      | expected
-        ${'package.json'}     | ${'{}'}                      | ${oc({ settings: {} })}
+        uri                   | content                        | expected
+        ${'package.json'}     | ${'{}'}                        | ${oc({ settings: {} })}
         ${'package.json?x=5'} | ${'{"codetypo":{"words":[]}}'} | ${oc({ settings: { words: [] } })}
     `('success $uri', ({ uri, content, expected }) => {
         expect(serializerPackageJson.deserialize({ url: new URL(uri, import.meta.url), content }, next)).toEqual(
@@ -22,21 +22,21 @@ describe('packageJson', () => {
     });
 
     test.each`
-        url                       | content             | expected
-        ${'file:///'}             | ${''}               | ${'Unable to parse config file: "file:///"'}
-        ${'file:///codetypo.js'}    | ${''}               | ${'Unable to parse config file: "file:///codetypo.js"'}
-        ${'file:///codetypo.json'}  | ${''}               | ${'Unable to parse config file: "file:///codetypo.json"'}
-        ${'file:///codetypo.yaml'}  | ${''}               | ${'Unable to parse config file: "file:///codetypo.yaml"'}
-        ${'file:///package.json'} | ${''}               | ${'Unexpected end of JSON input'}
-        ${'file:///package.json'} | ${'[]'}             | ${'Unable to parse file:///package.json'}
-        ${'file:///package.json'} | ${'{"codetypo": []}'} | ${'Unable to parse file:///package.json'}
+        url                        | content               | expected
+        ${'file:///'}              | ${''}                 | ${'Unable to parse config file: "file:///"'}
+        ${'file:///codetypo.js'}   | ${''}                 | ${'Unable to parse config file: "file:///codetypo.js"'}
+        ${'file:///codetypo.json'} | ${''}                 | ${'Unable to parse config file: "file:///codetypo.json"'}
+        ${'file:///codetypo.yaml'} | ${''}                 | ${'Unable to parse config file: "file:///codetypo.yaml"'}
+        ${'file:///package.json'}  | ${''}                 | ${'Unexpected end of JSON input'}
+        ${'file:///package.json'}  | ${'[]'}               | ${'Unable to parse file:///package.json'}
+        ${'file:///package.json'}  | ${'{"codetypo": []}'} | ${'Unable to parse file:///package.json'}
     `('fail $url', ({ url, content, expected }) => {
         expect(() => serializerPackageJson.deserialize({ url: new URL(url), content }, next)).toThrow(expected);
     });
 
     test.each`
-        uri                   | content                          | expected
-        ${'package.json'}     | ${'{\n\t"name": "name"}'}        | ${json({ name: 'name', codetypo: {} }, '\t')}
+        uri                   | content                            | expected
+        ${'package.json'}     | ${'{\n\t"name": "name"}'}          | ${json({ name: 'name', codetypo: {} }, '\t')}
         ${'package.json?x=5'} | ${'{\n  "codetypo":{"words":[]}}'} | ${json({ codetypo: { words: [] } }, 2)}
         ${'package.json?x=5'} | ${'{\n  "codetypo":{"words":[]}}'} | ${json({ codetypo: { words: [] } }, 2)}
     `('serialize $uri', ({ uri, content, expected }) => {

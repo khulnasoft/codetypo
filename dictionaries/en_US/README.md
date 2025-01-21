@@ -10,9 +10,9 @@ This dictionary comes pre-installed with codetypo. It should not be necessary to
 
 ## Requirements
 
-| Tool                                                                                                                                 | Version |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| [codetypo](https://github.com/khulnasofto)                                                                               | `>= 6`  |
+| Tool                                                                                                                 | Version |
+| -------------------------------------------------------------------------------------------------------------------- | ------- |
+| [codetypo](https://github.com/khulnasofto)                                                                           | `>= 6`  |
 | [Code Spell Checker - Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=khulnasoftell-checker) | `>= 2`  |
 
 ## Installation
@@ -73,8 +73,8 @@ MIT
 ---
 
 <p align="center">
-Brought to you by <a href="https://khulnasofttle="Street Side Software">
-<img width="16" alt="Street Side Software Logo" src="https://i.imgur.com/CyduuVY.png" /> Street Side Software
+Brought to you by <a href="https://khulnasofttle="KhulnaSoft Ltd">
+<img width="16" alt="KhulnaSoft Ltd Logo" src="https://i.imgur.com/CyduuVY.png" /> KhulnaSoft Ltd
 </a>
 </p>
 

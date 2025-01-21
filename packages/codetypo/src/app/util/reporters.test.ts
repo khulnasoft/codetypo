@@ -41,7 +41,7 @@ describe('mergeReporters', () => {
     });
 
     test.each`
-        reporter                                   | expected
+        reporter                                       | expected
         ${['@codetypo/codetypo-json-reporter', false]} | ${new Error('Failed to load reporter @codetypo/codetypo-json-reporter: codetypo-json-reporter settings must be an object')}
         ${['@codetypo/codetypo-unknown-reporter']}     | ${oc({ message: sc("Failed to load reporter @codetypo/codetypo-unknown-reporter: Cannot find package '@codetypo/codetypo-unknown-reporter' imported from") })}
         ${'@codetypo/codetypo-unknown-reporter'}       | ${oc({ message: sc("Failed to load reporter @codetypo/codetypo-unknown-reporter: Cannot find package '@codetypo/codetypo-unknown-reporter'") })}

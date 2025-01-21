@@ -3,7 +3,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import type { CodeTypoUserSettings, ImportFileRef, Source } from '@codetypo/codetypo-types';
-import { CodeTypoConfigFile, CodeTypoConfigFileReaderWriter, ICodeTypoConfigFile, IO, TextFile } from 'codetypo-config-lib';
+import {
+    CodeTypoConfigFile,
+    CodeTypoConfigFileReaderWriter,
+    ICodeTypoConfigFile,
+    IO,
+    TextFile,
+} from 'codetypo-config-lib';
 import { createReaderWriter } from 'codetypo-config-lib';
 import { isUrlLike, toFileURL } from 'codetypo-io';
 import { URI, Utils as UriUtils } from 'vscode-uri';

@@ -6,9 +6,9 @@ This is a pre-built dictionary for use with CodeTypo.
 
 ## Requirements
 
-| Tool                                                                                                                                 | Version      |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
-| [codetypo](https://github.com/khulnasoft/codetypo)                                                                               | `>= 6.25.0 ` |
+| Tool                                                                                                                         | Version      |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| [codetypo](https://github.com/khulnasoft/codetypo)                                                                           | `>= 6.25.0 ` |
 | [Code Spell Checker - Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=khulnasoft.code-spell-checker) | `>= 2.17.0`  |
 
 ## Installation
@@ -68,8 +68,8 @@ CC BY-SA 4.0
 ---
 
 <p align="center">
-Brought to you by <a href="https://khulnasoft.com" title="Street Side Software">
-<img width="16" alt="Street Side Software Logo" src="https://i.imgur.com/CyduuVY.png" /> Street Side Software
+Brought to you by <a href="https://khulnasoft.com" title="KhulnaSoft Ltd">
+<img width="16" alt="KhulnaSoft Ltd Logo" src="https://i.imgur.com/CyduuVY.png" /> KhulnaSoft Ltd
 </a>
 </p>
 

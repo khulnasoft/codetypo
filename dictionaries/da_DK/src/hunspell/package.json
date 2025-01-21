@@ -30,5 +30,8 @@
     "index.dic",
     "index.js",
     "index.map"
-  ]
+  ],
+  "dependencies": {
+    "dictionary-da": "^6.0.0"
+  }
 }

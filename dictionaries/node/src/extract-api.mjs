@@ -1,4 +1,3 @@
-
 /**
  * This script tries to extract word relevant to the NodeJS API into a text file that
  * can be used to generate a dictionary file.

@@ -66,9 +66,9 @@ const urlSrcDir = pathToFileURL(rp('src/lib'));
 
 describe('Validate CodeTypoSettingsServer', () => {
     test.each`
-        filename                                              | relativeTo   | refFilename
-        ${rp('codetypo.config.json')}                           | ${undefined} | ${rp('codetypo.config.json')}
-        ${rp('codetypo.config.json')}                           | ${rp('src')} | ${rp('codetypo.config.json')}
+        filename                                                    | relativeTo   | refFilename
+        ${rp('codetypo.config.json')}                               | ${undefined} | ${rp('codetypo.config.json')}
+        ${rp('codetypo.config.json')}                               | ${rp('src')} | ${rp('codetypo.config.json')}
         ${'@codetypo/codetypo-bundled-dicts/codetypo-default.json'} | ${rp()}      | ${require.resolve('@codetypo/codetypo-bundled-dicts/codetypo-default.json')}
         ${'@codetypo/codetypo-bundled-dicts/codetypo-default.json'} | ${undefined} | ${require.resolve('@codetypo/codetypo-bundled-dicts/codetypo-default.json')}
     `('tests readSettings $filename $relativeTo', async ({ filename, relativeTo, refFilename }) => {
@@ -314,7 +314,7 @@ describe('Validate Glob resolution', () => {
     });
 
     test.each`
-        settings                                                          | file                      | expected
+        settings                                                          | file                        | expected
         ${{}}                                                             | ${rSrcLib('codetypo.json')} | ${oc({ name: 'lib/codetypo.json' })}
         ${{ gitignoreRoot: '.' }}                                         | ${rSrcLib('codetypo.json')} | ${oc({ name: 'lib/codetypo.json', gitignoreRoot: [rSrcLib('.') + path.sep] })}
         ${{ gitignoreRoot: '..' }}                                        | ${rSrcLib('codetypo.json')} | ${oc({ gitignoreRoot: [rSrcLib('..') + path.sep] })}
@@ -327,7 +327,7 @@ describe('Validate Glob resolution', () => {
     });
 
     test.each`
-        settings                            | file                      | expected
+        settings                            | file                        | expected
         ${{ reporters: ['./reporter.js'] }} | ${rSrcLib('codetypo.json')} | ${'Not found: "./reporter.js"'}
         ${{ reporters: [{}] }}              | ${rSrcLib('codetypo.json')} | ${'Invalid Reporter'}
         ${{ reporters: [[{}]] }}            | ${rSrcLib('codetypo.json')} | ${'Invalid Reporter'}
@@ -368,7 +368,7 @@ describe('Validate search/load config files', () => {
     }
 
     test.each`
-        dir                         | expectedConfig                                                                    | expectedImportErrors
+        dir                         | expectedConfig                                                                      | expectedImportErrors
         ${samplesSrc}               | ${cfg(s('.codetypo.json'))}                                                         | ${[]}
         ${s('bug-fixes/bug345.ts')} | ${cfg(s('bug-fixes/codetypo.json'))}                                                | ${[]}
         ${s('linked/README.md')}    | ${cfg(s('linked/codetypo.config.js'))}                                              | ${[]}
@@ -407,7 +407,7 @@ describe('Validate search/load config files', () => {
     });
 
     test.each`
-        dir                                                   | expectedImports
+        dir                                                     | expectedImports
         ${new URL('issue-5034/.codetypo.json', urlIssues).href} | ${[oc({ filename: sm(/codetypo-ext.json/) }), oc({ filename: sm(/.codetypo.json/) })]}
     `('Search and merge from $dir', async ({ dir, expectedImports }) => {
         const loader = getDefaultConfigLoader();
@@ -421,7 +421,7 @@ describe('Validate search/load config files', () => {
     });
 
     test.each`
-        dir                                     | expectedConfig                                                      | expectedImportErrors
+        dir                                     | expectedConfig                                                        | expectedImportErrors
         ${pathToFileURL(samplesSrc + '/').href} | ${cfg(s('.codetypo.json'))}                                           | ${[]}
         ${sURL('bug-fixes/bug345.ts').href}     | ${cfg(s('bug-fixes/codetypo.json'))}                                  | ${[]}
         ${sURL('linked/file.txt').href}         | ${cfg(s('linked/codetypo.config.js'))}                                | ${[]}
@@ -447,9 +447,9 @@ describe('Validate search/load config files', () => {
     }
 
     test.each`
-        file                                          | expectedConfig
-        ${samplesSrc}                                 | ${cfg(resolveError(samplesSrc))}
-        ${s('bug-fixes')}                             | ${cfg(resolveError(s('bug-fixes')))}
+        file                                            | expectedConfig
+        ${samplesSrc}                                   | ${cfg(resolveError(samplesSrc))}
+        ${s('bug-fixes')}                               | ${cfg(resolveError(s('bug-fixes')))}
         ${s('linked/codetypo.config.js')}               | ${cfg(s('linked/codetypo.config.js'))}
         ${s('dot-config/.config/codetypo.config.yaml')} | ${cfg(s('dot-config/.config/codetypo.config.yaml'), { name: 'Nested in .config', globRoot: s('dot-config') })}
         ${s('js-config/codetypo.config.js')}            | ${cfg(s('js-config/codetypo.config.js'))}
@@ -461,7 +461,7 @@ describe('Validate search/load config files', () => {
     });
 
     test.each`
-        file                                  | expectedConfig
+        file                                    | expectedConfig
         ${s('linked/codetypo.config.js')}       | ${cf(s('linked/codetypo.config.js'), { description: 'codetypo.config.js file in samples/linked', import: ['./codetypo-imports.json'] })}
         ${s('js-config/codetypo.config.js')}    | ${cf(s('js-config/codetypo.config.js'), { description: 'codetypo.config.js file in samples/js-config' })}
         ${s('js-config/codetypo-no-export.js')} | ${cf(s('js-config/codetypo-no-export.js'), {})}
@@ -474,7 +474,7 @@ describe('Validate search/load config files', () => {
     });
 
     test.each`
-        file                                  | expectedConfig
+        file                                    | expectedConfig
         ${s('linked/codetypo.config.js')}       | ${cf(s('linked/codetypo.config.js'), { description: 'codetypo.config.js file in samples/linked', import: ['./codetypo-imports.json'] })}
         ${s('js-config/codetypo.config.js')}    | ${cf(s('js-config/codetypo.config.js'), { description: 'codetypo.config.js file in samples/js-config' })}
         ${s('js-config/codetypo-no-export.js')} | ${cf(s('js-config/codetypo-no-export.js'), {})}
@@ -487,9 +487,9 @@ describe('Validate search/load config files', () => {
     });
 
     test.each`
-        file                            | expectedConfig
-        ${samplesSrc}                   | ${readError(samplesSrc).error}
-        ${s('bug-fixes')}               | ${readError(s('bug-fixes')).error}
+        file                              | expectedConfig
+        ${samplesSrc}                     | ${readError(samplesSrc).error}
+        ${s('bug-fixes')}                 | ${readError(s('bug-fixes')).error}
         ${s('js-config/codetypo-bad.js')} | ${readError(s('js-config/codetypo-bad.js')).error}
     `('readConfigFile with error $file', async ({ file, expectedConfig }: TestLoadConfig) => {
         await expect(readConfigFile(file)).rejects.toEqual(expectedConfig);
@@ -498,9 +498,9 @@ describe('Validate search/load config files', () => {
     });
 
     test.each`
-        file                            | expectedConfig
-        ${samplesSrc}                   | ${readError(samplesSrc).error}
-        ${s('bug-fixes')}               | ${readError(s('bug-fixes')).error}
+        file                              | expectedConfig
+        ${samplesSrc}                     | ${readError(samplesSrc).error}
+        ${s('bug-fixes')}                 | ${readError(s('bug-fixes')).error}
         ${s('js-config/codetypo-bad.js')} | ${readError(s('js-config/codetypo-bad.js')).error}
     `('ReadRawSettings with error $file', async ({ file, expectedConfig }: TestLoadConfig) => {
         const result = await readRawSettings(file);
@@ -516,9 +516,9 @@ describe('Validate search/load config files', () => {
     */
 
     test.each`
-        file                                          | relativeTo   | expectedConfig
-        ${samplesSrc}                                 | ${undefined} | ${readError(samplesSrc).error}
-        ${s('bug-fixes')}                             | ${undefined} | ${readError(s('bug-fixes')).error}
+        file                                            | relativeTo   | expectedConfig
+        ${samplesSrc}                                   | ${undefined} | ${readError(samplesSrc).error}
+        ${s('bug-fixes')}                               | ${undefined} | ${readError(s('bug-fixes')).error}
         ${s('bug-fixes/not-found/codetypo.json')}       | ${undefined} | ${readError(s('bug-fixes/not-found/codetypo.json')).error}
         ${s('dot-config/.config/codetypo.config.yaml')} | ${undefined} | ${oc(cf(s('dot-config/.config/codetypo.config.yaml'), oc({ name: 'Nested in .config' })))}
         ${rp('codetypo.config.json')}                   | ${undefined} | ${oc(cf(rp('codetypo.config.json'), oc({ id: 'codetypo-package-config' })))}
@@ -637,7 +637,7 @@ describe('ConfigLoader with VirtualFS', () => {
     }
 
     test.each`
-        file                                       | expectedConfig
+        file                                         | expectedConfig
         ${'dot-config/.config/codetypo.config.yaml'} | ${cf(pURL('dot-config/.config/codetypo.config.yaml'), { name: 'Nested in .config' })}
         ${'yaml-config/codetypo.yaml'}               | ${cf(pURL('yaml-config/codetypo.yaml'), { id: 'Yaml Example Config' })}
     `('ReadRawSettings from $file', async ({ file, expectedConfig }) => {
@@ -665,7 +665,7 @@ describe('ConfigLoader with VirtualFS', () => {
     });
 
     test.each`
-        file                                    | expectedConfig                                                                   | expectedImportErrors
+        file                                    | expectedConfig                                                                     | expectedImportErrors
         ${'README.md'}                          | ${cfg(pURL('.codetypo.json'), {})}                                                 | ${[]}
         ${'bug-fixes/bug345.ts'}                | ${cfg(pURL('bug-fixes/codetypo.json'), {})}                                        | ${[]}
         ${uh('linked/file.txt', publicFileURL)} | ${cfg(uh('linked/codetypo.config.js', publicFileURL), { __importRef: undefined })} | ${[]}
@@ -696,7 +696,7 @@ describe('ConfigLoader with VirtualFS', () => {
     });
 
     test.each`
-        file                       | expectedConfig                                                                     | expectedImportErrors
+        file                       | expectedConfig                                                                       | expectedImportErrors
         ${'README.md'}             | ${cfg(u('.codetypo.json', publicFileURL), {})}                                       | ${[]}
         ${'bug-fixes/bug345.ts'}   | ${cfg(u('bug-fixes/codetypo.json', publicFileURL), {})}                              | ${[]}
         ${'linked/file.txt'}       | ${cfg(u('.codetypo.json', publicFileURL) /* not trusted == .js not loaded */, {})}   | ${[]}
@@ -727,10 +727,10 @@ describe('ConfigLoader with VirtualFS', () => {
     });
 
     test.each`
-        file                          | expectedConfig
-        ${'./.codetypo.json'}           | ${cf(u('.codetypo.json', publicFileURL), {})}
-        ${'./bug-fixes/codetypo.json'}  | ${cf(u('bug-fixes/codetypo.json', publicFileURL), {})}
-        ${defaultConfigFileModuleRef} | ${cf(u('packages/codetypo-bundled-dicts/codetypo-default.json', pathRepoRootURL), {})}
+        file                           | expectedConfig
+        ${'./.codetypo.json'}          | ${cf(u('.codetypo.json', publicFileURL), {})}
+        ${'./bug-fixes/codetypo.json'} | ${cf(u('bug-fixes/codetypo.json', publicFileURL), {})}
+        ${defaultConfigFileModuleRef}  | ${cf(u('packages/codetypo-bundled-dicts/codetypo-default.json', pathRepoRootURL), {})}
     `('Search resolve untrusted $file', async ({ file, expectedConfig }) => {
         const vfs = createVirtualFS();
         const redirectProvider = createRedirectProvider('test', publicFileURL, sURL('./'));
@@ -782,12 +782,12 @@ function uh(url: string | URL, ref?: string | URL): string {
 
 describe('Validate resolveGlobRoot', () => {
     test.each`
-        globRoot                        | cfgUrl                                                                 | expected
-        ${undefined}                    | ${import.meta.url}                                                     | ${rp(fileURLToPath(u('.', import.meta.url)))}
-        ${undefined}                    | ${uh('../not/found/cfg.json', import.meta.url)}                        | ${fileURLToPath(u('../not/found', import.meta.url))}
-        ${undefined}                    | ${uh('./.vscode/codetypo.json', import.meta.url)}                        | ${'${cwd}'}
-        ${undefined}                    | ${uh('./.config/.codetypo.json', import.meta.url)}                       | ${rp(fileURLToPath(u('.', import.meta.url)))}
-        ${undefined}                    | ${cUrl(import.meta.url, { scheme: 'vscode-vfs' }).href}                | ${uh('.', cUrl(import.meta.url, { scheme: 'vscode-vfs' }))}
+        globRoot                        | cfgUrl                                                     | expected
+        ${undefined}                    | ${import.meta.url}                                         | ${rp(fileURLToPath(u('.', import.meta.url)))}
+        ${undefined}                    | ${uh('../not/found/cfg.json', import.meta.url)}            | ${fileURLToPath(u('../not/found', import.meta.url))}
+        ${undefined}                    | ${uh('./.vscode/codetypo.json', import.meta.url)}          | ${'${cwd}'}
+        ${undefined}                    | ${uh('./.config/.codetypo.json', import.meta.url)}         | ${rp(fileURLToPath(u('.', import.meta.url)))}
+        ${undefined}                    | ${cUrl(import.meta.url, { scheme: 'vscode-vfs' }).href}    | ${uh('.', cUrl(import.meta.url, { scheme: 'vscode-vfs' }))}
         ${undefined}                    | ${uh('vscode-vfs://github/khulnasoft/codetypo/README.md')} | ${'vscode-vfs://github/khulnasoft/codetypo/'}
         ${'..'}                         | ${uh('vscode-vfs://github/khulnasoft/codetypo/README.md')} | ${'vscode-vfs://github/khulnasoft/'}
         ${'..' + path.sep + 'frontend'} | ${uh('vscode-vfs://github/khulnasoft/codetypo/README.md')} | ${'vscode-vfs://github/khulnasoft/frontend/'}
@@ -800,7 +800,7 @@ describe('Validate resolveGlobRoot', () => {
 
 describe('Validate Dependencies', () => {
     test.each`
-        filename                    | relativeTo   | expected
+        filename                      | relativeTo   | expected
         ${rp('codetypo.config.json')} | ${undefined} | ${{ configFiles: [rr('codetypo.json'), rp('codetypo.config.json')], dictionaryFiles: [rr('codetypo-dict.txt'), rr('codetypo-ignore-words.txt')] }}
     `('tests readSettings $filename $relativeTo', async ({ filename, relativeTo, expected }) => {
         const settings = await readSettings(filename, relativeTo);
@@ -811,8 +811,8 @@ describe('Validate Dependencies', () => {
 
 describe('relativeToCwd', () => {
     test.each`
-        filename                                      | expected
-        ${cwdURL()}                                   | ${'./'}
+        filename                                        | expected
+        ${cwdURL()}                                     | ${'./'}
         ${'../../codetypo.json'}                        | ${'../../codetypo.json'}
         ${'../../codetypo.json'}                        | ${'../../codetypo.json'}
         ${'../../../codetypo.json'}                     | ${'../../../codetypo.json'}

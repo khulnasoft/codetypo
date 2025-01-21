@@ -274,24 +274,24 @@ describe('Validate Glob Normalization to root', () => {
     }
 
     test.each`
-        globPath                                                  | file                      | root                             | expected                                                                   | comment
-        ${gp('*.json')}                                           | ${'cfg.json'}             | ${'.'}                           | ${eg({ glob: '*.json', root: './', ...relGlob }, Path)}                    | ${'matching root'}
-        ${gp('*.json', '.', pathPosix)}                           | ${'cfg.json'}             | ${'.'}                           | ${eg({ glob: '*.json', root: './' }, pathPosix)}                           | ${'matching root'}
-        ${gp('*.json', '.', pathWin32)}                           | ${'cfg.json'}             | ${'.'}                           | ${eg({ glob: '*.json', root: './' }, pathWin32)}                           | ${'matching root'}
-        ${gp('*.json')}                                           | ${'codetypo-glob/cfg.json'} | ${'..'}                          | ${eg({ glob: 'codetypo-glob/*.json', root: '../' }, Path)}                   | ${'root above'}
-        ${gp('*.json', '.', pathPosix)}                           | ${'codetypo/cfg.json'}      | ${'..'}                          | ${eg({ glob: 'codetypo/*.json', root: '../' }, pathPosix)}                   | ${'root above'}
-        ${gp('*.json', '.', pathWin32)}                           | ${'codetypo/cfg.json'}      | ${'..'}                          | ${eg({ glob: 'codetypo/*.json', root: '../' }, pathWin32)}                   | ${'root above'}
-        ${gp('*.json')}                                           | ${'cfg.json'}             | ${'deeper'}                      | ${eg({ glob: '../*.json', root: 'deeper/' }, Path)}                        | ${'root below, cannot change'}
-        ${gp('*.json', '.', pathPosix)}                           | ${'cfg.json'}             | ${'deeper'}                      | ${eg({ glob: '../*.json', root: 'deeper/' }, pathPosix)}                   | ${'root below, cannot change'}
-        ${gp('**/*.json', '.', pathWin32)}                        | ${'cfg.json'}             | ${'deeper'}                      | ${eg({ glob: '**/*.json', root: 'deeper/', ...globalGlob }, pathWin32)}    | ${'root below, globstar'}
-        ${gp('deeper/*.json')}                                    | ${'cfg.json'}             | ${'deeper'}                      | ${eg({ glob: '*.json', root: 'deeper/' }, Path)}                           | ${'root below, matching'}
-        ${gp('deeper/*.json', '.', pathPosix)}                    | ${'cfg.json'}             | ${'deeper'}                      | ${eg({ glob: '*.json', root: 'deeper/' }, pathPosix)}                      | ${'root below, matching'}
-        ${gp('deeper/*.json', '.', pathWin32)}                    | ${'cfg.json'}             | ${'deeper'}                      | ${eg({ glob: '*.json', root: 'deeper/' }, pathWin32)}                      | ${'root below, matching'}
-        ${gp('deeper/*.json', 'e:/user/Test/project', pathWin32)} | ${'cfg.json'}             | ${'E:/user/test/project/deeper'} | ${eg({ glob: '*.json', root: 'E:/user/test/project/deeper/' }, pathWin32)} | ${'root below, matching'}
-        ${gp('**/deeper/*.json')}                                 | ${'deeper/cfg.json'}      | ${'deeper'}                      | ${eg({ glob: '**/deeper/*.json', root: 'deeper/', ...globalGlob }, Path)}  | ${'root below, not matching'}
-        ${gp('**/deeper/*.json', 'proj/nested')}                  | ${'deeper/cfg.json'}      | ${'proj'}                        | ${eg({ glob: '**/deeper/*.json', root: 'proj/', ...globalGlob }, Path)}    | ${'root below, not matching'}
-        ${gp('**/deeper/*.json')}                                 | ${'!cfg.json'}            | ${'deeper'}                      | ${eg({ glob: '**/deeper/*.json', root: 'deeper/', ...globalGlob }, Path)}  | ${'root below, not matching'}
-        ${gp('deeper/project/*/*.json')}                          | ${'cfg.json'}             | ${'deeper/project/a'}            | ${eg({ glob: '*.json', root: 'deeper/project/a/' }, Path)}                 | ${'root below, not matching'}
+        globPath                                                  | file                        | root                             | expected                                                                   | comment
+        ${gp('*.json')}                                           | ${'cfg.json'}               | ${'.'}                           | ${eg({ glob: '*.json', root: './', ...relGlob }, Path)}                    | ${'matching root'}
+        ${gp('*.json', '.', pathPosix)}                           | ${'cfg.json'}               | ${'.'}                           | ${eg({ glob: '*.json', root: './' }, pathPosix)}                           | ${'matching root'}
+        ${gp('*.json', '.', pathWin32)}                           | ${'cfg.json'}               | ${'.'}                           | ${eg({ glob: '*.json', root: './' }, pathWin32)}                           | ${'matching root'}
+        ${gp('*.json')}                                           | ${'codetypo-glob/cfg.json'} | ${'..'}                          | ${eg({ glob: 'codetypo-glob/*.json', root: '../' }, Path)}                 | ${'root above'}
+        ${gp('*.json', '.', pathPosix)}                           | ${'codetypo/cfg.json'}      | ${'..'}                          | ${eg({ glob: 'codetypo/*.json', root: '../' }, pathPosix)}                 | ${'root above'}
+        ${gp('*.json', '.', pathWin32)}                           | ${'codetypo/cfg.json'}      | ${'..'}                          | ${eg({ glob: 'codetypo/*.json', root: '../' }, pathWin32)}                 | ${'root above'}
+        ${gp('*.json')}                                           | ${'cfg.json'}               | ${'deeper'}                      | ${eg({ glob: '../*.json', root: 'deeper/' }, Path)}                        | ${'root below, cannot change'}
+        ${gp('*.json', '.', pathPosix)}                           | ${'cfg.json'}               | ${'deeper'}                      | ${eg({ glob: '../*.json', root: 'deeper/' }, pathPosix)}                   | ${'root below, cannot change'}
+        ${gp('**/*.json', '.', pathWin32)}                        | ${'cfg.json'}               | ${'deeper'}                      | ${eg({ glob: '**/*.json', root: 'deeper/', ...globalGlob }, pathWin32)}    | ${'root below, globstar'}
+        ${gp('deeper/*.json')}                                    | ${'cfg.json'}               | ${'deeper'}                      | ${eg({ glob: '*.json', root: 'deeper/' }, Path)}                           | ${'root below, matching'}
+        ${gp('deeper/*.json', '.', pathPosix)}                    | ${'cfg.json'}               | ${'deeper'}                      | ${eg({ glob: '*.json', root: 'deeper/' }, pathPosix)}                      | ${'root below, matching'}
+        ${gp('deeper/*.json', '.', pathWin32)}                    | ${'cfg.json'}               | ${'deeper'}                      | ${eg({ glob: '*.json', root: 'deeper/' }, pathWin32)}                      | ${'root below, matching'}
+        ${gp('deeper/*.json', 'e:/user/Test/project', pathWin32)} | ${'cfg.json'}               | ${'E:/user/test/project/deeper'} | ${eg({ glob: '*.json', root: 'E:/user/test/project/deeper/' }, pathWin32)} | ${'root below, matching'}
+        ${gp('**/deeper/*.json')}                                 | ${'deeper/cfg.json'}        | ${'deeper'}                      | ${eg({ glob: '**/deeper/*.json', root: 'deeper/', ...globalGlob }, Path)}  | ${'root below, not matching'}
+        ${gp('**/deeper/*.json', 'proj/nested')}                  | ${'deeper/cfg.json'}        | ${'proj'}                        | ${eg({ glob: '**/deeper/*.json', root: 'proj/', ...globalGlob }, Path)}    | ${'root below, not matching'}
+        ${gp('**/deeper/*.json')}                                 | ${'!cfg.json'}              | ${'deeper'}                      | ${eg({ glob: '**/deeper/*.json', root: 'deeper/', ...globalGlob }, Path)}  | ${'root below, not matching'}
+        ${gp('deeper/project/*/*.json')}                          | ${'cfg.json'}               | ${'deeper/project/a'}            | ${eg({ glob: '*.json', root: 'deeper/project/a/' }, Path)}                 | ${'root below, not matching'}
     `(
         'normalizeGlobToRoot orig {$globPath.glob.glob, $globPath.glob.root} $root $comment',
         ({ globPath, file, root, expected }: TestNormalizeGlobToRoot) => {
@@ -467,34 +467,34 @@ describe('Validate minimatch assumptions', () => {
     const nestedPattern = `{**/temp/**,{${jsPattern},${mdPattern},${nodePattern}}}`;
 
     test.each`
-        pattern                | file                                  | options                | expected | comment
-        ${'*.json'}            | ${'package.json'}                     | ${{}}                  | ${true}  | ${''}
-        ${'**/*.json'}         | ${'package.json'}                     | ${{}}                  | ${true}  | ${''}
-        ${'**'}                | ${'packages/code/package.json'}       | ${{}}                  | ${true}  | ${''}
+        pattern                | file                                    | options                | expected | comment
+        ${'*.json'}            | ${'package.json'}                       | ${{}}                  | ${true}  | ${''}
+        ${'**/*.json'}         | ${'package.json'}                       | ${{}}                  | ${true}  | ${''}
+        ${'**'}                | ${'packages/code/package.json'}         | ${{}}                  | ${true}  | ${''}
         ${'node_modules'}      | ${'node_modules/codetypo/package.json'} | ${{}}                  | ${false} | ${''}
         ${'node_modules/'}     | ${'node_modules/codetypo/package.json'} | ${{}}                  | ${false} | ${''}
-        ${'node_modules/'}     | ${'node_modules'}                     | ${{}}                  | ${false} | ${''}
+        ${'node_modules/'}     | ${'node_modules'}                       | ${{}}                  | ${false} | ${''}
         ${'node_modules/**'}   | ${'node_modules/codetypo/package.json'} | ${{}}                  | ${true}  | ${''}
-        ${'node_modules/**/*'} | ${'node_modules/package.json'}        | ${{}}                  | ${true}  | ${''}
-        ${'node_modules/**'}   | ${'node_modules'}                     | ${{}}                  | ${true}  | ${'Note: this seems to be a bug with micromatch (minimatch return false)'}
-        ${'node_modules/**/*'} | ${'node_modules'}                     | ${{}}                  | ${false} | ${'Note: this is a work around for `/**` not working.'}
-        ${'*.json'}            | ${'src/package.json'}                 | ${{}}                  | ${false} | ${''}
-        ${'*.json'}            | ${'src/package.json'}                 | ${{ matchBase: true }} | ${true}  | ${'check matchBase behavior, option not used by codetypo'}
-        ${'*.yml'}             | ${'.github/workflows/test.yml'}       | ${{ matchBase: true }} | ${true}  | ${'check matchBase behavior, option not used by codetypo'}
-        ${'**/*.yml'}          | ${'.github/workflows/test.yml'}       | ${{}}                  | ${false} | ${''}
-        ${'**/*.yml'}          | ${'.github/workflows/test.yml'}       | ${{ dot: true }}       | ${true}  | ${'dot is used by default for excludes'}
-        ${'{*.json,*.yaml}'}   | ${'package.json'}                     | ${{}}                  | ${true}  | ${''}
-        ${nestedPattern}       | ${'index.js'}                         | ${{}}                  | ${true}  | ${'Nested {} is supported'}
+        ${'node_modules/**/*'} | ${'node_modules/package.json'}          | ${{}}                  | ${true}  | ${''}
+        ${'node_modules/**'}   | ${'node_modules'}                       | ${{}}                  | ${true}  | ${'Note: this seems to be a bug with micromatch (minimatch return false)'}
+        ${'node_modules/**/*'} | ${'node_modules'}                       | ${{}}                  | ${false} | ${'Note: this is a work around for `/**` not working.'}
+        ${'*.json'}            | ${'src/package.json'}                   | ${{}}                  | ${false} | ${''}
+        ${'*.json'}            | ${'src/package.json'}                   | ${{ matchBase: true }} | ${true}  | ${'check matchBase behavior, option not used by codetypo'}
+        ${'*.yml'}             | ${'.github/workflows/test.yml'}         | ${{ matchBase: true }} | ${true}  | ${'check matchBase behavior, option not used by codetypo'}
+        ${'**/*.yml'}          | ${'.github/workflows/test.yml'}         | ${{}}                  | ${false} | ${''}
+        ${'**/*.yml'}          | ${'.github/workflows/test.yml'}         | ${{ dot: true }}       | ${true}  | ${'dot is used by default for excludes'}
+        ${'{*.json,*.yaml}'}   | ${'package.json'}                       | ${{}}                  | ${true}  | ${''}
+        ${nestedPattern}       | ${'index.js'}                           | ${{}}                  | ${true}  | ${'Nested {} is supported'}
         ${nestedPattern}       | ${'node_modules/codetypo/package.json'} | ${{}}                  | ${true}  | ${'Nested {} is supported'}
-        ${nestedPattern}       | ${'testing/temp/file.bin'}            | ${{}}                  | ${true}  | ${'Nested {} is supported'}
-        ${'# comment'}         | ${'comment'}                          | ${{}}                  | ${false} | ${'Comments do not match'}
-        ${' *.js '}            | ${'index.js'}                         | ${{}}                  | ${false} | ${'Spaces are NOT ignored'}
-        ${'!*.js'}             | ${'index.js'}                         | ${{}}                  | ${false} | ${'Negations work'}
-        ${'!!*.js'}            | ${'index.js'}                         | ${{}}                  | ${true}  | ${'double negative'}
-        ${'{!*.js,*.ts}'}      | ${'index.js'}                         | ${{}}                  | ${false} | ${'nested negative'}
-        ${'{!*.js,*.ts}'}      | ${'index.ts'}                         | ${{}}                  | ${true}  | ${'nested negative'}
-        ${'{*.js,!index.js}'}  | ${'index.js'}                         | ${{}}                  | ${true}  | ${'nested negative does not work as expected'}
-        ${'{!!index.js,*.ts}'} | ${'index.js'}                         | ${{}}                  | ${false} | ${'nested negative does not work as expected'}
+        ${nestedPattern}       | ${'testing/temp/file.bin'}              | ${{}}                  | ${true}  | ${'Nested {} is supported'}
+        ${'# comment'}         | ${'comment'}                            | ${{}}                  | ${false} | ${'Comments do not match'}
+        ${' *.js '}            | ${'index.js'}                           | ${{}}                  | ${false} | ${'Spaces are NOT ignored'}
+        ${'!*.js'}             | ${'index.js'}                           | ${{}}                  | ${false} | ${'Negations work'}
+        ${'!!*.js'}            | ${'index.js'}                           | ${{}}                  | ${true}  | ${'double negative'}
+        ${'{!*.js,*.ts}'}      | ${'index.js'}                           | ${{}}                  | ${false} | ${'nested negative'}
+        ${'{!*.js,*.ts}'}      | ${'index.ts'}                           | ${{}}                  | ${true}  | ${'nested negative'}
+        ${'{*.js,!index.js}'}  | ${'index.js'}                           | ${{}}                  | ${true}  | ${'nested negative does not work as expected'}
+        ${'{!!index.js,*.ts}'} | ${'index.js'}                           | ${{}}                  | ${false} | ${'nested negative does not work as expected'}
     `(
         'assume glob $pattern matches $file is $expected - $comment',
         ({ pattern, file, options, expected }: TestCase) => {

@@ -103,32 +103,32 @@ describe('Validate InDocSettings', () => {
     const USE_TEST = undefined;
 
     test.each`
-        test                                                                   | text                                                                   | expected
-        ${'Empty Doc'}                                                         | ${''}                                                                  | ${{ id: 'in-doc-settings' }}
-        ${'codeTypo\u003AenableCompoundWords'}                                   | ${'codeTypo\u003AenableCompoundWords'}                                   | ${oc({ allowCompoundWords: true })}
-        ${'codeTypo\u003AENABLECompoundWords'}                                   | ${'codeTypo\u003AENABLECompoundWords'}                                   | ${oc({ allowCompoundWords: true })}
-        ${'codeTypo\u003AdisableCompoundWords'}                                  | ${'codeTypo\u003AdisableCompoundWords'}                                  | ${oc({ allowCompoundWords: false })}
-        ${'codeTypo\u003AdisableCompoundWORDS'}                                  | ${'codeTypo\u003AdisableCompoundWORDS'}                                  | ${oc({ allowCompoundWords: false })}
+        test                                                                       | text                                                                       | expected
+        ${'Empty Doc'}                                                             | ${''}                                                                      | ${{ id: 'in-doc-settings' }}
+        ${'codeTypo\u003AenableCompoundWords'}                                     | ${'codeTypo\u003AenableCompoundWords'}                                     | ${oc({ allowCompoundWords: true })}
+        ${'codeTypo\u003AENABLECompoundWords'}                                     | ${'codeTypo\u003AENABLECompoundWords'}                                     | ${oc({ allowCompoundWords: true })}
+        ${'codeTypo\u003AdisableCompoundWords'}                                    | ${'codeTypo\u003AdisableCompoundWords'}                                    | ${oc({ allowCompoundWords: false })}
+        ${'codeTypo\u003AdisableCompoundWORDS'}                                    | ${'codeTypo\u003AdisableCompoundWORDS'}                                    | ${oc({ allowCompoundWords: false })}
         ${'codeTypo\u003AENABLECompoundWords\ncodeTypo\u003AdisableCompoundWords'} | ${'codeTypo\u003AENABLECompoundWords\ncodeTypo\u003AdisableCompoundWords'} | ${oc({ allowCompoundWords: false })}
         ${'codeTypo\u003AdisableCompoundWords\ncodeTypo\u003AenableCompoundWords'} | ${'codeTypo\u003AdisableCompoundWords\ncodeTypo\u003AenableCompoundWords'} | ${oc({ allowCompoundWords: true })}
-        ${'sampleText'}                                                        | ${sampleText}                                                          | ${oc({ allowCompoundWords: true })}
-        ${'sampleCode'}                                                        | ${sampleCode}                                                          | ${oc({ allowCompoundWords: true })}
-        ${'codeTypo\u003Aword apple'}                                            | ${USE_TEST}                                                            | ${oc(inDocDict({ words: ['apple'] }))}
-        ${'/*codeTypo\u003Aword apple*/'}                                        | ${USE_TEST}                                                            | ${oc(inDocDict({ words: ['apple*/'] }))}
-        ${'<!--- codeTypo\u003Aword apple -->'}                                  | ${USE_TEST}                                                            | ${oc(inDocDict({ words: ['apple', '-->'] }))}
-        ${'<!--- codeTypo\u003AignoreWords apple -->'}                           | ${USE_TEST}                                                            | ${oc(inDocDict({ ignoreWords: ['apple', '-->'] }))}
-        ${'<!--- codeTypo\u003AforbidWords apple -->'}                           | ${USE_TEST}                                                            | ${oc(inDocDict({ flagWords: ['apple', '-->'] }))}
-        ${'<!--- codeTypo\u003Aflag-words apple -->'}                            | ${USE_TEST}                                                            | ${oc(inDocDict({ flagWords: ['apple', '-->'] }))}
-        ${'# codetypo\u003Aignore auto* *labeler'}                               | ${USE_TEST}                                                            | ${oc(inDocDict({ ignoreWords: ['auto*', '*labeler'] }))}
+        ${'sampleText'}                                                            | ${sampleText}                                                              | ${oc({ allowCompoundWords: true })}
+        ${'sampleCode'}                                                            | ${sampleCode}                                                              | ${oc({ allowCompoundWords: true })}
+        ${'codeTypo\u003Aword apple'}                                              | ${USE_TEST}                                                                | ${oc(inDocDict({ words: ['apple'] }))}
+        ${'/*codeTypo\u003Aword apple*/'}                                          | ${USE_TEST}                                                                | ${oc(inDocDict({ words: ['apple*/'] }))}
+        ${'<!--- codeTypo\u003Aword apple -->'}                                    | ${USE_TEST}                                                                | ${oc(inDocDict({ words: ['apple', '-->'] }))}
+        ${'<!--- codeTypo\u003AignoreWords apple -->'}                             | ${USE_TEST}                                                                | ${oc(inDocDict({ ignoreWords: ['apple', '-->'] }))}
+        ${'<!--- codeTypo\u003AforbidWords apple -->'}                             | ${USE_TEST}                                                                | ${oc(inDocDict({ flagWords: ['apple', '-->'] }))}
+        ${'<!--- codeTypo\u003Aflag-words apple -->'}                              | ${USE_TEST}                                                                | ${oc(inDocDict({ flagWords: ['apple', '-->'] }))}
+        ${'# codetypo\u003Aignore auto* *labeler'}                                 | ${USE_TEST}                                                                | ${oc(inDocDict({ ignoreWords: ['auto*', '*labeler'] }))}
     `('detect compound words setting: $test', ({ test, text, expected }) => {
         expect(InDoc.getInDocumentSettings(text == USE_TEST ? test : text)).toEqual(expected);
         expect([...InDoc.validateInDocumentSettings(text, {})]).toEqual([]);
     });
 
     test.each`
-        test                                      | text                                     | expected
-        ${'Empty Doc'}                            | ${''}                                    | ${{ id: 'in-doc-settings' }}
-        ${'sampleTextWithIncompleteInDocSetting'} | ${sampleTextWithIncompleteInDocSetting}  | ${oc(inDocDict(sampleInDocDict, ['php']))}
+        test                                      | text                                       | expected
+        ${'Empty Doc'}                            | ${''}                                      | ${{ id: 'in-doc-settings' }}
+        ${'sampleTextWithIncompleteInDocSetting'} | ${sampleTextWithIncompleteInDocSetting}    | ${oc(inDocDict(sampleInDocDict, ['php']))}
         ${'enableCaseSensitive'}                  | ${'// codetypo\u003AenableCaseSensitive'}  | ${oc({ caseSensitive: true })}
         ${'disableCaseSensitive'}                 | ${'// codetypo\u003AdisableCaseSensitive'} | ${oc({ caseSensitive: false })}
     `('extract setting: $test', ({ text, expected }) => {
@@ -182,18 +182,18 @@ describe('Validate InDocSettings', () => {
     test.each`
         text                                       | settings | expected
         ${''}                                      | ${{}}    | ${[]}
-        ${'codetypo\u003A */'}                       | ${{}}    | ${[]}
-        ${'codetypo\u003A ignore x */'}              | ${{}}    | ${[]}
-        ${'codetypo\u003A word*/'}                   | ${{}}    | ${[]}
-        ${'codetypo\u003A word-*/'}                  | ${{}}    | ${[oc({ message: 'Unknown CodeTypo directive', text: 'word-' })]}
+        ${'codetypo\u003A */'}                     | ${{}}    | ${[]}
+        ${'codetypo\u003A ignore x */'}            | ${{}}    | ${[]}
+        ${'codetypo\u003A word*/'}                 | ${{}}    | ${[]}
+        ${'codetypo\u003A word-*/'}                | ${{}}    | ${[oc({ message: 'Unknown CodeTypo directive', text: 'word-' })]}
         ${'spell-checker\u003A word-*/'}           | ${{}}    | ${[oc({ message: 'Unknown CodeTypo directive', text: 'word-' })]}
         ${'spellchecker\u003A word-*/'}            | ${{}}    | ${[oc({ message: 'Unknown CodeTypo directive', text: 'word-' })]}
         ${'spell\u003A ignore-next-occurrence */'} | ${{}}    | ${[oc({ message: 'Unknown CodeTypo directive', text: 'ignore-next-occurrence' })]}
-        ${'codetypo\u003Adictionar dutch'}           | ${{}}    | ${[oc({ range: [7, 16], suggestions: ac(['dictionary', 'dictionaries']), text: 'dictionar' })]}
-        ${'codetypo\u003A:dictionar dutch'}          | ${{}}    | ${[oc({ range: [8, 17], suggestions: ac(['dictionary', 'dictionaries']), text: 'dictionar' })]}
-        ${'codetypo\u003A ignored */'}               | ${{}}    | ${[oc({ range: [8, 15], suggestions: ac(['ignore', 'ignoreWord']), text: 'ignored' })]}
-        ${'codetypo\u003Alokal en'}                  | ${{}}    | ${[oc({ suggestions: ac(['locale']) })]}
-        ${'codetypo\u003Alokal en'}                  | ${{}}    | ${[oc({ suggestions: nac(['local']) })]}
+        ${'codetypo\u003Adictionar dutch'}         | ${{}}    | ${[oc({ range: [7, 16], suggestions: ac(['dictionary', 'dictionaries']), text: 'dictionar' })]}
+        ${'codetypo\u003A:dictionar dutch'}        | ${{}}    | ${[oc({ range: [8, 17], suggestions: ac(['dictionary', 'dictionaries']), text: 'dictionar' })]}
+        ${'codetypo\u003A ignored */'}             | ${{}}    | ${[oc({ range: [8, 15], suggestions: ac(['ignore', 'ignoreWord']), text: 'ignored' })]}
+        ${'codetypo\u003Alokal en'}                | ${{}}    | ${[oc({ suggestions: ac(['locale']) })]}
+        ${'codetypo\u003Alokal en'}                | ${{}}    | ${[oc({ suggestions: nac(['local']) })]}
     `('validateInDocumentSettings $text', ({ text, settings, expected }) => {
         const result = [...InDoc.validateInDocumentSettings(text, settings)];
         expect(result).toEqual(expected);

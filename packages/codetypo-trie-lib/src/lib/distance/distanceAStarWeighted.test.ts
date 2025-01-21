@@ -39,23 +39,23 @@ describe('distanceAStar', () => {
 
     // codetypo:ignore aeiou aeroplane
     test.each`
-        wordA         | wordB                                    | map                                                  | expected
-        ${''}         | ${''}                                    | ${undefined}                                         | ${0}
-        ${'apple'}    | ${'growing'}                             | ${undefined}                                         | ${700}
-        ${'apple'}    | ${'growing'}                             | ${{ map: 'apple_growing', replace: 99, insDel: 99 }} | ${693}
-        ${'apple'}    | ${'apple'}                               | ${{ map: 'ae', insDel: 75 }}                         | ${0}
-        ${'apple'}    | ${''}                                    | ${{ map: 'ae', insDel: 75 }}                         | ${450}
-        ${'apple'}    | ${''}                                    | ${{ map: 'ae|(ap)', insDel: 75 }}                    | ${350}
-        ${'apple'}    | ${''}                                    | ${{ map: '(ap)', insDel: 1 }}                        | ${301}
-        ${'apple'}    | ${'apples'}                              | ${{ map: '(les)(le)', replace: 50 }}                 | ${50}
-        ${'apple'}    | ${'maple'}                               | ${{ map: '(pp)p', replace: 50 }}                     | ${150}
-        ${'grapple'}  | ${'maples'}                              | ${{ map: '(pp)p', replace: 50 }}                     | ${350}
-        ${'bite'}     | ${'bate'}                                | ${{ map: 'aei', replace: 25 }}                       | ${25}
+        wordA         | wordB                                      | map                                                  | expected
+        ${''}         | ${''}                                      | ${undefined}                                         | ${0}
+        ${'apple'}    | ${'growing'}                               | ${undefined}                                         | ${700}
+        ${'apple'}    | ${'growing'}                               | ${{ map: 'apple_growing', replace: 99, insDel: 99 }} | ${693}
+        ${'apple'}    | ${'apple'}                                 | ${{ map: 'ae', insDel: 75 }}                         | ${0}
+        ${'apple'}    | ${''}                                      | ${{ map: 'ae', insDel: 75 }}                         | ${450}
+        ${'apple'}    | ${''}                                      | ${{ map: 'ae|(ap)', insDel: 75 }}                    | ${350}
+        ${'apple'}    | ${''}                                      | ${{ map: '(ap)', insDel: 1 }}                        | ${301}
+        ${'apple'}    | ${'apples'}                                | ${{ map: '(les)(le)', replace: 50 }}                 | ${50}
+        ${'apple'}    | ${'maple'}                                 | ${{ map: '(pp)p', replace: 50 }}                     | ${150}
+        ${'grapple'}  | ${'maples'}                                | ${{ map: '(pp)p', replace: 50 }}                     | ${350}
+        ${'bite'}     | ${'bate'}                                  | ${{ map: 'aei', replace: 25 }}                       | ${25}
         ${'receive'}  | ${'recieve' /* codetypo:ignore recieve */} | ${{ map: 'ei', swap: 25 }}                           | ${25}
-        ${'airplane'} | ${'aeroplane'}                           | ${{ map: '(ai)(ae)', replace: 25 }}                  | ${125}
-        ${'airplane'} | ${'aeroplane'}                           | ${{ map: '(air)(aero)|aeiou', replace: 25 }}         | ${25}
-        ${'airplane'} | ${'aeroplane'}                           | ${{ map: 'aeiou', replace: 25 }}                     | ${125}
-        ${'plain'}    | ${'plane'}                               | ${{ map: '(ane)(ain)', replace: 100 }}               | ${100}
+        ${'airplane'} | ${'aeroplane'}                             | ${{ map: '(ai)(ae)', replace: 25 }}                  | ${125}
+        ${'airplane'} | ${'aeroplane'}                             | ${{ map: '(air)(aero)|aeiou', replace: 25 }}         | ${25}
+        ${'airplane'} | ${'aeroplane'}                             | ${{ map: 'aeiou', replace: 25 }}                     | ${125}
+        ${'plain'}    | ${'plane'}                                 | ${{ map: '(ane)(ain)', replace: 100 }}               | ${100}
     `('distanceAStar "$wordA" "$wordB" $map', ({ wordA, wordB, map, expected }) => {
         const weightMap = createWeightMap();
         if (map) addDefToWeightMap(weightMap, map);

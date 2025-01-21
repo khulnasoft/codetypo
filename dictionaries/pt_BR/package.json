@@ -35,7 +35,8 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft",  "license": "GPL-3.0-or-later",
+  "author": "KhulnaSoft Ltd <support@khulnasoft",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/issues"
   },
@@ -46,6 +47,6 @@
     "codetypo-ext.json"
   ],
   "devDependencies": {
-    "dictionary-pt": "workspace:*"
+    "dictionary-pt": "^4.0.0"
   }
 }

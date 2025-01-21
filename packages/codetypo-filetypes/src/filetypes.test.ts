@@ -28,7 +28,7 @@ describe('Validate LanguageIds', () => {
         ${'image.jpg'}                       | ${['image']}
         ${'workspace.code-workspace'}        | ${['jsonc']}
         ${'.code-workspace'}                 | ${['jsonc']}
-        ${'.codetypocache'}                    | ${['cache_files']}
+        ${'.codetypocache'}                  | ${['cache_files']}
         ${'Gemfile'}                         | ${['ruby']}
         ${'path/Gemfile'}                    | ${['ruby']}
         ${'Cargo.lock'}                      | ${['lock', 'toml']}
@@ -100,43 +100,43 @@ describe('Validate LanguageIds', () => {
     });
 
     test.each`
-        filename          | expected
-        ${'README.md'}    | ${false}
-        ${'run.exe'}      | ${true}
-        ${'lib.obj'}      | ${true}
-        ${'lib.dll'}      | ${true}
-        ${'lib.o'}        | ${true}
-        ${'image.gif'}    | ${true}
-        ${'picture.jpeg'} | ${true}
-        ${'picture.jpg'}  | ${true}
-        ${'Cargo.lock'}   | ${true}
-        ${'doc.txt'}      | ${false}
-        ${'lock'}         | ${false}
-        ${'Gemfile'}      | ${false}
+        filename            | expected
+        ${'README.md'}      | ${false}
+        ${'run.exe'}        | ${true}
+        ${'lib.obj'}        | ${true}
+        ${'lib.dll'}        | ${true}
+        ${'lib.o'}          | ${true}
+        ${'image.gif'}      | ${true}
+        ${'picture.jpeg'}   | ${true}
+        ${'picture.jpg'}    | ${true}
+        ${'Cargo.lock'}     | ${true}
+        ${'doc.txt'}        | ${false}
+        ${'lock'}           | ${false}
+        ${'Gemfile'}        | ${false}
         ${'.codetypocache'} | ${true}
     `('isGeneratedExt $filename => $expected', ({ filename, expected }) => {
         expect(LangId.isGeneratedFile(filename)).toBe(expected);
     });
 
     test.each`
-        filename           | expected
-        ${'README.md'}     | ${false}
-        ${'run.exe'}       | ${true}
-        ${'lib.obj'}       | ${true}
-        ${'lib.dll'}       | ${true}
-        ${'lib.o'}         | ${true}
-        ${'image.PNG'}     | ${true}
-        ${'image.JPG'}     | ${true}
-        ${'image.gif'}     | ${true}
-        ${'picture.jpeg'}  | ${true}
-        ${'picture.jpg'}   | ${true}
-        ${'doc.txt'}       | ${false}
-        ${'lock'}          | ${false}
-        ${'Cargo.lock'}    | ${false}
-        ${'Gemfile'}       | ${false}
-        ${'.codetypocache'}  | ${false}
-        ${'my-video.webm'} | ${true}
-        ${'my-logo.svg'}   | ${false}
+        filename            | expected
+        ${'README.md'}      | ${false}
+        ${'run.exe'}        | ${true}
+        ${'lib.obj'}        | ${true}
+        ${'lib.dll'}        | ${true}
+        ${'lib.o'}          | ${true}
+        ${'image.PNG'}      | ${true}
+        ${'image.JPG'}      | ${true}
+        ${'image.gif'}      | ${true}
+        ${'picture.jpeg'}   | ${true}
+        ${'picture.jpg'}    | ${true}
+        ${'doc.txt'}        | ${false}
+        ${'lock'}           | ${false}
+        ${'Cargo.lock'}     | ${false}
+        ${'Gemfile'}        | ${false}
+        ${'.codetypocache'} | ${false}
+        ${'my-video.webm'}  | ${true}
+        ${'my-logo.svg'}    | ${false}
     `('isBinaryFile $filename => $expected', ({ filename, expected }) => {
         expect(LangId.isBinaryFile(filename)).toBe(expected);
     });

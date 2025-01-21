@@ -3,13 +3,25 @@ import { format } from 'node:util';
 
 import { isAsyncIterable, operators, opFilter, pipeAsync } from '@codetypo/codetypo-pipe';
 import { opMap, pipe } from '@codetypo/codetypo-pipe/sync';
-import type { CodeTypoSettings, Glob, Issue, RunResult, TextDocumentOffset, TextOffset } from '@codetypo/codetypo-types';
+import type {
+    CodeTypoSettings,
+    Glob,
+    Issue,
+    RunResult,
+    TextDocumentOffset,
+    TextOffset,
+} from '@codetypo/codetypo-types';
 import { MessageTypes } from '@codetypo/codetypo-types';
 import { toFileURL } from '@codetypo/url';
 import chalk from 'chalk';
 import { _debug as codetypoDictionaryDebug } from 'codetypo-dictionary';
 import { findRepoRoot, GitIgnore } from 'codetypo-gitignore';
-import { GlobMatcher, type GlobMatchOptions, type GlobPatternNormalized, type GlobPatternWithRoot } from 'codetypo-glob';
+import {
+    GlobMatcher,
+    type GlobMatchOptions,
+    type GlobPatternNormalized,
+    type GlobPatternWithRoot,
+} from 'codetypo-glob';
 import type { Logger, SpellCheckFileResult, ValidationIssue } from 'codetypo-lib';
 import {
     ENV_CODETYPO_GLOB_ROOT,
@@ -29,7 +41,7 @@ import { getEnvironmentVariable, setEnvironmentVariable, truthy } from '../envir
 import { getFeatureFlags } from '../featureFlags/index.js';
 import { CodeTypoReporterConfiguration } from '../models.js';
 import { npmPackage } from '../pkgInfo.js';
-import type { CodeTypoLintResultCache,CreateCacheSettings } from '../util/cache/index.js';
+import type { CodeTypoLintResultCache, CreateCacheSettings } from '../util/cache/index.js';
 import { calcCacheSettings, createCache } from '../util/cache/index.js';
 import { CheckFailed, toApplicationError, toError } from '../util/errors.js';
 import type { ConfigInfo, FileResult, ReadFileInfoResult } from '../util/fileHelper.js';

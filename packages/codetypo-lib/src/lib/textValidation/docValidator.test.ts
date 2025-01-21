@@ -59,13 +59,13 @@ describe('docValidator', () => {
     // codetypo:ignore Helllo grrrr dockblock
 
     test.each`
-        filename                                   | startText       | endText      | expected
-        ${__filename}                              | ${'__filename'} | ${undefined} | ${[]}
-        ${fix('sample-with-errors.ts')}            | ${"'H"}         | ${"'"}       | ${[oc({ text: 'Helllo' })]}
-        ${fix('sample-with-errors.ts')}            | ${'/**'}        | ${'*/'}      | ${[oc({ text: 'dockblock' })]}
-        ${fix('sample-with-errors.ts')}            | ${'main'}       | ${undefined} | ${[]}
+        filename                                     | startText       | endText      | expected
+        ${__filename}                                | ${'__filename'} | ${undefined} | ${[]}
+        ${fix('sample-with-errors.ts')}              | ${"'H"}         | ${"'"}       | ${[oc({ text: 'Helllo' })]}
+        ${fix('sample-with-errors.ts')}              | ${'/**'}        | ${'*/'}      | ${[oc({ text: 'dockblock' })]}
+        ${fix('sample-with-errors.ts')}              | ${'main'}       | ${undefined} | ${[]}
         ${fix('sample-with-codetypo-directives.ts')} | ${'grrrr'}      | ${undefined} | ${[]}
-        ${fixDict('remote/test.txt')}              | ${'New'}        | ${'Paris'}   | ${[]}
+        ${fixDict('remote/test.txt')}                | ${'New'}        | ${'Paris'}   | ${[]}
     `(
         'checkText async $filename "$startText"',
         async ({ filename, startText, endText, expected }) => {
@@ -86,12 +86,12 @@ describe('docValidator', () => {
     );
 
     test.each`
-        filename                                   | text            | configFile            | expected
-        ${__filename}                              | ${'__filename'} | ${undefined}          | ${[]}
-        ${fix('sample-with-errors.ts')}            | ${'Helllo'}     | ${undefined}          | ${[oc({ text: 'Helllo' })]}
-        ${fix('sample-with-errors.ts')}            | ${'Helllo'}     | ${fix('codetypo.json')} | ${[oc({ text: 'Helllo' })]}
-        ${fix('sample-with-errors.ts')}            | ${'main'}       | ${undefined}          | ${[]}
-        ${fix('sample-with-codetypo-directives.ts')} | ${'grrrr'}      | ${undefined}          | ${[]}
+        filename                                     | text            | configFile              | expected
+        ${__filename}                                | ${'__filename'} | ${undefined}            | ${[]}
+        ${fix('sample-with-errors.ts')}              | ${'Helllo'}     | ${undefined}            | ${[oc({ text: 'Helllo' })]}
+        ${fix('sample-with-errors.ts')}              | ${'Helllo'}     | ${fix('codetypo.json')} | ${[oc({ text: 'Helllo' })]}
+        ${fix('sample-with-errors.ts')}              | ${'main'}       | ${undefined}            | ${[]}
+        ${fix('sample-with-codetypo-directives.ts')} | ${'grrrr'}      | ${undefined}            | ${[]}
     `('checkText sync $filename "$text"', async ({ filename, text, expected, configFile }) => {
         const doc = await loadDoc(filename);
         const dVal = new DocumentValidator(doc, { configFile }, {});

@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "yarn lint",
-    "update:dep": "yarn add --dev @codetypo/dict-medicalterms@latest @codetypo/codetypo-types@latest @codetypo/eslint-plugin@latest"
+    "update:dep": "yarn add --dev @codetypo/dict-medicalterms@workspace:* @codetypo/codetypo-types@workspace:* @codetypo/eslint-plugin@workspace:*"
   },
   "devDependencies": {
     "@codetypo/codetypo-types": "workspace:*",
