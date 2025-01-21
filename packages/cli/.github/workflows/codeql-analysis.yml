@@ -1,0 +1,34 @@
+name: "CodeQL"
+
+on:
+  push:
+    branches:
+      - main
+      - codetypo4
+  pull_request:
+    branches:
+      - main
+      - codetypo4
+  workflow_dispatch:
+  schedule:
+    - cron: "0 23 * * 0"
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Make sure it goes back far enough to find where the branch split from main
+          fetch-depth: 20
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: "javascript"
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
