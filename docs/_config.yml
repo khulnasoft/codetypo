@@ -20,7 +20,7 @@
 
 title: CodeTypo
 email: &email "jason@khulnasoft.nl"
-name: &name "Jason Dent" # &name is a YAML anchor which can be *referenced later
+name: &name "Md Sulaiman" # &name is a YAML anchor which can be *referenced later
 description: >- # this means to ignore newlines until "baseurl:"
   A Spell Checker for Code!
 url: https://codetypo.khulnasoft.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"

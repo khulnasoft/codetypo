@@ -1,4 +1,4 @@
-# CSpell Django Dictionary
+# CodeTypo Django Dictionary
 
 Django dictionary for codetypo.
 

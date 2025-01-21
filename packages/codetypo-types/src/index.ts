@@ -1,6 +1,4 @@
 // Using old-style of `type` exports because the new style breaks some integrations.
-export type { CodeTypoUserSettingsFields } from './configFields.js';
-export { ConfigFields } from './configFields.js';
 export type {
     CodeTypoReporter,
     CodeTypoReporterModule,
@@ -31,12 +29,12 @@ export type {
     CacheFormat,
     CacheSettings,
     CacheStrategy,
-    CommandLineSettings,
     CodeTypoPackageSettings,
     CodeTypoSettings,
     CodeTypoSettingsWithSourceTrace,
     CodeTypoUserSettings,
     CodeTypoUserSettingsWithComments,
+    CommandLineSettings,
     ExperimentalBaseSettings,
     ExperimentalFileSettings,
     ExtendableSettings,
@@ -83,6 +81,8 @@ export type {
     VersionLegacy,
     WorkspaceTrustSettings,
 } from './CodeTypoSettingsDef.js';
+export type { CodeTypoUserSettingsFields } from './configFields.js';
+export { ConfigFields } from './configFields.js';
 export { defaultCodeTypoSettings } from './defaultConfigSettings.js';
 export { defineConfig } from './defineConfig.js';
 export type {

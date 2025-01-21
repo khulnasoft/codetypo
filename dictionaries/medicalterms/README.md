@@ -1,4 +1,4 @@
-# CSpell Medical Terms Dictionary
+# CodeTypo Medical Terms Dictionary
 
 Medical Terms dictionary for codetypo.
 

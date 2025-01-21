@@ -1,19 +1,19 @@
-# CSpell Finnish Dictionary
+# CodeTypo Finnish Dictionary
 
 Finnish dictionary for codetypo.
 
-This is a pre-built dictionary for use with CSpell.
+This is a pre-built dictionary for use with CodeTypo.
 
 ## Installation
 
-Global Install and add to CSpell global settings.
+Global Install and add to CodeTypo global settings.
 
 ```sh
 npm install -g @codetypo/dict-fi-fi
 codetypo link add @codetypo/dict-fi-fi
 ```
 
-## Uninstall from CSpell
+## Uninstall from CodeTypo
 
 ```sh
 codetypo link remove @codetypo/dict-fi-fi
@@ -39,7 +39,7 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 
 # Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasofto-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

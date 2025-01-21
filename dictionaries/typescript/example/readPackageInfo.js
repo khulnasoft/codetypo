@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 /**
  * Search for `package.json`
@@ -27,7 +27,7 @@ function findNearestPackageJson(from) {
  */
 function loadPackage(pkgFile) {
     if (!pkgFile) return;
-    return JSON.parse(fs.readFileSync(pkgFile, 'utf-8'));
+    return JSON.parse(fs.readFileSync(pkgFile, 'utf8'));
 }
 
 function determinePackageNamesAndMethods(cwd = process.cwd()) {

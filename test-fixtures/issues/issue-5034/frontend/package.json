@@ -7,8 +7,8 @@
     "test": "pnpm run spellcheck"
   },
   "devDependencies": {
-    "@codetypo/dict-fr-fr": "2.2.5",
-    "@codetypo/dict-mnemonics": "^3.0.4",
+    "@codetypo/dict-fr-fr": "workspace:*",
+    "@codetypo/dict-mnemonics": "workspace:*",
     "codetypo": "workspace:*"
   }
 }

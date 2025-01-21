@@ -1,10 +1,10 @@
 ---
 packages:
   - 'packages/*'
-  - 'dicts/*'
-  - 'dicts/dictionaries/*'
-  - 'dicts/packages/*'
+  - 'dictionaries/*'
   - 'packages/*/scripts'
+  - 'codetypo-dict-file-checker/*'
+  - 'generator-codetypo-dicts/*'
   - 'packages/codetypo-eslint-plugin/fixtures/import-support'
   - 'packages/codetypo-eslint-plugin/fixtures/simple'
   - 'rfc/*'

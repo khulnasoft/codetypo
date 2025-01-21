@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/rust"
   },
   "keywords": [
@@ -29,15 +29,14 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "contributors": [
+  "author": "Street Side Software <support@khulnasoft",  "contributors": [
     "Alexander Andreev"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/rust#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/rust#readme",
   "files": [
     "dict/rust.txt",
     "codetypo-ext.json"

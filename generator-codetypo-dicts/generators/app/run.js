@@ -1,4 +1,5 @@
 import { fileURLToPath } from 'node:url';
+
 import { createEnv } from 'yeoman-environment';
 
 import LocalGenerator from './index.js';

@@ -1,4 +1,4 @@
-# CSpell French Dictionary
+# CodeTypo French Dictionary
 
 French dictionary for codetypo.
 
@@ -49,7 +49,7 @@ The Hunspell source for this dictionary can be found:
 
 MIT
 
-See also: [French.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/fr_FR/src/hunspell-french-dictionaries-v7.0/README_dict_fr.txt)
+See also: [French.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/fr_FR/src/hunspell-french-dictionaries-v7.0/README_dict_fr.txt)
 
 <!--- @@inject: ../../static/footer.md --->
 

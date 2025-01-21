@@ -1,5 +1,5 @@
-import { createTextFileResource, urlOrReferenceToUrl } from '../common/index.js';
 import type { CodeTypoIO } from '../CodeTypoIO.js';
+import { createTextFileResource, urlOrReferenceToUrl } from '../common/index.js';
 import type {
     BufferEncoding,
     DirEntry,

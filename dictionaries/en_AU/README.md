@@ -1,4 +1,4 @@
-# CSpell Australian English Dictionary
+# CodeTypo Australian English Dictionary
 
 Australian English dictionary for codetypo.
 
@@ -48,7 +48,7 @@ npm run build
 
 ## Adding Words
 
-Please add any words to [src/additional_words.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/en_AU/src/additional_words.txt) by making a pull request.
+Please add any words to [src/additional_words.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/en_AU/src/additional_words.txt) by making a pull request.
 
 ## License
 

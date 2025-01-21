@@ -1,7 +1,7 @@
 {
   "name": "@codetypo/dict-de-ch",
   "version": "1.2.3",
-  "description": "Swiss German dictionary for CSpell.",
+  "description": "Swiss German dictionary for CodeTypo.",
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/de_CH"
   },
   "keywords": [
@@ -35,12 +35,11 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "license": "GPL-3.0-or-later",
+  "author": "Street Side Software <support@khulnasoft",  "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/de_CH#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/de_CH#readme",
   "files": [
     "de_CH.trie.gz",
     "codetypo-ext.json",

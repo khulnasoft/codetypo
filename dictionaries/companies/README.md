@@ -1,4 +1,4 @@
-# CSpell Company names Dictionary
+# CodeTypo Company names Dictionary
 
 Company names dictionary for codetypo.
 

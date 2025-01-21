@@ -1,8 +1,8 @@
 import type { CodeTypoUserSettings } from '@codetypo/codetypo-types';
 import { describe, expect, test } from 'vitest';
 
-import { getGlobalSettings } from './Controller/configLoader/index.js';
 import { mergeSettings } from './CodeTypoSettingsServer.js';
+import { getGlobalSettings } from './Controller/configLoader/index.js';
 import { getDefaultBundledSettingsAsync } from './DefaultSettings.js';
 import * as LS from './LanguageSettings.js';
 import { calcSettingsForLanguage, calcUserSettingsForLanguage } from './LanguageSettings.js';

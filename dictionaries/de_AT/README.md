@@ -1,19 +1,19 @@
-# CSpell Austrian German Dictionary
+# CodeTypo Austrian German Dictionary
 
-Austrian German dictionary for CSpell.
+Austrian German dictionary for CodeTypo.
 
-This is a pre-built dictionary for use with CSpell.
+This is a pre-built dictionary for use with CodeTypo.
 
 ## Installation
 
-Global Install and add to CSpell global settings.
+Global Install and add to CodeTypo global settings.
 
 ```sh
 npm install -g @codetypo/dict-de-at
 codetypo link add @codetypo/dict-de-at
 ```
 
-## Uninstall from CSpell
+## Uninstall from CodeTypo
 
 ```sh
 codetypo link remove @codetypo/dict-de-at

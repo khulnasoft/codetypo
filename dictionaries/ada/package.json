@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/ada"
   },
   "keywords": [
@@ -31,12 +31,12 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
+  "author": "Street Side Software <support@khulnasoft",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/ada#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/ada#readme",
   "files": [
     "dict/ada.txt",
     "codetypo-ext.json"

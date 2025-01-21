@@ -6,9 +6,9 @@ import { createCodeTypoSettingsInternal } from '../Models/CodeTypoSettingsIntern
 import { PatternRegExp } from '../Models/PatternRegExp.js';
 import { srcDirectory } from '../pkg-info.mjs';
 import { resolveFile } from '../util/resolveFile.js';
+import { mergeSettings } from './CodeTypoSettingsServer.js';
 import { defaultConfigFileModuleRef } from './constants.js';
 import { readSettings } from './Controller/configLoader/index.js';
-import { mergeSettings } from './CodeTypoSettingsServer.js';
 import * as LanguageSettings from './LanguageSettings.js';
 import * as RegPat from './RegExpPatterns.js';
 

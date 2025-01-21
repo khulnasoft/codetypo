@@ -18,9 +18,9 @@ import {
 } from '../../../../test-util/test.locations.cjs';
 import { logError, logWarning } from '../../../util/logger.js';
 import { cwdURL, resolveFileWithURL, toFilePathOrHref, toFileUrl } from '../../../util/url.js';
-import { currentSettingsFileVersion, defaultConfigFileModuleRef, ENV_CODETYPO_GLOB_ROOT } from '../../constants.js';
 import type { ImportFileRefWithError } from '../../CodeTypoSettingsServer.js';
 import { extractDependencies, getSources, mergeSettings } from '../../CodeTypoSettingsServer.js';
+import { currentSettingsFileVersion, defaultConfigFileModuleRef, ENV_CODETYPO_GLOB_ROOT } from '../../constants.js';
 import { _defaultSettings, getDefaultBundledSettingsAsync } from '../../DefaultSettings.js';
 import {
     __testing__ as __configLoader_testing__,

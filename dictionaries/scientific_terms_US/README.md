@@ -1,4 +1,4 @@
-# CSpell Scientific Terms US Dictionary
+# CodeTypo Scientific Terms US Dictionary
 
 Scientific Terms US dictionary for codetypo.
 

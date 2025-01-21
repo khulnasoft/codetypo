@@ -83,7 +83,7 @@
     "codetypo",
     "types"
   ],
-  "author": "Jason Dent",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "engines": {
     "node": ">=18"

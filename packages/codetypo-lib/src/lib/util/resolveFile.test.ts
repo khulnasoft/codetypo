@@ -7,9 +7,9 @@ import { getActiveResourcesInfo } from 'node:process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import util from 'node:util';
 
-import { parse } from 'comment-json';
 import type { VFileSystemProvider } from 'codetypo-io';
 import { createRedirectProvider, createVirtualFS } from 'codetypo-io';
+import { parse } from 'comment-json';
 import { afterEach, describe, expect, test } from 'vitest';
 
 import { pathRepoTestFixturesURL } from '../../test-util/index.mjs';

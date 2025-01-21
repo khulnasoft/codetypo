@@ -1,9 +1,8 @@
-#!/usr/bin/env node
 
-import * as fs from 'fs';
+import * as fs from 'node:fs';
 
 /**
- * To fix: [#218](https://github.com/khulnasofto-dicts/issues/218)
+ * To fix: [#218](https://github.com/khulnasoft/codetypo/issues/218)
  */
 
 const usageText = `
@@ -16,7 +15,7 @@ function usage() {
 
 function readFile(path) {
     try {
-        return fs.readFileSync(path, 'utf-8');
+        return fs.readFileSync(path, 'utf8');
     } catch (e) {
         console.error(e);
     }

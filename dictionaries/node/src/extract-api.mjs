@@ -1,6 +1,3 @@
-#!/usr/bin/env node
-
-'use strict';
 
 /**
  * This script tries to extract word relevant to the NodeJS API into a text file that
@@ -16,7 +13,7 @@
  *
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 
 function processFile(file) {
     const content = readFileSync(file, 'utf8');
@@ -48,30 +45,30 @@ function extract(content) {
     const regexpUnicode = /U\+[0-9A-F]{4}|0x[0-9A-F]{2,4}/gi;
 
     let text = content;
-    text = text.replace(/\r\n/g, '\n');
-    text = text.replace(/\r/g, '\n');
+    text = text.replaceAll('\r\n', '\n');
+    text = text.replaceAll('\r', '\n');
 
     // Ignore example code blocks
-    text = text.replace(regexpCodeBlock, '');
+    text = text.replaceAll(regexpCodeBlock, '');
 
     // Ignore Document Mega Data
-    text = text.replace(regexpMetaData, '');
+    text = text.replaceAll(regexpMetaData, '');
 
     // Remove Unicode
-    text = text.replace(regexpUnicode, '');
+    text = text.replaceAll(regexpUnicode, '');
 
     text = text
         .split('\n')
         .map((text) => text.replace(/<code>(.*)<\/code>/, '`$&`'))
-        .map((text) => text.replace(/^[^`]+$/gm, ''))
-        .map((text) => text.replace(/[^`]*`([^`]*)`[^`\n]*/gm, '<<<$1>>>\n'))
+        .map((text) => text.replaceAll(/^[^`]+$/gm, ''))
+        .map((text) => text.replaceAll(/[^`]*`([^`]*)`[^`\n]*/gm, '<<<$1>>>\n'))
         .join('\n');
 
     text = text
         .split('\n')
         .filter((text) => text.match(/<<<(.*?)>>>/))
-        .map((text) => text.replace(/^[^A-Z]*$/gim, ''))
-        .map((text) => text.replace(/[#']+/g, ' '))
+        .map((text) => text.replaceAll(/^[^A-Z]*$/gim, ''))
+        .map((text) => text.replaceAll(/[#']+/g, ' '))
         .map((text) => text.replace(/.*?<<<(.*?)>>>.*?/, '$1'))
         .map((text) => text.trim())
         .filter((t) => !!t)
@@ -79,7 +76,7 @@ function extract(content) {
         .join('\n');
 
     // Remove duplicate lines
-    text = text.replace(/(.*\n)\1+/g, '$1');
+    text = text.replaceAll(/(.*\n)\1+/g, '$1');
 
     return text;
 }

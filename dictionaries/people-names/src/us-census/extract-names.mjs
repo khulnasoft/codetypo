@@ -1,5 +1,5 @@
 // @ts-check
-import { promises as fs } from 'fs';
+import { promises as fs } from 'node:fs';
 
 import { loadWordFreqCollection } from '@internal/en-freq';
 
@@ -12,16 +12,16 @@ import { loadWordFreqCollection } from '@internal/en-freq';
 const compare = Intl.Collator('en-US').compare;
 
 const urlOutput = new URL('../us-census.txt', import.meta.url);
-const urlDataSurnames = new URL('./Names_2010Census.csv', import.meta.url);
-const urlDataGivenNames = new URL('./given-names.txt', import.meta.url);
+const urlDataSurnames = new URL('Names_2010Census.csv', import.meta.url);
+const urlDataGivenNames = new URL('given-names.txt', import.meta.url);
 
 async function run() {
     const freq = await loadWordFreqCollection();
     const data = await readData();
-    const rawNames = data.filter(row => row.rank > 0 && row.cum_prop100k <= 80000).map(row => row.name);
+    const rawNames = data.filter(row => row.rank > 0 && row.cum_prop100k <= 80_000).map(row => row.name);
 
-    const givenNames = (await readGivenNames()).map(name => correctName(name, freq, 1.0)).flat();
-    const surnames = rawNames.map(name => correctName(name, freq)).flat();
+    const givenNames = (await readGivenNames()).flatMap(name => correctName(name, freq, 1.0));
+    const surnames = rawNames.flatMap(name => correctName(name, freq));
 
     const names = [...new Set([...surnames, ...givenNames])].sort(compare);
 
@@ -60,7 +60,7 @@ function titleCase(name) {
  */
 async function readData() {
 // Header: name,rank,count,prop100k,cum_prop100k,pctwhite,pctblack,pctapi,pctaian,pct2prace,pcthispanic
-    const content = await fs.readFile(urlDataSurnames, 'utf-8');
+    const content = await fs.readFile(urlDataSurnames, 'utf8');
     const lines = content.split('\n');
     const rawData = lines.map(line => line.split(',')).filter(row => row.length > 5);
     const header = rawData[0];
@@ -73,7 +73,7 @@ async function readData() {
         function getCol(i) {
             const v = row[i];
             if (i < 1) return v;
-            return parseFloat(v);
+            return Number.parseFloat(v);
         }
 
         const obj =
@@ -87,7 +87,7 @@ async function readData() {
 
 
 async function readGivenNames() {
-    const content = await fs.readFile(urlDataGivenNames, 'utf-8');
+    const content = await fs.readFile(urlDataGivenNames, 'utf8');
 
     const names = content.split('\n').map(line => line.trim()).filter(line => line).map(titleCase);
     return names;

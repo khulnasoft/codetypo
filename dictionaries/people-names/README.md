@@ -1,8 +1,8 @@
-# CSpell People Names Dictionary
+# CodeTypo People Names Dictionary
 
 People Names dictionary for codetypo.
 
-This is a pre-built dictionary for use with CSpell.
+This is a pre-built dictionary for use with CodeTypo.
 
 This dictionary is an attempt at a collection of people names. It is not definitive. Contributions that add names are welcome.
 
@@ -46,14 +46,14 @@ Names will not be removed just because someone finds them offensive.
 
 ## Installation
 
-Global Install and add to CSpell global settings.
+Global Install and add to CodeTypo global settings.
 
 ```sh
 npm install -g @codetypo/dict-people-names
 codetypo link add @codetypo/dict-people-names
 ```
 
-## Uninstall from CSpell
+## Uninstall from CodeTypo
 
 ```sh
 codetypo link remove @codetypo/dict-people-names
@@ -79,7 +79,7 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 
 # Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

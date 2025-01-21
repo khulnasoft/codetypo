@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/makefile"
   },
   "keywords": [
@@ -30,17 +30,16 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "contributors": [
+  "author": "Street Side Software <support@khulnasoft",  "contributors": [
     "Kevin Traver (https://github.com/kevintraver)",
     "Jim Hays (https://github.com/calvinballing)",
-    "Jason Dent"
+    "Md Sulaiman"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/makefile#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/makefile#readme",
   "devDependencies": {},
   "dependencies": {},
   "files": [

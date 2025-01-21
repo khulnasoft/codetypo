@@ -1,4 +1,4 @@
-# CSpell font names Dictionary
+# CodeTypo font names Dictionary
 
 Font names dictionary for codetypo.
 

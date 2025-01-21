@@ -1,4 +1,4 @@
-# CSpell Portuguese Dictionary
+# CodeTypo Portuguese Dictionary
 
 Portuguese dictionary for codetypo.
 
@@ -48,6 +48,6 @@ The Hunspell source for this dictionary can be found:
 ## License
 
 MIT
-See: [Portuguese-European.dic license](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/pt_PT/src/hunspell/LICENSE)
+See: [Portuguese-European.dic license](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/pt_PT/src/hunspell/LICENSE)
 
 > Some packages may have other licenses included.

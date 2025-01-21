@@ -1,4 +1,4 @@
-# CSpell php Dictionary
+# CodeTypo php Dictionary
 
 Php dictionary for codetypo.
 

@@ -1,8 +1,8 @@
-# CSpell Dictionary Bundle
+# CodeTypo Dictionary Bundle
 
-Dictionaries included with the CSpell Command Line tool.
+Dictionaries included with the CodeTypo Command Line tool.
 
-This is a pre-built dictionary for use with CSpell.
+This is a pre-built dictionary for use with CodeTypo.
 
 ## Manual Installation
 

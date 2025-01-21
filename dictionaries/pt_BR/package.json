@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/pt_BR"
   },
   "keywords": [
@@ -35,12 +35,11 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "license": "GPL-3.0-or-later",
+  "author": "Street Side Software <support@khulnasoft",  "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/pt_BR#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/pt_BR#readme",
   "files": [
     "pt_BR.trie.gz",
     "src/hunspell/license",

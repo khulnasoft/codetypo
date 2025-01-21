@@ -1,4 +1,4 @@
-# CSpell Win32 Dictionary
+# CodeTypo Win32 Dictionary
 
 Win32 dictionary for codetypo.
 
@@ -34,7 +34,7 @@ Manual installation is useful if you want to include this dictionary as part of 
 npm i @codetypo/dict-win32
 ```
 
-The `codetypo-ext.json` file in this package should be added to the import section in your CSpell configuration file.
+The `codetypo-ext.json` file in this package should be added to the import section in your CodeTypo configuration file.
 
 **_`codetypo.config.yaml`_**
 
@@ -54,7 +54,7 @@ import: ['@codetypo/dict-win32/codetypo-ext.json']
 
 ## Enable the Dictionary
 
-By default the `win32` dictionary is enabled for `C` and `C++` file types. To enable it for other file types, it is necessary to add it to the `dictionaries` section of the configuration or include it as an inline CSpell directive: `codetypo:dictionaries win32`.
+By default the `win32` dictionary is enabled for `C` and `C++` file types. To enable it for other file types, it is necessary to add it to the `dictionaries` section of the configuration or include it as an inline CodeTypo directive: `codetypo:dictionaries win32`.
 
 Example: `example.md`
 
@@ -74,7 +74,7 @@ Sample Code:
 
 # Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

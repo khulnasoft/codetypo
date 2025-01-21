@@ -1,6 +1,6 @@
-# CSpell Developers (Fullstack) Dictionary
+# CodeTypo Developers (Fullstack) Dictionary
 
-A dictionary for CSpell containing commonly used words during full stack development.
+A dictionary for CodeTypo containing commonly used words during full stack development.
 
 This is a pre-built dictionary for use with codetypo.
 

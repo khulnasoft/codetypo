@@ -1,4 +1,4 @@
-# CSpell LaTeX Dictionary
+# CodeTypo LaTeX Dictionary
 
 LaTeX codetypo dictionary
 

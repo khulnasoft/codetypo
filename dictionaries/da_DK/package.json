@@ -1,7 +1,7 @@
 {
   "name": "@codetypo/dict-da-dk",
   "version": "4.0.3",
-  "description": "Danish dictionary for CSpell.",
+  "description": "Danish dictionary for CodeTypo.",
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/da_DK"
   },
   "keywords": [
@@ -36,9 +36,9 @@
   "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/da_DK#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/da_DK#readme",
   "files": [
     "da_DK.trie",
     "codetypo-ext.json",

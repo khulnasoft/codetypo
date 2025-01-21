@@ -1,10 +1,10 @@
-# The CSpell English dictionary uses the SCOWL (Spell Checker Oriented Word Lists) dictionary as a
+# The CodeTypo English dictionary uses the SCOWL (Spell Checker Oriented Word Lists) dictionary as a
 # base: http://wordlist.aspell.net/
 #
-# Additionally, CSpell adds some extra words to that dictionary that are very common.
+# Additionally, CodeTypo adds some extra words to that dictionary that are very common.
 #
 # There should be one entry per line.
-# Consider adding words to [shared-additional-words.txt](https://github.com/khulnasofto-dicts/blob/main/dictionaries/en_shared/src/shared-additional-words.txt)
+# Consider adding words to [shared-additional-words.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/en_shared/src/shared-additional-words.txt)
 # if they are used by all flavors of English.
 #
 # codetypo-tools: split

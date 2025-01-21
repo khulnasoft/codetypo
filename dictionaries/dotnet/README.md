@@ -1,4 +1,4 @@
-# CSpell .Net Dictionary
+# CodeTypo .Net Dictionary
 
 .Net dictionary for codetypo.
 

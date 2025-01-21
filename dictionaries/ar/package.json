@@ -1,7 +1,7 @@
 {
   "name": "@codetypo/dict-ar",
   "version": "1.1.4",
-  "description": "Arabic dictionary for CSpell.",
+  "description": "Arabic dictionary for CodeTypo.",
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/ar"
   },
   "keywords": [
@@ -40,9 +40,9 @@
   "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/ar#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/ar#readme",
   "comment-devDependencies": {
     "ayaspell": "https://github.com/linuxscout/ayaspell"
   },

@@ -1,4 +1,4 @@
-# CSpell Bulgarian Dictionary
+# CodeTypo Bulgarian Dictionary
 
 Bulgarian dictionary for codetypo.
 

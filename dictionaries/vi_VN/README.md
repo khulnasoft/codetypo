@@ -1,4 +1,4 @@
-# CSpell Vietnamese Dictionary
+# CodeTypo Vietnamese Dictionary
 
 Vietnamese dictionary for codetypo.
 

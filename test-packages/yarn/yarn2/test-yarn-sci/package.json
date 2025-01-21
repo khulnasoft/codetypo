@@ -11,7 +11,7 @@
     "update:dep": "yarn add --dev @codetypo/dict-scientific-terms-us@latest @codetypo/codetypo-types@latest"
   },
   "devDependencies": {
-    "@codetypo/codetypo-types": "^8.17.2",
-    "@codetypo/dict-scientific-terms-us": "^3.0.6"
+    "@codetypo/codetypo-types": "workspace:*",
+    "@codetypo/dict-scientific-terms-us": "workspace:*"
   }
 }

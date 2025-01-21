@@ -1,4 +1,4 @@
-# CSpell Czech Dictionary
+# CodeTypo Czech Dictionary
 
 Czech dictionary for codetypo.
 
@@ -51,4 +51,4 @@ MIT
 
 > Some packages may have other licenses included.
 
-See also: [Czech.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/cs_CZ/Czech.txt)
+See also: [Czech.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/cs_CZ/Czech.txt)

@@ -3,7 +3,7 @@
     "id": "vue",
     "version": "0.2",
     "name": "Vue",
-    "description": "CSpell configuration for VUE files",
+    "description": "CodeTypo configuration for VUE files",
     // List of dictionary files to add to the global list of dictionaries
     "dictionaryDefinitions": [],
     // Dictionaries to always be used.

@@ -1,4 +1,4 @@
-# CSpell Esperanto Dictionary
+# CodeTypo Esperanto Dictionary
 
 Esperanto dictionary for codetypo.
 

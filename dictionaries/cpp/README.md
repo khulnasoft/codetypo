@@ -1,4 +1,4 @@
-# CSpell C/C++ Dictionary
+# CodeTypo C/C++ Dictionary
 
 C/C++ Dictionary for codetypo.
 

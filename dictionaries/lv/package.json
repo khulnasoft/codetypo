@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/lv"
   },
   "keywords": [
@@ -33,12 +33,11 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "license": "LGPL-3.0+",
+  "author": "Street Side Software <support@khulnasoft",  "license": "LGPL-3.0+",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/lv#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/lv#readme",
   "files": [
     "dict/lv.trie.gz",
     "codetypo-ext.json",

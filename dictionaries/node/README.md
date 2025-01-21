@@ -1,4 +1,4 @@
-# CSpell Node.js Dictionary
+# CodeTypo Node.js Dictionary
 
 Node.js dictionary for codetypo.
 

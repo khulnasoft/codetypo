@@ -1,4 +1,4 @@
-# CSpell city-names-finland Dictionary
+# CodeTypo city-names-finland Dictionary
 
 City area names in Finland for codetypo.
 

@@ -1,4 +1,4 @@
-# CSpell filetypes Dictionary
+# CodeTypo filetypes Dictionary
 
 Filetypes dictionary for codetypo.
 

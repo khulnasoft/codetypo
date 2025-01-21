@@ -1,4 +1,4 @@
-# CSpell Java Dictionary
+# CodeTypo Java Dictionary
 
 Java dictionary for codetypo.
 

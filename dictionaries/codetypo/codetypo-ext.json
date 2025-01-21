@@ -1,8 +1,8 @@
 {
     "id": "codetypo-bundle",
     "version": "0.2",
-    "name": "CSpell Dictionaries Bundle",
-    "description": "Dictionaries included with the CSpell Command Line tool.",
+    "name": "CodeTypo Dictionaries Bundle",
+    "description": "Dictionaries included with the CodeTypo Command Line tool.",
     "readonly": true,
     "import": [
         "@codetypo/dict-ada/codetypo-ext.json",

@@ -25,7 +25,7 @@
     "update-snapshots-only": "node tester.js check --update-snapshots",
     "update-repositories": "node tester.js check --update-repositories"
   },
-  "author": "Jason Dent",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-types": "workspace:*",

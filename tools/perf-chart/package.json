@@ -19,7 +19,7 @@
     "test-vitest": "vitest run",
     "watch": "tsc -p . -w"
   },
-  "author": "Jason Dent",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "dependencies": {
     "commander": "^13.0.0",

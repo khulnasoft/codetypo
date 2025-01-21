@@ -52,7 +52,7 @@
     "trie",
     "codetypo"
   ],
-  "author": "Jason Dent",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-trie"
@@ -67,9 +67,9 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "@codetypo/dict-en_us": "^4.3.30",
-    "@codetypo/dict-es-es": "^3.0.3",
-    "@codetypo/dict-nl-nl": "^2.3.3",
+    "@codetypo/dict-en_us": "workspace:*",
+    "@codetypo/dict-es-es": "workspace:*",
+    "@codetypo/dict-nl-nl": "workspace:*",
     "import-meta-resolve": "^4.1.0"
   }
 }

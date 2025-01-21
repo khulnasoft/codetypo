@@ -1,4 +1,4 @@
-# CSpell TypeScript and JavaScript Dictionary
+# CodeTypo TypeScript and JavaScript Dictionary
 
 TypeScript and JavaScript dictionary for codetypo.
 

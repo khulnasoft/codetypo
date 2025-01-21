@@ -57,7 +57,7 @@ const compare = new Intl.Collator('en').compare;
  */
 async function readPackagesInfo() {
     try {
-        const content = await fs.readFile(urlPackagesInfo, 'utf-8');
+        const content = await fs.readFile(urlPackagesInfo, 'utf8');
         return PackageDependencies.fromJSON(JSON.parse(content));
     } catch {
         return new PackageDependencies();
@@ -178,7 +178,7 @@ async function writeList(packageDep, lines, newPackages) {
 const formatPackageInfoOnly = false;
 
 async function updateList() {
-    const listContent = await fs.readFile(urlList, 'utf-8');
+    const listContent = await fs.readFile(urlList, 'utf8');
     const lines = listContent.split('\n').map(parseLine);
     const knownPackages = new Set(lines.map((line) => line.value));
     /** @type {Set<string>} */
@@ -266,7 +266,7 @@ async function run() {
         silent = args.includes('--silent');
 
         const startTime = Date.now();
-        while (Date.now() - startTime < 10000) {
+        while (Date.now() - startTime < 10_000) {
             if (!(await updateList())) break;
         }
     } catch (e) {

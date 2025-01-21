@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/grc_GR"
   },
   "keywords": [
@@ -32,13 +32,12 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "contributors": [],
+  "author": "Street Side Software <support@khulnasoft",  "contributors": [],
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/grc#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/grc#readme",
   "devDependencies": {},
   "dependencies": {},
   "files": [

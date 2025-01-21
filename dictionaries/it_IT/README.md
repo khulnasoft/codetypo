@@ -1,4 +1,4 @@
-# CSpell Italian Dictionary
+# CodeTypo Italian Dictionary
 
 Italian dictionary for codetypo.
 

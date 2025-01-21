@@ -1,4 +1,4 @@
-# CSpell VUE Configuration
+# CodeTypo VUE Configuration
 
 Configuration bundle for VUE files.
 

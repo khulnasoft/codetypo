@@ -1,7 +1,7 @@
 {
   "name": "@codetypo/dict-codetypo-bundle",
   "version": "1.0.27",
-  "description": "Dictionaries included with the CSpell Command Line tool.",
+  "description": "Dictionaries included with the CodeTypo Command Line tool.",
   "private": false,
   "publishConfig": {
     "access": "public",
@@ -20,23 +20,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/codetypo"
   },
   "keywords": [
     "codetypo",
     "codetypo-ext",
-    "CSpell Bundle",
+    "CodeTypo Bundle",
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "contributors": [],
+  "author": "Street Side Software <support@khulnasoft",  "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/codetypo#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/codetypo#readme",
   "devDependencies": {},
   "dependencies": {
     "@codetypo/dict-ada": "workspace:^",

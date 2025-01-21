@@ -1,8 +1,8 @@
-# CSpell Gaming Dictionary
+# CodeTypo Gaming Dictionary
 
 Gaming dictionary for codetypo.
 
-This is a pre-built dictionary for use with CSpell.
+This is a pre-built dictionary for use with CodeTypo.
 
 ## Installation
 
@@ -30,11 +30,11 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 
 ## Adding Terms to the Dictionaries
 
-See: [`src/README.md`](https://github.com/khulnasoft/codetypo-dicts/tree/main/dictionaries/gaming-terms/src#readme)
+See: [`src/README.md`](https://github.com/khulnasoft/codetypo/tree/main/dictionaries/gaming-terms/src#readme)
 
 ## Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

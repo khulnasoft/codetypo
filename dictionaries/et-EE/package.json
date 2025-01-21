@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/et-EE"
   },
   "keywords": [
@@ -39,9 +39,9 @@
   "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "LGPL-3.0+",
   "bugs": {
-    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/et-EE#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/et-EE#readme",
   "files": [
     "src/LICENSE",
     "et_EE.trie.gz",

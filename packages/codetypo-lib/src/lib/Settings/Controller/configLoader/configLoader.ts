@@ -26,6 +26,7 @@ import {
     toFileUrl,
     windowsDriveLetterToUpper,
 } from '../../../util/url.js';
+import { getMergeStats, mergeSettings } from '../../CodeTypoSettingsServer.js';
 import {
     configSettingsFileVersion0_1,
     configSettingsFileVersion0_2,
@@ -33,7 +34,6 @@ import {
     defaultConfigFileModuleRef,
     ENV_CODETYPO_GLOB_ROOT,
 } from '../../constants.js';
-import { getMergeStats, mergeSettings } from '../../CodeTypoSettingsServer.js';
 import { getGlobalConfig } from '../../GlobalSettings.js';
 import { ImportError } from '../ImportError.js';
 import type { LoaderResult } from '../pnpLoader.js';

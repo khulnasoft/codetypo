@@ -1,6 +1,6 @@
 with Ada.Text_IO;
 
--- Related to [issue-1276](https://github.com/khulnasofto-dicts/issues/1276)
+-- Related to [issue-1276](https://github.com/khulnasoft/codetypo/issues/1276)
 
 procedure Test is
 begin

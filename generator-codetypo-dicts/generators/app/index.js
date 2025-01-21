@@ -1,8 +1,9 @@
-import Generator from 'yeoman-generator';
-import chalk from 'chalk';
-import yosay from 'yosay';
-import { extname, resolve, join, dirname, basename } from 'path';
 import { mkdir } from 'node:fs/promises';
+import { basename,dirname, extname, join, resolve } from 'node:path';
+
+import chalk from 'chalk';
+import Generator from 'yeoman-generator';
+import yosay from 'yosay';
 
 function mkdirp(p) {
     return mkdir(p, { recursive: true });
@@ -89,7 +90,7 @@ export default class extends Generator {
         props.format = props.useTrie ? 'trie3' : 'plaintext';
         props.generateNonStrict = props.useTrie ? 'true' : 'false';
 
-        props.packageName = props.name.toLowerCase().replace(/[^a-z0-9-]/g, '-');
+        props.packageName = props.name.toLowerCase().replaceAll(/[^a-z0-9-]/g, '-');
         props.dstFileName = 'dict/' + props.packageName + '.' + props.fileExt;
         props.compressDest = false; // depProps.useTrie;
         props.dstFullFileName = props.dstFileName + (props.compressDest ? '.gz' : '');
@@ -175,7 +176,7 @@ export default class extends Generator {
 }
 
 function dirName(name) {
-    return name.toLowerCase().replace(/[^-_a-z0-9]/g, '-');
+    return name.toLowerCase().replaceAll(/[^-_a-z0-9]/g, '-');
 }
 
 function friendlyName(name) {

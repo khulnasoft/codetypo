@@ -1,5 +1,13 @@
 export { calcOverrideSettings } from './calcOverrideSettings.js';
 export { checkFilenameMatchesGlob } from './checkFilenameMatchesGlob.js';
+export type { ConfigurationDependencies, ImportFileRefWithError } from './CodeTypoSettingsServer.js';
+export {
+    extractDependencies,
+    finalizeSettings,
+    getSources,
+    mergeInDocSettings,
+    mergeSettings,
+} from './CodeTypoSettingsServer.js';
 export { currentSettingsFileVersion, ENV_CODETYPO_GLOB_ROOT } from './constants.js';
 export type { CodeTypoConfigFile, ICodeTypoConfigFile } from './Controller/configLoader/index.js';
 export {
@@ -24,12 +32,4 @@ export {
     sectionCodeTypo,
 } from './Controller/configLoader/index.js';
 export { ImportError } from './Controller/ImportError.js';
-export type { ConfigurationDependencies, ImportFileRefWithError } from './CodeTypoSettingsServer.js';
-export {
-    extractDependencies,
-    finalizeSettings,
-    getSources,
-    mergeInDocSettings,
-    mergeSettings,
-} from './CodeTypoSettingsServer.js';
 export { defaultSettingsLoader, getDefaultBundledSettingsAsync, getDefaultSettings } from './DefaultSettings.js';

@@ -1,4 +1,4 @@
-# CSpell Spanish Dictionary
+# CodeTypo Spanish Dictionary
 
 Spanish dictionary for codetypo.
 
@@ -41,7 +41,7 @@ npm run build
 
 ## Adding Words
 
-Please add any words to [src/additional_words.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/es_ES/src/additional_words.txt) by making a pull request.
+Please add any words to [src/additional_words.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/es_ES/src/additional_words.txt) by making a pull request.
 
 ## Resources
 
@@ -54,4 +54,4 @@ The Hunspell source for this dictionary can be found:
 LGPL-3.0
 
 > Some packages may have other licenses included.
-> See [src/hunspell/license](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/src/hunspell/license)
+> See [src/hunspell/license](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/src/hunspell/license)

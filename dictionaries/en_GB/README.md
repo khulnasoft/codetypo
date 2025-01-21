@@ -1,4 +1,4 @@
-# CSpell en_GB Dictionary
+# CodeTypo en_GB Dictionary
 
 British English dictionary for codetypo.
 
@@ -48,7 +48,7 @@ npm run build
 
 ## Adding Words
 
-Please add any words to [src/additional_words.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/en_GB/src/additional_words.txt) by making a pull request.
+Please add any words to [src/additional_words.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/en_GB/src/additional_words.txt) by making a pull request.
 
 ## License
 

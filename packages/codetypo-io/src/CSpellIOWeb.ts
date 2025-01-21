@@ -1,5 +1,5 @@
-import { compareStats } from './common/stat.js';
 import type { CodeTypoIO } from './CodeTypoIO.js';
+import { compareStats } from './common/stat.js';
 import { ErrorNotImplemented } from './errors/errors.js';
 import type { FileReference, TextFileResource, UrlOrFilename, UrlOrReference } from './models/FileResource.js';
 import type { DirEntry, Stats } from './models/index.js';

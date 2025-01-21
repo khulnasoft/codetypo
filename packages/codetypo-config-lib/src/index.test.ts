@@ -6,7 +6,7 @@ import { pathToFileURL } from 'node:url';
 import { describe, expect, test } from 'vitest';
 
 import * as index from './index.js';
-import { createReaderWriter, CodeTypoConfigFile } from './index.js';
+import { CodeTypoConfigFile,createReaderWriter } from './index.js';
 import { fixtures } from './test-helpers/fixtures.js';
 import { copyFile, tempPath } from './test-helpers/util.js';
 

@@ -1,4 +1,4 @@
-# CSpell Turkish Dictionary
+# CodeTypo Turkish Dictionary
 
 Turkish dictionary for codetypo.
 

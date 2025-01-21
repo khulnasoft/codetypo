@@ -14,7 +14,7 @@
     "spell checker",
     "spelling"
   ],
-  "author": "Jason Dent <jason@khulnasoft.nl>",
+  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-eslint-plugin#readme",
   "license": "MIT",
   "exports": {

@@ -1,4 +1,4 @@
-# CSpell Haskell Dictionary
+# CodeTypo Haskell Dictionary
 
 Haskell dictionary for codetypo.
 

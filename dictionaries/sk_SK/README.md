@@ -1,4 +1,4 @@
-# CSpell Slovak Dictionary
+# CodeTypo Slovak Dictionary
 
 Slovak dictionary for codetypo.
 
@@ -54,7 +54,7 @@ MPL v2
 See also:
 
 - [sk-spell/hunspell-sk](https://github.com/sk-spell/hunspell-sk#readme)
-- [Slovak.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/src/Slovak.txt)
+- [Slovak.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/src/Slovak.txt)
 
 ## Contributors
 

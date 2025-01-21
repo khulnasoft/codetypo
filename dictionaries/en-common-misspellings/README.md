@@ -1,8 +1,8 @@
-# CSpell Common English Misspellings Dictionary
+# CodeTypo Common English Misspellings Dictionary
 
 Common English Misspellings dictionary for codetypo.
 
-This is a pre-built dictionary for use with CSpell.
+This is a pre-built dictionary for use with CodeTypo.
 
 ## Requirements
 
@@ -13,14 +13,14 @@ This is a pre-built dictionary for use with CSpell.
 
 ## Installation
 
-Global Install and add to CSpell global settings.
+Global Install and add to CodeTypo global settings.
 
 ```sh
 npm install -g @codetypo/dict-en-common-misspellings
 codetypo link add @codetypo/dict-en-common-misspellings
 ```
 
-## Uninstall from CSpell
+## Uninstall from CodeTypo
 
 ```sh
 codetypo link remove @codetypo/dict-en-common-misspellings
@@ -53,7 +53,7 @@ The source of this dictionary comes from:
 
 ## Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

@@ -1,4 +1,4 @@
-# CSpell Cryptocurrencies Dictionary
+# CodeTypo Cryptocurrencies Dictionary
 
 Cryptocurrencies dictionary for codetypo.
 

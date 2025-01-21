@@ -1,21 +1,21 @@
-# CSpell Google Dictionary
+# CodeTypo Google Dictionary
 
-Google Cloud Development Dictionary for CSpell. It contains common terms found while working with Google products, services, and APIs.
+Google Cloud Development Dictionary for CodeTypo. It contains common terms found while working with Google products, services, and APIs.
 
-This is a pre-built dictionary for use with CSpell.
+This is a pre-built dictionary for use with CodeTypo.
 
 Based upon: [cloud.google.com](https://cloud.google.com/products)
 
 ## Installation
 
-Global Install and add to CSpell global settings.
+Global Install and add to CodeTypo global settings.
 
 ```sh
 npm install -g @codetypo/dict-google
 codetypo link add @codetypo/dict-google
 ```
 
-## Uninstall from CSpell
+## Uninstall from CodeTypo
 
 ```sh
 codetypo link remove @codetypo/dict-google
@@ -42,7 +42,7 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 
 # Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasofto-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

@@ -1,4 +1,4 @@
-# CSpell Git Configuration
+# CodeTypo Git Configuration
 
 Configuration for spell checking Git Commit messages.
 

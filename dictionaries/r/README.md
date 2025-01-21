@@ -1,4 +1,4 @@
-# CSpell R Dictionary
+# CodeTypo R Dictionary
 
 R dictionary for codetypo.
 
@@ -46,7 +46,7 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 
 # Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasofto-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

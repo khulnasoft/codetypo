@@ -1,4 +1,4 @@
-# CSpell Scala Dictionary
+# CodeTypo Scala Dictionary
 
 Scala dictionary for codetypo.
 

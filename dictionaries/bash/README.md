@@ -1,4 +1,4 @@
-# CSpell bash Dictionary
+# CodeTypo bash Dictionary
 
 Bash dictionary for codetypo.
 

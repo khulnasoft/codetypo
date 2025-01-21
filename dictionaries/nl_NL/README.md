@@ -1,4 +1,4 @@
-# CSpell nl_NL Dictionary
+# CodeTypo nl_NL Dictionary
 
 Dutch dictionary for codetypo.
 
@@ -44,7 +44,7 @@ npm run build
 MIT
 
 > Some packages may have other licenses included.
-> See: [hunspell Dutch license](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/nl_NL/src/hunspell/license)
+> See: [hunspell Dutch license](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/nl_NL/src/hunspell/license)
 
 ## Resources
 

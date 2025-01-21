@@ -1,4 +1,4 @@
-# CSpell German Dictionary
+# CodeTypo German Dictionary
 
 German dictionary for codetypo.
 
@@ -50,4 +50,4 @@ The Hunspell source for this dictionary can be found:
 LGPL-3.0
 
 > Some packages may have other licenses included.
-> See [src/hunspell/license](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/de_DE/src/hunspell/license) and [src/German_de_DE.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/de_DE/src/German_de_DE.txt)
+> See [src/hunspell/license](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/de_DE/src/hunspell/license) and [src/German_de_DE.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/de_DE/src/German_de_DE.txt)

@@ -1,8 +1,8 @@
-# CSpell Swedish Dictionary
+# CodeTypo Swedish Dictionary
 
-Swedish dictionary for CSpell.
+Swedish dictionary for CodeTypo.
 
-This is a pre-built dictionary for use with CSpell.
+This is a pre-built dictionary for use with CodeTypo.
 
 ## Installation
 

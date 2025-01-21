@@ -1,4 +1,4 @@
-# CSpell Html Symbol Entities Dictionary
+# CodeTypo Html Symbol Entities Dictionary
 
 HTML Symbol Entities dictionary for codetypo.
 

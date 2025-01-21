@@ -2,10 +2,10 @@
   "name": "generator-codetypo-dicts",
   "version": "0.1.1",
   "description": "Generate codetypo dictionary subprojects.",
-  "homepage": "https://github.com/khulnasofto-dicts",
+  "homepage": "https://github.com/khulnasoft/codetypo",
   "type": "module",
   "private": true,
-  "author": "Jason Dent <jason@khulnasoft
+  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
   "files": [
     "generators"
   ],
@@ -31,11 +31,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khulnasofto-dicts.git"
+    "url": "git+https://github.com/khulnasoft/codetypo.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
   "codetypo": {
     "words": [

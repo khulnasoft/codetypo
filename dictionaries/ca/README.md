@@ -1,4 +1,4 @@
-# CSpell Catalan Dictionary
+# CodeTypo Catalan Dictionary
 
 Catalan dictionary for codetypo.
 

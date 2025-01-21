@@ -1,4 +1,4 @@
-# CSpell K8s Dictionary
+# CodeTypo K8s Dictionary
 
 K8s dictionary for codetypo.
 

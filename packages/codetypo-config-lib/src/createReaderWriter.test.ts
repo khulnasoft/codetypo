@@ -1,7 +1,7 @@
 import { describe, expect, test, vi } from 'vitest';
 
-import { createReaderWriter } from './createReaderWriter.js';
 import { CodeTypoConfigFileReaderWriterImpl } from './CodeTypoConfigFileReaderWriter.js';
+import { createReaderWriter } from './createReaderWriter.js';
 import type { IO } from './IO.js';
 import { defaultDeserializers } from './serializers/index.js';
 

@@ -1,4 +1,4 @@
-# CSpell Russian Dictionary
+# CodeTypo Russian Dictionary
 
 Russian dictionary for codetypo.
 
@@ -49,7 +49,7 @@ GPL-3.0-or-later
 
 ## Adding Missing Words
 
-Please add words to [additional_words.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/ru_RU/src/additional_words.txt)
+Please add words to [additional_words.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/ru_RU/src/additional_words.txt)
 
 ## Building
 

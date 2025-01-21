@@ -3,7 +3,7 @@
   "version": "1.0.7",
   "description": "Checks files against a snapshot",
   "main": "index.mjs",
-  "author": "Jason Dent",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "private": true,
   "dependencies": {

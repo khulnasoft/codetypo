@@ -4,4 +4,4 @@ All source files used to generate the dictionary should be stored in this direct
 
 Files:
 
-- `Greek.ALLCAPS.txt` - are generated to fix: [#218](https://github.com/khulnasofto-dicts/issues/218)
+- `Greek.ALLCAPS.txt` - are generated to fix: [#218](https://github.com/khulnasoft/codetypo/issues/218)

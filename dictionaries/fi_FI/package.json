@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/fi_FI"
   },
   "keywords": [
@@ -34,15 +34,14 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "contributors": [
+  "author": "Street Side Software <support@khulnasoft",  "contributors": [
     "Kimi Heinonen <kimi.heinonen+codetypo@gmail.com>"
   ],
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/fi_FI#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/fi_FI#readme",
   "devDependencies": {},
   "dependencies": {},
   "files": [

@@ -1,7 +1,7 @@
 {
   "name": "@codetypo/dict-de-at",
   "version": "1.1.3",
-  "description": "Austrian German dictionary for CSpell.",
+  "description": "Austrian German dictionary for CodeTypo.",
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/de_AT"
   },
   "keywords": [
@@ -38,9 +38,9 @@
   "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/de_AT#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/de_AT#readme",
   "files": [
     "de_AT.trie.gz",
     "codetypo-ext.json",

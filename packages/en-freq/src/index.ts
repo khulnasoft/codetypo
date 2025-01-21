@@ -1,11 +1,11 @@
-import { promises as fs } from 'fs';
+import { promises as fs } from 'node:fs';
 
 export type WordFreqMap = Map<string, number>;
 
 export const wordFreqUrl = new URL('../dict/en-freq.tsv', import.meta.url);
 
 export async function loadWordFreqMap(): Promise<WordFreqMap> {
-    const data = await fs.readFile(wordFreqUrl, 'utf-8');
+    const data = await fs.readFile(wordFreqUrl, 'utf8');
     const freq = data
         .split('\n')
         .filter((line) => line.trim())
@@ -72,8 +72,8 @@ function calcWordForms(words: string[] | Iterable<string>): Map<string, Set<stri
     for (const word of words) {
         const key = word.normalize().toLowerCase();
         addWord(key, word);
-        addWord(key.replace(/[^\p{L}\d]/gu, ''), word);
-        addWord(key.normalize('NFD').replace(/[^\p{L}\d]/gu, ''), word);
+        addWord(key.replaceAll(/[^\p{L}\d]/gu, ''), word);
+        addWord(key.normalize('NFD').replaceAll(/[^\p{L}\d]/gu, ''), word);
     }
 
     return map;

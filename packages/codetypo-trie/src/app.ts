@@ -5,8 +5,8 @@ import * as stream from 'node:stream';
 import { fileURLToPath } from 'node:url';
 import * as zlib from 'node:zlib';
 
-import type { Command } from 'commander';
 import * as Trie from 'codetypo-trie-lib';
+import type { Command } from 'commander';
 import type { Sequence } from 'gensequence';
 import { genSequence } from 'gensequence';
 

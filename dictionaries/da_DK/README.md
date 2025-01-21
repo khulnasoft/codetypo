@@ -1,19 +1,19 @@
-# CSpell Danish Dictionary
+# CodeTypo Danish Dictionary
 
-Danish dictionary for CSpell.
+Danish dictionary for CodeTypo.
 
-This is a pre-built dictionary, base on [Stavekontrolden](https://www.stavekontrolden.dk), for use with CSpell.
+This is a pre-built dictionary, base on [Stavekontrolden](https://www.stavekontrolden.dk), for use with CodeTypo.
 
 ## Installation
 
-Global Install and add to CSpell global settings.
+Global Install and add to CodeTypo global settings.
 
 ```sh
 npm install -g @codetypo/dict-da-dk
 codetypo link add @codetypo/dict-da-dk
 ```
 
-## Uninstall from CSpell
+## Uninstall from CodeTypo
 
 ```sh
 codetypo link remove @codetypo/dict-da-dk

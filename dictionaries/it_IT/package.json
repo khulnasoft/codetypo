@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/it_IT"
   },
   "keywords": [
@@ -32,12 +32,11 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "license": "GPL-3.0-or-later",
+  "author": "Street Side Software <support@khulnasoft",  "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/it_IT#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/it_IT#readme",
   "files": [
     "dict/it-it.trie",
     "src/hunspell/license",

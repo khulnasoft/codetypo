@@ -10,6 +10,7 @@ import { createCodeTypoSettingsInternal as csi } from '../Models/CodeTypoSetting
 import { toURL } from '../util/url.js';
 import { calcOverrideSettings } from './calcOverrideSettings.js';
 import { checkFilenameMatchesGlob } from './checkFilenameMatchesGlob.js';
+import { getMergeStats, getSources, mergeSettings } from './CodeTypoSettingsServer.js';
 import { getDefaultConfigLoader } from './Controller/configLoader/defaultConfigLoader.js';
 import {
     __testing__ as __configLoader_testing__,
@@ -22,7 +23,6 @@ import {
     readSettingsFiles,
 } from './Controller/configLoader/index.js';
 import type { CodeTypoSettingsWST } from './Controller/configLoader/types.js';
-import { getMergeStats, getSources, mergeSettings } from './CodeTypoSettingsServer.js';
 import { _defaultSettings, getDefaultBundledSettingsAsync } from './DefaultSettings.js';
 
 const samplesDir = pathPackageSamples;

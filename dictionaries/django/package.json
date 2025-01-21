@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/django"
   },
   "keywords": [
@@ -31,13 +31,13 @@
   "author": "Street Side Software <support@khulnasoft.nl>",
   "contributors": [
     "canarduck",
-    "Jason Dent <jason@khulnasoft.nl>"
+    "Md Sulaiman <dev.sulaiman@icloud.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/django#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/django#readme",
   "files": [
     "dict/django.txt",
     "codetypo-ext.json"

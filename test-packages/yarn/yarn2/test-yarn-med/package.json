@@ -11,7 +11,7 @@
     "update:dep": "yarn add --dev @codetypo/dict-medicalterms@latest @codetypo/codetypo-types@latest"
   },
   "devDependencies": {
-    "@codetypo/codetypo-types": "^8.17.2",
-    "@codetypo/dict-medicalterms": "^4.1.5"
+    "@codetypo/codetypo-types": "workspace:*",
+    "@codetypo/dict-medicalterms": "workspace:*"
   }
 }

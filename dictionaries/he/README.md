@@ -1,4 +1,4 @@
-# CSpell he Dictionary
+# CodeTypo he Dictionary
 
 Dictionary for Hebrew language
 

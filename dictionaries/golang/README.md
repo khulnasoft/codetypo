@@ -1,4 +1,4 @@
-# CSpell Go Language Dictionary
+# CodeTypo Go Language Dictionary
 
 Go Language dictionary for codetypo.
 
@@ -6,7 +6,7 @@ This is a pre-built dictionary for use with codetypo.
 
 Supports keywords and built-in library names up to Go 1.12.
 
-This dictionary is included by default in CSpell.
+This dictionary is included by default in CodeTypo.
 
 ## Requirements
 

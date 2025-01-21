@@ -1,4 +1,4 @@
-# CSpell Ukrainian Dictionary
+# CodeTypo Ukrainian Dictionary
 
 Ukrainian dictionary for codetypo.
 

@@ -1,4 +1,4 @@
-# CSpell Brazilian Portuguese Dictionary
+# CodeTypo Brazilian Portuguese Dictionary
 
 Brazilian Portuguese dictionary for codetypo.
 
@@ -41,6 +41,6 @@ npm run build
 
 ## License
 
-[GPL-3.0-or-later](https://github.com/khulnasofto-dicts/blob/main/dictionaries/pt_BR/LICENSE)
+[GPL-3.0-or-later](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/pt_BR/LICENSE)
 
 > Some packages may have other licenses included.

@@ -1,4 +1,4 @@
-# CSpell software terms Dictionary
+# CodeTypo software terms Dictionary
 
 Software terms dictionary for codetypo.
 

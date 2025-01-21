@@ -1,6 +1,6 @@
-# CSpell Estonian Dictionary
+# CodeTypo Estonian Dictionary
 
-This is a CSpell repackaging of the [wordlist](http://www.meso.ee/~jjpp/speller/)
+This is a CodeTypo repackaging of the [wordlist](http://www.meso.ee/~jjpp/speller/)
 created by Jaak Pruulmann.
 
 The following description has been taken from the webpage of the original author:
@@ -64,7 +64,7 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 
 # Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

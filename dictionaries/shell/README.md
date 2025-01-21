@@ -1,4 +1,4 @@
-# CSpell Shell Script Dictionary
+# CodeTypo Shell Script Dictionary
 
 Shell Script dictionary for codetypo.
 

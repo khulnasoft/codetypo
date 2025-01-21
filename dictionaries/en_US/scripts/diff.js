@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 
 'use strict';
 
@@ -10,8 +9,8 @@
  * But it will need a bit of cleaning up first.
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 function readWords(filename) {
     const contents = fs.readFileSync(filename, 'utf8');

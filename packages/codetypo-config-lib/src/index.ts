@@ -1,4 +1,3 @@
-export { createReaderWriter } from './createReaderWriter.js';
 export type { ICodeTypoConfigFile } from './CodeTypoConfigFile.js';
 export { CodeTypoConfigFile, satisfiesCodeTypoConfigFile } from './CodeTypoConfigFile.js';
 export {
@@ -9,6 +8,7 @@ export {
     CodeTypoConfigFileYaml,
 } from './CodeTypoConfigFile/index.js';
 export type { CodeTypoConfigFileReaderWriter } from './CodeTypoConfigFileReaderWriter.js';
+export { createReaderWriter } from './createReaderWriter.js';
 export type { IO } from './IO.js';
 export type {
     DeserializerNext,

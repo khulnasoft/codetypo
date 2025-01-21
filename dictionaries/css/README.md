@@ -1,4 +1,4 @@
-# CSpell css Dictionary
+# CodeTypo css Dictionary
 
 Css dictionary for codetypo.
 

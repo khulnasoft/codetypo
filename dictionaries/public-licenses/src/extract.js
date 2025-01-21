@@ -1,8 +1,8 @@
 /**
  * Generate the list of public licenses based upon spdx-license-ids.
  */
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 const ids = require('spdx-license-ids');
 
 const filename = path.join(__dirname, './generated/public-licenses.txt');
@@ -14,7 +14,7 @@ function processIds() {
 
     for (const line of ids) {
         const a = line
-            .replace(/[.0-9]/g, ' ')
+            .replaceAll(/[.0-9]/g, ' ')
             .split(' ')
             .map((a) => a.replace(/^-+/, ''))
             .map((a) => a.replace(/-+$/, ''))

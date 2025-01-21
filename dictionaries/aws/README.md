@@ -1,4 +1,4 @@
-# CSpell AWS Terms Dictionary
+# CodeTypo AWS Terms Dictionary
 
 AWS terms dictionary for codetypo.
 

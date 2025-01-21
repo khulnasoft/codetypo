@@ -1,7 +1,7 @@
 {
   "name": "@codetypo/dict-vue",
   "version": "3.0.4",
-  "description": "CSpell configuration for VUE files.",
+  "description": "CodeTypo configuration for VUE files.",
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/vue"
   },
   "keywords": [
@@ -29,12 +29,11 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "license": "MIT",
+  "author": "Street Side Software <support@khulnasoft",  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/vue#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/vue#readme",
   "files": [
     "codetypo-ext.json"
   ]

@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/java"
   },
   "keywords": [
@@ -34,9 +34,9 @@
   "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/java#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/java#readme",
   "files": [
     "dict/java.trie",
     "codetypo-ext.json"

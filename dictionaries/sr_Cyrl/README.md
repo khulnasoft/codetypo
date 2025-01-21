@@ -1,22 +1,22 @@
-# CSpell Serbian (Cyrillic) Dictionary
+# CodeTypo Serbian (Cyrillic) Dictionary
 
 Serbian (Cyrillic) dictionary for codetypo.
 
-This is a pre-built dictionary for use with CSpell. The word list is based on
+This is a pre-built dictionary for use with CodeTypo. The word list is based on
 Milutin Smiljanić's [korektor](https://github.com/msmiljan/korektor). The codetypo
 dictionary has been compiled and is maintained by [Toma
 Tasovac](https://github.com/ttasovac).
 
 ## Installation
 
-Global Install and add to CSpell global settings.
+Global Install and add to CodeTypo global settings.
 
 ```sh
 npm install -g @codetypo/dict-sr-cyrl
 codetypo link add @codetypo/dict-sr-cyrl
 ```
 
-## Uninstall from CSpell
+## Uninstall from CodeTypo
 
 ```sh
 codetypo link remove @codetypo/dict-sr-cyrl
@@ -42,7 +42,7 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 
 # Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

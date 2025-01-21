@@ -1,4 +1,4 @@
-# CSpell Rust Dictionary
+# CodeTypo Rust Dictionary
 
 Rust dictionary for codetypo.
 

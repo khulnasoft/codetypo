@@ -1,4 +1,4 @@
-# CSpell csharp Dictionary
+# CodeTypo csharp Dictionary
 
 Csharp dictionary for codetypo.
 

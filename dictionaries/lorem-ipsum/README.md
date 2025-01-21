@@ -1,4 +1,4 @@
-# CSpell lorem-ipsum Dictionary
+# CodeTypo lorem-ipsum Dictionary
 
 Lorem-ipsum dictionary for codetypo.
 

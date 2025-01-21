@@ -1,4 +1,4 @@
-# CSpell Français Réforme 1990 Dictionary
+# CodeTypo Français Réforme 1990 Dictionary
 
 Français Réforme 1990 dictionary for codetypo.
 

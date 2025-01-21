@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/k8s"
   },
   "keywords": [
@@ -30,16 +30,15 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "contributors": [
+  "author": "Street Side Software <support@khulnasoft",  "contributors": [
     "Carlo Corradini",
-    "Jason Dent"
+    "Md Sulaiman"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/k8s#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/k8s#readme",
   "files": [
     "dict/k8s.txt",
     "codetypo-ext.json"

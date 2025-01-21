@@ -1,4 +1,4 @@
-# CSpell Lithuanian Dictionary
+# CodeTypo Lithuanian Dictionary
 
 Lithuanian dictionary for codetypo. Based on ispell-lt package, version 1.3.
 

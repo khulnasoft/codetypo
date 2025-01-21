@@ -1,4 +1,4 @@
-# CSpell Python Dictionary
+# CodeTypo Python Dictionary
 
 Python dictionary for codetypo.
 

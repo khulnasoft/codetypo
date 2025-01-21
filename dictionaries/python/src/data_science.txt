@@ -1,2 +1,2 @@
 # Data Science Related Terms
-# These words have been moved to [dictionaries/data-science/src](https://github.com/khulnasofto-dicts/tree/main/dictionaries/data-science/src)
+# These words have been moved to [dictionaries/data-science/src](https://github.com/khulnasoft/codetypo/tree/main/dictionaries/data-science/src)

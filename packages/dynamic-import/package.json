@@ -13,7 +13,7 @@
     "import",
     "require"
   ],
-  "author": "Jason Dent <jason@khulnasoft.nl>",
+  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/dynamic-import#readme",
   "license": "MIT",
   "type": "commonjs",

@@ -1,7 +1,7 @@
 {
   "name": "@codetypo/dict-sv",
   "version": "2.2.3",
-  "description": "Swedish dictionary for CSpell.",
+  "description": "Swedish dictionary for CodeTypo.",
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasofto-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/sv"
   },
   "keywords": [
@@ -34,12 +34,11 @@
     "dictionary",
     "spelling"
   ],
-  "author": "Street Side Software <support@khulnasoft
-  "license": "GPL-3.0-or-later",
+  "author": "Street Side Software <support@khulnasoft",  "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/khulnasofto-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasofto-dicts/blob/main/dictionaries/sv#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/sv#readme",
   "files": [
     "Swedish.trie.gz",
     "codetypo-ext.json"

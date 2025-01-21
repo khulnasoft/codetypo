@@ -1,4 +1,4 @@
-# CSpell Persian Dictionary
+# CodeTypo Persian Dictionary
 
 Persian dictionary for codetypo.
 

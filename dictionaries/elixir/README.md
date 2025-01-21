@@ -1,4 +1,4 @@
-# CSpell elixir Dictionary
+# CodeTypo elixir Dictionary
 
 Elixir dictionary for codetypo.
 

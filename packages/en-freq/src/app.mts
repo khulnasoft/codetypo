@@ -1,4 +1,5 @@
 import { Command, program as defaultCommand } from 'commander';
+
 import { loadWordFreqCollection } from './index.js';
 
 export async function app(program = defaultCommand): Promise<Command> {

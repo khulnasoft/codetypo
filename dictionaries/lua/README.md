@@ -1,4 +1,4 @@
-# CSpell lua Dictionary
+# CodeTypo lua Dictionary
 
 Lua dictionary for codetypo.
 

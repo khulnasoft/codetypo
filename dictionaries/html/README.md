@@ -1,4 +1,4 @@
-# CSpell html Dictionary
+# CodeTypo html Dictionary
 
 Html dictionary for codetypo.
 

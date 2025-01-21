@@ -1,4 +1,4 @@
-# CSpell Slovenian Dictionary
+# CodeTypo Slovenian Dictionary
 
 Slovenian dictionary for codetypo.
 
@@ -39,7 +39,7 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 
 # Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## Resources
 
@@ -53,4 +53,4 @@ GNU/LGPL and GNU/GPL
 
 > Some packages may have other licenses included.
 
-See also: [README_sl_SI.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/sl_SIsrc/README_sl_SI.txt)
+See also: [README_sl_SI.txt](https://github.com/khulnasoft/codetypo/blob/main/dictionaries/sl_SIsrc/README_sl_SI.txt)

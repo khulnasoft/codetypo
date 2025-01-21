@@ -44,7 +44,7 @@
     "!**/*.spec.*",
     "!**/*.map"
   ],
-  "author": "Jason Dent",
+  "author": "Md Sulaiman",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-tools"

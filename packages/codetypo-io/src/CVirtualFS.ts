@@ -1,6 +1,6 @@
-import { urlOrReferenceToUrl } from './common/index.js';
 import type { CodeTypoIO } from './CodeTypoIO.js';
 import { getDefaultCodeTypoIO } from './CodeTypoIONode.js';
+import { urlOrReferenceToUrl } from './common/index.js';
 import type { Disposable } from './models/index.js';
 import { LogEvent } from './models/LogEvent.js';
 import { UrlOrReference, VFileSystem, VFileSystemCore } from './VFileSystem.js';

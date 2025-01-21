@@ -1,8 +1,8 @@
-# CSpell NPM Dictionary
+# CodeTypo NPM Dictionary
 
 This dictionary contains a list of popular JavaScript packages found on [npmjs.com](https://www.npmjs.com/).
 
-This is a pre-built dictionary for use with CSpell.
+This is a pre-built dictionary for use with CodeTypo.
 
 ## Requirements
 
@@ -13,14 +13,14 @@ This is a pre-built dictionary for use with CSpell.
 
 ## Installation
 
-Global Install and add to CSpell global settings.
+Global Install and add to CodeTypo global settings.
 
 ```sh
 npm install -g @codetypo/dict-npm
 codetypo link add @codetypo/dict-npm
 ```
 
-## Uninstall from CSpell
+## Uninstall from CodeTypo
 
 ```sh
 codetypo link remove @codetypo/dict-npm
@@ -40,7 +40,7 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 
 # Dictionary Development
 
-See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo-dicts#how-to-create-a-new-dictionary)
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo#how-to-create-a-new-dictionary)
 
 ## License
 

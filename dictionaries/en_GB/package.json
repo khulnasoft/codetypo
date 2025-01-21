@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "url": "https://github.com/khulnasoft/codetypo",
     "directory": "dictionaries/en_GB"
   },
   "keywords": [
@@ -38,9 +38,9 @@
   "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+    "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/en_GB#readme",
+  "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/en_GB#readme",
   "files": [
     "en_GB.trie.gz",
     "codetypo-ext.json",

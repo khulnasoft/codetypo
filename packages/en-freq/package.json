@@ -29,11 +29,11 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@codetypo/codetypo-pipe": "^8.17.2",
+    "@codetypo/codetypo-pipe": "workspace:*",
     "as-table": "^1.0.55",
     "chalk": "^5.4.1",
     "commander": "^13.0.0",
-    "codetypo-trie-lib": "^8.17.2",
+    "codetypo-trie-lib": "workspace:*",
     "globby": "^14.0.2"
   },
   "files": [

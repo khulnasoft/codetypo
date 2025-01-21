@@ -1,4 +1,4 @@
-# CSpell Ada Language Dictionary
+# CodeTypo Ada Language Dictionary
 
 Ada Language dictionary for codetypo.
 

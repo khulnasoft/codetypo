@@ -1,4 +1,4 @@
-# CSpell Greek Dictionary
+# CodeTypo Greek Dictionary
 
 Greek dictionary for codetypo.
 

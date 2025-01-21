@@ -18,8 +18,8 @@ export { createTextDocument, updateTextDocument } from './Models/TextDocument.js
 export type { PerfTimer } from './perf/index.js';
 export { createPerfTimer } from './perf/index.js';
 export type {
-    ConfigurationDependencies,
     CodeTypoConfigFile,
+    ConfigurationDependencies,
     ICodeTypoConfigFile,
     ImportFileRefWithError,
 } from './Settings/index.js';
