@@ -95,7 +95,7 @@
     "codetypo-io": "workspace:*",
     "codetypo-lib": "workspace:*",
     "fast-json-stable-stringify": "^2.1.0",
-    "file-entry-cache": "^9.1.0",
+    "file-entry-cache": "^10.0.6",
     "get-stdin": "^9.0.0",
     "semver": "^7.7.1",
     "tinyglobby": "^0.2.10"
