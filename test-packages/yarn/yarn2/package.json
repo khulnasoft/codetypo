@@ -1,7 +1,7 @@
 {
   "name": "test-yarn2",
   "private": true,
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Tests for dictionaries included by a Yarn 2 repository",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,6 @@
     "update:yarn-sci": "cd test-yarn-sci && corepack use yarn@stable && corepack yarn update:dep",
     "update-yarn": "pnpm update:eslint-plugin && pnpm update:yarn-med && pnpm update:yarn-sci"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT"
 }

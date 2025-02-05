@@ -35,7 +35,7 @@
     "dictionary",
     "spelling"
   ],
-  "author": "KhulnaSoft Ltd <support@khulnasoft.nl>",
+  "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/issues"
@@ -49,6 +49,6 @@
     "test": "tests"
   },
   "devDependencies": {
-    "@codetypo/dict-en-shared": "workspace:*"
+    "@codetypo/dict-en-shared": "workspace:^"
   }
 }

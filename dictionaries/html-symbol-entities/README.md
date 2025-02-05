@@ -8,9 +8,9 @@ This addon dictionary adds HTML symbol entities like: `&mdash;`, `&laquo;`, and 
 
 ## Requirements
 
-| Tool                                                                                                                         | Version |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------- |
-| [codetypo](https://github.com/khulnasoft/codetypo)                                                                           | `>= 6`  |
+| Tool                                                                                                                                 | Version |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| [codetypo](https://github.com/khulnasoft/codetypo)                                                                               | `>= 6`  |
 | [Code Spell Checker - Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=khulnasoft.code-spell-checker) | `>= 2`  |
 
 ## Installation

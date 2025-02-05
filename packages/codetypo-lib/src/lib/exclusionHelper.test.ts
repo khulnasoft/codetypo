@@ -19,9 +19,9 @@ describe('Verify Exclusion Helper functions', () => {
     const fnExcludeGlobs = generateExclusionFunctionForUri(excludeGlobs, '/project/myProject');
 
     test.each`
-        uri                                                               | expected
-        ${'file:///project/myProject/node_modules'}                       | ${true}
-        ${'file:///project/myProject/node_modules/test/test.js'}          | ${true}
+        uri                                                             | expected
+        ${'file:///project/myProject/node_modules'}                     | ${true}
+        ${'file:///project/myProject/node_modules/test/test.js'}        | ${true}
         ${'file:///project/myProject/.vscode/codeTypo.json'}              | ${true}
         ${'file:///project/myProject/.github/node_modules/codeTypo.json'} | ${true}
     `('generated matching function "$uri" expected: $expected', ({ uri, expected }) => {

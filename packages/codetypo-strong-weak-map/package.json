@@ -4,7 +4,7 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "A Map with weakly referenced values.",
   "keywords": [
     "Map",
@@ -12,7 +12,7 @@
     "Weak",
     "Values"
   ],
-  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "author": "Jason Dent <jason@khulnasoft.nl>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-strong-weak-map#readme",
   "license": "MIT",
   "type": "module",

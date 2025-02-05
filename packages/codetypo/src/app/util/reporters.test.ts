@@ -2,6 +2,7 @@ import type { CodeTypoReporter, ReporterSettings } from '@codetypo/codetypo-type
 import { MessageTypes } from '@codetypo/codetypo-types';
 import { describe, expect, test, vi } from 'vitest';
 
+import { ApplicationError } from './errors.js';
 import { InMemoryReporter } from './InMemoryReporter.js';
 import { loadReporters, mergeReporters } from './reporters.js';
 
@@ -41,8 +42,8 @@ describe('mergeReporters', () => {
     });
 
     test.each`
-        reporter                                       | expected
-        ${['@codetypo/codetypo-json-reporter', false]} | ${new Error('Failed to load reporter @codetypo/codetypo-json-reporter: codetypo-json-reporter settings must be an object')}
+        reporter                                   | expected
+        ${['@codetypo/codetypo-json-reporter', false]} | ${new ApplicationError('Failed to load reporter @codetypo/codetypo-json-reporter: codetypo-json-reporter settings must be an object')}
         ${['@codetypo/codetypo-unknown-reporter']}     | ${oc({ message: sc("Failed to load reporter @codetypo/codetypo-unknown-reporter: Cannot find package '@codetypo/codetypo-unknown-reporter' imported from") })}
         ${'@codetypo/codetypo-unknown-reporter'}       | ${oc({ message: sc("Failed to load reporter @codetypo/codetypo-unknown-reporter: Cannot find package '@codetypo/codetypo-unknown-reporter'") })}
     `('loadReporters fail $reporter', async ({ reporter, expected }) => {

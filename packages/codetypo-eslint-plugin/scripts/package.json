@@ -11,7 +11,7 @@
     "test": "echo Ok"
   },
   "keywords": [],
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "engines": {
     "node": ">=18.0"

@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-lib-rollup",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for codetypo-lib.",
   "bin": {
     "mjs": "bin.mjs",
@@ -19,11 +19,11 @@
     "test:esm": "node bin.mjs",
     "test:cjs": "node bin.cjs"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-bundled-dicts": "workspace:*",
-    "import-fresh": "^3.3.0"
+    "import-fresh": "^3.3.1"
   },
   "devDependencies": {
     "codetypo-lib": "workspace:*",

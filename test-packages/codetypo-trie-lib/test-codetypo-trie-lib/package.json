@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-trie-lib",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package",
   "private": true,
   "bin": {
@@ -22,7 +22,7 @@
     "test:smoke": "node ./bin.mjs && node ./bin.rollup.mjs && node ./bin.rollup.cjs",
     "test:unit": "vitest run"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "codetypo-trie-lib": "workspace:*"

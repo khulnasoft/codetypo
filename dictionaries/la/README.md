@@ -54,8 +54,8 @@ GPL-3.0+
 ---
 
 <p align="center">
-Brought to you by <a href="https://khulnasoft.com" title="KhulnaSoft Ltd">
-<img width="16" alt="KhulnaSoft Ltd Logo" src="https://i.imgur.com/CyduuVY.png" /> KhulnaSoft Ltd
+Brought to you by <a href="https://khulnasoft.com" title="Street Side Software">
+<img width="16" alt="Street Side Software Logo" src="https://i.imgur.com/CyduuVY.png" /> Street Side Software
 </a>
 </p>
 

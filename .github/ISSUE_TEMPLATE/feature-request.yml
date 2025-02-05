@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        🛑✋ This is a feature request for codetypo software. To add or remove words in a dictionary, visit [codetypo-dicts](https://github.com/khulnasoft/codetypo/issues).
+        🛑✋ This is a feature request for codetypo software. To add or remove words in a dictionary, visit [codetypo-dicts](https://github.com/khulnasoft/codetypo-dicts/issues).
 
         Thank you for taking the time to fill out this feature request! Please describe your request in as much detail as possible.
 

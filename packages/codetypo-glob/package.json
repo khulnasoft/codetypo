@@ -4,13 +4,13 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Glob matcher for codetypo",
   "keywords": [
     "codetypo",
     "glob"
   ],
-  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "author": "Jason Dent <jason@khulnasoft.nl>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-glob#readme",
   "license": "MIT",
   "type": "module",

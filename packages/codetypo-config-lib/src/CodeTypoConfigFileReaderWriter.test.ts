@@ -16,7 +16,7 @@ const oc = <T>(obj: T) => expect.objectContaining(obj);
 
 describe('CodeTypoConfigFileReaderWriter', () => {
     test.each`
-        uri                       | content                                                 | expected
+        uri                       | content                                               | expected
         ${'file:///package.json'} | ${json({ name: 'name', codetypo: { words: ['one'] } })} | ${oc({ url: new URL('file:///package.json'), settings: { words: ['one'] } })}
     `('readConfig', async ({ uri, content, expected }) => {
         const io: IO = {
@@ -28,7 +28,7 @@ describe('CodeTypoConfigFileReaderWriter', () => {
     });
 
     test.each`
-        uri                      | content | expected
+        uri                    | content | expected
         ${'file:///codetypo.js'} | ${''}   | ${new Error('Unable to parse config file: "file:///codetypo.js"')}
     `('fail to read .js config without a loader', async ({ uri, content, expected }) => {
         const io: IO = {
@@ -40,7 +40,7 @@ describe('CodeTypoConfigFileReaderWriter', () => {
     });
 
     test.each`
-        uri                        | content
+        uri                      | content
         ${'file:///codetypo.json'} | ${'{}\n'}
     `('writeConfig $uri', async ({ uri, content }) => {
         const io: IO = {
@@ -56,7 +56,7 @@ describe('CodeTypoConfigFileReaderWriter', () => {
     });
 
     test.each`
-        uri                               | settings
+        uri                             | settings
         ${'file:///codetypo.config.js'}   | ${{}}
         ${'file:///codetypo.config.json'} | ${{ readonly: true }}
     `('writeConfig readonly $uri', async ({ uri, settings }) => {
@@ -102,8 +102,8 @@ describe('CodeTypoConfigFileReaderWriter', () => {
     });
 
     test.each`
-        uri                                     | content                   | expected
-        ${'file:///package.json'}               | ${json({ name: 'name' })} | ${'Untrusted URL: "file:///package.json"'}
+        uri                                   | content                   | expected
+        ${'file:///package.json'}             | ${json({ name: 'name' })} | ${'Untrusted URL: "file:///package.json"'}
         ${'safe-fs:///path/codetypo.config.js'} | ${json({ name: 'name' })} | ${'Untrusted URL: "safe-fs:///path/codetypo.config.js"'}
     `('readConfig untrusted', async ({ uri, content, expected }) => {
         const io: IO = {
@@ -138,7 +138,7 @@ describe('CodeTypoConfigFileReaderWriter', () => {
     });
 
     test.each`
-        url                        | content
+        url                      | content
         ${'file:///codetypo.json'} | ${json({ name: 'name', words: ['one'] })}
     `('toCodeTypoConfigFile $url', async ({ url, content }) => {
         const io: IO = {

@@ -168,7 +168,7 @@ describe('Validate getDictionary', () => {
     }
 
     test.each`
-        configFile                                | expectedErrors
+        configFile                              | expectedErrors
         ${sample('yaml-config/codetypo.yaml')}    | ${[{ name: 'missing dictionary file', message: 'failed to load' }]}
         ${sample('.codetypo.json')}               | ${[{ name: 'missing dictionary file', message: 'failed to load' }]}
         ${sample('js-config/codetypo.config.js')} | ${[]}

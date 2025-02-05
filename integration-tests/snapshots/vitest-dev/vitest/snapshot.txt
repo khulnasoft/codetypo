@@ -3,7 +3,7 @@ Repository: vitest-dev/vitest
 Url: "https://github.com/vitest-dev/vitest"
 Args: ["--issues-summary-report","--locale=en,en-GB","."]
 Lines:
- CodeTypo: Files checked: 1953, Issues found: 1272 in 300 files.
+ CodeTypo: Files checked: 1972, Issues found: 1285 in 304 files.
  exit code: 1
 LICENSE:3:28      - Unknown word (Vitest)     -- Copyright (c) 2021-Present Vitest Team
 README.md:113:5     - Unknown word (patak)      -- - [@patak-dev](https://github
@@ -108,11 +108,12 @@ docs/guide/index.md:280:4     - Unknown word (neodrag)    -- - [neodrag](https:/
 docs/guide/index.md:282:4     - Unknown word (iconify)    -- - [iconify](https://github.com
 docs/guide/index.md:283:4     - Unknown word (tdesign)    -- - [tdesign-vue-next](https://github
 docs/guide/index.md:9:25      - Unknown word (veetest)    -- Vitest (pronounced as _"veetest"_) is a next generation
-docs/guide/migration.md:145:87    - Unknown word (workspacespec) -- danger">API</Badge> {#the-workspacespec-type-is-no-longer-used
-docs/guide/migration.md:159:93    - Unknown word (resolveconfig) -- Badge> {#changes-to-resolveconfig-type-signature}
-docs/guide/migration.md:228:32    - Unknown word (examplejs)     -- ignored: ['!node_modules/examplejs'] // [!code ++]
+docs/guide/migration.md:150:87    - Unknown word (workspacespec) -- danger">API</Badge> {#the-workspacespec-type-is-no-longer-used
+docs/guide/migration.md:164:93    - Unknown word (resolveconfig) -- Badge> {#changes-to-resolveconfig-type-signature}
+docs/guide/migration.md:233:32    - Unknown word (examplejs)     -- ignored: ['!node_modules/examplejs'] // [!code ++]
 docs/guide/migration.md:59:79     - Unknown word (reaplying)  -- implementation without reaplying the spy. Now, `spy.mockReset
 docs/guide/mocking.md:148:3     - Unknown word (unobserve)  -- unobserve: vi.fn(),
+docs/guide/mocking.md:476:8     - Unknown word (Grap)       -- ```js [GrapQL Setup]
 docs/guide/mocking.md:85:46     - Unknown word (Testman)    -- test message', from: 'Testman' },
 docs/guide/profiling-test-performance.md:185:4     - Unknown word (Speedscope)  -- - [Speedscope](https://www.speedscope
 docs/guide/profiling-test-performance.md:86:106    - Unknown word (heapprofile) -- test-runner-profile/*.heapprofile` files generated. See
@@ -135,8 +136,8 @@ examples/fastify/mockData.ts:7:10      - Unknown word (Daenerys)   -- name: 'Dae
 examples/fastify/mockData.ts:7:19      - Unknown word (Targaryen)  -- name: 'Daenerys Targaryen',
 examples/profiling/src/prime-number.ts:50:20     - Unknown word (unefficient) -- // Intentionally unefficient to highlight performance
 netlify.toml:2:18      - Unknown word (vitepress)  -- publish = "docs/.vitepress/dist"
-package.json:51:6      - Unknown word (bumpp)      -- "bumpp": "^9.10.1",
-package.json:52:6      - Unknown word (changelogithub) -- "changelogithub": "^0.13.11",
+package.json:51:6      - Unknown word (bumpp)      -- "bumpp": "^9.10.2",
+package.json:52:6      - Unknown word (changelogithub) -- "changelogithub": "^13.12.1",
 packages/browser/aria-role.d.ts:15:8      - Unknown word (spinbutton)       -- | "spinbutton"
 packages/browser/aria-role.d.ts:31:8      - Unknown word (treegrid)         -- | "treegrid";
 packages/browser/aria-role.d.ts:76:8      - Unknown word (contentinfo)      -- | "contentinfo"
@@ -153,26 +154,26 @@ packages/browser/jest-dom.d.ts:200:34    - Unknown word (tocontainelement)    --
 packages/browser/jest-dom.d.ts:211:34    - Unknown word (tocontainhtml)       -- testing-library/jest-dom#tocontainhtml](https://github.com
 packages/browser/jest-dom.d.ts:234:34    - Unknown word (tohaveattribute)     -- testing-library/jest-dom#tohaveattribute](https://github.com
 packages/browser/jest-dom.d.ts:261:34    - Unknown word (tohaveclass)         -- testing-library/jest-dom#tohaveclass](https://github.com
-packages/browser/jest-dom.d.ts:272:53    - Unknown word (Luca)                -- input-example" value="Luca" />
-packages/browser/jest-dom.d.ts:281:25    - Unknown word (ananas)              -- * <option value="ananas">Ananas</option>
-packages/browser/jest-dom.d.ts:281:33    - Unknown word (Ananas)              -- option value="ananas">Ananas</option>
+packages/browser/jest-dom.d.ts:271:53    - Unknown word (Luca)                -- input-example" value="Luca" />
+packages/browser/jest-dom.d.ts:280:25    - Unknown word (ananas)              -- * <option value="ananas">Ananas</option>
+packages/browser/jest-dom.d.ts:280:33    - Unknown word (Ananas)              -- option value="ananas">Ananas</option>
 packages/browser/jest-dom.d.ts:29:34     - Unknown word (tobeinthedocument) -- testing-library/jest-dom#tobeinthedocument](https://github.com
-packages/browser/jest-dom.d.ts:304:34    - Unknown word (tohavedisplayvalue)  -- testing-library/jest-dom#tohavedisplayvalue](https://github.com
-packages/browser/jest-dom.d.ts:321:34    - Unknown word (tohavefocus)         -- testing-library/jest-dom#tohavefocus](https://github.com
-packages/browser/jest-dom.d.ts:342:34    - Unknown word (tohaveformvalues)    -- testing-library/jest-dom#tohaveformvalues](https://github.com
-packages/browser/jest-dom.d.ts:365:34    - Unknown word (tohavestyle)         -- testing-library/jest-dom#tohavestyle](https://github.com
-packages/browser/jest-dom.d.ts:389:34    - Unknown word (tohavetextcontent)   -- testing-library/jest-dom#tohavetextcontent](https://github.com
-packages/browser/jest-dom.d.ts:412:34    - Unknown word (tohavevalue)         -- testing-library/jest-dom#tohavevalue](https://github.com
-packages/browser/jest-dom.d.ts:436:34    - Unknown word (tobechecked)         -- testing-library/jest-dom#tobechecked](https://github.com
-packages/browser/jest-dom.d.ts:447:15    - Unknown word (describedby)         -- * [`aria-describedby` attribute](https:/
-packages/browser/jest-dom.d.ts:485:34    - Unknown word (tohavedescription)   -- testing-library/jest-dom#tohavedescription](https://github.com
-packages/browser/jest-dom.d.ts:511:34    - Unknown word (tohaveaccessibledescription) -- testing-library/jest-dom#tohaveaccessibledescription](https://github.com
-packages/browser/jest-dom.d.ts:551:34    - Unknown word (tohaveaccessibleerrormessage) -- testing-library/jest-dom#tohaveaccessibleerrormessage](https://github.com
+packages/browser/jest-dom.d.ts:303:34    - Unknown word (tohavedisplayvalue)  -- testing-library/jest-dom#tohavedisplayvalue](https://github.com
+packages/browser/jest-dom.d.ts:320:34    - Unknown word (tohavefocus)         -- testing-library/jest-dom#tohavefocus](https://github.com
+packages/browser/jest-dom.d.ts:341:34    - Unknown word (tohaveformvalues)    -- testing-library/jest-dom#tohaveformvalues](https://github.com
+packages/browser/jest-dom.d.ts:364:34    - Unknown word (tohavestyle)         -- testing-library/jest-dom#tohavestyle](https://github.com
+packages/browser/jest-dom.d.ts:388:34    - Unknown word (tohavetextcontent)   -- testing-library/jest-dom#tohavetextcontent](https://github.com
+packages/browser/jest-dom.d.ts:411:34    - Unknown word (tohavevalue)         -- testing-library/jest-dom#tohavevalue](https://github.com
+packages/browser/jest-dom.d.ts:435:34    - Unknown word (tobechecked)         -- testing-library/jest-dom#tobechecked](https://github.com
+packages/browser/jest-dom.d.ts:446:15    - Unknown word (describedby)         -- * [`aria-describedby` attribute](https:/
+packages/browser/jest-dom.d.ts:484:34    - Unknown word (tohavedescription)   -- testing-library/jest-dom#tohavedescription](https://github.com
+packages/browser/jest-dom.d.ts:510:34    - Unknown word (tohaveaccessibledescription) -- testing-library/jest-dom#tohaveaccessibledescription](https://github.com
+packages/browser/jest-dom.d.ts:550:34    - Unknown word (tohaveaccessibleerrormessage) -- testing-library/jest-dom#tohaveaccessibleerrormessage](https://github.com
 packages/browser/jest-dom.d.ts:56:34     - Unknown word (tobevisible)       -- testing-library/jest-dom#tobevisible](https://github.com
-packages/browser/jest-dom.d.ts:583:34    - Unknown word (tohaveaccessiblename)         -- testing-library/jest-dom#tohaveaccessiblename](https://github.com
-packages/browser/jest-dom.d.ts:620:34    - Unknown word (tohaverole)                   -- testing-library/jest-dom#tohaverole](https://github.com
-packages/browser/jest-dom.d.ts:662:34    - Unknown word (tobepartiallychecked)         -- testing-library/jest-dom#tobepartiallychecked](https://github.com
-packages/browser/jest-dom.d.ts:705:34    - Unknown word (tohaveerrormessage)           -- testing-library/jest-dom#tohaveerrormessage](https://github.com
+packages/browser/jest-dom.d.ts:582:34    - Unknown word (tohaveaccessiblename)         -- testing-library/jest-dom#tohaveaccessiblename](https://github.com
+packages/browser/jest-dom.d.ts:619:34    - Unknown word (tohaverole)                   -- testing-library/jest-dom#tohaverole](https://github.com
+packages/browser/jest-dom.d.ts:661:34    - Unknown word (tobepartiallychecked)         -- testing-library/jest-dom#tobepartiallychecked](https://github.com
+packages/browser/jest-dom.d.ts:704:34    - Unknown word (tohaveerrormessage)           -- testing-library/jest-dom#tohaveerrormessage](https://github.com
 packages/browser/jest-dom.d.ts:72:34     - Unknown word (tobeempty)         -- testing-library/jest-dom#tobeempty](https://github.com
 packages/browser/jest-dom.d.ts:86:34     - Unknown word (tobeemptydomelement) -- testing-library/jest-dom#tobeemptydomelement](https://github.com
 packages/browser/package.json:106:7     - Unknown word (wdio)         -- "@wdio/protocols": "^8.40.
@@ -180,17 +181,17 @@ packages/browser/package.json:109:6     - Unknown word (ivya)         -- "ivya":
 packages/browser/package.json:82:6      - Unknown word (safaridriver) -- "safaridriver": {
 packages/browser/package.json:97:6      - Unknown word (tinyrainbow)  -- "tinyrainbow": "^2.0.0",
 packages/browser/src/client/public/error-catcher.js:19:17     - Unknown word (Unhandler)  -- function throwUnhandlerError(e) {
-packages/browser/src/client/public/esm-client-injector.js:47:36     - Unknown word (gmix)       -- !/^(?!.*?(.).*?\1)[gmixXsuUAJ]+$/.test(m[3]
+packages/browser/src/client/public/esm-client-injector.js:48:36     - Unknown word (gmix)       -- !/^(?!.*?(.).*?\1)[gmixXsuUAJ]+$/.test(m[3]
 packages/browser/src/client/tester/runner.ts:147:22    - Unknown word (browserv)   -- const query = `browserv=${hash}`
 packages/browser/src/client/tester/runner.ts:148:13    - Unknown word (importpath) -- const importpath = `${prefix}${filepath
 packages/browser/src/client/tester/tester.ts:93:71     - Unknown word (prebundles) -- page waiting until Vite prebundles it
 packages/browser/src/node/commands/keyboard.ts:77:115    - Unknown word (Backquote)  -- F10', 'F11', 'F12', 'Backquote', '`', '~', 'Digit1
-packages/browser/src/node/plugin.ts:316:33    - Unknown word (nastry)     -- loupe bundle has a nastry require('util') call
+packages/browser/src/node/plugin.ts:324:33    - Unknown word (nastry)     -- loupe bundle has a nastry require('util') call
 packages/browser/src/node/pool.ts:3:13      - Unknown word (nodeos)     -- import * as nodeos from 'node:os'
 packages/browser/src/node/projectParent.ts:150:19    - Unknown word (cdps)       -- public readonly cdps = new Map<string, BrowserServ
 packages/browser/src/node/providers/playwright.ts:152:20    - Unknown word (frameattached) -- page.on('frameattached', (frame) => {
 packages/browser/src/node/providers/playwright.ts:176:16    - Unknown word (requestfailed) -- page.on('requestfailed', (request) => {
-packages/browser/src/node/serverTester.ts:79:11     - Unknown word (indexhtml)  -- const indexhtml = await browserProject
+packages/browser/src/node/serverTester.ts:80:11     - Unknown word (indexhtml)  -- const indexhtml = await browserProject
 packages/coverage-istanbul/package.json:54:6      - Unknown word (magicast)   -- "magicast": "^0.3.5",
 packages/coverage-istanbul/src/provider.ts:25:3      - Unknown word (instrumenter) -- instrumenter!: Instrumenter
 packages/coverage-istanbul/src/provider.ts:7:16      - Unknown word (Instrumenter) -- import { createInstrumenter, type Instrumenter
@@ -206,7 +207,7 @@ packages/mocker/src/browser/mocker.ts:6:10      - Unknown word (Automocked) -- i
 packages/mocker/src/index.ts:6:3       - Unknown word (Autospied)  -- AutospiedModule,
 packages/mocker/src/node/esmWalker.ts:13:18     - Unknown word (eswalk)     -- import { walk as eswalk } from 'estree-walker
 packages/snapshot/src/port/inlineSnapshot.ts:105:11    - Unknown word (Oneline)    -- const isOneline = lines.length <= 1
-packages/ui/client/auto-imports.d.ts:341:14    - Unknown word (Triggerable) -- const watchTriggerable: typeof import('@vueuse
+packages/ui/client/auto-imports.d.ts:342:14    - Unknown word (Triggerable) -- const watchTriggerable: typeof import('@vueuse
 packages/ui/client/components/views/ViewReport.spec.ts:107:28    - Unknown word (mtest)      -- stack: '\x1B[33mtest/plain-stack-trace.ts
 packages/ui/client/components/views/ViewReportError.vue:21:13     - Unknown word (Showable)   -- const isDiffShowable = computed(() => {
 packages/ui/client/composables/client/static.ts:10:44     - Unknown word (fflate)     -- mpressSync, strFromU8 } from 'fflate'
@@ -248,11 +249,11 @@ packages/vite-node/src/constants.ts:8:4       - Unknown word (pjpeg)      -- 'pj
 packages/vite-node/src/source-map-handler.ts:493:24    - Unknown word (reformatter) -- / Install the error reformatter
 packages/vite-node/src/source-map.ts:11:5      - Unknown word (SOURCEMAPPING) -- let SOURCEMAPPING_URL = 'sourceMa'
 packages/vite-node/src/source-map.ts:12:23     - Unknown word (pping)         -- SOURCEMAPPING_URL += 'ppingURL'
-packages/vite-node/src/source-map.ts:67:26     - Unknown word (CAAA)          -- map.mappings = `AAAA,CAAA${map.mappings}`
+packages/vite-node/src/source-map.ts:70:26     - Unknown word (CAAA)          -- map.mappings = `AAAA,CAAA${map.mappings}`
 packages/vite-node/src/types.ts:137:11    - Unknown word (dumpped)    -- * Read dumpped module from filesystem
 packages/vite-node/src/utils.ts:16:20     - Unknown word (Regext)     -- const driveOppositeRegext = driveOpposite
-packages/vite-node/src/utils.ts:187:32    - Unknown word (Fnpd)       -- pkgData = cache.get(getFnpdCacheKey(basedir))
-packages/vite-node/src/utils.ts:209:11    - Unknown word (fnpd)       -- return `fnpd_${basedir}`
+packages/vite-node/src/utils.ts:197:32    - Unknown word (Fnpd)       -- pkgData = cache.get(getFnpdCacheKey(basedir))
+packages/vite-node/src/utils.ts:219:11    - Unknown word (fnpd)       -- return `fnpd_${basedir}`
 packages/vitest/LICENSE.md:1026:4    - Unknown word (sisteransi)    -- ## sisteransi
 packages/vitest/LICENSE.md:1115:10   - Unknown word (Luer)          -- By: Jake Luer, Keith Cirkel, David
 packages/vitest/LICENSE.md:1115:111  - Unknown word (Tice)          -- Grant Snodgrass, Jeremy Tice, Edward Betts, dvlsg
@@ -329,14 +330,16 @@ packages/vitest/LICENSE.md:914:12    - Unknown word (Aboukhadijeh)  -- By: Feros
 packages/vitest/LICENSE.md:914:5     - Unknown word (Feross)        -- By: Feross Aboukhadijeh
 packages/vitest/LICENSE.md:915:30    - Unknown word (feross)        -- Repository: git://github.com/feross/queue-microtask.git
 packages/vitest/LICENSE.md:969:4     - Unknown word (reusify)       -- ## reusify
-packages/vitest/package.json:167:6     - Unknown word (tinyexec)   -- "tinyexec": "^0.3.2",
+packages/vitest/package.json:171:6     - Unknown word (tinyexec)   -- "tinyexec": "^0.3.2",
+packages/vitest/src/api/check.ts:8:94      - Unknown word (proteced)   -- which is cross origin proteced.
 packages/vitest/src/constants.ts:1:28      - Unknown word (jsdocs)     -- changed, update also jsdocs and docs
 packages/vitest/src/integrations/mock/date.ts:5:24      - Unknown word (Lauer)      -- Copyright (c) 2014 Bob Lauer
+packages/vitest/src/integrations/mock/timers.ts:23:22     - Unknown word (truethy)    -- // | false       | truethy | vi.setSystemTime
 packages/vitest/src/node/git.ts:78:40     - Unknown word (cdup)       -- rev-parse', '--show-cdup']
-packages/vitest/src/node/plugins/index.ts:65:12     - Unknown word (reassignable) -- // reassignable when running in worker
+packages/vitest/src/node/plugins/index.ts:66:12     - Unknown word (reassignable) -- // reassignable when running in worker
 packages/vitest/src/node/reporters/json.ts:17:11     - Unknown word (Callsite)   -- interface Callsite {
 packages/vitest/src/node/reporters/junit.ts:97:24     - Unknown word (apos)       -- .replace(/'/g, '&apos;')
-packages/vitest/src/node/reporters/summary.ts:247:31    - Unknown word (immediatelly) -- Remove finished test immediatelly.
+packages/vitest/src/node/reporters/summary.ts:251:31    - Unknown word (immediatelly) -- Remove finished test immediatelly.
 packages/vitest/src/node/sequencers/BaseSequencer.ts:15:43     - Unknown word (sequelizers) -- be extended by other sequelizers
 packages/vitest/src/node/specifications.ts:58:28     - Unknown word (sepcifies)  -- Key is file and val sepcifies whether we have matched
 packages/vitest/src/node/watch-filter.ts:222:11    - Unknown word (cursort)    -- const cursortPos
@@ -345,7 +348,7 @@ packages/vitest/src/runtime/external-executor.ts:287:16    - Unknown word (deade
 packages/vitest/src/runtime/utils.ts:57:8      - Unknown word (cnpm)       -- // cnpm
 packages/vitest/src/runtime/vm/types.ts:40:10     - Unknown word (contextified) -- * The contextified object as returned by
 packages/vitest/src/runtime/vm/utils.ts:22:18     - Unknown word (Kets)       -- const defaultKets = Object.keys(mod.default
-packages/vitest/src/typecheck/collect.ts:247:12    - Unknown word (quasis)     -- for (let quasisIndex = 0; quasisIndex
+packages/vitest/src/typecheck/collect.ts:254:12    - Unknown word (quasis)     -- for (let quasisIndex = 0; quasisIndex
 packages/vitest/src/types/jsdom-options.ts:14:118    - Unknown word (subresources) -- sent while fetching subresources.
 packages/vitest/src/types/jsdom-options.ts:16:70     - Unknown word (KHTML)        -- AppleWebKit/537.36 (KHTML, like Gecko) jsdom/
 packages/vitest/src/types/mocker.ts:3:6       - Unknown word (Promisable) -- type Promisable<T> = T | Promise<T>
@@ -449,13 +452,16 @@ test/cli/fixtures/stacktraces/vite.config.ts:5:24      - Unknown word (imba)    
 test/cli/test/fails.test.ts:14:30     - Unknown word (snapshop)   -- update: file === 'inline-snapshop-inside-loop.test.ts
 test/cli/test/location-filters.test.ts:129:36    - Unknown word (doesn)      -- fixturePath}/:a/file/that/doesn-t/exit:10`,
 test/cli/test/stacktraces.test.ts:55:24     - Unknown word (framestack) -- // expect to print framestack of foo.js
+test/config/deps/test-dep-conditions/indirect.js:5:17      - Unknown word (Productioin) -- import conditionProductioin from '@vitest/test-dep
 test/config/fixtures/browser-custom-html/browser-custom.test.ts:7:7       - Unknown word (importmap)  -- test('importmap is injected', () =>
 test/config/fixtures/shuffle/basic.test.ts:15:11     - Unknown word (unshuffle)  -- describe('unshuffle', { shuffle: false
 test/config/test/browser-configs.test.ts:10:7      - Unknown word (assignes)   -- test('assignes names as browsers',
+test/config/test/browser-configs.test.ts:201:47    - Unknown word (workspaced) -- works correctly in workspaced browser mode if instances
+test/config/test/browser-configs.test.ts:232:15    - Unknown word (myproject)  -- project: 'myproject',
 test/config/test/browser-configs.test.ts:46:31     - Unknown word (wildecard)  -- filters projects with a wildecard', async () => {
 test/config/test/browser-configs.test.ts:48:15     - Unknown word (chrom)      -- project: 'chrom*',
 test/config/test/console-color.test.ts:16:36     - Unknown word (mtrue)      -- stdout).toContain('\x1B[33mtrue\x1B[39m\n')
-test/config/test/failures.test.ts:431:20    - Unknown word (filteres)   -- test('browser.name filteres all browser.instances
+test/config/test/failures.test.ts:429:20    - Unknown word (filteres)   -- test('browser.name filteres all browser.instances
 test/core/package.json:32:6      - Unknown word (sweetalert) -- "sweetalert2": "^11.6.16",
 test/core/src/mocks/external/default-cjs.cjs:1:33      - Unknown word (pseudoesm)  -- exports = require('./cjs-pseudoesm.cjs')
 test/core/src/wasm/wasm-bindgen-no-cyclic/index_bg.js:105:49    - Unknown word (wbindgen)   -- assStringToWasm0(name, wasm.__wbindgen_malloc, wasm.__wbindgen
@@ -467,7 +473,6 @@ test/core/test/isolate.test.ts:6:12      - Unknown word (fooooo)     -- expect(g
 test/core/test/jest-expect.test.ts:1371:168  - Unknown word (Atreides)   -- Jessica', lastName: 'Atreides', colors: ['red', 'green
 test/core/test/jest-expect.test.ts:1371:58   - Unknown word (Harkonnen)  -- Vladimir', lastName: 'Harkonnen', family: 'House Harkonnen
 test/core/test/resolve-file-url.test.ts:4:48      - Unknown word (Edep)       -- ./resolve-file-url%7Edep.js', import.meta.url
-test/core/test/sequencers.test.ts:31:10     - Unknown word (workspaced) -- function workspaced(files: string[]) {
 test/coverage-test/fixtures/test/isolation-1-fixture.test.ts:4:27      - Unknown word (sucessfully) -- Should run function sucessfully", async () => {
 test/reporters/src/data.ts:185:23    - Unknown word (merror)     -- content: '[33merror[39m',
 test/reporters/tests/test-run.test.ts:900:9     - Unknown word (typechking) -- test('typechking is reported correctly

@@ -1,4 +1,4 @@
-// ["Axiallary" isn't a word. · Issue #573 · khulnasoft/codetypo](https://github.com/khulnasoft/codetypo/issues/573)
+// ["Axiallary" isn't a word. · Issue #573 · khulnasoft/codetypo-dicts](https://github.com/khulnasoft/codetypo-dicts/issues/573)
 // ["Axiallary" isn't a word. · Issue #1626 · khulnasoft/codetypo](https://github.com/khulnasoft/codetypo/issues/1626)
 namespace axiallary
 {

@@ -4,13 +4,13 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "CodeTypo Config library",
   "keywords": [
     "codetypo",
     "config"
   ],
-  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "author": "Jason Dent <jason@khulnasoft.nl>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-config-lib#readme",
   "license": "MIT",
   "type": "module",

@@ -10,7 +10,7 @@ const config: Config = {
     staticDirectories: ['public', 'static'],
 
     // Set the production url of your site here
-    url: 'https://codetypo.khulnasoft.com',
+    url: 'https://codetypo.org',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/docsV2/',
@@ -116,7 +116,7 @@ const config: Config = {
         navbar: {
             title: 'CodeTypo',
             logo: {
-                alt: 'KhulnaSoft Ltd Logo',
+                alt: 'Street Side Software Logo',
                 src: 'img/logo.png',
             },
             items: [
@@ -127,7 +127,7 @@ const config: Config = {
                     label: 'Docs',
                 },
                 { to: '/about', label: 'About', position: 'left' },
-                { label: 'KhulnaSoft Ltd', href: 'https://khulnasoft.com', position: 'right' },
+                { label: 'Street Side Software', href: 'https://khulnasoft.com', position: 'right' },
                 // {to: '/blog', label: 'Blog', position: 'left'},
                 {
                     href: 'https://github.com/khulnasoft/codetypo',
@@ -179,7 +179,7 @@ const config: Config = {
             //         ],
             //     },
             // ],
-            copyright: `Copyright © ${new Date().getFullYear()} KhulnaSoft Ltd`,
+            copyright: `Copyright © ${new Date().getFullYear()} Street Side Software`,
         },
         prism: {
             theme: prismThemes.github,

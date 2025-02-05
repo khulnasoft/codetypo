@@ -11,9 +11,9 @@ const timeout = 20_000;
 
 describe('stat', () => {
     test.each`
-        url                                                                           | expected
+        url                                                                                 | expected
         ${'https://raw.githubusercontent.com/khulnasoft/codetypo/main/tsconfig.json'} | ${oc({ eTag: sc('W/') })}
-        ${__filename}                                                                 | ${oc({ mtimeMs: expect.any(Number) })}
+        ${__filename}                                                                       | ${oc({ mtimeMs: expect.any(Number) })}
     `(
         'getStat $url',
         async ({ url, expected }) => {

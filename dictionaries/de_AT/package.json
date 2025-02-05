@@ -35,7 +35,7 @@
     "dictionary",
     "spelling"
   ],
-  "author": "KhulnaSoft Ltd <support@khulnasoft.nl>",
+  "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/issues"
@@ -47,6 +47,6 @@
     "src/hunspell/license"
   ],
   "devDependencies": {
-    "dictionary-de-at": "^1.1.3"
+    "dictionary-de-at": "^3.0.0"
   }
 }

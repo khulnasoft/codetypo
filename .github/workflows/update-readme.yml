@@ -36,4 +36,4 @@ jobs:
           commit-message: 'ci: Workflow Bot -- Build Readme'
           branch: ${{ env.NEW_BRANCH }}
           app_id: ${{ secrets.AUTOMATION_APP_ID }}
-          app_private_key: ${{ secrets.ORG_REPO_TOKEN }}
+          app_private_key: ${{ secrets.AUTOMATION_PRIVATE_KEY }}

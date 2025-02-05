@@ -53,7 +53,7 @@ More Examples:
         where $FILES is a shell variable that contains the list of files.
 
 References:
-    https://codetypo.khulnasoft.com
+    https://codetypo.org
     https://github.com/khulnasoft/codetypo
 `;
 

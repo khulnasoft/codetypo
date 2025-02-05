@@ -61,6 +61,11 @@ export const optionsSchema = {
       "markdownDescription": "Spell check strings",
       "type": "boolean"
     },
+    "configFile": {
+      "description": "Path to the codetypo configuration file. Relative paths, will be relative to the current working directory.",
+      "markdownDescription": "Path to the codetypo configuration file.\nRelative paths, will be relative to the current working directory.",
+      "type": "string"
+    },
     "codetypo": {
       "additionalProperties": false,
       "description": "CodeTypo options to pass to the spell checker.",
@@ -73,7 +78,7 @@ export const optionsSchema = {
           "type": "boolean"
         },
         "dictionaries": {
-          "description": "Optional list of dictionaries to use. Each entry should match the name of the dictionary.\n\nTo remove a dictionary from the list, add `!` before the name.\n\nFor example, `!typescript` will turn off the dictionary with the name `typescript`.\n\nSee the [Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries/) and [Custom Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries-custom/) for more details.",
+          "description": "Optional list of dictionaries to use. Each entry should match the name of the dictionary.\n\nTo remove a dictionary from the list, add `!` before the name.\n\nFor example, `!typescript` will turn off the dictionary with the name `typescript`.\n\nSee the [Dictionaries](https://codetypo.org/docs/dictionaries/) and [Custom Dictionaries](https://codetypo.org/docs/dictionaries-custom/) for more details.",
           "items": {
             "anyOf": [
               {
@@ -92,7 +97,7 @@ export const optionsSchema = {
             "description": "Reference to a dictionary by name. One of:\n-  {@link  DictionaryRef } \n-  {@link  DictionaryNegRef }",
             "markdownDescription": "Reference to a dictionary by name.\nOne of:\n-  {@link  DictionaryRef } \n-  {@link  DictionaryNegRef }"
           },
-          "markdownDescription": "Optional list of dictionaries to use. Each entry should match the name of the dictionary.\n\nTo remove a dictionary from the list, add `!` before the name.\n\nFor example, `!typescript` will turn off the dictionary with the name `typescript`.\n\nSee the [Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries/)\nand [Custom Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries-custom/) for more details.",
+          "markdownDescription": "Optional list of dictionaries to use. Each entry should match the name of the dictionary.\n\nTo remove a dictionary from the list, add `!` before the name.\n\nFor example, `!typescript` will turn off the dictionary with the name `typescript`.\n\nSee the [Dictionaries](https://codetypo.org/docs/dictionaries/)\nand [Custom Dictionaries](https://codetypo.org/docs/dictionaries-custom/) for more details.",
           "type": "array"
         },
         "dictionaryDefinitions": {
@@ -174,7 +179,7 @@ export const optionsSchema = {
           "type": "array"
         },
         "ignoreRegExpList": {
-          "description": "List of regular expression patterns or pattern names to exclude from spell checking.\n\nExample: `[\"href\"]` - to exclude html href pattern.\n\nRegular expressions use JavaScript regular expression syntax.\n\nExample: to ignore ALL-CAPS words\n\nJSON ```json \"ignoreRegExpList\": [\"/\\\\b[A-Z]+\\\\b/g\"] ```\n\nYAML ```yaml ignoreRegExpList:   - >-    /\\b[A-Z]+\\b/g ```\n\nBy default, several patterns are excluded. See [Configuration](https://codetypo.khulnasoft.com/configuration/patterns) for more details.\n\nWhile you can create your own patterns, you can also leverage several patterns that are [built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).",
+          "description": "List of regular expression patterns or pattern names to exclude from spell checking.\n\nExample: `[\"href\"]` - to exclude html href pattern.\n\nRegular expressions use JavaScript regular expression syntax.\n\nExample: to ignore ALL-CAPS words\n\nJSON ```json \"ignoreRegExpList\": [\"/\\\\b[A-Z]+\\\\b/g\"] ```\n\nYAML ```yaml ignoreRegExpList:   - >-    /\\b[A-Z]+\\b/g ```\n\nBy default, several patterns are excluded. See [Configuration](https://codetypo.org/configuration/patterns) for more details.\n\nWhile you can create your own patterns, you can also leverage several patterns that are [built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).",
           "items": {
             "anyOf": [
               {
@@ -222,7 +227,7 @@ export const optionsSchema = {
             "description": "A PatternRef is a Pattern or PatternId.",
             "markdownDescription": "A PatternRef is a Pattern or PatternId."
           },
-          "markdownDescription": "List of regular expression patterns or pattern names to exclude from spell checking.\n\nExample: `[\"href\"]` - to exclude html href pattern.\n\nRegular expressions use JavaScript regular expression syntax.\n\nExample: to ignore ALL-CAPS words\n\nJSON\n```json\n\"ignoreRegExpList\": [\"/\\\\b[A-Z]+\\\\b/g\"]\n```\n\nYAML\n```yaml\nignoreRegExpList:\n  - >-\n   /\\b[A-Z]+\\b/g\n```\n\nBy default, several patterns are excluded. See\n[Configuration](https://codetypo.khulnasoft.com/configuration/patterns) for more details.\n\nWhile you can create your own patterns, you can also leverage several patterns that are\n[built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).",
+          "markdownDescription": "List of regular expression patterns or pattern names to exclude from spell checking.\n\nExample: `[\"href\"]` - to exclude html href pattern.\n\nRegular expressions use JavaScript regular expression syntax.\n\nExample: to ignore ALL-CAPS words\n\nJSON\n```json\n\"ignoreRegExpList\": [\"/\\\\b[A-Z]+\\\\b/g\"]\n```\n\nYAML\n```yaml\nignoreRegExpList:\n  - >-\n   /\\b[A-Z]+\\b/g\n```\n\nBy default, several patterns are excluded. See\n[Configuration](https://codetypo.org/configuration/patterns) for more details.\n\nWhile you can create your own patterns, you can also leverage several patterns that are\n[built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).",
           "type": "array"
         },
         "ignoreWords": {
@@ -249,11 +254,11 @@ export const optionsSchema = {
               "type": "array"
             }
           ],
-          "description": "Allows this configuration to inherit configuration for one or more other files.\n\nSee [Importing / Extending Configuration](https://codetypo.khulnasoft.com/configuration/imports/) for more details.",
-          "markdownDescription": "Allows this configuration to inherit configuration for one or more other files.\n\nSee [Importing / Extending Configuration](https://codetypo.khulnasoft.com/configuration/imports/) for more details."
+          "description": "Allows this configuration to inherit configuration for one or more other files.\n\nSee [Importing / Extending Configuration](https://codetypo.org/configuration/imports/) for more details.",
+          "markdownDescription": "Allows this configuration to inherit configuration for one or more other files.\n\nSee [Importing / Extending Configuration](https://codetypo.org/configuration/imports/) for more details."
         },
         "includeRegExpList": {
-          "description": "List of regular expression patterns or defined pattern names to match for spell checking.\n\nIf this property is defined, only text matching the included patterns will be checked.\n\nWhile you can create your own patterns, you can also leverage several patterns that are [built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).",
+          "description": "List of regular expression patterns or defined pattern names to match for spell checking.\n\nIf this property is defined, only text matching the included patterns will be checked.\n\nWhile you can create your own patterns, you can also leverage several patterns that are [built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).",
           "items": {
             "anyOf": [
               {
@@ -301,7 +306,7 @@ export const optionsSchema = {
             "description": "A PatternRef is a Pattern or PatternId.",
             "markdownDescription": "A PatternRef is a Pattern or PatternId."
           },
-          "markdownDescription": "List of regular expression patterns or defined pattern names to match for spell checking.\n\nIf this property is defined, only text matching the included patterns will be checked.\n\nWhile you can create your own patterns, you can also leverage several patterns that are\n[built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).",
+          "markdownDescription": "List of regular expression patterns or defined pattern names to match for spell checking.\n\nIf this property is defined, only text matching the included patterns will be checked.\n\nWhile you can create your own patterns, you can also leverage several patterns that are\n[built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).",
           "type": "array"
         },
         "language": {
@@ -333,11 +338,6 @@ export const optionsSchema = {
       ],
       "description": "Specify the root path of the codetypo configuration. It is used to resolve `imports` found in  {@link  codetypo } .\n\nexample: ```js codetypoOptionsRoot: import.meta.url // or codetypoOptionsRoot: __filename ```",
       "markdownDescription": "Specify the root path of the codetypo configuration.\nIt is used to resolve `imports` found in  {@link  codetypo } .\n\nexample:\n```js\ncodetypoOptionsRoot: import.meta.url\n// or\ncodetypoOptionsRoot: __filename\n```"
-    },
-    "configFile": {
-      "description": "Path to the codetypo configuration file. Relative paths, will be relative to the current working directory.",
-      "markdownDescription": "Path to the codetypo configuration file.\nRelative paths, will be relative to the current working directory.",
-      "type": "string"
     },
     "customWordListFile": {
       "anyOf": [

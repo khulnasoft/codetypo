@@ -54,7 +54,7 @@ jobs:
         id: generate-token
         with:
           app_id: ${{ secrets.AUTOMATION_APP_ID }}
-          private_key: ${{ secrets.ORG_REPO_TOKEN }}
+          private_key: ${{ secrets.AUTOMATION_PRIVATE_KEY }}
 
       - name: Setup Token
         env:
@@ -66,15 +66,10 @@ jobs:
         with:
           token: ${{ env.GITHUB_TOKEN }} # needed to trigger workflows
 
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Node and Pnpm
+        uses: ./.github/actions/setup-node
         with:
           node-version: 18
-          registry-url: 'https://registry.npmjs.org'
-          cache: pnpm
 
       - name: Version
         run: |

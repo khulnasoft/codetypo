@@ -4,13 +4,13 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Grammar parsing support for codetypo",
   "keywords": [
     "codetypo",
     "grammar"
   ],
-  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "author": "Jason Dent <jason@khulnasoft.nl>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-grammar#readme",
   "license": "MIT",
   "bin": {

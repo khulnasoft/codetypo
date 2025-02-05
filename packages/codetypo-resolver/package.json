@@ -4,13 +4,13 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Library to help resolve module locations.",
   "keywords": [
     "codetypo",
     "resolve"
   ],
-  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "author": "Jason Dent <jason@khulnasoft.nl>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-resolver#readme",
   "license": "MIT",
   "type": "commonjs",

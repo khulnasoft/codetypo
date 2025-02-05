@@ -1,6 +1,6 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/khulnasofto/main/packages/codetypo-tools/codetypo-tools.config.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/khulnasoft/codetypo/main/packages/codetypo-tools/codetypo-tools.config.schema.json
 
-$schema: https://raw.githubusercontent.com/khulnasofto/main/packages/codetypo-tools/codetypo-tools.config.schema.json
+$schema: https://raw.githubusercontent.com/khulnasoft/codetypo/main/packages/codetypo-tools/codetypo-tools.config.schema.json
 targets:
   - name: markdown
     targetDirectory: .

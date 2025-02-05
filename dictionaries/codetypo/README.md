@@ -17,7 +17,7 @@ The `codetypo-ext.json` file in this package should be added to the import secti
 ```jsonc
 {
   // …
-  "import": ["@codetypo/dict-codetypo-bundle/codetypo-ext.json"]
+  "import": ["@codetypo/dict-codetypo-bundle/codetypo-ext.json"],
   // …
 }
 ```
@@ -35,8 +35,8 @@ MIT
 ---
 
 <p align="center">
-Brought to you by <a href="https://khulnasofttle="KhulnaSoft Ltd">
-<img width="16" alt="KhulnaSoft Ltd Logo" src="https://i.imgur.com/CyduuVY.png" /> KhulnaSoft Ltd
+Brought to you by <a href="https://khulnasoft.com" title="Street Side Software">
+<img width="16" alt="Street Side Software Logo" src="https://i.imgur.com/CyduuVY.png" /> Street Side Software
 </a>
 </p>
 

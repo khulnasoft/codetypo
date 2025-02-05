@@ -1,6 +1,6 @@
 {
   "name": "@codetypo/dict-npm",
-  "version": "5.1.23",
+  "version": "5.1.24",
   "description": "Dictionary of common NPM packages for codetypo.",
   "publishConfig": {
     "access": "public",
@@ -32,7 +32,7 @@
     "dictionary",
     "spelling"
   ],
-  "author": "KhulnaSoft Ltd <support@khulnasoft.nl>",
+  "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/issues"

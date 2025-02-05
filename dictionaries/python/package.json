@@ -33,14 +33,14 @@
     "dictionary",
     "spelling"
   ],
-  "author": "KhulnaSoft Ltd <support@khulnasoft",
+  "author": "Street Side Software <support@khulnasoft.nl>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/issues"
   },
   "homepage": "https://github.com/khulnasoft/codetypo/blob/main/dictionaries/python#readme",
   "dependencies": {
-    "@codetypo/dict-data-science": "workspace:*"
+    "@codetypo/dict-data-science": "workspace:^"
   },
   "files": [
     "dict/python.txt",

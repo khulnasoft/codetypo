@@ -18,20 +18,20 @@ const cwdURL = pathToFileURL('.');
 
 describe('util', () => {
     test.each`
-        file                                                                                            | expected
-        ${'samples/cities.txt'}                                                                         | ${false}
-        ${'samples/cities.txt.gz'}                                                                      | ${false}
+        file                                                                                                | expected
+        ${'samples/cities.txt'}                                                                             | ${false}
+        ${'samples/cities.txt.gz'}                                                                          | ${false}
         ${'https://github.com/khulnasoft/codetypo/raw/main/packages/codetypo-io/samples/cities.txt'}    | ${true}
         ${'https://github.com/khulnasoft/codetypo/raw/main/packages/codetypo-io/samples/cities.txt.gz'} | ${true}
-        ${'vsls:/codetypo.config.yaml'}                                                                 | ${true}
+        ${'vsls:/codetypo.config.yaml'}                                                                       | ${true}
     `('isUrlLike $file', ({ file, expected }) => {
         expect(isUrlLike(file)).toBe(expected);
     });
 
     test.each`
-        file                                                                 | expected
-        ${'samples/cities.txt'}                                              | ${uh('samples/cities.txt')}
-        ${'samples/cities.txt.gz'}                                           | ${uh('samples/cities.txt.gz')}
+        file                                                                       | expected
+        ${'samples/cities.txt'}                                                    | ${uh('samples/cities.txt')}
+        ${'samples/cities.txt.gz'}                                                 | ${uh('samples/cities.txt.gz')}
         ${'https://github.com/khulnasoft/codetypo-io/samples/cities.txt.gz'} | ${'https://github.com/khulnasoft/codetypo-io/samples/cities.txt.gz'}
         ${'https://github.com/khulnasoft/codetypo-io/samples/cities.txt'}    | ${'https://github.com/khulnasoft/codetypo-io/samples/cities.txt'}
     `('toFileURL $file', async ({ file, expected }) => {
@@ -40,31 +40,31 @@ describe('util', () => {
     });
 
     test.each`
-        file                                                                                            | expected
-        ${'samples/cities.txt'}                                                                         | ${'cities.txt'}
-        ${'samples/cities.txt.gz'}                                                                      | ${'cities.txt.gz'}
-        ${'https://example.com/dir/file.txt'}                                                           | ${'file.txt'}
-        ${'https://example.com/dir/'}                                                                   | ${'dir/'}
-        ${'https://example.com/dir/path/'}                                                              | ${'path/'}
+        file                                                                                                | expected
+        ${'samples/cities.txt'}                                                                             | ${'cities.txt'}
+        ${'samples/cities.txt.gz'}                                                                          | ${'cities.txt.gz'}
+        ${'https://example.com/dir/file.txt'}                                                               | ${'file.txt'}
+        ${'https://example.com/dir/'}                                                                       | ${'dir/'}
+        ${'https://example.com/dir/path/'}                                                                  | ${'path/'}
         ${'https://github.com/khulnasoft/codetypo/raw/main/packages/codetypo-io/samples/cities.txt'}    | ${'cities.txt'}
         ${'https://github.com/khulnasoft/codetypo/raw/main/packages/codetypo-io/samples/cities.txt.gz'} | ${'cities.txt.gz'}
-        ${'data:text/plain;charset=utf8,Hello%2C%20World!'}                                             | ${'text.plain'}
-        ${'data:text/plain;charset=utf8;filename=cities.txt,New%20York'}                                | ${'cities.txt'}
-        ${'data:'}                                                                                      | ${''}
-        ${'data:application/gzip;base64,H'}                                                             | ${'application.gzip'}
-        ${toURL('data:application/gzip;base64,H')}                                                      | ${'application.gzip'}
-        ${'data:application/vnd.codetypo.dictionary+trie,H'}                                            | ${'application.vnd.codetypo.dictionary.trie'}
+        ${'data:text/plain;charset=utf8,Hello%2C%20World!'}                                                 | ${'text.plain'}
+        ${'data:text/plain;charset=utf8;filename=cities.txt,New%20York'}                                    | ${'cities.txt'}
+        ${'data:'}                                                                                          | ${''}
+        ${'data:application/gzip;base64,H'}                                                                 | ${'application.gzip'}
+        ${toURL('data:application/gzip;base64,H')}                                                          | ${'application.gzip'}
+        ${'data:application/vnd.codetypo.dictionary+trie,H'}                                                  | ${'application.vnd.codetypo.dictionary.trie'}
     `('urlBasename $file', async ({ file, expected }) => {
         const filename = isUrlLike(file) ? file : toFileURL(Path.resolve(root, file));
         expect(urlBasename(filename)).toEqual(expected);
     });
 
     test.each`
-        file                                                                                            | expected
-        ${'samples/cities.txt'}                                                                         | ${sm(/file:.*\/samples\/$/)}
-        ${'samples/cities.txt.gz'}                                                                      | ${sm(/file:.*\/samples\/$/)}
-        ${'samples/code/'}                                                                              | ${sm(/file:.*\/samples\/$/)}
-        ${'file://samples/code/'}                                                                       | ${sm(/file:.*\/samples\/$/)}
+        file                                                                                                | expected
+        ${'samples/cities.txt'}                                                                             | ${sm(/file:.*\/samples\/$/)}
+        ${'samples/cities.txt.gz'}                                                                          | ${sm(/file:.*\/samples\/$/)}
+        ${'samples/code/'}                                                                                  | ${sm(/file:.*\/samples\/$/)}
+        ${'file://samples/code/'}                                                                           | ${sm(/file:.*\/samples\/$/)}
         ${'https://github.com/khulnasoft/codetypo/raw/main/packages/codetypo-io/samples/cities.txt'}    | ${sm(/https:.*\/samples\/$/)}
         ${'https://github.com/khulnasoft/codetypo/raw/main/packages/codetypo-io/samples/cities.txt.gz'} | ${sm(/https:.*\/samples\/$/)}
         ${'https://github.com/khulnasoft/codetypo/raw/main/packages/codetypo-io/samples/code/'}         | ${sm(/https:.*\/samples\/$/)}

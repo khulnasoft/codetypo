@@ -1,17 +1,8 @@
 {
-    "json.schemas": [
-        {
-            "fileMatch": [
-                "codetypo.json",
-                ".codetypo.json",
-                "codeTypo.json"
-            ],
-            "url": "./codetypo.schema.json"
-        }
-    ],
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
-    },
-    "python.formatting.provider": "none",
-    "editor.formatOnSave": true
+	"json.schemas": [{
+		"fileMatch": [
+            "codetypo.json", ".codetypo.json", "codeTypo.json"
+        ],
+        "url": "./codetypo.schema.json"
+    }]
 }

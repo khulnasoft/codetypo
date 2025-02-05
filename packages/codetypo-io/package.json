@@ -4,7 +4,7 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "A library of useful I/O functions used across various codetypo tools.",
   "type": "module",
   "sideEffects": false,
@@ -41,7 +41,7 @@
   "keywords": [
     "codetypo"
   ],
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-io"
@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "lorem-ipsum": "^2.0.8",
-    "typescript": "^5.7.3",
+    "typescript": "~5.7.3",
     "vitest-fetch-mock": "^0.4.3"
   },
   "dependencies": {

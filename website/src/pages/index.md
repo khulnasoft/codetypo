@@ -72,8 +72,8 @@ Join us on:
 
 ## RFCs
 
-| Link                                                                                                            | Description                     | Status      |
-| --------------------------------------------------------------------------------------------------------------- | ------------------------------- | ----------- |
+| Link                                                                                                                  | Description                     | Status      |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ----------- |
 | [rfc-0001](https://github.com/khulnasoft/codetypo/tree/main/rfc/rfc-0001%20suggestions/)                        | Fixing common misspellings      | Done        |
 | [rfc-0002](https://github.com/khulnasoft/codetypo/tree/main/rfc/rfc-0002%20improve%20dictionary%20suggestions/) | Improving Generated Suggestions | Done        |
 | [rfc-0003](https://github.com/khulnasoft/codetypo/tree/main/rfc/rfc-0003%20parsing%20files/)                    | Plug-ins: Adding file parsers   | In Progress |
@@ -93,8 +93,8 @@ Tidelift will coordinate the fix and disclosure.
 
 ## Versions
 
-|          | version | Node    | Status                | Maintenance | End of Free Support |
-| :------- | :------ | :------ | :-------------------- | :---------- | :------------------ |
+|        | version | Node    | Status                | Maintenance | End of Free Support |
+| :----- | :------ | :------ | :-------------------- | :---------- | :------------------ |
 | codetypo | 8.x     | 18.x    | In Active Development | TBD         | TBD                 |
 | codetypo | 7.x     | 16.x    | Maintenance           | 2023-10-01  | 2023-11-07          |
 | codetypo | 6.x     | 14.14.x | Paid support only[^1] | 2023-04-01  | 2023-05-01          |

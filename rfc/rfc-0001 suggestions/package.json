@@ -1,6 +1,6 @@
 {
   "name": "rfc-0001-suggestions",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Possible ways to support suggestion lists",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
     "test": ""
   },
   "files": [],
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-types": "workspace:*"

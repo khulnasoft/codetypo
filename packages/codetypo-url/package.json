@@ -4,13 +4,13 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "URL parsing and manipulation utilities for codetypo",
   "keywords": [
     "codetypo",
     "url"
   ],
-  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "author": "Jason Dent <jason@khulnasoft.nl>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-url#readme",
   "license": "MIT",
   "type": "module",

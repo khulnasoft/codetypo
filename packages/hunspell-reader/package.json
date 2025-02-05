@@ -4,7 +4,7 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "A library for reading Hunspell Dictionary Files",
   "bin": "bin.js",
   "type": "module",
@@ -41,16 +41,16 @@
   "keywords": [
     "Hunspell"
   ],
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/issues"
   },
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/hunspell-reader#readme",
   "dependencies": {
-    "@codetypo/codetypo-pipe": "workspace:*",
-    "@codetypo/codetypo-types": "workspace:*",
-    "commander": "^13.0.0",
+    "@codetypo/codetypo-pipe": "workspace:^",
+    "@codetypo/codetypo-types": "workspace:^",
+    "commander": "^13.1.0",
     "gensequence": "^7.0.0",
     "html-entities": "^2.5.2",
     "iconv-lite": "^0.6.3"

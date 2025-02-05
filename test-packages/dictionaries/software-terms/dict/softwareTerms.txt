@@ -482,8 +482,6 @@ codec
 codecs
 codefixes
 codelens
-codetypo
-codetypocache
 codium
 colliders
 colno
@@ -539,6 +537,8 @@ crontab
 cryptocurrencies
 cryptocurrency
 csharp
+codetypo
+codetypocache
 csrc
 css
 csv
@@ -981,7 +981,6 @@ keybindings
 keycode
 keyfn
 keyframe
-khulnasoft
 kstat
 kubectl
 kurtosis
@@ -1543,6 +1542,7 @@ stdout
 stmt
 storagectl
 strace
+khulnasoft
 stringified
 stringifies
 stringify

@@ -36,7 +36,7 @@ describe('Validate repository helper', () => {
     });
 
     test.each`
-        msg           | repo                                                 | path                                 | commit                       | expected
+        msg           | repo                                                         | path                                         | commit                       | expected
         ${'main'}     | ${'https://github.com/khulnasoft/regexp-worker.git'} | ${'test/khulnasoft/regexp-worker-1'} | ${undefined}                 | ${true}
         ${'bad url'}  | ${'https://github.com/khulnasoft/missing.git'}       | ${'test/khulnasoft/regexp-worker-4'} | ${undefined}                 | ${false}
         ${'bad hash'} | ${'https://github.com/khulnasoft/regexp-worker.git'} | ${'test/khulnasoft/regexp-worker-5'} | ${'de9543cf171629badbadbad'} | ${false}
@@ -54,8 +54,8 @@ describe('Validate repository helper', () => {
     );
 
     test.each`
-        msg             | repo                                                       | path
-        ${'main'}       | ${'https://github.com/khulnasoft/regexp-worker.git'}       | ${'khulnasoft/regexp-worker'}
+        msg             | repo                                                             | path
+        ${'main'}       | ${'https://github.com/khulnasoft/regexp-worker.git'}     | ${'khulnasoft/regexp-worker'}
         ${'issue-1114'} | ${'https://github.com/khulnasoft/codetypo-test-cases.git'} | ${'khulnasoft/codetypo-test-cases'}
     `(
         'addRepository $msg $repo $path',

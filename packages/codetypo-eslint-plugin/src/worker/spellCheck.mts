@@ -409,10 +409,7 @@ function getDocValidator(filename: string, text: string, options: WorkerOptions)
         return cachedValidator;
     }
 
-    const resolveImportsRelativeTo = toFileURL(
-        options.codetypoOptionsRoot || import.meta.url,
-        toFileDirURL(options.cwd),
-    );
+    const resolveImportsRelativeTo = toFileURL(options.codetypoOptionsRoot || import.meta.url, toFileDirURL(options.cwd));
     const validator = new DocumentValidator(doc, { ...options, resolveImportsRelativeTo }, settings);
     docValCache.set(doc, validator);
     return validator;

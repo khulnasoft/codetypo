@@ -40,4 +40,4 @@ jobs:
           title: >-
             ci: Fix Lint -- Workflow Bot
           app_id: ${{ secrets.AUTOMATION_APP_ID }}
-          app_private_key: ${{ secrets.ORG_REPO_TOKEN }}
+          app_private_key: ${{ secrets.AUTOMATION_PRIVATE_KEY }}

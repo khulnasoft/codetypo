@@ -11,10 +11,10 @@
     "test": "echo \"Error: no test specified\""
   },
   "keywords": [],
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
-    "@codetypo/normalize-json": "workspace:*",
+    "@codetypo/normalize-json": "../../packages/*",
     "csv-stringify": "^6.5.2"
   },
   "engines": {

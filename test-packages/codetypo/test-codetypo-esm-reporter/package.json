@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-esm-reporter",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "cli for codetypo",
   "private": "true",
   "type": "module",
@@ -19,14 +19,14 @@
   "keywords": [
     "codetypo"
   ],
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo-cli/issues"
   },
   "homepage": "https://github.com/khulnasoft/codetypo-cli#readme",
   "dependencies": {
-    "@codetypo/codetypo-types": "workspace:*",
+    "@codetypo/codetypo-types": "workspace:^",
     "codetypo": "workspace:*"
   }
 }

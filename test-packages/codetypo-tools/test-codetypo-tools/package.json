@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-tools",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for @codetypo/codetypo-tools.",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "test-codetypo": "codetypo -c codetypo.json \"src/*\"",
     "test": "pnpm run test-dist && pnpm run test-codetypo"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-tools": "workspace:*",

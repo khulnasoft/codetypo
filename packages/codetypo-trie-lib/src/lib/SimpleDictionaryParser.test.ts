@@ -172,17 +172,17 @@ describe('Validate SimpleDictionaryParser', () => {
     });
 
     test.each`
-        lines                                                                                | options                                        | expected
-        ${dictionary()}                                                                      | ${{}}                                          | ${s('Begin|~begin|Begin+|~begin+|End|~end|+End|~+end|+Middle+|~+middle+|Café|~café|~cafe|!forbid')}
+        lines                                                                              | options                                        | expected
+        ${dictionary()}                                                                    | ${{}}                                          | ${s('Begin|~begin|Begin+|~begin+|End|~end|+End|~+end|+Middle+|~+middle+|Café|~café|~cafe|!forbid')}
         ${s('# codetypo-dictionary: no-generate-alternatives split|Apple|Arizona|New York')} | ${{}}                                          | ${s('Apple|Arizona|New|York')}
         ${s('# codetypo-dictionary: split|Apple|Arizona|New York')}                          | ${{}}                                          | ${s('Apple|~apple|Arizona|~arizona|New|~new|York|~york')}
         ${s('# codetypo-dictionary: no-split|Apple|Arizona|New York')}                       | ${{ stripCaseAndAccents: false }}              | ${s('Apple|Arizona|New York')}
         ${s('# codetypo-dictionary: generate-alternatives|Apple|Arizona|New York')}          | ${{ stripCaseAndAccents: false }}              | ${s('Apple|~apple|Arizona|~arizona|New York|~new york')}
         ${s('Apple| # codetypo-dictionary: no-generate-alternatives|Arizona|New York')}      | ${{}}                                          | ${s('Apple|~apple|Arizona|New York')}
-        ${dictionary3()}                                                                     | ${{ stripCaseAndAccentsKeepDuplicate: false }} | ${s('Error|~error|Error+|~error+|+error|+error+|Code|~code|Code+|~code+|+code|+code+|msg|+msg|!err|!Errorerror|!Codemsg|Café|~café|~cafe|!codecode')}
+        ${dictionary3()}                                                                   | ${{ stripCaseAndAccentsKeepDuplicate: false }} | ${s('Error|~error|Error+|~error+|+error|+error+|Code|~code|Code+|~code+|+code|+code+|msg|+msg|!err|!Errorerror|!Codemsg|Café|~café|~cafe|!codecode')}
         ${s('# codetypo-dictionary: split|"New York"|Tower of London')}                      | ${{ stripCaseAndAccentsKeepDuplicate: true }}  | ${s('New York|Tower|~tower|of|~of|London|~london')}
-        ${s('Hello|!Goodbye')}                                                               | ${{}}                                          | ${s('Hello|~hello|!Goodbye')}
-        ${s('Hello|!Goodbye')}                                                               | ${{ stripCaseAndAccentsOnForbidden: true }}    | ${s('Hello|~hello|!Goodbye|~!goodbye')}
+        ${s('Hello|!Goodbye')}                                                             | ${{}}                                          | ${s('Hello|~hello|!Goodbye')}
+        ${s('Hello|!Goodbye')}                                                             | ${{ stripCaseAndAccentsOnForbidden: true }}    | ${s('Hello|~hello|!Goodbye|~!goodbye')}
     `('parseDictionaryLines complex $lines', ({ lines, options, expected }) => {
         const r = [...parseDictionaryLines(lines, options)];
         expect(r).toEqual(expected);

@@ -1,6 +1,6 @@
 {
   "name": "codetypo",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "A Spelling Checker for Code!",
   "funding": "https://github.com/khulnasoft/codetypo?sponsor=1",
   "bin": {
@@ -74,12 +74,12 @@
     "spelling checker",
     "lint"
   ],
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/issues"
   },
-  "homepage": "https://codetypo.khulnasoft.com/",
+  "homepage": "https://codetypo.org/",
   "dependencies": {
     "@codetypo/codetypo-json-reporter": "workspace:*",
     "@codetypo/codetypo-pipe": "workspace:*",
@@ -88,7 +88,7 @@
     "@codetypo/url": "workspace:*",
     "chalk": "^5.4.1",
     "chalk-template": "^1.1.0",
-    "commander": "^13.0.0",
+    "commander": "^13.1.0",
     "codetypo-dictionary": "workspace:*",
     "codetypo-gitignore": "workspace:*",
     "codetypo-glob": "workspace:*",
@@ -97,7 +97,7 @@
     "fast-json-stable-stringify": "^2.1.0",
     "file-entry-cache": "^9.1.0",
     "get-stdin": "^9.0.0",
-    "semver": "^7.6.3",
+    "semver": "^7.7.1",
     "tinyglobby": "^0.2.10"
   },
   "engines": {

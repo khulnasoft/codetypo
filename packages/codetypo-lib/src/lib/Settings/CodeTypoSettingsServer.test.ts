@@ -189,9 +189,9 @@ describe('Validate CodeTypoSettingsServer', () => {
     });
 
     test.each`
-        filename                                                    | relativeTo   | refFilename
-        ${rpr('./codetypo.config.json')}                            | ${undefined} | ${rpr('./codetypo.config.json')}
-        ${rpr('./codetypo.config.json')}                            | ${pathSrc}   | ${rpr('./codetypo.config.json')}
+        filename                                              | relativeTo   | refFilename
+        ${rpr('./codetypo.config.json')}                        | ${undefined} | ${rpr('./codetypo.config.json')}
+        ${rpr('./codetypo.config.json')}                        | ${pathSrc}   | ${rpr('./codetypo.config.json')}
         ${'@codetypo/codetypo-bundled-dicts/codetypo-default.json'} | ${pathSrc}   | ${require.resolve('@codetypo/codetypo-bundled-dicts/codetypo-default.json')}
         ${'@codetypo/codetypo-bundled-dicts/codetypo-default.json'} | ${undefined} | ${require.resolve('@codetypo/codetypo-bundled-dicts/codetypo-default.json')}
     `('tests readSettings $filename $relativeTo', async ({ filename, relativeTo, refFilename }) => {
@@ -312,16 +312,16 @@ describe('Validate CodeTypoSettingsServer', () => {
 
 describe('Validate Overrides', () => {
     test.each`
-        file                                 | glob                                    | expected
-        ${'nested/dir/spell.test.ts'}        | ${'nested/**'}                          | ${false /* nested/** tests against the current dir not `samples` */}
-        ${'nested/dir/spell.test.ts'}        | ${{ glob: 'nested/**', root: rs('.') }} | ${true /* setting the root to `samples` will allow this to be true. */}
-        ${'nested/dir/spell.test.ts'}        | ${'nested'}                             | ${true}
-        ${'nested/dir/spell.test.ts'}        | ${'*.ts'}                               | ${true}
-        ${'nested/dir/spell.test.ts'}        | ${'**/*.ts'}                            | ${true}
-        ${'nested/dir/spell.test.ts'}        | ${['**/*.ts']}                          | ${true}
-        ${'nested/dir/spell.test.ts'}        | ${['**/dir/**/*.ts']}                   | ${true}
-        ${'nested/dir/spell.test.js'}        | ${['**/*.ts']}                          | ${false}
-        ${'nested/dir/spell.test.js'}        | ${['*.ts', '*.test.js']}                | ${true}
+        file                               | glob                                    | expected
+        ${'nested/dir/spell.test.ts'}      | ${'nested/**'}                          | ${false /* nested/** tests against the current dir not `samples` */}
+        ${'nested/dir/spell.test.ts'}      | ${{ glob: 'nested/**', root: rs('.') }} | ${true /* setting the root to `samples` will allow this to be true. */}
+        ${'nested/dir/spell.test.ts'}      | ${'nested'}                             | ${true}
+        ${'nested/dir/spell.test.ts'}      | ${'*.ts'}                               | ${true}
+        ${'nested/dir/spell.test.ts'}      | ${'**/*.ts'}                            | ${true}
+        ${'nested/dir/spell.test.ts'}      | ${['**/*.ts']}                          | ${true}
+        ${'nested/dir/spell.test.ts'}      | ${['**/dir/**/*.ts']}                   | ${true}
+        ${'nested/dir/spell.test.js'}      | ${['**/*.ts']}                          | ${false}
+        ${'nested/dir/spell.test.js'}      | ${['*.ts', '*.test.js']}                | ${true}
         ${'/codetypo-dicts/nl_NL/Dutch.txt'} | ${'**/nl_NL/**'}                        | ${true /* the file is a root filename but the glob is global */}
         ${'/codetypo-dicts/nl_NL/Dutch.txt'} | ${'/**/nl_NL/**'}                       | ${false /* the file is a root filename */}
         ${'codetypo-dicts/nl_NL/Dutch.txt'}  | ${'**/nl_NL/**'}                        | ${true}

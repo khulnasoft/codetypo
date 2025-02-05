@@ -40,7 +40,7 @@ runs:
         echo "inputs: $INPUTS"
 
     - id: cache-path
-      uses: khulnasoft-lab/action-output@master
+      uses: khulnasoft/action-set-output@v1
       with:
         value: |
           packages/*/dist
@@ -50,7 +50,7 @@ runs:
         debug: true
 
     - id: cache-key
-      uses: khulnasoft-lab/action-output@master
+      uses: khulnasoft/action-set-output@v1
       with:
         value: >-
           integrations-build-${{ hashFiles(

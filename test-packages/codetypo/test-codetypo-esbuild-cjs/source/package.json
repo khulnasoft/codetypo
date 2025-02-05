@@ -13,7 +13,7 @@
     "clean-build": "pnpm run clean && pnpm run build",
     "compile": "tsc -p ."
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "codetypo": "workspace:*"

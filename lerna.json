@@ -4,26 +4,13 @@
     "./packages/*",
     "./rfc/*",
     "./test-packages/*/*",
-    "./integration-tests",
-    "./dictionaries/*"
+    "./integration-tests"
   ],
-  "version": "8.17.2",
+  "version": "8.17.3",
   "command": {
     "version": {
       "allowBranch": "main",
       "conventionalCommits": true
-    },
-    "publish": {
-      "conventionalCommits": true,
-      "ignoreChanges": [
-        "*.md",
-        "package-lock.json",
-        "codetypo.json"
-      ]
     }
-  },
-  "changelogPreset": {
-    "name": "conventionalcommits",
-    "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}"
   }
 }

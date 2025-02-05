@@ -4,7 +4,7 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Trie Data Structure reader for codetypo",
   "type": "module",
   "sideEffects": false,
@@ -38,14 +38,14 @@
     "trie",
     "codetypo"
   ],
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-trie"
   },
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-trie#readme",
   "dependencies": {
-    "commander": "^13.0.0",
+    "commander": "^13.1.0",
     "codetypo-trie-lib": "workspace:*",
     "gensequence": "^7.0.0"
   },

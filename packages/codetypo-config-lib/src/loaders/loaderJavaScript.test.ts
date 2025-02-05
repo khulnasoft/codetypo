@@ -14,7 +14,7 @@ describe('loaderJavaScript', () => {
     afterEach(() => {});
 
     test.each`
-        file                                 | expected
+        file                               | expected
         ${'js/module/codetypo.config.js'}    | ${{ settings: oc({ id: 'module/js' }) }}
         ${'js/module/codetypo.config.cjs'}   | ${{ settings: oc({ id: 'module/cjs' }) }}
         ${'js/commonjs/codetypo.config.js'}  | ${{ settings: oc({ id: 'commonjs/js' }) }}
@@ -50,7 +50,7 @@ describe('loaderJavaScript', () => {
     /* codetypo:ignore lazr */
 
     test.each`
-        file                                | expected
+        file                              | expected
         ${'js/module/codetypo.function.js'} | ${{ settings: oc({ id: 'config-function', words: ac(['recheck', 'tested']) }) }}
         ${'js/module/codetypo.python.mjs'}  | ${{ settings: oc({ id: 'python-imports', words: ac(['blinker', 'click', 'lazr']) }) }}
     `('loaderJavaScript $file default function', async ({ file, expected }) => {
@@ -83,7 +83,7 @@ describe('loaderJavaScript', () => {
     });
 
     test.each`
-        file                                 | expected
+        file                               | expected
         ${'js/commonjs/codetypo.config.mjs'} | ${{ settings: oc({ id: 'commonjs/mjs' }) }}
     `('loaderJavaScript reloading $file', async ({ file, expected }) => {
         const url = pathToFileURL(fixtures(file));

@@ -9,7 +9,7 @@
     "codetypo": "bin.mjs",
     "codetypo-tools": "codetypo-tools.mjs"
   },
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c",
   "private": true,
   "scripts": {
     "bt": "pnpm run build && pnpm run test",
@@ -17,7 +17,7 @@
     "build-codetypo-types-docs": "cd doc-generator && pnpm i && pnpm run build-codetypo-types-docs",
     "build-integration-tests": "cd ./integration-tests && pnpm i",
     "build-schema": "pnpm -r run build-schema",
-    "build": "pnpm run compile && pnpm -r --stream --workspace-concurrency=2 run build",
+    "build": "pnpm -r --stream --workspace-concurrency=2 run build",
     "build:readme": "pnpm build:readme:packages && pnpm build:readme:root && pnpm docs:inject",
     "build:readme:packages": "pnpm -r build:readme",
     "build:readme:root": "inject-markdown README.md \"packages/*/README.md\" && prettier -w README.md \"packages/*/README.md\"",
@@ -69,19 +69,7 @@
     "update-test-snapshots": "pnpm ib && pnpm run test:update-snapshots",
     "website-install": "cd website && pnpm i",
     "website-lint": "cd website && pnpm run lint",
-    "website-lint-ci": "cd website && pnpm run lint-ci",
-    "codetypo-yaml-to-json": "pnpm -s yaml2json -p codetypo.config.yaml > codetypo-ext.json && pnpm lint",
-    "sync": "pnpm cpy \"node_modules/dictionary-es/**\" src/hunspell",
-    "compile": "codetypo-tools-cli build",
-    "conditional-build": "pnpm run sync && pnpm run build --conditional && pnpm gz",
-    "test-dict": "pipe-cmds \"hunspell-reader words -n 1000 \\\"src/hunspell/index.dic\\\"\" \"codetypo -c ./codetypo-ext.json --locale=es --languageId=* stdin\"",
-    "test-text": "codetypo",
-    "gz": "codetypo-tools-cli gzip \"*.trie\"",
-    "prepare:dictionary": "pnpm gz",
-    "prepublishOnly": "echo pre-publish",
-    "format": "pnpm prettier --write .",
-    "format:check": "pnpm prettier --check .",
-    "format:packages": "pnpm synopkg fix-mismatches --types 'prod,dev' || true && pnpm synopkg set-semver-ranges && pnpm install -r"
+    "website-lint-ci": "cd website && pnpm run lint-ci"
   },
   "repository": {
     "type": "git",
@@ -96,7 +84,7 @@
     "overrides": {},
     "patchedDependencies": {}
   },
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/issues"
@@ -106,15 +94,11 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
-    "@codetypo/codetypo-tools": "workspace:*",
     "@codetypo/eslint-plugin": "workspace:*",
-    "@codetypo/codetypo-types": "workspace:*",
-    "codetypo": "workspace:*",
-    "codetypo-trie": "workspace:*",
-    "@eslint/js": "^9.18.0",
+    "@eslint/js": "^9.19.0",
     "@internal/scripts": "workspace:*",
-    "@lerna-lite/cli": "^3.11.0",
-    "@lerna-lite/publish": "^3.11.0",
+    "@lerna-lite/cli": "^3.12.0",
+    "@lerna-lite/publish": "^3.12.0",
     "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-json": "^6.1.0",
@@ -124,10 +108,10 @@
     "@rollup/plugin-typescript": "^12.1.2",
     "@swc-node/register": "^1.10.9",
     "@tsconfig/node18": "^18.2.4",
-    "@types/node": "^20.17.14",
-    "@vitest/coverage-istanbul": "^2.1.8",
+    "@types/node": "^18.19.75",
+    "@vitest/coverage-istanbul": "^3.0.5",
     "conventional-changelog-conventionalcommits": "^8.0.0",
-    "eslint": "^9.18.0",
+    "eslint": "^9.19.0",
     "eslint-plugin-n": "^17.15.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unicorn": "^56.0.1",
@@ -135,25 +119,17 @@
     "nyc": "^17.1.0",
     "perf-insight": "^1.2.0",
     "prettier": "^3.4.2",
-    "rollup": "^4.31.0",
+    "rollup": "^4.34.3",
     "rollup-plugin-dts": "^6.1.1",
     "shx": "^0.3.4",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "ts2mjs": "^3.0.0",
     "tslib": "^2.8.1",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.21.0",
-    "vite": "^6.0.10",
-    "vitest": "^2.1.8",
-    "globals": "^15.14.0",
-    "hunspell-reader": "workspace:*",
-    "json5": "^2.2.3",
-    "license": "^1.0.3",
-    "scripts": "link:scripts"
-  },
-  "dependencies": {
-    "synopkg": "^13.0.2"
+    "tsup": "^8.3.6",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "^8.23.0",
+    "vite": "^6.0.11",
+    "vitest": "^3.0.5"
   }
 }

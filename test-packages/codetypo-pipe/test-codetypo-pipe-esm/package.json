@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-pipe-esm",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for @codetypo/codetypo-pipe. Its purpose is to verify @codetypo/codetypo-pipe dependencies.",
   "private": true,
   "bin": "./bin.mjs",
@@ -14,7 +14,7 @@
     "test:smoke": "node ./bin.mjs",
     "test:unit": "vitest run"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-pipe": "workspace:*"

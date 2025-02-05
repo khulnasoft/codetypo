@@ -149,21 +149,21 @@ describe('VirtualFs', () => {
     test('try unsupported readFile', async () => {
         const fs = virtualFs.fs;
         const result = fs.readFile(new URL('ftp://example.com/data.json'));
-        await expect(result).rejects.toEqual(new Error('Unsupported request: readFile'));
+        await expect(result).rejects.toThrowError('Unsupported request: readFile');
         await expect(result).rejects.toBeInstanceOf(VFSErrorUnsupportedRequest);
     });
 
     test('try unsupported stat', async () => {
         const fs = virtualFs.fs;
         const result = fs.stat(new URL('ftp://example.com/data.json'));
-        await expect(result).rejects.toEqual(new Error('Unsupported request: stat'));
+        await expect(result).rejects.toThrowError('Unsupported request: stat');
         await expect(result).rejects.toBeInstanceOf(VFSErrorUnsupportedRequest);
     });
 
     test('try unsupported readDirectory', async () => {
         const fs = virtualFs.fs;
         const result = fs.readDirectory(new URL('ftp://example.com/data.json'));
-        await expect(result).rejects.toEqual(new Error('Unsupported request: readDirectory'));
+        await expect(result).rejects.toThrowError('Unsupported request: readDirectory');
         await expect(result).rejects.toBeInstanceOf(VFSErrorUnsupportedRequest);
     });
 
@@ -231,9 +231,9 @@ describe('VirtualFs', () => {
     });
 
     test.each`
-        url                                                                        | expected
+        url                                                                              | expected
         ${'https://raw.gitubusrcotent.com/khulnasoft/codetypo/main/tsconfig.json'} | ${oc({ code: 'ENOTFOUND' })}
-        ${ps(__dirname, 'not-found.nf')}                                           | ${oc({ code: 'ENOENT' })}
+        ${ps(__dirname, 'not-found.nf')}                                                 | ${oc({ code: 'ENOENT' })}
     `('getStat with error $url', { timeout: 30_000 }, async ({ url, expected }) => {
         url = toFileURL(url);
         const fs = getDefaultVFileSystem();

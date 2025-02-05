@@ -1,6 +1,6 @@
 {
   "name": "test-dynamic-import-cjs",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for @codetypo/dynamic-import.",
   "private": true,
   "bin": "./bin.cjs",
@@ -13,7 +13,7 @@
     "test:smoke": "node ./bin.cjs",
     "test:unit": "vitest run"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-pipe": "workspace:*",

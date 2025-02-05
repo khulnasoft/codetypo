@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-eslint-plugin-v8",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for @codetypo/eslint-plugin-codetypo.",
   "private": true,
   "type": "commonjs",
@@ -11,13 +11,13 @@
   "engines": {
     "node": ">=18"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "main": "index.js",
   "keywords": [],
   "devDependencies": {
     "@codetypo/eslint-plugin": "workspace:*",
-    "@eslint/js": "^9.18.0",
-    "eslint": "^9.18.0"
+    "@eslint/js": "^8.57.1",
+    "eslint": "8.57.0"
   }
 }

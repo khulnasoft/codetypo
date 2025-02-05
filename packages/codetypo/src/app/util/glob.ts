@@ -100,11 +100,7 @@ export function calcExcludeGlobInfo(root: string, commandLineExclude: string[] |
     ];
 }
 
-export function extractGlobExcludesFromConfig(
-    root: string,
-    source: string,
-    config: CodeTypoUserSettings,
-): GlobSrcInfo[] {
+export function extractGlobExcludesFromConfig(root: string, source: string, config: CodeTypoUserSettings): GlobSrcInfo[] {
     if (!config.ignorePaths || !config.ignorePaths.length) {
         return [];
     }

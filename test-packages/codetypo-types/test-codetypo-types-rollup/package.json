@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-types-rollup",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for @codetypo/codetypo-types. Its purpose is to verify @codetypo/codetypo-types dependencies.",
   "private": true,
   "bin": {
@@ -20,7 +20,7 @@
     "test:smoke": "node ./bin.mjs && node ./bin.cjs",
     "test:unit": "vitest run"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-types": "workspace:*"

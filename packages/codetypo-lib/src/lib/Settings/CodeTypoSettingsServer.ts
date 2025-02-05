@@ -11,14 +11,8 @@ import type {
 } from '@codetypo/codetypo-types';
 
 import { onClearCache } from '../events/index.js';
-import type {
-    CodeTypoSettingsInternal,
-    CodeTypoSettingsInternalFinalized,
-} from '../Models/CodeTypoSettingsInternalDef.js';
-import {
-    cleanCodeTypoSettingsInternal as csi,
-    isCodeTypoSettingsInternal,
-} from '../Models/CodeTypoSettingsInternalDef.js';
+import type { CodeTypoSettingsInternal, CodeTypoSettingsInternalFinalized } from '../Models/CodeTypoSettingsInternalDef.js';
+import { cleanCodeTypoSettingsInternal as csi, isCodeTypoSettingsInternal } from '../Models/CodeTypoSettingsInternalDef.js';
 import { autoResolveWeak, AutoResolveWeakCache } from '../util/AutoResolve.js';
 import type { OptionalOrUndefined } from '../util/types.js';
 import { toFileUrl } from '../util/url.js';
@@ -255,9 +249,7 @@ function takeRightOtherwiseLeft<T>(left: T[] | undefined, right: T[] | undefined
  * @param settings - settings to finalize
  * @returns settings where all globs and file paths have been resolved.
  */
-export function finalizeSettings(
-    settings: CodeTypoSettingsWSTO | CodeTypoSettingsI,
-): CodeTypoSettingsInternalFinalized {
+export function finalizeSettings(settings: CodeTypoSettingsWSTO | CodeTypoSettingsI): CodeTypoSettingsInternalFinalized {
     return _finalizeSettings(toInternalSettings(settings));
 }
 

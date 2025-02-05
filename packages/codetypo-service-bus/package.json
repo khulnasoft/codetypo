@@ -4,12 +4,12 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "A Library for connecting requests to services that can fulfill them.",
   "keywords": [
     "codetypo"
   ],
-  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "author": "Jason Dent <jason@khulnasoft.nl>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-service-bus#readme",
   "license": "MIT",
   "type": "module",

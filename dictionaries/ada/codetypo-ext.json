@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/khulnasofto/v5.18.4/codetypo.schema.json",
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/v5.18.4/codetypo.schema.json",
     "version": "0.2",
     "id": "ada",
     "name": "Ada",

@@ -1,6 +1,6 @@
 {
   "name": "@codetypo/codetypo-code-snippets",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Code snippets and data structures.",
   "private": true,
   "files": [],
@@ -21,7 +21,7 @@
   "keywords": [
     "codetypo"
   ],
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-trie"

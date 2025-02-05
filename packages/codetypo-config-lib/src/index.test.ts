@@ -6,7 +6,7 @@ import { pathToFileURL } from 'node:url';
 import { describe, expect, test } from 'vitest';
 
 import * as index from './index.js';
-import { CodeTypoConfigFile, createReaderWriter } from './index.js';
+import { CodeTypoConfigFile,createReaderWriter } from './index.js';
 import { fixtures } from './test-helpers/fixtures.js';
 import { copyFile, tempPath } from './test-helpers/util.js';
 
@@ -27,8 +27,8 @@ describe('codetypo-config', () => {
         fixture                                 | addWords
         ${'package/with-value/package.json'}    | ${['apple']}
         ${'package/without-value/package.json'} | ${['apple']}
-        ${'codetypo.jsonc'}                     | ${['apple', 'cache']}
-        ${'codetypo.yaml'}                      | ${['apple', 'cache']}
+        ${'codetypo.jsonc'}                       | ${['apple', 'cache']}
+        ${'codetypo.yaml'}                        | ${['apple', 'cache']}
     `('edit config', async ({ fixture, addWords }) => {
         const fixtureFile = fixtures(fixture);
         const tempFile = tempPath(fixture);

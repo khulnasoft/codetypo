@@ -63,6 +63,14 @@ exclude-labels:
   - chore
   - dependencies
   - test
+include-labels:
+  - breaking
+  - documentation
+  - feat
+  - feature
+  - fix
+  - refactor
+  - Update Dictionaries
 autolabeler:
   - label: 'Update Dictionaries'
     title:

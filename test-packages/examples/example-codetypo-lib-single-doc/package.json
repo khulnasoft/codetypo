@@ -1,6 +1,6 @@
 {
   "name": "example-codetypo-lib-single-doc",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for codetypo-io. Its purpose is to verify codetypo-io dependencies.",
   "private": true,
   "type": "module",
@@ -13,7 +13,7 @@
     "compile": "tsc -p .",
     "test": "node bin.js src/index.ts"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "codetypo-lib": "workspace:*"

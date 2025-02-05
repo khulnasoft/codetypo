@@ -4,7 +4,7 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Trie Data Structure to support codetypo.",
   "type": "module",
   "sideEffects": false,
@@ -52,7 +52,7 @@
     "trie",
     "codetypo"
   ],
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-trie"
@@ -67,9 +67,9 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "@codetypo/dict-en_us": "workspace:*",
-    "@codetypo/dict-es-es": "workspace:*",
-    "@codetypo/dict-nl-nl": "workspace:*",
+    "@codetypo/dict-en_us": "../dictionaries/*",
+    "@codetypo/dict-es-es": "../dictionaries/*",
+    "@codetypo/dict-nl-nl": "../dictionaries/*",
     "import-meta-resolve": "^4.1.0"
   }
 }

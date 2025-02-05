@@ -6,10 +6,10 @@ This is a pre-built dictionary for use with CodeTypo.
 
 ## Requirements
 
-| Tool                                                                                                                 | Version |
-| -------------------------------------------------------------------------------------------------------------------- | ------- |
-| [codetypo](https://github.com/khulnasofto)                                                                           | `>= 6`  |
-| [Code Spell Checker - Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=khulnasoftell-checker) | `>= 2`  |
+| Tool                                                                                                                                 | Version |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| [codetypo](https://github.com/khulnasoft/codetypo)                                                                               | `>= 6`  |
+| [Code Spell Checker - Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=khulnasoft.code-spell-checker) | `>= 2`  |
 
 ## Installation
 

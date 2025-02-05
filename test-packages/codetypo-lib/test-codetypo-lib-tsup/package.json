@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-lib-tsup",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for codetypo-lib.",
   "bin": {
     "test-bin": "test-bin.mjs"
@@ -14,7 +14,7 @@
     "clean-build": "pnpm run clean && pnpm run build",
     "test": "node ./test-bin.mjs"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "codetypo-lib": "workspace:*"

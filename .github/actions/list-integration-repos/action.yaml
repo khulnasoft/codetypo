@@ -27,7 +27,7 @@ runs:
 
     - name: Set Outputs
       id: result
-      uses: khulnasoft-lab/action-output@master
+      uses: khulnasoft/action-set-output@v1
       with:
         value: ${{ env.REPOS }}
         debug: true

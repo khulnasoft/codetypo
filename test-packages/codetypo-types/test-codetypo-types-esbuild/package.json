@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-types-esbuild",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for @codetypo/codetypo-types. Its purpose is to verify @codetypo/codetypo-types dependencies.",
   "private": true,
   "bin": {
@@ -16,7 +16,7 @@
     "clean-build": "pnpm run clean && pnpm run build",
     "test": "node ./test-bin.mjs"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "@codetypo/codetypo-types": "workspace:*"

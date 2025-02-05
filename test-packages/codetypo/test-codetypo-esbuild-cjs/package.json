@@ -1,6 +1,6 @@
 {
   "name": "test-codetypo-esbuild-cjs",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Pure testing package for codetypo-lib.",
   "bin": {
     "build": "build.mjs",
@@ -14,7 +14,7 @@
     "test:esm": "node bin.mjs README.md",
     "test:cjs": "node bin.cjs build.mjs"
   },
-  "author": "Md Sulaiman",
+  "author": "",
   "license": "MIT",
   "engines": {
     "node": ">=18"

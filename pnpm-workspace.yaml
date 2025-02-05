@@ -1,15 +1,10 @@
 ---
 packages:
-  - cspell-dict-file-checker
-  - dictionaries/*
-  - dictionaries/*/scripts
-  - packages/*
-  - generator-cspell-dicts
-  - scripts
   - 'packages/*'
   - 'packages/*/scripts'
-  - 'packages/cspell-eslint-plugin/fixtures/import-support'
-  - 'packages/cspell-eslint-plugin/fixtures/simple'
+  - 'dictionaries/*/*'
+  - 'packages/codetypo-eslint-plugin/fixtures/import-support'
+  - 'packages/codetypo-eslint-plugin/fixtures/simple'
   - 'rfc/*'
   - 'rfc/drafts/*'
   - 'test-fixtures/dictionaries/*'

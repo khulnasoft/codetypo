@@ -1,8 +1,8 @@
 {
   "name": "@codetypo/codetypo-json-reporter",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "JSON reporter for CodeTypo",
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-json-reporter"

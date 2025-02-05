@@ -46,7 +46,7 @@ Patterns allow you to define reusable patterns for excluding or including text t
 
 ## Predefined Patterns
 
-- See: [Predefined Patterns](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html)
+- See: [Predefined Patterns](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html)
 
 ## Default `ignoreRegExpList` Patterns
 

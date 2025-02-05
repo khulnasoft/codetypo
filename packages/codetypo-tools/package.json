@@ -1,6 +1,6 @@
 {
   "name": "@codetypo/codetypo-tools",
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Tools to assist with the development of codeTypo",
   "publishConfig": {
     "access": "public",
@@ -44,7 +44,7 @@
     "!**/*.spec.*",
     "!**/*.map"
   ],
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-tools"
@@ -52,8 +52,8 @@
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-tools#readme",
   "dependencies": {
     "@codetypo/codetypo-pipe": "workspace:*",
-    "commander": "^13.0.0",
-    "cosmiconfig": "^9.0.0",
+    "commander": "^13.1.0",
+    "cosmiconfig": "9.0.0",
     "codetypo-trie-lib": "workspace:*",
     "glob": "^10.4.5",
     "hunspell-reader": "workspace:*",

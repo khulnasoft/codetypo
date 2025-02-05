@@ -87,7 +87,7 @@
             "request": "launch",
             "name": "codetypo: Run Link Add",
             "program": "${workspaceRoot}/bin.mjs",
-            "args": ["link", "add", "codetypo/dict-nl-nl/codetypo-ext.json"],
+            "args": ["link", "add", "codetypo-dict-nl-nl/codetypo-ext.json"],
             "cwd": "${workspaceRoot}/../codetypo-lib",
             "outFiles": ["${workspaceRoot}/dist/**"],
             "sourceMaps": true

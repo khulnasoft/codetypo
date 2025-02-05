@@ -4,7 +4,7 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Types for codetypo and codetypo-lib",
   "type": "commonjs",
   "sideEffects": false,
@@ -83,7 +83,7 @@
     "codetypo",
     "types"
   ],
-  "author": "Md Sulaiman",
+  "author": "Jason Dent",
   "license": "MIT",
   "engines": {
     "node": ">=18"

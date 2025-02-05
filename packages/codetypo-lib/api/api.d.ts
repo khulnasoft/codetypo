@@ -1,11 +1,11 @@
-import { Glob, AdvancedCodeTypoSettingsWithSourceTrace, Parser, DictionaryDefinitionInline, DictionaryDefinitionPreferred, DictionaryDefinitionAugmented, DictionaryDefinitionCustom, CodeTypoUserSettings, ImportFileRef, PnPSettings, CodeTypoSettingsWithSourceTrace, TextOffset, Issue, LocaleId, CodeTypoSettings, MappedText, ParsedText, TextDocumentOffset } from '@codetypo/codetypo-types';
+import { Glob, AdvancedCodeTypoSettingsWithSourceTrace, DictionaryDefinitionPreferred, DictionaryDefinitionCustom, DictionaryDefinitionAugmented, DictionaryDefinitionInline, Parser, CodeTypoUserSettings, ImportFileRef, PnPSettings, CodeTypoSettingsWithSourceTrace, TextOffset, Issue, LocaleId, CodeTypoSettings, MappedText, ParsedText, TextDocumentOffset } from '@codetypo/codetypo-types';
 export * from '@codetypo/codetypo-types';
 import * as codetypo_io from 'codetypo-io';
 import { VFileSystem } from 'codetypo-io';
 export { FSCapabilityFlags, VFileSystemProvider, VirtualFS, asyncIterableToArray, readFileText as readFile, readFileTextSync as readFileSync, writeToFile, writeToFileIterable, writeToFileIterableP } from 'codetypo-io';
 import { FileTypeId } from '@codetypo/filetypes';
 export { findMatchingFileTypes as getLanguageIdsForBaseFilename, getFileTypesForExt as getLanguagesForExt } from '@codetypo/filetypes';
-import { SpellingDictionaryCollection, SuggestOptions, SuggestionResult, CachingDictionary } from 'codetypo-dictionary';
+import { SpellingDictionaryCollection, SuggestionResult, SuggestOptions, CachingDictionary } from 'codetypo-dictionary';
 export { SpellingDictionary, SpellingDictionaryCollection, SuggestOptions, SuggestionCollector, SuggestionResult, createSpellingDictionary, createCollection as createSpellingDictionaryCollection } from 'codetypo-dictionary';
 import { WeightMap } from 'codetypo-trie-lib';
 export { CompoundWordsMethod } from 'codetypo-trie-lib';

@@ -54,8 +54,8 @@ The root configuration is used to determine which files to check. Files matching
 
 For example:
 
-| File                           | Config Used                        |
-| ------------------------------ | ---------------------------------- |
+| File                           | Config Used                      |
+| ------------------------------ | -------------------------------- |
 | `packages/package-A/README.md` | `packages/package-A/codetypo.json` |
 | `packages/package-A/CONFIG.md` | `packages/package-A/codetypo.json` |
 | `packages/package-B/README.md` | `codetypo.config.json`             |

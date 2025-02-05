@@ -157,7 +157,7 @@ Define cache settings.
 
 Determines if words must match case and accent rules.
 
-See [Case Sensitivity](https://codetypo.khulnasoft.com/docs/case-sensitive/) for more details.
+See [Case Sensitivity](https://codetypo.org/docs/case-sensitive/) for more details.
 
 - `false` - Case is ignored and accents can be missing on the entire word.
   Incorrect accents or partially missing accents will be marked as incorrect.
@@ -217,8 +217,8 @@ To remove a dictionary from the list, add `!` before the name.
 
 For example, `!typescript` will turn off the dictionary with the name `typescript`.
 
-See the [Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries/)
-and [Custom Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries-custom/) for more details.
+See the [Dictionaries](https://codetypo.org/docs/dictionaries/)
+and [Custom Dictionaries](https://codetypo.org/docs/dictionaries-custom/) for more details.
 
 </dd>
 
@@ -688,10 +688,10 @@ ignoreRegExpList:
 ```
 
 By default, several patterns are excluded. See
-[Configuration](https://codetypo.khulnasoft.com/configuration/patterns) for more details.
+[Configuration](https://codetypo.org/configuration/patterns) for more details.
 
 While you can create your own patterns, you can also leverage several patterns that are
-[built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).
+[built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).
 
 </dd>
 
@@ -744,7 +744,7 @@ also in the `flagWords`.
 
 Allows this configuration to inherit configuration for one or more other files.
 
-See [Importing / Extending Configuration](https://codetypo.khulnasoft.com/configuration/imports/) for more details.
+See [Importing / Extending Configuration](https://codetypo.org/configuration/imports/) for more details.
 
 </dd>
 
@@ -774,7 +774,7 @@ List of regular expression patterns or defined pattern names to match for spell 
 If this property is defined, only text matching the included patterns will be checked.
 
 While you can create your own patterns, you can also leverage several patterns that are
-[built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).
+[built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).
 
 </dd>
 
@@ -857,7 +857,7 @@ Forces the spell checker to assume a give language id. Used mainly as an Overrid
 
 Additional settings for individual languages.
 
-See [Language Settings](https://codetypo.khulnasoft.com/configuration/language-settings/) for more details.
+See [Language Settings](https://codetypo.org/configuration/language-settings/) for more details.
 
 </dd>
 
@@ -5633,7 +5633,7 @@ True to enable compound word checking.
 
 Determines if words must match case and accent rules.
 
-See [Case Sensitivity](https://codetypo.khulnasoft.com/docs/case-sensitive/) for more details.
+See [Case Sensitivity](https://codetypo.org/docs/case-sensitive/) for more details.
 
 - `false` - Case is ignored and accents can be missing on the entire word.
   Incorrect accents or partially missing accents will be marked as incorrect.
@@ -5693,8 +5693,8 @@ To remove a dictionary from the list, add `!` before the name.
 
 For example, `!typescript` will turn off the dictionary with the name `typescript`.
 
-See the [Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries/)
-and [Custom Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries-custom/) for more details.
+See the [Dictionaries](https://codetypo.org/docs/dictionaries/)
+and [Custom Dictionaries](https://codetypo.org/docs/dictionaries-custom/) for more details.
 
 </dd>
 
@@ -5863,10 +5863,10 @@ ignoreRegExpList:
 ```
 
 By default, several patterns are excluded. See
-[Configuration](https://codetypo.khulnasoft.com/configuration/patterns) for more details.
+[Configuration](https://codetypo.org/configuration/patterns) for more details.
 
 While you can create your own patterns, you can also leverage several patterns that are
-[built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).
+[built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).
 
 </dd>
 
@@ -5922,7 +5922,7 @@ List of regular expression patterns or defined pattern names to match for spell 
 If this property is defined, only text matching the included patterns will be checked.
 
 While you can create your own patterns, you can also leverage several patterns that are
-[built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).
+[built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).
 
 </dd>
 
@@ -6297,7 +6297,7 @@ True to enable compound word checking.
 
 Determines if words must match case and accent rules.
 
-See [Case Sensitivity](https://codetypo.khulnasoft.com/docs/case-sensitive/) for more details.
+See [Case Sensitivity](https://codetypo.org/docs/case-sensitive/) for more details.
 
 - `false` - Case is ignored and accents can be missing on the entire word.
   Incorrect accents or partially missing accents will be marked as incorrect.
@@ -6357,8 +6357,8 @@ To remove a dictionary from the list, add `!` before the name.
 
 For example, `!typescript` will turn off the dictionary with the name `typescript`.
 
-See the [Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries/)
-and [Custom Dictionaries](https://codetypo.khulnasoft.com/docs/dictionaries-custom/) for more details.
+See the [Dictionaries](https://codetypo.org/docs/dictionaries/)
+and [Custom Dictionaries](https://codetypo.org/docs/dictionaries-custom/) for more details.
 
 </dd>
 
@@ -6661,10 +6661,10 @@ ignoreRegExpList:
 ```
 
 By default, several patterns are excluded. See
-[Configuration](https://codetypo.khulnasoft.com/configuration/patterns) for more details.
+[Configuration](https://codetypo.org/configuration/patterns) for more details.
 
 While you can create your own patterns, you can also leverage several patterns that are
-[built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).
+[built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).
 
 </dd>
 
@@ -6720,7 +6720,7 @@ List of regular expression patterns or defined pattern names to match for spell 
 If this property is defined, only text matching the included patterns will be checked.
 
 While you can create your own patterns, you can also leverage several patterns that are
-[built-in to CodeTypo](https://codetypo.khulnasoft.com/types/codetypo-types/types/PredefinedPatterns.html).
+[built-in to CodeTypo](https://codetypo.org/types/codetypo-types/types/PredefinedPatterns.html).
 
 </dd>
 
@@ -6797,7 +6797,7 @@ Sets the programming language id to match file type.
 
 Additional settings for individual languages.
 
-See [Language Settings](https://codetypo.khulnasoft.com/configuration/language-settings/) for more details.
+See [Language Settings](https://codetypo.org/configuration/language-settings/) for more details.
 
 </dd>
 

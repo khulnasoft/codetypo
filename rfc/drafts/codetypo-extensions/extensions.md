@@ -7,7 +7,7 @@ There are two types of extensions.
 
 ## Static Extensions
 
-At the time of this writing, [codetypo-dicts](https://github.com/khulnasoft/codetypo) has only static dictionary extensions.
+At the time of this writing, [codetypo-dicts](https://github.com/khulnasoft/codetypo-dicts) has only static dictionary extensions.
 
 These extensions are defined as `codetypo-ext.json`. They tend to define static dictionaries and a few regexp patterns for include / exclude.
 

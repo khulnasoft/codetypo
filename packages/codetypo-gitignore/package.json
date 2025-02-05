@@ -4,14 +4,14 @@
     "access": "public",
     "provenance": true
   },
-  "version": "8.17.2",
+  "version": "8.17.3",
   "description": "Gitignore Glob matcher for codetypo",
   "keywords": [
     "codetypo",
     "gitignore",
     "glob"
   ],
-  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "author": "Jason Dent <jason@khulnasoft.nl>",
   "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-gitignore#readme",
   "license": "MIT",
   "bin": {

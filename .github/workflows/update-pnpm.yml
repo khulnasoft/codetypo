@@ -51,7 +51,7 @@ jobs:
           title: 'ci: Workflow Bot -- Update PNPM (${{ env.REF_BRANCH }})'
           body: ${{ steps.git-body.outputs.body }}
           app_id: ${{ secrets.AUTOMATION_APP_ID }}
-          app_private_key: ${{ secrets.ORG_REPO_TOKEN }}
+          app_private_key: ${{ secrets.AUTOMATION_PRIVATE_KEY }}
 
       - name: Summary
         uses: khulnasoft/actions/public/summary@v1

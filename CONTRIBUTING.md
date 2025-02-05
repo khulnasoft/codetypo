@@ -2,7 +2,7 @@
 
 These are some notes about contributing to the project.
 
-**Note:** To add or remove words in a dictionary, visit [codetypo-dicts](https://github.com/khulnasoft/codetypo/issues).
+**Note:** To add or remove words in a dictionary, visit [codetypo-dicts](https://github.com/khulnasoft/codetypo-dicts/issues).
 
 ## Continuous Integration
 

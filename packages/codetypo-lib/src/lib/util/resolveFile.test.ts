@@ -91,8 +91,8 @@ describe('Validate resolveFile', () => {
         ${'.' + path.sep + 'search.ts'}               | ${pathToFileURL(__filename)}      | ${path.resolve(__dirname, 'search.ts')}            | ${true}
         ${'.' + path.sep + notFound}                  | ${__dirname}                      | ${path.resolve(__dirname, notFound)}               | ${false}
         ${path.relative(__dirname, __filename)}       | ${__dirname}                      | ${__filename}                                      | ${true}
-        ${'@codetypo/dict-cpp/codetypo-ext.json'}     | ${__dirname}                      | ${rr['@codetypo/dict-cpp/codetypo-ext.json']}      | ${true}
-        ${'codetypo-ext.json'}                        | ${__dirname}                      | ${'codetypo-ext.json'}                             | ${false}
+        ${'@codetypo/dict-cpp/codetypo-ext.json'}         | ${__dirname}                      | ${rr['@codetypo/dict-cpp/codetypo-ext.json']}          | ${true}
+        ${'codetypo-ext.json'}                          | ${__dirname}                      | ${'codetypo-ext.json'}                               | ${false}
         ${'vitest'}                                   | ${__dirname}                      | ${rr['vitest']}                                    | ${true}
         ${userNotFound}                               | ${__dirname}                      | ${path.resolve(path.join(os.homedir(), notFound))} | ${false}
         ${'https://google.com/file.txt'}              | ${__dirname}                      | ${'https://google.com/file.txt'}                   | ${false}
@@ -122,8 +122,8 @@ describe('Validate resolveFile', () => {
     const urlIssue5034 = new URL('issue-5034/.codetypo.json', issuesFolderURL);
 
     test.each`
-        filename                                 | relativeTo                                                  | expected                                 | found
-        ${'./frontend/src/codetypo.config.yaml'} | ${urlIssue5034.href}                                        | ${sm(/src[/\\]codetypo\.config\.yaml$/)} | ${true}
+        filename                               | relativeTo                                                | expected                               | found
+        ${'./frontend/src/codetypo.config.yaml'} | ${urlIssue5034.href}                                      | ${sm(/src[/\\]codetypo\.config\.yaml$/)} | ${true}
         ${'./frontend/src/codetypo.config.yaml'} | ${new URL('codetypo.json', urlIssue5034).href}              | ${sm(/src[/\\]codetypo\.config\.yaml$/)} | ${true}
         ${'@codetypo/dict-fr-fr'}                | ${new URL('frontend/src/codetypo.json', urlIssue5034).href} | ${sm(/codetypo-ext\.json$/)}             | ${true}
         ${'@codetypo/dict-mnemonics'}            | ${new URL('frontend/src/codetypo.json', urlIssue5034).href} | ${sm(/codetypo-ext\.json$/)}             | ${true}
@@ -135,12 +135,10 @@ describe('Validate resolveFile', () => {
     });
 
     // Due to a circular reference it is not possible to make a dependency upon the issue.
-    const frExtFound = fs.existsSync(
-        new URL('frontend/node_modules/@codetypo/dict-fr-fr/codetypo-ext.json', urlIssue5034),
-    );
+    const frExtFound = fs.existsSync(new URL('frontend/node_modules/@codetypo/dict-fr-fr/codetypo-ext.json', urlIssue5034));
 
     test.each`
-        filename                                                            | relativeTo           | expected                     | found
+        filename                                                        | relativeTo           | expected                   | found
         ${'./frontend/node_modules/@codetypo/dict-fr-fr/codetypo-ext.json'} | ${urlIssue5034.href} | ${sm(/codetypo-ext\.json$/)} | ${frExtFound}
     `('resolveFile $filename rel $relativeTo', async ({ filename, relativeTo, expected, found }) => {
         const r = await resolver.resolveFile(filename, toURL(relativeTo));
@@ -150,10 +148,10 @@ describe('Validate resolveFile', () => {
     });
 
     test.each`
-        filename                                                     | relativeTo                                                  | expected                     | found   | warning                                    | method
+        filename                                                 | relativeTo                                                | expected                   | found   | warning                                    | method
         ${'node_modules/@codetypo/dict-mnemonics/codetypo-ext.json'} | ${new URL('frontend/src/codetypo.json', urlIssue5034).href} | ${sm(/codetypo-ext\.json$/)} | ${true} | ${expect.stringContaining('node_modules')} | ${'tryLegacyResolve'}
-        ${'@codetypo/dict-mnemonics'}                                | ${new URL('frontend/src/codetypo.json', urlIssue5034).href} | ${sm(/codetypo-ext\.json$/)} | ${true} | ${undefined}                               | ${'tryCreateRequire'}
-        ${'node_modules/@codetypo/dict-mnemonics'}                   | ${new URL('frontend/src/codetypo.json', urlIssue5034).href} | ${sm(/codetypo-ext\.json$/)} | ${true} | ${expect.stringContaining('node_modules')} | ${'tryLegacyResolve'}
+        ${'@codetypo/dict-mnemonics'}                              | ${new URL('frontend/src/codetypo.json', urlIssue5034).href} | ${sm(/codetypo-ext\.json$/)} | ${true} | ${undefined}                               | ${'tryCreateRequire'}
+        ${'node_modules/@codetypo/dict-mnemonics'}                 | ${new URL('frontend/src/codetypo.json', urlIssue5034).href} | ${sm(/codetypo-ext\.json$/)} | ${true} | ${expect.stringContaining('node_modules')} | ${'tryLegacyResolve'}
     `(
         'resolveFile $filename rel $relativeTo with warning',
         async ({ filename, relativeTo, expected, found, warning, method }) => {
@@ -177,11 +175,11 @@ describe('Validate resolveFile', () => {
     });
 
     test.each`
-        url                       | relativeTo                     | expected
-        ${'/User/home'}           | ${import.meta.url}             | ${oc({ filename: r('/User/home'), found: false })}
-        ${uh('/User/not-home')}   | ${import.meta.url}             | ${oc({ filename: fileURLToPath(u('/User/not-home')), found: false })}
-        ${import.meta.url}        | ${import.meta.url}             | ${oc({ filename: toFilePathOrHref(new URL(import.meta.url)), found: true })}
-        ${'file.txt'}             | ${'https://google.com'}        | ${oc({ filename: 'https://google.com/file.txt', found: false })}
+        url                     | relativeTo                     | expected
+        ${'/User/home'}         | ${import.meta.url}             | ${oc({ filename: r('/User/home'), found: false })}
+        ${uh('/User/not-home')} | ${import.meta.url}             | ${oc({ filename: fileURLToPath(u('/User/not-home')), found: false })}
+        ${import.meta.url}      | ${import.meta.url}             | ${oc({ filename: toFilePathOrHref(new URL(import.meta.url)), found: true })}
+        ${'file.txt'}           | ${'https://google.com'}        | ${oc({ filename: 'https://google.com/file.txt', found: false })}
         ${'@codetypo/dict-de-de'} | ${'data:,Hello%2C%20World%21'} | ${undefined}
     `('tryUrl $url $relativeTo', async ({ url, relativeTo, expected }) => {
         expect(await resolver.tryUrl(url, relativeTo)).toEqual(expected);
