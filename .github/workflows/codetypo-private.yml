@@ -58,7 +58,7 @@ jobs:
       # tomli should not be required for the next two steps (and make sure it's not)
       - run: pip uninstall -yq tomli
         if: ${{ matrix.no-toml == 'no-toml' }}
-      - run: codetypo --check-filenames --skip="./.git/*,./.pytest_cache/*,./junit-results.xml,*.pyc,./codetypo/tests/test_basic.py,./codetypo/data/*,./example/code.c,./build/lib/codetypo/tests/test_basic.py,./build/lib/codetypo/data/*,README.rst,*.egg-info/*,pyproject-codetypo.precommit-toml,./.mypy_cache"
+      - run: codetypo --check-filenames --skip="./.*,./build/*,./codetypo/data/*,./codetypo/tests/test_basic.py,./example/code.c,./junit-results.xml,*.egg-info/*,*.pyc,*.sig,pyproject-codetypo.precommit-toml,README.rst,"
       # this file has an error
       - run: "! codetypo codetypo/tests/test_basic.py"
 
