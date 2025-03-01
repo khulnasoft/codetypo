@@ -6,7 +6,7 @@ on:
       base:
         description: The Base Ref to apply the diff
         required: false
-        default: main
+        default: node
       force:
         description: Force the update of integration snapshots even if the dictionaries are not updated.
         required: false
