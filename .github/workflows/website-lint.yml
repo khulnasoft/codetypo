@@ -5,7 +5,7 @@ on:
       - 'website/**'
   push:
     branches:
-      - main
+      - node
     paths:
       - 'website/**'
 
