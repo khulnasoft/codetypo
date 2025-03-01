@@ -3,7 +3,7 @@ name: Update Readme files
 on:
   push:
     branches:
-      - main
+      - node
   workflow_dispatch:
 
 permissions:
