@@ -7,7 +7,7 @@ on:
       - 'website/**'
   push:
     branches:
-      - main
+      - node
     paths:
       - 'docs/**'
       - 'website/**'
