@@ -3,10 +3,10 @@ name: 'CodeQL'
 on:
   push:
     branches:
-      - main
+      - node
   pull_request:
     branches:
-      - main
+      - node
       - codetypo6
   schedule:
     - cron: '0 23 * * 0'
