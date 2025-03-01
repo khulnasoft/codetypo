@@ -1,0 +1,5 @@
+[type.rust]
+check-filename = false
+
+[default.extend-words]
+foo = "bar"

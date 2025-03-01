@@ -1,0 +1,103 @@
+[package]
+name = "codetypo-cli"
+version = "1.29.10"
+description = "Source Code Spelling Correction"
+readme = "../../README.md"
+categories = ["development-tools", "text-processing"]
+keywords = ["development", "spelling"]
+repository.workspace = true
+license.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+include.workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
+
+[package.metadata.release]
+tag-prefix = ""
+pre-release-replacements = [
+  {file="../../CHANGELOG.md", search="Unreleased", replace="{{version}}", min=1},
+  {file="../../CHANGELOG.md", search="\\.\\.\\.HEAD", replace="...{{tag_name}}", exactly=1},
+  {file="../../CHANGELOG.md", search="ReleaseDate", replace="{{date}}", min=1},
+  {file="../../CHANGELOG.md", search="<!-- next-header -->", replace="<!-- next-header -->\n## [Unreleased] - ReleaseDate\n", exactly=1},
+  {file="../../CHANGELOG.md", search="<!-- next-url -->", replace="<!-- next-url -->\n[Unreleased]: https://github.com/khulnasoft/codetypo/compare/{{tag_name}}...HEAD", exactly=1},
+  {file="../../action/entrypoint.sh", search="VERSION=.*", replace="VERSION={{version}}", min=1},
+  {file="../../docs/pre-commit.md", search="rev: .*", replace="rev: {{tag_name}}", exactly=1},
+  {file="../../docs/github-action.md", search="uses: khulnasoft/codetypo@.*", replace="uses: khulnasoft/codetypo@{{tag_name}}", min=1},
+  {file="../../setup.py", search="CODETYPO_VERSION = .*", replace="CODETYPO_VERSION = '{{version}}'", exactly=1},
+]
+
+[features]
+default = ["dict", "vars"]
+dict = ["dep:codetypo-dict"]
+vars = ["dep:codetypo-vars"]
+unstable-schema = ["dep:schemars"]
+
+[[bin]]
+name = "codetypo"
+path = "src/bin/codetypo-cli/main.rs"
+doc = false
+
+[dependencies]
+codetypo = { version = "^0.10", path = "../codetypo" }
+varcon-core = { version = "^5.0.2", path = "../varcon-core" }
+codetypo-dict = { version = "^0.12", path = "../codetypo-dict", optional = true }
+codetypo-vars = { version = "^0.9", path = "../codetypo-vars", optional = true }
+unicase = "2.8.1"
+anyhow = "1.0"
+clap = { version = "4.5.4", features = ["derive"] }
+clap-verbosity-flag = "3.0"
+ignore = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8.12"
+log = "0.4"
+env_logger = { version = "0.11", default-features = false, features = ["auto-color"] }
+bstr = "1.9"
+ahash = "0.8"
+difflib = "0.4"
+proc-exit = "2.0"
+human-panic = "2.0.0"
+content_inspector = "0.2.4"
+unicode-segmentation = "1.11.0"
+derive_more = { version = "1.0", features = ["from", "display"] }
+derive_setters = "0.1"
+itertools = "0.14"
+serde_json = "1.0"
+kstring = { version = "2.0.0", features = ["serde"] }
+typed-arena = "2.0.2"
+unicode-width = "0.2.0"
+unic-emoji-char = "0.9.0"
+thread_local = "1.1.8"
+globset = "0.4.14"
+anstyle = "1.0.6"
+anstream = "0.6.13"
+colorchoice-clap = "1.0.3"
+serde_regex = "1.1.0"
+regex = "1.10.4"
+encoding_rs = "0.8.34"
+serde-sarif = "0.7.0"
+schemars = { version = "0.8.21", features = ["preserve_order","semver"], optional = true }
+
+[dev-dependencies]
+assert_fs = "1.1"
+divan = "0.1.14"
+maplit = "1.0"
+snapbox = "0.6.5"
+trycmd = "0.15.4"
+
+[[bench]]
+name = "check_file"
+harness = false
+
+[[bench]]
+name = "correct_word"
+harness = false
+
+[[bench]]
+name = "tokenize"
+harness = false
+
+[lints]
+workspace = true

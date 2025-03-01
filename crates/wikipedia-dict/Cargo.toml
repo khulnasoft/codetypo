@@ -1,0 +1,27 @@
+[package]
+name = "wikipedia-dict"
+version = "0.4.0"
+description = "Source Code Spelling Correction"
+readme = "README.md"
+categories = ["development-tools", "text-processing"]
+keywords = ["development", "spelling"]
+publish = false
+license = "CC-BY-SA-3.0"
+repository.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+include.workspace = true
+
+[package.metadata.release]
+release = false
+
+[dependencies]
+dictgen = { version = "^0.3", path = "../dictgen" }
+
+[dev-dependencies]
+codegenrs = "3.0"
+dictgen = { version = "^0.3", path = "../dictgen", features = ["codegen"] }
+snapbox = "0.6.5"
+
+[lints]
+workspace = true

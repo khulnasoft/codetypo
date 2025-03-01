@@ -1,0 +1,71 @@
+{
+  schedule: [
+    'before 5am on the first day of the month',
+  ],
+  semanticCommits: 'enabled',
+  commitMessageLowerCase: 'never',
+  configMigration: true,
+  dependencyDashboard: true,
+  customManagers: [
+    {
+      customType: 'regex',
+      fileMatch: [
+        '^rust-toolchain\\.toml$',
+        'Cargo.toml$',
+        'clippy.toml$',
+        '\\.clippy.toml$',
+        '^\\.github/workflows/ci.yml$',
+        '^\\.github/workflows/rust-next.yml$',
+      ],
+      matchStrings: [
+        'STABLE.*?(?<currentValue>\\d+\\.\\d+(\\.\\d+)?)',
+        '(?<currentValue>\\d+\\.\\d+(\\.\\d+)?).*?STABLE',
+      ],
+      depNameTemplate: 'STABLE',
+      packageNameTemplate: 'rust-lang/rust',
+      datasourceTemplate: 'github-releases',
+    },
+  ],
+  packageRules: [
+    {
+      commitMessageTopic: 'Rust Stable',
+      matchManagers: [
+        'custom.regex',
+      ],
+      matchDepNames: [
+        'STABLE',
+      ],
+      extractVersion: '^(?<version>\\d+\\.\\d+)',  // Drop the patch version
+      schedule: [
+        '* * * * *',
+      ],
+      automerge: true,
+    },
+    // Goals:
+    // - Rollup safe upgrades to reduce CI runner load
+    // - Have lockfile and manifest in-sync
+    {
+      matchManagers: [
+        'cargo',
+      ],
+      matchCurrentVersion: '>=0.1.0',
+      matchUpdateTypes: [
+        'patch',
+      ],
+      automerge: true,
+      groupName: 'compatible',
+    },
+    {
+      matchManagers: [
+        'cargo',
+      ],
+      matchCurrentVersion: '>=1.0.0',
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
+      automerge: true,
+      groupName: 'compatible',
+    },
+  ],
+}

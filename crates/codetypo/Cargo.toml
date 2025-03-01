@@ -1,0 +1,30 @@
+[package]
+name = "codetypo"
+version = "0.10.34"
+description = "Source Code Spelling Correction"
+readme = "../../README.md"
+categories = ["development-tools", "text-processing"]
+keywords = ["development", "spelling"]
+repository.workspace = true
+license.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+include.workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
+
+[dependencies]
+winnow = "0.7.0"
+unicode-xid = "0.2.4"
+serde = { version = "1.0", features = ["derive"] }
+simdutf8 = "0.1.4"
+itertools = "0.14"
+bstr = "1.9"
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+snapbox = "0.6.11"

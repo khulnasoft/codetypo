@@ -1,0 +1,29 @@
+[package]
+name = "codespell-dict"
+version = "0.5.0"
+description = "Source Code Spelling Correction"
+readme = "README.md"
+categories = ["development-tools", "text-processing"]
+keywords = ["development", "spelling"]
+publish = false
+license = "CC-BY-SA-3.0"
+repository.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+include.workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
+
+[dependencies]
+dictgen = { version = "^0.3", path = "../dictgen" }
+
+[dev-dependencies]
+codegenrs = "3.0"
+dictgen = { version = "^0.3", path = "../dictgen", features = ["codegen"] }
+snapbox = "0.6.5"
+codetypo = { path = "../codetypo" }
+
+[lints]
+workspace = true

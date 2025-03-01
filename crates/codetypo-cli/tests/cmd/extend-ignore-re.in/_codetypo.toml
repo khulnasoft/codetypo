@@ -1,0 +1,5 @@
+[default]
+extend-ignore-re = ["`.*`", "olt-manager"]
+
+[default.extend-identifiers]
+hello = "goodbye"
