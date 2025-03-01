@@ -1,0 +1,76 @@
+# CodeTypo Common English Misspellings Dictionary
+
+Common English Misspellings dictionary for codetypo.
+
+This is a pre-built dictionary for use with CodeTypo.
+
+## Requirements
+
+| Tool                                                                                                                                 | Version      |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| [codetypo](https://github.com/khulnasoft/codetypo)                                                                               | `>= 6.25.0 ` |
+| [Code Spell Checker - Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) | `>= 2.17.0`  |
+
+## Installation
+
+Global Install and add to CodeTypo global settings.
+
+```sh
+npm install -g @codetypo/dict-en-common-misspellings
+codetypo link add @codetypo/dict-en-common-misspellings
+```
+
+## Uninstall from CodeTypo
+
+```sh
+codetypo link remove @codetypo/dict-en-common-misspellings
+```
+
+## Manual Installation
+
+Manual installation is useful if you want to include this dictionary as part of your CI/CD lint process.
+
+```
+npm i @codetypo/dict-en-common-misspellings
+```
+
+The `codetypo-ext.json` file in this package should be added to the import section in your `codetypo.json` file.
+
+```javascript
+{
+    // …
+    "import": ["@codetypo/dict-en-common-misspellings/codetypo-ext.json"],
+    // …
+}
+```
+
+## Reference
+
+The source of this dictionary comes from:
+
+- [Wikipedia:Lists of common misspellings/For machines - Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings/For_machines)
+- [Wikipedia:Lists of common misspellings - Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings)
+
+## Dictionary Development
+
+See: [How to Create a New Dictionary](https://github.com/khulnasoft/codetypo-dicts#how-to-create-a-new-dictionary)
+
+## License
+
+CC BY-SA 4.0
+
+> Some packages may have other licenses included.
+
+<!--- @@inject: ../../static/footer.md --->
+
+<br/>
+
+---
+
+<p align="center">
+Brought to you by <a href="https://streetsidesoftware.com" title="KhulnaSoft Ltd">
+<img width="16" alt="KhulnaSoft Ltd Logo" src="https://i.imgur.com/CyduuVY.png" /> KhulnaSoft Ltd
+</a>
+</p>
+
+<!--- @@inject-end: ../../static/footer.md --->

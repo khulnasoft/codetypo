@@ -1,0 +1,325 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "definitions": {
+    "DictionaryFormats": {
+      "enum": [
+        "plaintext",
+        "trie",
+        "trie3",
+        "trie4"
+      ],
+      "type": "string"
+    },
+    "DictionarySource": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/FilePath"
+        },
+        {
+          "$ref": "#/definitions/FileSource"
+        },
+        {
+          "$ref": "#/definitions/FileListSource"
+        }
+      ]
+    },
+    "FileListSource": {
+      "additionalProperties": false,
+      "properties": {
+        "allowedSplitWords": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FilePath"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/FilePath"
+              },
+              "type": "array"
+            }
+          ],
+          "description": "Words in the `allowedSplitWords` are considered correct and can be used as a basis for splitting compound words.\n\nIf entries can be split so that all the words in the entry are allowed, then only the individual words are added, otherwise the entire entry is added. This is to prevent misspellings in CamelCase words from being introduced into the dictionary."
+        },
+        "keepRawCase": {
+          "default": false,
+          "description": "Do not generate lower case / accent free versions of words.",
+          "type": "boolean"
+        },
+        "listFile": {
+          "$ref": "#/definitions/FilePath"
+        },
+        "maxDepth": {
+          "description": "Maximum number of nested Hunspell Rules to apply. This is needed for recursive dictionaries like Hebrew.",
+          "type": "number"
+        },
+        "minCompoundLength": {
+          "default": 4,
+          "description": "Controls the minimum length of a compound word when storing words using `storeSplitWordsAsCompounds`. The compound words are prefixed / suffixed with `*`, to allow them to be combined with other compound words. If the length is too low, then the dictionary will consider many misspelled words as correct.",
+          "type": "number"
+        },
+        "split": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "const": "legacy",
+              "type": "string"
+            }
+          ],
+          "default": false,
+          "description": "Split lines into words."
+        },
+        "storeSplitWordsAsCompounds": {
+          "default": false,
+          "description": "Camel case words that have been split using the `allowedSplitWords` are added to the dictionary as compoundable words. These words are prefixed / suffixed with `*`.",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "listFile"
+      ],
+      "type": "object"
+    },
+    "FilePath": {
+      "description": "Note: All relative paths are relative to the config file location.",
+      "type": "string"
+    },
+    "FileSource": {
+      "additionalProperties": false,
+      "properties": {
+        "allowedSplitWords": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FilePath"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/FilePath"
+              },
+              "type": "array"
+            }
+          ],
+          "description": "Words in the `allowedSplitWords` are considered correct and can be used as a basis for splitting compound words.\n\nIf entries can be split so that all the words in the entry are allowed, then only the individual words are added, otherwise the entire entry is added. This is to prevent misspellings in CamelCase words from being introduced into the dictionary."
+        },
+        "filename": {
+          "$ref": "#/definitions/FilePath"
+        },
+        "keepRawCase": {
+          "default": false,
+          "description": "Do not generate lower case / accent free versions of words.",
+          "type": "boolean"
+        },
+        "maxDepth": {
+          "description": "Maximum number of nested Hunspell Rules to apply. This is needed for recursive dictionaries like Hebrew.",
+          "type": "number"
+        },
+        "minCompoundLength": {
+          "default": 4,
+          "description": "Controls the minimum length of a compound word when storing words using `storeSplitWordsAsCompounds`. The compound words are prefixed / suffixed with `*`, to allow them to be combined with other compound words. If the length is too low, then the dictionary will consider many misspelled words as correct.",
+          "type": "number"
+        },
+        "split": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "const": "legacy",
+              "type": "string"
+            }
+          ],
+          "default": false,
+          "description": "Split lines into words."
+        },
+        "storeSplitWordsAsCompounds": {
+          "default": false,
+          "description": "Camel case words that have been split using the `allowedSplitWords` are added to the dictionary as compoundable words. These words are prefixed / suffixed with `*`.",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "filename"
+      ],
+      "type": "object"
+    },
+    "Target": {
+      "additionalProperties": false,
+      "properties": {
+        "allowedSplitWords": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FilePath"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/FilePath"
+              },
+              "type": "array"
+            }
+          ],
+          "description": "Words in the `allowedSplitWords` are considered correct and can be used as a basis for splitting compound words.\n\nIf entries can be split so that all the words in the entry are allowed, then only the individual words are added, otherwise the entire entry is added. This is to prevent misspellings in CamelCase words from being introduced into the dictionary."
+        },
+        "compress": {
+          "default": ": false",
+          "description": "gzip the file?",
+          "type": "boolean"
+        },
+        "dictionaryDirectives": {
+          "description": "Injects `codetypo-dictionary` directives into the dictionary header.\n\nExample:\n\n```ini # codetypo-dictionary: no-generate-alternatives ```\n\nKnown Directives: ```yaml\n- split # Tell the dictionary loader to split words\n- no-split # Tell the dictionary loader to not split words (default)\n- generate-alternatives # Tell the dictionary loader to generate alternate spellings (default)\n- no-generate-alternatives # Tell the dictionary loader to not generate alternate spellings ```",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "excludeWordsFrom": {
+          "description": "Words from the sources that are found in `excludeWordsFrom` files will not be added to the dictionary.",
+          "items": {
+            "$ref": "#/definitions/FilePath"
+          },
+          "type": "array"
+        },
+        "format": {
+          "$ref": "#/definitions/DictionaryFormats",
+          "description": "Format of the dictionary."
+        },
+        "generateNonStrict": {
+          "default": false,
+          "description": "Generate lower case / accent free versions of words.",
+          "type": "boolean"
+        },
+        "name": {
+          "description": "Name of target, used as the basis of target file name.",
+          "type": "string"
+        },
+        "removeDuplicates": {
+          "default": false,
+          "description": "Remove duplicate words, favor lower case words over mixed case words. Combine compound prefixes where possible.",
+          "type": "boolean"
+        },
+        "sort": {
+          "default": true,
+          "description": "Sort the words in the resulting dictionary. Does not apply to `trie` based formats.",
+          "type": "boolean"
+        },
+        "sources": {
+          "description": "File sources used to build the dictionary.",
+          "items": {
+            "$ref": "#/definitions/DictionarySource"
+          },
+          "type": "array"
+        },
+        "targetDirectory": {
+          "$ref": "#/definitions/FilePath",
+          "default": "current directory",
+          "description": "The target directory"
+        },
+        "trieBase": {
+          "description": "Advanced: Set the trie base number. A value between 10 and 36 Set numeric base to use. 10 is the easiest to read. 16 is common hex format. 36 is the most compact.",
+          "type": "number"
+        }
+      },
+      "required": [
+        "name",
+        "format",
+        "sources"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "$schema": {
+      "default": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/packages/codetypo-tools/codetypo-tools.config.schema.json",
+      "description": "Url to JSON Schema",
+      "type": "string"
+    },
+    "allowedSplitWords": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/FilePath"
+        },
+        {
+          "items": {
+            "$ref": "#/definitions/FilePath"
+          },
+          "type": "array"
+        }
+      ],
+      "description": "Words in the `allowedSplitWords` are considered correct and can be used as a basis for splitting compound words.\n\nIf entries can be split so that all the words in the entry are allowed, then only the individual words are added, otherwise the entire entry is added. This is to prevent misspellings in CamelCase words from being introduced into the dictionary."
+    },
+    "checksumFile": {
+      "description": "Path to checksum file. `true` - defaults to `./checksum.txt`.",
+      "type": [
+        "string",
+        "boolean"
+      ]
+    },
+    "dictionaryDirectives": {
+      "description": "Injects `codetypo-dictionary` directives into the dictionary header.\n\nExample:\n\n```ini # codetypo-dictionary: no-generate-alternatives ```\n\nKnown Directives: ```yaml\n- split # Tell the dictionary loader to split words\n- no-split # Tell the dictionary loader to not split words (default)\n- generate-alternatives # Tell the dictionary loader to generate alternate spellings (default)\n- no-generate-alternatives # Tell the dictionary loader to not generate alternate spellings ```",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "generateNonStrict": {
+      "default": false,
+      "description": "Generate lower case / accent free versions of words.",
+      "type": "boolean"
+    },
+    "keepRawCase": {
+      "default": false,
+      "description": "Do not generate lower case / accent free versions of words.",
+      "type": "boolean"
+    },
+    "maxDepth": {
+      "description": "Maximum number of nested Hunspell Rules to apply. This is needed for recursive dictionaries like Hebrew.",
+      "type": "number"
+    },
+    "minCompoundLength": {
+      "default": 4,
+      "description": "Controls the minimum length of a compound word when storing words using `storeSplitWordsAsCompounds`. The compound words are prefixed / suffixed with `*`, to allow them to be combined with other compound words. If the length is too low, then the dictionary will consider many misspelled words as correct.",
+      "type": "number"
+    },
+    "removeDuplicates": {
+      "default": false,
+      "description": "Remove duplicate words, favor lower case words over mixed case words. Combine compound prefixes where possible.",
+      "type": "boolean"
+    },
+    "rootDir": {
+      "description": "Specify the directory where all relative paths will resolved against. By default, all relative paths are relative to the location of the config file.",
+      "type": "string"
+    },
+    "sort": {
+      "default": true,
+      "description": "Sort the words in the resulting dictionary. Does not apply to `trie` based formats.",
+      "type": "boolean"
+    },
+    "split": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": "legacy",
+          "type": "string"
+        }
+      ],
+      "default": false,
+      "description": "Split lines into words."
+    },
+    "storeSplitWordsAsCompounds": {
+      "default": false,
+      "description": "Camel case words that have been split using the `allowedSplitWords` are added to the dictionary as compoundable words. These words are prefixed / suffixed with `*`.",
+      "type": "boolean"
+    },
+    "targets": {
+      "description": "Optional Target Dictionaries to create.",
+      "items": {
+        "$ref": "#/definitions/Target"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

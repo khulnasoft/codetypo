@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Add or Remove Words in a Dictionary
+    url: https://github.com/khulnasoft/codetypo-dicts/issues
+    about: Please suggest corrections in codetypo-dicts.

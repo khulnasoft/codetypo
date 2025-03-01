@@ -1,0 +1,9 @@
+{
+    "language": "en,fa",
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "words": [
+        "mdash"
+    ]
+}

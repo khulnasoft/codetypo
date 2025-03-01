@@ -1,0 +1,47 @@
+{
+  "name": "@codetypo/dict-k8s",
+  "version": "1.0.10",
+  "description": "K8s dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "download": "./src/build.sh --out-file ./src/k8s.txt",
+    "build": "codetypo-tools-cli compile --keep-raw-case src/k8s.txt --no-compress -o ./dict",
+    "test": "shx head -n 100 src/k8s.txt | codetypo -c ./codetypo-ext.json \"--locale=*\" \"--languageId=yaml\" stdin",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/k8s"
+  },
+  "keywords": [
+    "codetypo",
+    "k8s",
+    "kubernetes",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "contributors": [
+    "Carlo Corradini",
+    "Jason Dent"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/k8s#readme",
+  "files": [
+    "dict/k8s.txt",
+    "codetypo-ext.json"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "@codetypo/normalize-json",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "version": "8.17.5",
+  "description": "A library to normalize JSON objects to reduce the size.",
+  "keywords": [
+    "codetypo",
+    "json",
+    "normalize",
+    "flatten"
+  ],
+  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-normalize-json#readme",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/*.tsbuildInfo",
+    "!**/__mocks__",
+    "!**/*.test.*",
+    "!**/*.spec.*",
+    "!**/*.map"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . -w",
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "coverage": "vitest run --coverage",
+    "test-watch": "vitest",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/codetypo-normalize-json"
+  },
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo/labels/filetype"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "flatpack-json": "workspace:*"
+  },
+  "devDependencies": {
+    "@codetypo/filetypes": "workspace:*"
+  }
+}

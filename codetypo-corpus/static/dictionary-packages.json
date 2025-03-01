@@ -1,0 +1,2409 @@
+[
+  {
+    "name": "Ada",
+    "dir": "dictionaries/ada",
+    "packageName": "@codetypo/dict-ada",
+    "description": "Ada Language Dictionary",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "ada",
+        "description": "Ada Language Dictionary",
+        "fileTypes": [
+          "ada"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AL",
+    "dir": "dictionaries/al",
+    "packageName": "@codetypo/dict-al",
+    "description": "AL (Microsoft Business Central) Dictionary",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "al",
+        "description": "AL Keywords Dictionary",
+        "fileTypes": [
+          "al"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Arabic",
+    "dir": "dictionaries/ar",
+    "packageName": "@codetypo/dict-ar",
+    "description": "Arabic dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "ar",
+        "description": "Arabic dictionary.",
+        "locales": [
+          "ar"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AWS",
+    "dir": "dictionaries/aws",
+    "packageName": "@codetypo/dict-aws",
+    "description": "AWS dictionary.",
+    "codetypo": true,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "aws",
+        "description": "AWS dictionary.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "bash",
+    "dir": "dictionaries/bash",
+    "packageName": "@codetypo/dict-bash",
+    "description": "Bash dictionary.",
+    "codetypo": true,
+    "categories": [],
+    "dictionaries": []
+  },
+  {
+    "name": "Bulgarian",
+    "dir": "dictionaries/bg_BG",
+    "packageName": "@codetypo/dict-bg-bg",
+    "description": "Bulgarian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "bg-bg",
+        "description": "Bulgarian dictionary.",
+        "locales": [
+          "bg",
+          "bg-BG"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Catalan",
+    "dir": "dictionaries/ca",
+    "packageName": "@codetypo/dict-ca",
+    "description": "Catalan dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "ca",
+        "description": "Catalan dictionary.",
+        "locales": [
+          "ca"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cities of Finland",
+    "dir": "dictionaries/city-names-finland",
+    "packageName": "@codetypo/dict-city-names-finland",
+    "description": "List of cities in Finland.",
+    "codetypo": false,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "city-names-finland",
+        "description": "List of cities in Finland.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "Clojure",
+    "dir": "dictionaries/clojure",
+    "packageName": "@codetypo/dict-clojure",
+    "description": "Clojure dictionary.",
+    "codetypo": false,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "clojure",
+        "description": "Clojure dictionary.",
+        "fileTypes": [
+          "clojure"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Company names",
+    "dir": "dictionaries/companies",
+    "packageName": "@codetypo/dict-companies",
+    "description": "Company names dictionary.",
+    "codetypo": true,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "companies",
+        "description": "Company names dictionary.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "C/C++",
+    "dir": "dictionaries/cpp",
+    "packageName": "@codetypo/dict-cpp",
+    "description": "C/C++ Keywords and common library functions.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "cpp-legacy",
+        "description": "Legacy C/C++ Keywords and common library functions.",
+        "fileTypes": [
+          "c",
+          "cpp"
+        ]
+      },
+      {
+        "name": "cpp",
+        "description": "C/C++ Keywords and common library functions.",
+        "fileTypes": [
+          "c",
+          "cpp"
+        ]
+      },
+      {
+        "name": "cpp-refined",
+        "description": "Refined list of C/C++ Keywords and common library functions.",
+        "fileTypes": [
+          "c",
+          "cpp"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cryptocurrencies",
+    "dir": "dictionaries/cryptocurrencies",
+    "packageName": "@codetypo/dict-cryptocurrencies",
+    "description": "Cryptocurrencies dictionary.",
+    "codetypo": true,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "cryptocurrencies",
+        "description": "Cryptocurrencies dictionary.",
+        "enabled": true
+      },
+      {
+        "name": "cryptocurrencies-legacy",
+        "description": "Legacy Cryptocurrency dictionary."
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "Czech",
+    "dir": "dictionaries/cs_CZ",
+    "packageName": "@codetypo/dict-cs-cz",
+    "description": "Czech dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "cs-cz",
+        "description": "Czech dictionary.",
+        "locales": [
+          "cs"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C#",
+    "dir": "dictionaries/csharp",
+    "packageName": "@codetypo/dict-csharp",
+    "description": "C# dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "csharp",
+        "description": "C# dictionary.",
+        "fileTypes": [
+          "csharp"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CodeTypo Dictionaries Bundle",
+    "dir": "dictionaries/codetypo",
+    "packageName": "@codetypo/dict-codetypo-bundle",
+    "description": "Dictionaries included with the CodeTypo Command Line tool.",
+    "codetypo": false,
+    "categories": [],
+    "dictionaries": [],
+    "isBundle": true
+  },
+  {
+    "name": "CSS",
+    "dir": "dictionaries/css",
+    "packageName": "@codetypo/dict-css",
+    "description": "CSS dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "css",
+        "description": "Css dictionary.",
+        "fileTypes": [
+          "css"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Danish Dictionary",
+    "dir": "dictionaries/da_DK",
+    "packageName": "@codetypo/dict-da-dk",
+    "description": "Danish (da-DK) Dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "da-dk",
+        "description": "Danish (da-DK) Dictionary.",
+        "locales": [
+          "da",
+          "da-DK"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dart",
+    "dir": "dictionaries/dart",
+    "packageName": "@codetypo/dict-dart",
+    "description": "Dart dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "dart",
+        "description": "Dart dictionary.",
+        "fileTypes": [
+          "dart"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Data Science",
+    "dir": "dictionaries/data-science",
+    "packageName": "@codetypo/dict-data-science",
+    "description": "Data Science dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "data-science",
+        "description": "Data Science Terms dictionary.",
+        "fileTypes": [
+          "python"
+        ]
+      },
+      {
+        "name": "data-science-models",
+        "description": "Data Science Models dictionary.",
+        "fileTypes": [
+          "python"
+        ]
+      },
+      {
+        "name": "data-science-tools",
+        "description": "Data Science Tools dictionary.",
+        "fileTypes": [
+          "python"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Austrian German Dictionary",
+    "dir": "dictionaries/de_AT",
+    "packageName": "@codetypo/dict-de-at",
+    "description": "Austrian German (de-AT) Dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "de-at",
+        "description": "Austrian German (de-AT) Dictionary.",
+        "locales": [
+          "de_AT"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Swiss German Dictionary",
+    "dir": "dictionaries/de_CH",
+    "packageName": "@codetypo/dict-de-ch",
+    "description": "Swiss German (de-CH) Dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "de-ch",
+        "description": "Swiss German (de-CH) Dictionary.",
+        "locales": [
+          "de",
+          "de_CH"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "German Dictionary",
+    "dir": "dictionaries/de_DE",
+    "packageName": "@codetypo/dict-de-de",
+    "description": "German (de-DE) Dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "de-de",
+        "description": "German (de-DE) Dictionary.",
+        "locales": [
+          "de",
+          "de_DE"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Django",
+    "dir": "dictionaries/django",
+    "packageName": "@codetypo/dict-django",
+    "description": "List of Python Django Framework keywords.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "django",
+        "description": "List of Python Django Framework keywords.",
+        "fileTypes": [
+          "html",
+          "python"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Docker",
+    "dir": "dictionaries/docker",
+    "packageName": "@codetypo/dict-docker",
+    "description": "Docker dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "docker",
+        "description": "Docker dictionary.",
+        "fileTypes": [
+          "dockerfile"
+        ]
+      }
+    ]
+  },
+  {
+    "name": ".Net",
+    "dir": "dictionaries/dotnet",
+    "packageName": "@codetypo/dict-dotnet",
+    "description": ".Net keywords Dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "dotnet",
+        "description": ".Net keywords.",
+        "fileTypes": [
+          "cs"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Greek",
+    "dir": "dictionaries/el",
+    "packageName": "@codetypo/dict-el",
+    "description": "Greek dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "el",
+        "description": "Greek dictionary.",
+        "locales": [
+          "el"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Emacs Lisp",
+    "dir": "dictionaries/elisp",
+    "packageName": "@codetypo/dict-elisp",
+    "description": "Emacs Lisp dictionary.",
+    "codetypo": false,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "elisp",
+        "description": "Emacs Lisp dictionary.",
+        "fileTypes": [
+          "elisp",
+          "lisp"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Elixir",
+    "dir": "dictionaries/elixir",
+    "packageName": "@codetypo/dict-elixir",
+    "description": "Elixir dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "elixir",
+        "description": "Elixir dictionary.",
+        "fileTypes": [
+          "elixir"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "English - Australian",
+    "dir": "dictionaries/en_AU",
+    "packageName": "@codetypo/dict-en-au",
+    "description": "Australian English Dictionary",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "en-au",
+        "description": "Australian English Dictionary",
+        "locales": [
+          "en-AU"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "English - Canadian",
+    "dir": "dictionaries/en_CA",
+    "packageName": "@codetypo/dict-en-ca",
+    "description": "Canadian English Dictionary",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "en-ca",
+        "description": "Canadian English Dictionary",
+        "locales": [
+          "en-CA"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "English - British",
+    "dir": "dictionaries/en_GB",
+    "packageName": "@codetypo/dict-en-gb",
+    "description": "British English Dictionary",
+    "codetypo": true,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "en-gb",
+        "description": "British English Dictionary",
+        "locales": [
+          "en-GB"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "English - British (Limited)",
+    "dir": "dictionaries/en_GB-MIT",
+    "packageName": "@codetypo/dict-en-gb-mit",
+    "description": "British English Dictionary with MIT License",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "en-gb-mit",
+        "description": "British English Dictionary",
+        "locales": [
+          "en-GB"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "English - Shared",
+    "dir": "dictionaries/en_shared",
+    "packageName": "@codetypo/dict-en-shared",
+    "description": "English words shared between the various English dictionaries.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "en-shared",
+        "description": "English words shared between the various English dictionaries.",
+        "locales": [
+          "en"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "English - American",
+    "dir": "dictionaries/en_US",
+    "packageName": "@codetypo/dict-en_us",
+    "description": "American English Dictionary",
+    "codetypo": true,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "en_us",
+        "description": "American English Dictionary",
+        "locales": [
+          "en",
+          "en-US"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "English - Common Misspellings",
+    "dir": "dictionaries/en-common-misspellings",
+    "packageName": "@codetypo/dict-en-common-misspellings",
+    "description": "Common English misspellings dictionary.",
+    "codetypo": true,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "en-common-misspellings",
+        "locales": [
+          "en"
+        ]
+      },
+      {
+        "name": "en-gb-common-misspellings",
+        "locales": [
+          "en-gb"
+        ]
+      },
+      {
+        "name": "en-us-common-misspellings",
+        "locales": [
+          "en-us"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Esperanto",
+    "dir": "dictionaries/eo",
+    "packageName": "@codetypo/dict-eo",
+    "description": "Esperanto dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "eo",
+        "description": "Esperanto dictionary.",
+        "locales": [
+          "eo"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Spanish Dictionary (Spain)",
+    "dir": "dictionaries/es_ES",
+    "packageName": "@codetypo/dict-es-es",
+    "description": "Spanish Dictionary (Spain)",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "es-es",
+        "description": "Spanish Dictionary (Spain)",
+        "locales": [
+          "es",
+          "es_ES"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Estonian",
+    "dir": "dictionaries/et-EE",
+    "packageName": "@codetypo/dict-et-ee",
+    "description": "Estonian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "et-ee",
+        "description": "Estonian dictionary.",
+        "locales": [
+          "et",
+          "et-EE"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Basque",
+    "dir": "dictionaries/eu",
+    "packageName": "@codetypo/dict-eu",
+    "description": "Basque dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "eu",
+        "description": "Basque dictionary.",
+        "locales": [
+          "eu"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Persian Dictionary",
+    "dir": "dictionaries/fa_IR",
+    "packageName": "@codetypo/dict-fa-ir",
+    "description": "Persian Dictionary",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "fa-ir",
+        "description": "Persian Dictionary",
+        "locales": [
+          "fa",
+          "fa-IR"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Finnish",
+    "dir": "dictionaries/fi_FI",
+    "packageName": "@codetypo/dict-fi-fi",
+    "description": "Finnish dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "fi-fi",
+        "description": "Finnish dictionary.",
+        "locales": [
+          "fi",
+          "fi-fi"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "File Types",
+    "dir": "dictionaries/filetypes",
+    "packageName": "@codetypo/dict-filetypes",
+    "description": "File types dictionary.",
+    "codetypo": true,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "filetypes",
+        "description": "File types dictionary.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "Flutter",
+    "dir": "dictionaries/flutter",
+    "packageName": "@codetypo/dict-flutter",
+    "description": "Flutter dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "flutter",
+        "description": "Flutter dictionary.",
+        "fileTypes": [
+          "dart"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Font Names",
+    "dir": "dictionaries/fonts",
+    "packageName": "@codetypo/dict-fonts",
+    "description": "Font names dictionary.",
+    "codetypo": true,
+    "categories": [
+      "other"
+    ],
+    "dictionaries": [
+      {
+        "name": "fonts",
+        "description": "Font names dictionary."
+      }
+    ]
+  },
+  {
+    "name": "French Dictionary (France)",
+    "dir": "dictionaries/fr_FR",
+    "packageName": "@codetypo/dict-fr-fr",
+    "description": "French Dictionary (France)",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "fr-fr",
+        "description": "French Dictionary (France)",
+        "locales": [
+          "fr",
+          "fr_FR"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Français Réforme 1990",
+    "dir": "dictionaries/fr_FR_90",
+    "packageName": "@codetypo/dict-fr-reforme",
+    "description": "Français Réforme 1990 dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "fr-fr-90",
+        "description": "Français Réforme 1990 dictionary.",
+        "locales": [
+          "fr",
+          "fr-90",
+          "fr-fr"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "F#",
+    "dir": "dictionaries/fsharp",
+    "packageName": "@codetypo/dict-fsharp",
+    "description": "F# dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "fsharp",
+        "description": "F# dictionary.",
+        "fileTypes": [
+          "fsharp"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fullstack",
+    "dir": "dictionaries/fullstack",
+    "packageName": "@codetypo/dict-fullstack",
+    "description": "Common words encountered during fullstack development",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "fullstack",
+        "description": "Common words encountered during fullstack development",
+        "fileTypes": [
+          "ada",
+          "c",
+          "cpp",
+          "csharp",
+          "css",
+          "h",
+          "hpp",
+          "html",
+          "java",
+          "javascript",
+          "javascriptreact",
+          "lua",
+          "mdx",
+          "php",
+          "python",
+          "razor",
+          "ruby",
+          "rust",
+          "scala",
+          "scss",
+          "swift",
+          "typescript",
+          "typescriptreact"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gaming",
+    "dir": "dictionaries/gaming-terms",
+    "packageName": "@codetypo/dict-gaming-terms",
+    "description": "Gaming dictionary.",
+    "codetypo": true,
+    "categories": [
+      "other"
+    ],
+    "dictionaries": [
+      {
+        "name": "gaming-terms",
+        "description": "Gaming dictionary."
+      },
+      {
+        "name": "game-development",
+        "description": "Game development dictionary. Includes Godot, Unity, and more terms."
+      }
+    ]
+  },
+  {
+    "name": "GIS and PostGIS",
+    "dir": "dictionaries/gis",
+    "packageName": "@codetypo/dict-gis",
+    "description": "GIS and PostGIS dictionary.",
+    "codetypo": false,
+    "categories": [
+      "other"
+    ],
+    "dictionaries": [
+      {
+        "name": "gis",
+        "description": "GIS and PostGIS dictionary."
+      }
+    ]
+  },
+  {
+    "name": "Git",
+    "dir": "dictionaries/git",
+    "packageName": "@codetypo/dict-git",
+    "description": "CodeTypo configuration for GIT",
+    "codetypo": true,
+    "categories": [
+      "other"
+    ],
+    "dictionaries": [
+      {
+        "name": "git",
+        "description": "Git Terms"
+      }
+    ]
+  },
+  {
+    "name": "Galician Dictionary (Spain)",
+    "dir": "dictionaries/gl_ES",
+    "packageName": "@codetypo/dict-gl-es",
+    "description": "Galician Dictionary (Spain)",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "gl-es",
+        "description": "Galician Dictionary (Spain)",
+        "locales": [
+          "gl",
+          "gl_ES"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Go Language",
+    "dir": "dictionaries/golang",
+    "packageName": "@codetypo/dict-golang",
+    "description": "Go Language Dictionary",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "golang",
+        "description": "Go Language Dictionary",
+        "fileTypes": [
+          "go"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Google Cloud",
+    "dir": "dictionaries/google",
+    "packageName": "@codetypo/dict-google",
+    "description": "Google Cloud Development Dictionary.",
+    "codetypo": true,
+    "categories": [
+      "other"
+    ],
+    "dictionaries": [
+      {
+        "name": "google",
+        "description": "Google Cloud Development dictionary."
+      }
+    ]
+  },
+  {
+    "name": "Ancient Greek",
+    "dir": "dictionaries/grc_GR",
+    "packageName": "@codetypo/dict-grc",
+    "description": "Ancient Greek dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "grc",
+        "description": "Ancient Greek dictionary.",
+        "locales": [
+          "el-GRC",
+          "gr",
+          "grc",
+          "grc_GR"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Haskell",
+    "dir": "dictionaries/haskell",
+    "packageName": "@codetypo/dict-haskell",
+    "description": "Haskell dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "haskell",
+        "description": "Haskell dictionary.",
+        "fileTypes": [
+          "haskell"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hebrew Dictionary",
+    "dir": "dictionaries/he",
+    "packageName": "@codetypo/dict-he",
+    "description": "Hebrew Dictionary",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "he",
+        "description": "Hebrew Dictionary",
+        "locales": [
+          "he"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Croatian",
+    "dir": "dictionaries/hr_HR",
+    "packageName": "@codetypo/dict-hr-hr",
+    "description": "Croatian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "hr-hr",
+        "description": "Croatian dictionary.",
+        "locales": [
+          "hr",
+          "hr-HR"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HTML",
+    "dir": "dictionaries/html",
+    "packageName": "@codetypo/dict-html",
+    "description": "HTML dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "html",
+        "description": "HTML dictionary.",
+        "fileTypes": [
+          "html"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HTML Symbol Entities",
+    "dir": "dictionaries/html-symbol-entities",
+    "packageName": "@codetypo/dict-html-symbol-entities",
+    "description": "HTML Symbol Entities Dictionary",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "html-symbol-entities",
+        "description": "HTML Symbol Entities Dictionary",
+        "fileTypes": [
+          "html",
+          "markdown"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hungarian",
+    "dir": "dictionaries/hu_HU",
+    "packageName": "@codetypo/dict-hu-hu",
+    "description": "Hungarian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "hu-hu",
+        "description": "Hungarian dictionary.",
+        "locales": [
+          "hu",
+          "hu-hu"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Armenian",
+    "dir": "dictionaries/hy",
+    "packageName": "@codetypo/dict-hy",
+    "description": "Armenian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "hy_am",
+        "description": "Armenian dictionary",
+        "locales": [
+          "hy",
+          "hy-AM"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Indonesia",
+    "dir": "dictionaries/id_ID",
+    "packageName": "@codetypo/dict-id-id",
+    "description": "Indonesia dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "id-id",
+        "description": "Indonesia dictionary.",
+        "locales": [
+          "id",
+          "id-ID"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Italian",
+    "dir": "dictionaries/it_IT",
+    "packageName": "@codetypo/dict-it-it",
+    "description": "Italian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "it-it",
+        "description": "Italian dictionary.",
+        "locales": [
+          "it",
+          "it-IT"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Java",
+    "dir": "dictionaries/java",
+    "packageName": "@codetypo/dict-java",
+    "description": "Java dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "java",
+        "description": "Java dictionary.",
+        "fileTypes": [
+          "java"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Julia",
+    "dir": "dictionaries/julia",
+    "packageName": "@codetypo/dict-julia",
+    "description": "Julia function and keyword dictionary",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "julia",
+        "description": "Julia Dictionary",
+        "fileTypes": [
+          "julia"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "K8s",
+    "dir": "dictionaries/k8s",
+    "packageName": "@codetypo/dict-k8s",
+    "description": "K8s dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "k8s",
+        "description": "K8s dictionary.",
+        "fileTypes": [
+          "yaml"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Kotlin",
+    "dir": "dictionaries/kotlin",
+    "packageName": "@codetypo/dict-kotlin",
+    "description": "Kotlin dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "kotlin",
+        "description": "Kotlin dictionary.",
+        "fileTypes": [
+          "kotlin"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Latin",
+    "dir": "dictionaries/la",
+    "packageName": "@codetypo/dict-la",
+    "description": "Latin dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "la",
+        "description": "Latin dictionary.",
+        "locales": [
+          "la",
+          "la-VA"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "LaTeX",
+    "dir": "dictionaries/latex",
+    "packageName": "@codetypo/dict-latex",
+    "description": "LaTeX codetypo dictionary",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "latex",
+        "description": "LaTeX dictionary",
+        "fileTypes": [
+          "latex"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lorem-ipsum",
+    "dir": "dictionaries/lorem-ipsum",
+    "packageName": "@codetypo/dict-lorem-ipsum",
+    "description": "Lorem-ipsum dictionary.",
+    "codetypo": true,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "lorem-ipsum",
+        "description": "Lorem-ipsum dictionary.",
+        "locales": [
+          "lorem",
+          "lorem-ipsum"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lithuanian",
+    "dir": "dictionaries/lt_LT",
+    "packageName": "@codetypo/dict-lt-lt",
+    "description": "Lithuanian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "lt-lt",
+        "description": "Lithuanian dictionary.",
+        "locales": [
+          "lt",
+          "lt-LT"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lua",
+    "dir": "dictionaries/lua",
+    "packageName": "@codetypo/dict-lua",
+    "description": "Lua dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "lua",
+        "description": "Lua dictionary.",
+        "fileTypes": [
+          "lua"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Latvian",
+    "dir": "dictionaries/lv",
+    "packageName": "@codetypo/dict-lv",
+    "description": "Latvian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "lv",
+        "description": "Latvian dictionary.",
+        "locales": [
+          "lv"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Makefile",
+    "dir": "dictionaries/makefile",
+    "packageName": "@codetypo/dict-makefile",
+    "description": "Makefile dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "makefile",
+        "description": "Makefile dictionary.",
+        "fileTypes": [
+          "makefile"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Markdown",
+    "dir": "dictionaries/markdown",
+    "packageName": "@codetypo/dict-markdown",
+    "description": "Markdown dictionary.",
+    "codetypo": true,
+    "categories": [],
+    "dictionaries": []
+  },
+  {
+    "name": "Medical terms",
+    "dir": "dictionaries/medicalterms",
+    "packageName": "@codetypo/dict-medicalterms",
+    "description": "Medical Terms Dictionary",
+    "codetypo": false,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "medical terms",
+        "description": "List of nearly 100,000 medical terms.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "Macedonian",
+    "dir": "dictionaries/mk",
+    "packageName": "@codetypo/dict-mk",
+    "description": "Macedonian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "mk",
+        "description": "Macedonian dictionary.",
+        "locales": [
+          "mk",
+          "mk-cyrl"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mongolian",
+    "dir": "dictionaries/mn_MN",
+    "packageName": "@codetypo/dict-mn-mn",
+    "description": "Mongolian dictionary for codetypo.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "mn-mn",
+        "description": "Mongolian dictionary.",
+        "locales": [
+          "mn",
+          "mn-MN"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mnemonics",
+    "dir": "dictionaries/mnemonics",
+    "packageName": "@codetypo/dict-mnemonics",
+    "description": "i86 Mnemonics dictionary for codetypo",
+    "codetypo": false,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "mnemonics",
+        "description": "i86 Mnemonics dictionary for codetypo",
+        "fileTypes": [
+          "c",
+          "cpp",
+          "h",
+          "hpp"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Monkey C",
+    "dir": "dictionaries/monkeyc",
+    "packageName": "@codetypo/dict-monkeyc",
+    "description": "Monkey C dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "monkeyc",
+        "description": "Monkey C dictionary.",
+        "fileTypes": [
+          "monkeyc"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Norwegian Bokmål",
+    "dir": "dictionaries/nb_NO",
+    "packageName": "@codetypo/dict-nb-no",
+    "description": "Norwegian Bokmål dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "nb-no",
+        "description": "Norwegian Bokmål dictionary.",
+        "locales": [
+          "nb",
+          "nb-no"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dutch (Netherlands) Dictionary",
+    "dir": "dictionaries/nl_NL",
+    "packageName": "@codetypo/dict-nl-nl",
+    "description": "Dutch (Netherlands) Dictionary",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "nl-nl",
+        "description": "Dutch (Netherlands) Dictionary",
+        "locales": [
+          "nl",
+          "nl-NL"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Node.js",
+    "dir": "dictionaries/node",
+    "packageName": "@codetypo/dict-node",
+    "description": "Node.js dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "node",
+        "description": "Node.js dictionary.",
+        "fileTypes": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "NPM",
+    "dir": "dictionaries/npm",
+    "packageName": "@codetypo/dict-npm",
+    "description": "Dictionary of Common Javascript Packages.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "npm",
+        "description": "Dictionary of Common Javascript Packages.",
+        "fileTypes": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "People Names",
+    "dir": "dictionaries/people-names",
+    "packageName": "@codetypo/dict-people-names",
+    "description": "People Names dictionary.",
+    "codetypo": false,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "people-names",
+        "description": "People Names dictionary.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "PHP",
+    "dir": "dictionaries/php",
+    "packageName": "@codetypo/dict-php",
+    "description": "Php dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "php",
+        "description": "Php dictionary.",
+        "fileTypes": [
+          "php"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Polish Dictionary",
+    "dir": "dictionaries/pl_PL",
+    "packageName": "@codetypo/dict-pl_pl",
+    "description": "Polish Dictionary",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "pl-pl",
+        "description": "Polish Dictionary",
+        "locales": [
+          "pl",
+          "pl_PL"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pokémon",
+    "dir": "dictionaries/pokemon",
+    "packageName": "@codetypo/dict-pokemon",
+    "description": "Pokémon dictionary.",
+    "codetypo": false,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "pokemon",
+        "description": "Pokémon dictionary.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "PowerShell",
+    "dir": "dictionaries/powershell",
+    "packageName": "@codetypo/dict-powershell",
+    "description": "PowerShell Keyword Dictionary",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "powershell",
+        "description": "PowerShell Keyword Dictionary",
+        "fileTypes": [
+          "powershell"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Portuguese (Brazilian) Dictionary",
+    "dir": "dictionaries/pt_BR",
+    "packageName": "@codetypo/dict-pt-br",
+    "description": "Portuguese (Brazilian) Dictionary",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "pt-br",
+        "description": "Portuguese (Brazilian) Dictionary",
+        "locales": [
+          "pt",
+          "pt_BR"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Portuguese Dictionary (Portugal)",
+    "dir": "dictionaries/pt_PT",
+    "packageName": "@codetypo/dict-pt-pt",
+    "description": "Portuguese Dictionary (Portugal)",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "pt-pt",
+        "description": "Portuguese Dictionary (Portugal)",
+        "locales": [
+          "pt",
+          "pt_PT"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Common Public Licenses",
+    "dir": "dictionaries/public-licenses",
+    "packageName": "@codetypo/dict-public-licenses",
+    "description": "Common Public Licenses dictionary.",
+    "codetypo": true,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "public-licenses",
+        "description": "Common Public Licenses dictionary.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "Python",
+    "dir": "dictionaries/python",
+    "packageName": "@codetypo/dict-python",
+    "description": "Python Keyword Dictionary",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "python",
+        "description": "Python Dictionary",
+        "fileTypes": [
+          "python"
+        ]
+      },
+      {
+        "name": "python-common",
+        "description": "Python Common Terms Dictionary",
+        "fileTypes": [
+          "python"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "R",
+    "dir": "dictionaries/r",
+    "packageName": "@codetypo/dict-r",
+    "description": "R dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "r",
+        "description": "R dictionary.",
+        "fileTypes": [
+          "r"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Redis",
+    "dir": "dictionaries/redis",
+    "packageName": "@codetypo/dict-redis",
+    "description": "Redis dictionary.",
+    "codetypo": false,
+    "categories": [
+      "other"
+    ],
+    "dictionaries": [
+      {
+        "name": "redis",
+        "description": "Redis dictionary."
+      }
+    ]
+  },
+  {
+    "name": "Romanian",
+    "dir": "dictionaries/ro_RO",
+    "packageName": "@codetypo/dict-ro-ro",
+    "description": "Romanian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "ro-ro",
+        "description": "Romanian dictionary.",
+        "locales": [
+          "ro",
+          "ro-RO"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Russian Dictionary (Combined)",
+    "dir": "dictionaries/ru_RU",
+    "packageName": "@codetypo/dict-ru_ru",
+    "description": "Russian Dictionary (Combined)",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "ru-ru",
+        "description": "Russian Dictionary (Combined)",
+        "locales": [
+          "ru",
+          "ru-ru"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ruby",
+    "dir": "dictionaries/ruby",
+    "packageName": "@codetypo/dict-ruby",
+    "description": "For ruby and ruby on rails",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "ruby",
+        "description": "For ruby and ruby on rails",
+        "fileTypes": [
+          "ruby"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rust",
+    "dir": "dictionaries/rust",
+    "packageName": "@codetypo/dict-rust",
+    "description": "Rust Keyword Dictionary",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "rust",
+        "description": "Rust Keyword Dictionary",
+        "fileTypes": [
+          "rust"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Scala",
+    "dir": "dictionaries/scala",
+    "packageName": "@codetypo/dict-scala",
+    "description": "Scala dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "scala",
+        "description": "Scala dictionary.",
+        "fileTypes": [
+          "scala"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Scientific Terms GB",
+    "dir": "dictionaries/scientific_terms_GB",
+    "packageName": "@codetypo/dict-scientific-terms-gb",
+    "description": "Scientific Terms GB dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "scientific-terms-gb",
+        "description": "Scientific Terms GB dictionary.",
+        "locales": [
+          "en-GB"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Scientific Terms US",
+    "dir": "dictionaries/scientific_terms_US",
+    "packageName": "@codetypo/dict-scientific-terms-us",
+    "description": "Scientific Terms US dictionary.",
+    "codetypo": false,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "scientific-terms-us",
+        "description": "Scientific Terms US dictionary.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "ShellScript",
+    "dir": "dictionaries/shell",
+    "packageName": "@codetypo/dict-shell",
+    "description": "ShellScript dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "bash",
+        "description": "Bash dictionary.",
+        "fileTypes": [
+          "bashscript"
+        ]
+      },
+      {
+        "name": "shellscript",
+        "description": "ShellScript dictionary.",
+        "fileTypes": [
+          "shellscript"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Slovak",
+    "dir": "dictionaries/sk_SK",
+    "packageName": "@codetypo/dict-sk-sk",
+    "description": "Slovak dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "sk-sk",
+        "description": "Slovak dictionary.",
+        "locales": [
+          "sk"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Slovenian",
+    "dir": "dictionaries/sl_SI",
+    "packageName": "@codetypo/dict-sl-si",
+    "description": "Slovenian dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "sl-si",
+        "description": "Slovenian dictionary.",
+        "locales": [
+          "sl",
+          "sl-SI"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Software Terms",
+    "dir": "dictionaries/software-terms",
+    "packageName": "@codetypo/dict-software-terms",
+    "description": "Software terms dictionary.",
+    "codetypo": true,
+    "categories": [
+      "other",
+      "default"
+    ],
+    "dictionaries": [
+      {
+        "name": "software-term-suggestions",
+        "enabled": true
+      },
+      {
+        "name": "softwareTerms",
+        "description": "Software terms dictionary.",
+        "enabled": true
+      },
+      {
+        "name": "networking-terms",
+        "description": "Software networking terms dictionary."
+      },
+      {
+        "name": "web-services",
+        "description": "Web Services and APIs dictionary.",
+        "enabled": true
+      },
+      {
+        "name": "computing-acronyms",
+        "description": "Common acronyms related to computing.",
+        "enabled": true
+      },
+      {
+        "name": "coding-compound-terms",
+        "description": "Common codding compound terms.",
+        "enabled": true
+      }
+    ],
+    "hasEnabledByDefault": true
+  },
+  {
+    "name": "SQL",
+    "dir": "dictionaries/sql",
+    "packageName": "@codetypo/dict-sql",
+    "description": "SQL dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "sql",
+        "description": "SQL dictionary.",
+        "fileTypes": [
+          "sql"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Serbian (Cyrillic)",
+    "dir": "dictionaries/sr_Cyrl",
+    "packageName": "@codetypo/dict-sr-cyrl",
+    "description": "Serbian (Cyrillic) dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "sr-cyrl",
+        "description": "Serbian (Cyrillic) dictionary.",
+        "locales": [
+          "sr",
+          "sr-Cyrl"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Serbian (Latin)",
+    "dir": "dictionaries/sr_Latn",
+    "packageName": "@codetypo/dict-sr-latn",
+    "description": "Serbian (Latin) dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "sr-latn",
+        "description": "Serbian (Latin) dictionary.",
+        "locales": [
+          "sr",
+          "sr-Latn"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Swedish Dictionary",
+    "dir": "dictionaries/sv",
+    "packageName": "@codetypo/dict-sv",
+    "description": "Swedish Dictionary",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "sv",
+        "description": "Swedish Dictionary",
+        "locales": [
+          "sv",
+          "sv_SE"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Svelte",
+    "dir": "dictionaries/svelte",
+    "packageName": "@codetypo/dict-svelte",
+    "description": "Svelte dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "svelte",
+        "description": "Svelte dictionary.",
+        "fileTypes": [
+          "javascript",
+          "svelte",
+          "typescript"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Swift",
+    "dir": "dictionaries/swift",
+    "packageName": "@codetypo/dict-swift",
+    "description": "Swift dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "swift",
+        "description": "Swift dictionary.",
+        "fileTypes": [
+          "swift"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Terraform",
+    "dir": "dictionaries/terraform",
+    "packageName": "@codetypo/dict-terraform",
+    "description": "Terraform dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "terraform",
+        "description": "Terraform dictionary.",
+        "fileTypes": [
+          "terraform",
+          "tfvars"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Turkish",
+    "dir": "dictionaries/tr_TR",
+    "packageName": "@codetypo/dict-tr-tr",
+    "description": "Turkish dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "tr-tr",
+        "description": "Turkish dictionary.",
+        "locales": [
+          "tr",
+          "tr-TR"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TypeScript/JavaScript",
+    "dir": "dictionaries/typescript",
+    "packageName": "@codetypo/dict-typescript",
+    "description": "TypeScript and JavaScript dictionary.",
+    "codetypo": true,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "typescript",
+        "description": "TypeScript and JavaScript dictionary.",
+        "fileTypes": [
+          "astro",
+          "javascript",
+          "javascriptreact",
+          "mdx",
+          "typescript",
+          "typescriptreact"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ukrainian Dictionary",
+    "dir": "dictionaries/uk_UA",
+    "packageName": "@codetypo/dict-uk-ua",
+    "description": "Ukrainian Dictionary",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "uk-ua",
+        "description": "Ukrainian Dictionary",
+        "locales": [
+          "uk"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vietnamese",
+    "dir": "dictionaries/vi_VN",
+    "packageName": "@codetypo/dict-vi-vn",
+    "description": "Vietnamese dictionary.",
+    "codetypo": false,
+    "categories": [
+      "natural-language"
+    ],
+    "dictionaries": [
+      {
+        "name": "vi-vn",
+        "description": "Vietnamese dictionary.",
+        "locales": [
+          "vi"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vim",
+    "dir": "dictionaries/vim",
+    "packageName": "@codetypo/dict-vim",
+    "description": "Vim developers dictionary.",
+    "codetypo": false,
+    "categories": [
+      "other"
+    ],
+    "dictionaries": [
+      {
+        "name": "vim",
+        "description": "Vim dictionary."
+      }
+    ]
+  },
+  {
+    "name": "Vue",
+    "dir": "dictionaries/vue",
+    "packageName": "@codetypo/dict-vue",
+    "description": "CodeTypo configuration for VUE files",
+    "codetypo": true,
+    "categories": [],
+    "dictionaries": []
+  },
+  {
+    "name": "Win32",
+    "dir": "dictionaries/win32",
+    "packageName": "@codetypo/dict-win32",
+    "description": "Win32 dictionary.",
+    "codetypo": false,
+    "categories": [
+      "programming"
+    ],
+    "dictionaries": [
+      {
+        "name": "win32",
+        "description": "Win32 dictionary.",
+        "fileTypes": [
+          "c",
+          "cpp"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "name": "@codetypo/filetypes",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "version": "8.17.5",
+  "description": "Library to determine file types based upon the file name.",
+  "keywords": [
+    "codetypo",
+    "filetypes"
+  ],
+  "author": "Md Sulaiman <dev.sulaiman@icloud.com>",
+  "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-filetypes#readme",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/*.tsbuildInfo",
+    "!**/__mocks__",
+    "!**/*.test.*",
+    "!**/*.spec.*",
+    "!**/*.map"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . -w",
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "sort-filetypes": "pnpm build && node scripts/sortFileTypes.js && prettier --write src/definitions.ts",
+    "coverage": "vitest run --coverage",
+    "test-watch": "vitest",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/codetypo-filetypes"
+  },
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo/labels/filetype"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

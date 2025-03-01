@@ -1,0 +1,81 @@
+name: Coverage
+on:
+  pull_request:
+    paths:
+      - '/*.js'
+      - '*.ts'
+      - '*-lock.yaml'
+      - 'package.json'
+      - 'packages/**/*-lock.yaml'
+      - 'packages/**/*.js'
+      - 'packages/**/*.ts'
+      - 'packages/**/*.mts'
+      - 'packages/**/package.json'
+      - '.github/workflows/coverage.yml'
+      - '!docs/**'
+      - '!website/**'
+  push:
+    branches:
+      - main
+    paths:
+      - '**/package.json'
+      - '**/*-lock.yaml'
+      - '**/*.ts'
+      - '**/*.mts'
+      - '**/*.js'
+      - '.github/workflows/coverage.yml'
+      - '!docs/**'
+      - '!website/**'
+  workflow_dispatch:
+    inputs:
+      NODE_VERSION:
+        description: 'Node Version'
+        required: true
+        default: '22.x'
+permissions:
+  contents: read
+
+env:
+  NODE_OPTIONS: '--enable-source-maps' # coverage report is wrong if this in not set.
+  NODE_VERSION: ${{ inputs.NODE_VERSION || '22.x' }}
+
+jobs:
+  coverage:
+    permissions:
+      checks: write # for coverallsapp/github-action to create new checks
+      contents: read # for actions/checkout to fetch code
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install and Build
+        uses: ./.github/actions/install-build
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - run: pnpm run coverage
+
+      - name: Upload coverage Coveralls
+        id: coveralls
+        uses: coverallsapp/github-action@648a8eb78e6d50909eff900e4ec85cab4524a45b # 2.3.6
+        continue-on-error: true
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./lcov.info
+
+      - name: Upload coverage to Codecov
+        id: codecov
+        uses: codecov/codecov-action@0565863a31f2c772f9f0395002a31e3f06189574 # v5.4.0
+        continue-on-error: true
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: '.'
+          files: ./lcov.info
+
+      - name: Show Summary
+        uses: khulnasoft/actions/public/summary@v1
+        with:
+          text: |
+            Coveralls: ${{ steps.coveralls.outcome }}
+            Codecov: ${{ steps.codecov.outcome }}

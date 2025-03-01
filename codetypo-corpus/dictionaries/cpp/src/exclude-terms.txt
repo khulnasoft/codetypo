@@ -1,0 +1,4 @@
+# This file contains terms and spelling issues that should be excluded from the dictionary.
+# codetypo:ignoreRegExp /^.*?(#|$)/gm
+alterantive # See: https://github.com/khulnasoft/codetypo-dicts/issues/4110
+alterantively # See: https://github.com/khulnasoft/codetypo-dicts/issues/4110

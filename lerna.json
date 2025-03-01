@@ -1,0 +1,16 @@
+{
+  "npmClient": "pnpm",
+  "packages": [
+    "./packages/*",
+    "./rfc/*",
+    "./test-packages/*/*",
+    "./integration-tests"
+  ],
+  "version": "8.17.5",
+  "command": {
+    "version": {
+      "allowBranch": "main",
+      "conventionalCommits": true
+    }
+  }
+}

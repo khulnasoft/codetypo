@@ -1,0 +1,43 @@
+{
+  "name": "@codetypo/dict-latex",
+  "version": "4.0.3",
+  "description": "LaTeX codetypo dictionary",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli compile build",
+    "test": "pnpm run test-dict && pnpm run test-check",
+    "test-dict": "shx head -n 1000 src/latex.txt | codetypo -c ./codetypo-ext.json --locale=* --languageId=latex stdin",
+    "test-check": "ava",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/latex"
+  },
+  "keywords": [
+    "codetypo",
+    "LaTeX",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/latex#readme",
+  "files": [
+    "dict/latex.txt",
+    "codetypo-ext.json"
+  ]
+}

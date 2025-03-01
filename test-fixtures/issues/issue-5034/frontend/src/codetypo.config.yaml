@@ -1,0 +1,5 @@
+name: Nested Config
+version: "0.2"
+import: "node_modules/@codetypo/dict-fr-fr/codetypo-ext.json"
+words:
+  - codetypo

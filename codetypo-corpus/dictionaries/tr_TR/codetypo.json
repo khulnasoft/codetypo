@@ -1,0 +1,10 @@
+{
+    "version": "0.2",
+    "language": "en,tr",
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "words": [
+        "Bouzout"
+    ]
+}

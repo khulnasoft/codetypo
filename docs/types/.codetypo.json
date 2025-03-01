@@ -1,0 +1,18 @@
+{
+    "version": "0.2",
+    "dictionaries": ["custom-dictionary"],
+    "ignorePaths": [],
+    "dictionaryDefinitions": [
+        {
+            "name": "custom-dictionary",
+            "path": "./.codetypo/custom-dictionary.txt",
+            "addWords": true
+        }
+    ],
+    "overrides": [
+        {
+            "filename": [".codetypo.json", "codetypo-types/interfaces/**/*.md"],
+            "ignoreWords": ["colour", "canot"]
+        }
+    ]
+}

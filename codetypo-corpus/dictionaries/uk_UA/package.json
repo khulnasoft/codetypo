@@ -1,0 +1,50 @@
+{
+  "name": "@codetypo/dict-uk-ua",
+  "version": "4.0.4",
+  "description": "Ukrainian dictionary for codetypo",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "pnpm run compile",
+    "sync": "pnpm cpy \"node_modules/dictionary-uk/**\" src/hunspell",
+    "compile": "codetypo-tools-cli build",
+    "conditional-build": "pnpm sync && pnpm build --conditional",
+    "test-dict": "pipe-cmds \"hunspell-reader words -n 1000 \\\"src/hunspell/index.dic\\\"\" \"codetypo -c ./codetypo-ext.json --locale=uk --languageId=* stdin\"",
+    "test-text": "codetypo samples",
+    "test": "pnpm run test-dict && pnpm run test-text",
+    "prepublishOnly": "echo pre-publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/uk_UA"
+  },
+  "keywords": [
+    "codetypo",
+    "uk_UA",
+    "Ukrainian",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/uk_UA#readme",
+  "files": [
+    "src/hunspell/license",
+    "uk_ua.trie",
+    "codetypo-ext.json"
+  ],
+  "devDependencies": {
+    "dictionary-uk": "^4.0.0"
+  }
+}

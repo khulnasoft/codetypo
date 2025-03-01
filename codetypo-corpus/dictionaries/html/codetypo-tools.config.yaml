@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/khulnasoft/codetypo/main/packages/codetypo-tools/codetypo-tools.config.schema.json
+
+targets:
+  - name: html
+    sources:
+      - src/html.txt
+      - src/svg.txt
+    format: plaintext
+    targetDirectory: 'dict'
+    generateNonStrict: false

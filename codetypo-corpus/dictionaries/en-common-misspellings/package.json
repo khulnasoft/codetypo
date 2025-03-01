@@ -1,0 +1,45 @@
+{
+  "name": "@codetypo/dict-en-common-misspellings",
+  "version": "2.0.9",
+  "description": "Common English misspellings dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "echo ok",
+    "test": "codetypo .",
+    "prepublishOnly": "echo OK",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/en-common-misspellings"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "en-common-misspellings",
+    "Common English Misspellings",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "CC BY-SA 4.0",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/en-common-misspellings#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "files": [
+    "codetypo-ext.json",
+    "dict-*.yaml"
+  ]
+}

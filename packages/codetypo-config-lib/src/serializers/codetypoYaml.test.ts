@@ -1,0 +1,70 @@
+import assert from 'node:assert';
+import { pathToFileURL } from 'node:url';
+
+import { describe, expect, test, vi } from 'vitest';
+import { stringify } from 'yaml';
+
+import { CodeTypoConfigFileYaml } from '../CodeTypoConfigFile/CodeTypoConfigFileYaml.js';
+import { defaultNextDeserializer } from '../defaultNext.js';
+import { serializerCodeTypoYaml } from './codetypoYaml.js';
+
+const oc = <T>(obj: T) => expect.objectContaining(obj);
+const next = defaultNextDeserializer;
+
+describe('codetypoYaml', () => {
+    const sampleCodeTypoYaml = `\
+version: "0.2"
+words:
+  - cache
+`;
+
+    test.each`
+        uri                 | content                    | expected
+        ${'codetypo.yaml'}    | ${''}                      | ${oc({ settings: {} })}
+        ${'codetypo.yaml'}    | ${'---\n{}\n'}             | ${oc({ settings: {} })}
+        ${'codetypo-ext.yml'} | ${'---\nversion: "0.2"\n'} | ${oc({ settings: { version: '0.2' } })}
+        ${'.codetypo.yml'}    | ${'\nwords: []\n'}         | ${oc({ settings: { words: [] } })}
+    `('success $uri', ({ uri, content, expected }) => {
+        expect(serializerCodeTypoYaml.deserialize({ url: pathToFileURL(uri), content }, next)).toEqual(expected);
+    });
+
+    test.each`
+        uri              | content       | expected
+        ${''}            | ${''}         | ${'Unable to parse config file: "file:///"'}
+        ${'codetypo.js'}   | ${''}         | ${'Unable to parse config file: "file:///codetypo.js"'}
+        ${'codetypo.json'} | ${''}         | ${'Unable to parse config file: "file:///codetypo.json"'}
+        ${'codetypo.yaml'} | ${'"version'} | ${'Missing closing'}
+        ${'codetypo.yaml'} | ${'[]'}       | ${'Unable to parse file:///codetypo.yaml'}
+    `('fail $uri', ({ uri, content, expected }) => {
+        expect(() => serializerCodeTypoYaml.deserialize({ url: new URL(uri, 'file:///'), content }, next)).toThrow(
+            expected,
+        );
+    });
+
+    test.each`
+        uri                  | content                   | expected
+        ${'codetypo.yaml'}     | ${'{\n\t"name": "name"}'} | ${toYaml({ name: 'name' }, '\t')}
+        ${'codetypo.yaml?x=5'} | ${'{\n  "words":[]}'}     | ${toYaml({ words: [] }, 2)}
+        ${'codetypo.yml'}      | ${sampleCodeTypoYaml}       | ${sampleCodeTypoYaml}
+    `('serialize $uri', ({ uri, content, expected }) => {
+        const next = vi.fn();
+        const file = serializerCodeTypoYaml.deserialize({ url: new URL(uri, 'file:///'), content }, next);
+        assert(file instanceof CodeTypoConfigFileYaml);
+        expect(serializerCodeTypoYaml.serialize(file, next)).toEqual(expected);
+        expect(next).toHaveBeenCalledTimes(0);
+    });
+
+    test('serialize reject', () => {
+        const next = vi.fn();
+        serializerCodeTypoYaml.serialize({ url: new URL('file:///file.txt'), settings: {} }, next);
+        expect(next).toHaveBeenCalledTimes(1);
+    });
+});
+
+function toYaml(obj: unknown, indent: string | number = 2): string {
+    if (typeof indent === 'string') {
+        indent = indent.replaceAll('\t', '    ').replaceAll(/[^ ]/g, '');
+        indent = indent.length;
+    }
+    return stringify(obj, { indent });
+}

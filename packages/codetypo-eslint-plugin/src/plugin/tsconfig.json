@@ -1,0 +1,16 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "tsBuildInfoFile": "../../dist/plugin/compile.tsbuildInfo",
+        "rootDir": ".",
+        "outDir": "../../dist/plugin"
+    },
+    "include": ["."],
+    "references": [
+        { "path": "../common/tsconfig.json" },
+        { "path": "../worker/tsconfig.json" },
+        { "path": "../generated/tsconfig.json" }
+    ]
+}

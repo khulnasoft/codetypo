@@ -1,0 +1,22 @@
+name: codetypo-action
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  codetypo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node and Pnpm
+        uses: ./.github/actions/setup-node
+
+      - run: pnpm run prepare-codetypo-action
+      - uses: khulnasoft/codetypo-action@v6

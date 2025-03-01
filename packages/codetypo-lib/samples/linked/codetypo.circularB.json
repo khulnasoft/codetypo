@@ -1,0 +1,14 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "name": "circular file B",
+    "version": "0.2",
+    "ignorePaths": [
+        "node_modules"
+    ],
+    "words": [
+        "bb"
+    ],
+    "import": [
+        "./codetypo.circularA.json"
+    ]
+}

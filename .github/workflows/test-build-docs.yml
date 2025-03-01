@@ -1,0 +1,35 @@
+name: Test - Build Docs
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test-build-docs:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node-version:
+          # List of supported node versions (latest is tested in `test-os`)
+          - 22.x
+
+        os:
+          - ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: pnpm run test-build-docs
+
+      # Ensure the repository is clean after build & test
+      - run: git --no-pager diff --compact-summary --exit-code

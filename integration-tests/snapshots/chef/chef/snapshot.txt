@@ -1,0 +1,8 @@
+
+Repository: chef/chef
+Url: "https://github.com/chef/chef.git"
+Args: ["--config=../../../codetypo-chef.config.yaml","**"]
+Lines:
+ CodeTypo: Files checked: 1204, Issues found: 1 in 1 file.
+ exit code: 1
+lib/chef/provider/mount/solaris.rb:152:74    - Unknown word (largefiles) -- setuid/devices/intr/largefiles/logging/xattr/onerror

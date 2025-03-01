@@ -1,0 +1,9 @@
+{
+    "generator-node": {
+        "promptValues": {
+            "authorName": "Jason Dent",
+            "authorEmail": "jason@khulnasoft.com",
+            "authorUrl": ""
+        }
+    }
+}

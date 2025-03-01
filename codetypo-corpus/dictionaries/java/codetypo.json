@@ -1,0 +1,7 @@
+{
+    "files": ["**/*.{md,txt}"],
+    "dictionaries": ["java"],
+    "ignorePaths": ["*.trie", "src"],
+    "import": ["./codetypo-ext.json"],
+    "ignoreWords": ["wordlist", "Schmid", "classgraph"]
+}

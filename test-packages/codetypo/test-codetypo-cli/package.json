@@ -1,0 +1,30 @@
+{
+  "name": "test-codetypo-cli",
+  "version": "8.17.5",
+  "description": "cli for codetypo",
+  "private": "true",
+  "type": "module",
+  "bin": {
+    "codetypo-cli": "bin.mjs",
+    "codetypo-cli-esm": "bin.mjs"
+  },
+  "scripts": {
+    "test": "node ./bin.mjs ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khulnasoft/codetypo-cli.git"
+  },
+  "keywords": [
+    "codetypo"
+  ],
+  "author": "Md Sulaiman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-cli/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-cli#readme",
+  "dependencies": {
+    "codetypo": "workspace:*"
+  }
+}

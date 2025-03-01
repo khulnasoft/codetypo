@@ -1,0 +1,71 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`mapDictionaryInfo > mapDictionaryInformation 1`] = `
+[
+  {
+    "insDel": 100,
+    "map": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+    "replace": 100,
+    "swap": 100,
+  },
+  {
+    "map": "Aa|Bb|Cc|Dd|Ee|Ff|Gg|Hh|Ii|Jj|Kk|Ll|Mm|Nn|Oo|Pp|Qq|Rr|Ss|Tt|Uu|Vv|Ww|Xx|Yy|Zz|Aa|Bb|Cc|Dd|Ee|Ff|Gg|Hh|Ii|Jj|Kk|Ll|Mm|Nn|Oo|Pp|Qq|Rr|Ss|Tt|Uu|Vv|Ww|Xx|Yy|Zz",
+    "replace": 1,
+  },
+  {
+    "map": "(^A)(^B)(^C)(^D)(^E)(^F)(^G)(^H)(^I)(^J)(^K)(^L)(^M)(^N)(^O)(^P)(^Q)(^R)(^S)(^T)(^U)(^V)(^W)(^X)(^Y)(^Z)(^a)(^b)(^c)(^d)(^e)(^f)(^g)(^h)(^i)(^j)(^k)(^l)(^m)(^n)(^o)(^p)(^q)(^r)(^s)(^t)(^u)(^v)(^w)(^x)(^y)(^z)(^)",
+    "penalty": 8,
+    "replace": 96,
+  },
+  {
+    "insDel": 1,
+    "map": "̴̵̶̷̸̡̢̧̨̛̖̗̘̙̜̝̞̟̠̣̤̥̦̩̪̫̬̭̮̯̰̱̲̳̹̺̻̼̀́̂̃̄̅̆̇̈̉̊̋̌̍̎̏̐̑̒̓̔̽̾̿̀́̕̚",
+    "replace": 1,
+  },
+]
+`;
+
+exports[`mapDictionaryInfo > mapDictionaryInformation 2`] = `
+[
+  {
+    "insDel": 100,
+    "map": "ABCDEabcde",
+    "replace": 100,
+    "swap": 100,
+  },
+  {
+    "map": "Aa|Bb|Cc|Dd|Ee",
+    "replace": 1,
+  },
+  {
+    "map": "(^a)(^b)(^c)(^d)(^e)(^)",
+    "penalty": 8,
+    "replace": 96,
+  },
+]
+`;
+
+exports[`mapDictionaryInfo > mapDictionaryInformation 3`] = `
+[
+  {
+    "insDel": 100,
+    "map": "ABCDEabcde",
+    "replace": 100,
+    "swap": 100,
+  },
+  {
+    "map": "Aa|Bb|Cc|Dd|Ee|Aa|Bb|Cc|Dd|Ee",
+    "replace": 1,
+  },
+  {
+    "map": "(^A)(^B)(^C)(^D)(^E)(^a)(^b)(^c)(^d)(^e)(^)",
+    "penalty": 8,
+    "replace": 96,
+  },
+  {
+    "insDel": 1,
+    "map": "́",
+    "replace": 1,
+  },
+]
+`;

@@ -1,0 +1,10 @@
+{
+    "files": [
+        "**/*.{md,txt}"
+    ],
+    "dictionaries": [],
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "ignoreWords": []
+}

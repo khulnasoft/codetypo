@@ -1,0 +1,12 @@
+{
+    "dictionaries": [
+        "php"
+    ],
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "ignoreWords": [
+        "mdash",
+        "xffffffff"
+    ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "test-codetypo-lib-esbuild-cjs",
+  "version": "7.0.0",
+  "description": "Pure testing package for codetypo-lib.",
+  "bin": {
+    "build": "build.mjs"
+  },
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "build": "node build.mjs",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "compile": "tsc -p ."
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "codetypo": "workspace:*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "codetypo": {
+    "words": [
+      "outfile",
+      "tsbuild"
+    ]
+  },
+  "keywords": []
+}

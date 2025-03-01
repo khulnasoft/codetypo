@@ -1,0 +1,42 @@
+{
+  "name": "@codetypo/dict-html-symbol-entities",
+  "version": "4.0.3",
+  "description": "Html Symbol Entities dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli compile \"entities.txt\" -o .",
+    "test": "shx head -n 100 \"entities.txt\" | codetypo -c ./codetypo-ext.json --locale=* --languageId=html stdin",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/html-symbol-entities"
+  },
+  "keywords": [
+    "codetypo",
+    "html-symbol-entities",
+    "Html Symbol Entities",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/html-symbol-entities#readme",
+  "files": [
+    "entities.txt.gz",
+    "codetypo-ext.json"
+  ]
+}

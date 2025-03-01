@@ -1,0 +1,13 @@
+---
+Repository: chef/chef
+Url: https://github.com/chef/chef.git
+Args: '["--config=../../../codetypo-chef.config.yaml","**"]'
+Summary:
+  files: 1204
+  filesWithIssues: 1
+  issues: 1
+  errors: 0
+Errors: []
+
+issues:
+  - "lib/chef/provider/mount/solaris.rb:152:74       largefiles      U       setuid/devices/intr/largefiles/logging/xattr/onerror"

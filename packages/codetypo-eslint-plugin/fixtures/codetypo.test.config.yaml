@@ -1,0 +1,9 @@
+ignorePaths:
+  - codetypo*.{yaml,json}
+ignoreWords:
+  - todos
+  - blacklist
+  - whitelist
+  - café
+  - bluelist
+  - Bluelist

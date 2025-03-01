@@ -1,0 +1,12 @@
+import type { CodeTypoSettingsInternalFinalized } from '../Models/CodeTypoSettingsInternalDef.js';
+import type { ValidationOptions } from './ValidationTypes.js';
+
+export function settingsToValidateOptions(settings: CodeTypoSettingsInternalFinalized): ValidationOptions {
+    const opt: ValidationOptions = {
+        ...settings,
+        ignoreCase: !(settings.caseSensitive ?? false),
+        ignoreRandomStrings: settings.ignoreRandomStrings,
+        minRandomLength: settings.minRandomLength,
+    };
+    return opt;
+}

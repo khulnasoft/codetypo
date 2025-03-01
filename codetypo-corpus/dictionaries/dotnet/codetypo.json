@@ -1,0 +1,12 @@
+{
+    "files": [
+        "**/*.{md,txt}"
+    ],
+    "dictionaries": [
+        "dotnet"
+    ],
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "ignoreWords": []
+}

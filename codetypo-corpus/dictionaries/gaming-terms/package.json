@@ -1,0 +1,48 @@
+{
+  "name": "@codetypo/dict-gaming-terms",
+  "version": "1.1.0",
+  "description": "Gaming dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "test": "codetypo .",
+    "prepublishOnly": "echo OK",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/gaming-terms"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "gaming-terms",
+    "Gaming",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/gaming-terms#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "files": [
+    "dict/gaming-terms.txt",
+    "dict/game-development.txt",
+    "codetypo-ext.json",
+    "*.js",
+    "*.d.ts"
+  ]
+}

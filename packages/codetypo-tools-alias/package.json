@@ -1,0 +1,50 @@
+{
+  "name": "codetypo-tools",
+  "version": "8.17.5",
+  "description": "Tools to assist with the development of codeTypo. Alias of @codetypo/codetypo-tools",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "type": "module",
+  "sideEffects": false,
+  "bin": {
+    "codetypo-tools": "bin.mjs"
+  },
+  "scripts": {
+    "test": "pnpm test-shasum",
+    "test-shasum": "node ./bin.mjs shasum package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo.git",
+    "directory": "packages/codetypo-tools-alias"
+  },
+  "keywords": [
+    "codeTypo",
+    "Word",
+    "List",
+    "Compiler"
+  ],
+  "files": [
+    "bin.mjs",
+    "!**/*.tsbuildInfo",
+    "!**/__mocks__",
+    "!**/*.test.*",
+    "!**/*.spec.*",
+    "!**/*.map"
+  ],
+  "author": "Md Sulaiman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo/labels/codetypo-tools"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-tools-alias#readme",
+  "dependencies": {
+    "@codetypo/codetypo-tools": "workspace:*"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "module": "bin.mjs"
+}

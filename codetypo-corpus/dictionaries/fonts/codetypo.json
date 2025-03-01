@@ -1,0 +1,12 @@
+// codeTypo Settings
+{
+    "id": "fonts-package",
+    "name": "fonts package settings",
+    "description": "Used for testing",
+    "dictionaries": [
+        "fonts"
+    ],
+    "import": [
+        "./codetypo-ext.json"
+    ]
+}

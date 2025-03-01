@@ -1,0 +1,12 @@
+{
+    "version": "0.2",
+    "files": [
+        "**/*.{md,txt}"
+    ],
+    "dictionaries": [
+        "gaming-terms", "game-development"
+    ],
+    "import": [
+        "./codetypo-ext.json"
+    ]
+}

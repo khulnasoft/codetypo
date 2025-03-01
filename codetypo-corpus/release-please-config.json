@@ -1,0 +1,569 @@
+{
+    "bootstrap-sha": "57747d12b18819775592694ea936eb9e4ce875b6",
+    "include-v-in-tag": false,
+    "tag-separator": "@",
+    "plugins": [
+        {
+            "type": "node-workspace",
+            "always-link-local": true,
+            "updatePeerDependencies": true
+        }
+    ],
+    "changelog-sections": [
+        {
+            "type": "feat",
+            "section": "Features",
+            "hidden": false
+        },
+        {
+            "type": "feature",
+            "section": "Features"
+        },
+        {
+            "type": "fix",
+            "section": "Updates and Bug Fixes",
+            "hidden": false
+        },
+        {
+            "type": "perf",
+            "section": "Performance Improvements"
+        },
+        {
+            "type": "ci",
+            "section": "Continuous Integration",
+            "hidden": true
+        },
+        {
+            "type": "chore",
+            "section": "Miscellaneous",
+            "hidden": true
+        },
+        {
+            "type": "revert",
+            "section": "Reverts"
+        },
+        {
+            "type": "docs",
+            "section": "Documentation"
+        },
+        {
+            "type": "style",
+            "section": "Styles",
+            "hidden": false
+        },
+        {
+            "type": "refactor",
+            "section": "Code Refactoring",
+            "hidden": false
+        },
+        {
+            "type": "test",
+            "section": "Tests",
+            "hidden": false
+        },
+        {
+            "type": "build",
+            "section": "Build System",
+            "hidden": false
+        },
+        {
+            "type": "",
+            "section": "Changes",
+            "hidden": false
+        }
+    ],
+    "packages": {
+        ".": {
+            "component": "codetypo-dicts",
+            "releaseType": "node"
+        },
+        "dictionaries/ada": {
+            "component": "@codetypo/dict-ada",
+            "releaseType": "node"
+        },
+        "dictionaries/al": {
+            "component": "@codetypo/dict-al",
+            "releaseType": "node"
+        },
+        "dictionaries/ar": {
+            "component": "@codetypo/dict-ar",
+            "releaseType": "node"
+        },
+        "dictionaries/aws": {
+            "component": "@codetypo/dict-aws",
+            "releaseType": "node"
+        },
+        "dictionaries/bash": {
+            "component": "@codetypo/dict-bash",
+            "releaseType": "node"
+        },
+        "dictionaries/bg_BG": {
+            "component": "@codetypo/dict-bg-bg",
+            "releaseType": "node"
+        },
+        "dictionaries/ca": {
+            "component": "@codetypo/dict-ca",
+            "releaseType": "node"
+        },
+        "dictionaries/city-names-finland": {
+            "component": "@codetypo/dict-city-names-finland",
+            "releaseType": "node"
+        },
+        "dictionaries/clojure": {
+            "component": "@codetypo/dict-clojure",
+            "releaseType": "node"
+        },
+        "dictionaries/companies": {
+            "component": "@codetypo/dict-companies",
+            "releaseType": "node"
+        },
+        "dictionaries/cpp": {
+            "component": "@codetypo/dict-cpp",
+            "releaseType": "node"
+        },
+        "dictionaries/cryptocurrencies": {
+            "component": "@codetypo/dict-cryptocurrencies",
+            "releaseType": "node"
+        },
+        "dictionaries/cs_CZ": {
+            "component": "@codetypo/dict-cs-cz",
+            "releaseType": "node"
+        },
+        "dictionaries/csharp": {
+            "component": "@codetypo/dict-csharp",
+            "releaseType": "node"
+        },
+        "dictionaries/codetypo": {
+            "component": "@codetypo/dict-codetypo-bundle",
+            "releaseType": "node"
+        },
+        "dictionaries/css": {
+            "component": "@codetypo/dict-css",
+            "releaseType": "node"
+        },
+        "dictionaries/da_DK": {
+            "component": "@codetypo/dict-da-dk",
+            "releaseType": "node"
+        },
+        "dictionaries/dart": {
+            "component": "@codetypo/dict-dart",
+            "releaseType": "node"
+        },
+        "dictionaries/data-science": {
+            "component": "@codetypo/dict-data-science",
+            "releaseType": "node"
+        },
+        "dictionaries/de_AT": {
+            "component": "@codetypo/dict-de-at",
+            "releaseType": "node"
+        },
+        "dictionaries/de_CH": {
+            "component": "@codetypo/dict-de-ch",
+            "releaseType": "node"
+        },
+        "dictionaries/de_DE": {
+            "component": "@codetypo/dict-de-de",
+            "releaseType": "node"
+        },
+        "dictionaries/django": {
+            "component": "@codetypo/dict-django",
+            "releaseType": "node"
+        },
+        "dictionaries/docker": {
+            "component": "@codetypo/dict-docker",
+            "releaseType": "node"
+        },
+        "dictionaries/dotnet": {
+            "component": "@codetypo/dict-dotnet",
+            "releaseType": "node"
+        },
+        "dictionaries/el": {
+            "component": "@codetypo/dict-el",
+            "releaseType": "node"
+        },
+        "dictionaries/elisp": {
+            "component": "@codetypo/dict-elisp",
+            "releaseType": "node"
+        },
+        "dictionaries/elixir": {
+            "component": "@codetypo/dict-elixir",
+            "releaseType": "node"
+        },
+        "dictionaries/en-common-misspellings": {
+            "component": "@codetypo/dict-en-common-misspellings",
+            "releaseType": "node"
+        },
+        "dictionaries/en_AU": {
+            "component": "@codetypo/dict-en-au",
+            "releaseType": "node"
+        },
+        "dictionaries/en_CA": {
+            "component": "@codetypo/dict-en-ca",
+            "releaseType": "node"
+        },
+        "dictionaries/en_GB-MIT": {
+            "component": "@codetypo/dict-en-gb-mit",
+            "releaseType": "node"
+        },
+        "dictionaries/en_GB": {
+            "component": "@codetypo/dict-en-gb",
+            "releaseType": "node"
+        },
+        "dictionaries/en_US": {
+            "component": "@codetypo/dict-en_us",
+            "releaseType": "node"
+        },
+        "dictionaries/en_shared": {
+            "component": "@codetypo/dict-en-shared",
+            "releaseType": "node"
+        },
+        "dictionaries/eo": {
+            "component": "@codetypo/dict-eo",
+            "releaseType": "node"
+        },
+        "dictionaries/es_ES": {
+            "component": "@codetypo/dict-es-es",
+            "releaseType": "node"
+        },
+        "dictionaries/et-EE": {
+            "component": "@codetypo/dict-et-ee",
+            "releaseType": "node"
+        },
+        "dictionaries/eu": {
+            "component": "@codetypo/dict-eu",
+            "releaseType": "node"
+        },
+        "dictionaries/fa_IR": {
+            "component": "@codetypo/dict-fa-ir",
+            "releaseType": "node"
+        },
+        "dictionaries/fi_FI": {
+            "component": "@codetypo/dict-fi-fi",
+            "releaseType": "node"
+        },
+        "dictionaries/filetypes": {
+            "component": "@codetypo/dict-filetypes",
+            "releaseType": "node"
+        },
+        "dictionaries/flutter": {
+            "component": "@codetypo/dict-flutter",
+            "releaseType": "node"
+        },
+        "dictionaries/fonts": {
+            "component": "@codetypo/dict-fonts",
+            "releaseType": "node"
+        },
+        "dictionaries/fr_FR": {
+            "component": "@codetypo/dict-fr-fr",
+            "releaseType": "node"
+        },
+        "dictionaries/fr_FR_90": {
+            "component": "@codetypo/dict-fr-reforme",
+            "releaseType": "node"
+        },
+        "dictionaries/fsharp": {
+            "component": "@codetypo/dict-fsharp",
+            "releaseType": "node"
+        },
+        "dictionaries/fullstack": {
+            "component": "@codetypo/dict-fullstack",
+            "releaseType": "node"
+        },
+        "dictionaries/gaming-terms": {
+            "component": "@codetypo/dict-gaming-terms",
+            "releaseType": "node"
+        },
+        "dictionaries/gis": {
+            "component": "@codetypo/dict-gis",
+            "releaseType": "node"
+        },
+        "dictionaries/git": {
+            "component": "@codetypo/dict-git",
+            "releaseType": "node"
+        },
+        "dictionaries/gl_ES": {
+            "component": "@codetypo/dict-gl-es",
+            "releaseType": "node"
+        },
+        "dictionaries/golang": {
+            "component": "@codetypo/dict-golang",
+            "releaseType": "node"
+        },
+        "dictionaries/google": {
+            "component": "@codetypo/dict-google",
+            "releaseType": "node"
+        },
+        "dictionaries/grc_GR": {
+            "component": "@codetypo/dict-grc",
+            "releaseType": "node"
+        },
+        "dictionaries/haskell": {
+            "component": "@codetypo/dict-haskell",
+            "releaseType": "node"
+        },
+        "dictionaries/he": {
+            "component": "@codetypo/dict-he",
+            "releaseType": "node"
+        },
+        "dictionaries/hr_HR": {
+            "component": "@codetypo/dict-hr-hr",
+            "releaseType": "node"
+        },
+        "dictionaries/html-symbol-entities": {
+            "component": "@codetypo/dict-html-symbol-entities",
+            "releaseType": "node"
+        },
+        "dictionaries/html": {
+            "component": "@codetypo/dict-html",
+            "releaseType": "node"
+        },
+        "dictionaries/hu_HU": {
+            "component": "@codetypo/dict-hu-hu",
+            "releaseType": "node"
+        },
+        "dictionaries/hy": {
+            "component": "@codetypo/dict-hy",
+            "releaseType": "node"
+        },
+        "dictionaries/id_ID": {
+            "component": "@codetypo/dict-id-id",
+            "releaseType": "node"
+        },
+        "dictionaries/it_IT": {
+            "component": "@codetypo/dict-it-it",
+            "releaseType": "node"
+        },
+        "dictionaries/java": {
+            "component": "@codetypo/dict-java",
+            "releaseType": "node"
+        },
+        "dictionaries/julia": {
+            "component": "@codetypo/dict-julia",
+            "releaseType": "node"
+        },
+        "dictionaries/k8s": {
+            "component": "@codetypo/dict-k8s",
+            "releaseType": "node"
+        },
+        "dictionaries/kotlin": {
+            "component": "@codetypo/dict-kotlin",
+            "releaseType": "node"
+        },
+        "dictionaries/la": {
+            "component": "@codetypo/dict-la",
+            "releaseType": "node"
+        },
+        "dictionaries/latex": {
+            "component": "@codetypo/dict-latex",
+            "releaseType": "node"
+        },
+        "dictionaries/lorem-ipsum": {
+            "component": "@codetypo/dict-lorem-ipsum",
+            "releaseType": "node"
+        },
+        "dictionaries/lt_LT": {
+            "component": "@codetypo/dict-lt-lt",
+            "releaseType": "node"
+        },
+        "dictionaries/lua": {
+            "component": "@codetypo/dict-lua",
+            "releaseType": "node"
+        },
+        "dictionaries/lv": {
+            "component": "@codetypo/dict-lv",
+            "releaseType": "node"
+        },
+        "dictionaries/makefile": {
+            "component": "@codetypo/dict-makefile",
+            "releaseType": "node"
+        },
+        "dictionaries/markdown": {
+            "component": "@codetypo/dict-markdown",
+            "releaseType": "node"
+        },
+        "dictionaries/medicalterms": {
+            "component": "@codetypo/dict-medicalterms",
+            "releaseType": "node"
+        },
+        "dictionaries/mk": {
+            "component": "@codetypo/dict-mk",
+            "releaseType": "node"
+        },
+        "dictionaries/mn_MN": {
+            "component": "@codetypo/dict-mn-mn",
+            "releaseType": "node"
+        },
+        "dictionaries/mnemonics": {
+            "component": "@codetypo/dict-mnemonics",
+            "releaseType": "node"
+        },
+        "dictionaries/monkeyc": {
+            "component": "@codetypo/dict-monkeyc",
+            "releaseType": "node"
+        },
+        "dictionaries/nb_NO": {
+            "component": "@codetypo/dict-nb-no",
+            "releaseType": "node"
+        },
+        "dictionaries/nl_NL": {
+            "component": "@codetypo/dict-nl-nl",
+            "releaseType": "node"
+        },
+        "dictionaries/node": {
+            "component": "@codetypo/dict-node",
+            "releaseType": "node"
+        },
+        "dictionaries/npm": {
+            "component": "@codetypo/dict-npm",
+            "releaseType": "node"
+        },
+        "dictionaries/people-names": {
+            "component": "@codetypo/dict-people-names",
+            "releaseType": "node"
+        },
+        "dictionaries/php": {
+            "component": "@codetypo/dict-php",
+            "releaseType": "node"
+        },
+        "dictionaries/pl_PL": {
+            "component": "@codetypo/dict-pl_pl",
+            "releaseType": "node"
+        },
+        "dictionaries/pokemon": {
+            "component": "@codetypo/dict-pokemon",
+            "releaseType": "node"
+        },
+        "dictionaries/powershell": {
+            "component": "@codetypo/dict-powershell",
+            "releaseType": "node"
+        },
+        "dictionaries/pt_BR": {
+            "component": "@codetypo/dict-pt-br",
+            "releaseType": "node"
+        },
+        "dictionaries/pt_PT": {
+            "component": "@codetypo/dict-pt-pt",
+            "releaseType": "node"
+        },
+        "dictionaries/public-licenses": {
+            "component": "@codetypo/dict-public-licenses",
+            "releaseType": "node"
+        },
+        "dictionaries/python": {
+            "component": "@codetypo/dict-python",
+            "releaseType": "node"
+        },
+        "dictionaries/r": {
+            "component": "@codetypo/dict-r",
+            "releaseType": "node"
+        },
+        "dictionaries/redis": {
+            "component": "@codetypo/dict-redis",
+            "releaseType": "node"
+        },
+        "dictionaries/ro_RO": {
+            "component": "@codetypo/dict-ro-ro",
+            "releaseType": "node"
+        },
+        "dictionaries/ru_RU": {
+            "component": "@codetypo/dict-ru_ru",
+            "releaseType": "node"
+        },
+        "dictionaries/ruby": {
+            "component": "@codetypo/dict-ruby",
+            "releaseType": "node"
+        },
+        "dictionaries/rust": {
+            "component": "@codetypo/dict-rust",
+            "releaseType": "node"
+        },
+        "dictionaries/scala": {
+            "component": "@codetypo/dict-scala",
+            "releaseType": "node"
+        },
+        "dictionaries/scientific_terms_GB": {
+            "component": "@codetypo/dict-scientific-terms-gb",
+            "releaseType": "node"
+        },
+        "dictionaries/scientific_terms_US": {
+            "component": "@codetypo/dict-scientific-terms-us",
+            "releaseType": "node"
+        },
+        "dictionaries/shell": {
+            "component": "@codetypo/dict-shell",
+            "releaseType": "node"
+        },
+        "dictionaries/sk_SK": {
+            "component": "@codetypo/dict-sk-sk",
+            "releaseType": "node"
+        },
+        "dictionaries/sl_SI": {
+            "component": "@codetypo/dict-sl-si",
+            "releaseType": "node"
+        },
+        "dictionaries/software-terms": {
+            "component": "@codetypo/dict-software-terms",
+            "releaseType": "node"
+        },
+        "dictionaries/sql": {
+            "component": "@codetypo/dict-sql",
+            "releaseType": "node"
+        },
+        "dictionaries/sr_Cyrl": {
+            "component": "@codetypo/dict-sr-cyrl",
+            "releaseType": "node"
+        },
+        "dictionaries/sr_Latn": {
+            "component": "@codetypo/dict-sr-latn",
+            "releaseType": "node"
+        },
+        "dictionaries/sv": {
+            "component": "@codetypo/dict-sv",
+            "releaseType": "node"
+        },
+        "dictionaries/svelte": {
+            "component": "@codetypo/dict-svelte",
+            "releaseType": "node"
+        },
+        "dictionaries/swift": {
+            "component": "@codetypo/dict-swift",
+            "releaseType": "node"
+        },
+        "dictionaries/terraform": {
+            "component": "@codetypo/dict-terraform",
+            "releaseType": "node"
+        },
+        "dictionaries/tr_TR": {
+            "component": "@codetypo/dict-tr-tr",
+            "releaseType": "node"
+        },
+        "dictionaries/typescript": {
+            "component": "@codetypo/dict-typescript",
+            "releaseType": "node"
+        },
+        "dictionaries/uk_UA": {
+            "component": "@codetypo/dict-uk-ua",
+            "releaseType": "node"
+        },
+        "dictionaries/vi_VN": {
+            "component": "@codetypo/dict-vi-vn",
+            "releaseType": "node"
+        },
+        "dictionaries/vim": {
+            "component": "@codetypo/dict-vim",
+            "releaseType": "node"
+        },
+        "dictionaries/vue": {
+            "component": "@codetypo/dict-vue",
+            "releaseType": "node"
+        },
+        "dictionaries/win32": {
+            "component": "@codetypo/dict-win32",
+            "releaseType": "node"
+        },
+        "packages/en-freq": {
+            "component": "@internal/en-freq",
+            "releaseType": "node"
+        }
+    }
+}

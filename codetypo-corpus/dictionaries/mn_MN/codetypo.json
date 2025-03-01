@@ -1,0 +1,13 @@
+{
+    "version": "0.2",
+    "files": [
+        "**/*.{md,txt}"
+    ],
+    "dictionaries": [
+        "mn-mn"
+    ],
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "ignorePaths": ["src/hunspell"]
+}

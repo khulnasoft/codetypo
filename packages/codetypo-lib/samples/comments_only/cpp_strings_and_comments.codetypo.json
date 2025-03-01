@@ -1,0 +1,30 @@
+// codeTypo Settings
+{
+    // Version of the setting file.  Always 0.2
+    "version": "0.2",
+    "dictionaryDefinitions": [
+        // re-define the cpp dictionary to prevent it from loading (this is up to you)
+        {
+            "name": "cpp",
+            "file": ""
+        }
+    ],
+    // Settings per language
+    "languageSettings": [
+        {
+            // use with cpp or c files
+            "languageId": "cpp,c",
+            // turn off compound words, because it is only checking strings.
+            "allowCompoundWords": false,
+            // Only check comments and strings
+            "includeRegExpList": [
+                "CStyleComment",
+                "string"
+            ],
+            // Exclude includes, because they are also strings.
+            "ignoreRegExpList": [
+                "/#include.*/"
+            ]
+        }
+    ]
+}

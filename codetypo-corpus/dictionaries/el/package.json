@@ -1,0 +1,54 @@
+{
+  "name": "@codetypo/dict-el",
+  "version": "3.1.6",
+  "description": "Greek dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "pnpm build:pre && pnpm run build:dictionary && pnpm build:post",
+    "build:pre": "pnpm sync && pnpm run compile-all-caps",
+    "build:post": "pnpm gz",
+    "build:dictionary": "codetypo-tools-cli build",
+    "conditional-build": "pnpm build:pre && pnpm run build:dictionary --conditional && pnpm build:post",
+    "compile-all-caps": "node ./tools/toCaps.mjs ./src/Greek.txt ./src/Greek.ALLCAPS.txt",
+    "sync": "pnpm cpy \"node_modules/dictionary-el/{*.dic,*.aff,*.md,**/license}\" src/hunspell",
+    "gz": "codetypo-tools-cli gzip \"*.trie\"",
+    "prepare:dictionary": "pnpm gz",
+    "test": "shx head -n 1000 ./src/Greek.txt | codetypo -c codetypo-ext.json --locale=el stdin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/el"
+  },
+  "keywords": [
+    "codetypo",
+    "el",
+    "Greek",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionareis/el/README.md",
+  "files": [
+    "el_GR.trie.gz",
+    "codetypo-ext.json",
+    "src/hunspell/license",
+    "!samples",
+    "!tools"
+  ],
+  "devDependencies": {
+    "dictionary-el": "^4.0.0"
+  }
+}

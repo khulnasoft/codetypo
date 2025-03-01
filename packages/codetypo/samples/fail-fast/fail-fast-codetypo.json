@@ -1,0 +1,5 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "import": "./codetypo.json",
+    "failFast": true
+}

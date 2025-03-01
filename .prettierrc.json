@@ -1,0 +1,18 @@
+{
+    "printWidth": 120,
+    "singleQuote": true,
+    "overrides": [
+        {
+            "files": "**/*.{jsonc,json,md,code-workspace}",
+            "options": {
+                "trailingComma": "none"
+            }
+        },
+        {
+            "files": ["**/src/GlobMatcher.test.ts", "packages/codetypo-filetypes/**/definitions.ts"],
+            "options": {
+                "printWidth": 180
+            }
+        }
+    ]
+}

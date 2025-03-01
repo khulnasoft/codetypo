@@ -1,0 +1,15 @@
+# Terms that are common to shell scripts but not a command, function, or keyword.
+alnum
+autoremove
+cntrl
+dearmor
+enarmor
+history
+inlib
+keyrings
+keyword
+physical
+posix
+privileged
+punct
+xdigit

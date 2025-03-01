@@ -1,0 +1,44 @@
+{
+  "name": "@codetypo/dict-ada",
+  "version": "4.1.0",
+  "description": "Ada Language dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "test": "pnpm run test-dict && pnpm run test-samples",
+    "test-dict": "shx head -n 100 src/ada.txt | codetypo -c ./codetypo-ext.json --locale=* --languageId=ada stdin",
+    "test-samples": "codetypo \"samples/**\"",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/ada"
+  },
+  "keywords": [
+    "codetypo",
+    "ada",
+    "Ada Language",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/ada#readme",
+  "files": [
+    "dict/ada.txt",
+    "codetypo-ext.json"
+  ]
+}

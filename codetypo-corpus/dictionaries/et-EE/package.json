@@ -1,0 +1,55 @@
+{
+  "name": "@codetypo/dict-et-ee",
+  "version": "3.1.4",
+  "description": "Estonian dictionary for codetypo.",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "pnpm run compile",
+    "sync": "pnpm cpy \"node_modules/dictionary-et/index.{aff,dic}\" src",
+    "compile": "codetypo-tools-cli build",
+    "conditional-build": "pnpm run sync && pnpm run build --conditional && pnpm gz",
+    "test-dict": "pipe-cmds \"hunspell-reader words -n 10000 \\\"src/index.dic\\\"\" \"codetypo -c ./codetypo-ext.json --locale=et --languageId=* stdin\"",
+    "test-text": "codetypo -c ./codetypo-ext.json --locale=et --languageId=* \"samples/**\"",
+    "test": "pnpm run test-dict && pnpm run test-text",
+    "gz": "codetypo-tools-cli gzip \"*.trie\"",
+    "prepare:dictionary": "pnpm gz",
+    "prepublishOnly": "echo pre-publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/et-EE"
+  },
+  "keywords": [
+    "codetypo",
+    "et-EE",
+    "Estonian",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "LGPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/et-EE#readme",
+  "files": [
+    "src/LICENSE",
+    "et_EE.trie.gz",
+    "codetypo-ext.json",
+    "*.js",
+    "*.d.ts"
+  ],
+  "devDependencies": {
+    "dictionary-et": "^2.0.0"
+  }
+}

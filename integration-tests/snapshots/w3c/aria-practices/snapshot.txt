@@ -1,0 +1,7 @@
+
+Repository: w3c/aria-practices
+Url: "https://github.com/w3c/aria-practices.git"
+Args: ["**/*.*"]
+Lines:
+ CodeTypo: Files checked: 405, Issues found: 0 in 0 files.
+ exit code: 0

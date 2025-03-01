@@ -1,0 +1,6 @@
+{
+    "flagWords": [],
+    "import": [
+        "./codetypo-dictionaries.json"
+    ]
+}

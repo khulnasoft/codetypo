@@ -1,0 +1,42 @@
+{
+  "name": "@codetypo/dict-dotnet",
+  "version": "5.0.9",
+  "description": ".Net dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build",
+    "test": "shx head -n 100 src/dotnet.txt | codetypo -c ./codetypo-ext.json --locale=* --languageId=cs stdin",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/dotnet"
+  },
+  "keywords": [
+    "codetypo",
+    "dotnet",
+    ".Net",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/dotnet#readme",
+  "files": [
+    "dict/*",
+    "codetypo-ext.json"
+  ]
+}

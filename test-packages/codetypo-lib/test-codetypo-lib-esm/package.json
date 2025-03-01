@@ -1,0 +1,25 @@
+{
+  "name": "test-codetypo-lib-esm",
+  "version": "8.17.5",
+  "description": "Pure testing package for codetypo-lib.",
+  "bin": "bin.mjs",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "build": "pnpm run compile",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "compile": "tsc -p .",
+    "test": "node bin.mjs"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "codetypo-lib": "workspace:*"
+  },
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": []
+}

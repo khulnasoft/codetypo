@@ -1,0 +1,6 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "version": "0.2",
+    "language": "en",
+    "files": ["**/*.txt"]
+}

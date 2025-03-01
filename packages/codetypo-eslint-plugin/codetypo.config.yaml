@@ -1,0 +1,8 @@
+ignorePaths:
+  - codetypo*.{yaml,json}
+  - assets/options.schema.json
+ignoreWords:
+  - todos
+  - bluelist
+words:
+  - synckit

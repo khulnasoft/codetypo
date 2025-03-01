@@ -1,0 +1,22 @@
+{
+    "id": "lt-lt",
+    "name": "Lithuanian",
+    "description": "Lithuanian dictionary.",
+    "readonly": true,
+    "dictionaryDefinitions": [
+        {
+            "name": "lt-lt",
+            "path": "./lt_LT.trie.gz",
+            "description": "Lithuanian dictionary."
+        }
+    ],
+    "dictionaries": [],
+    "languageSettings": [
+        {
+            "languageId": "*",
+            "locale": "lt,lt-LT",
+            "dictionaries": ["lt-lt"],
+            "dictionaryDefinitions": []
+        }
+    ]
+}

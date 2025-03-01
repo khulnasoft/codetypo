@@ -1,0 +1,5 @@
+{
+    "import": ["../codetypo-ext.json"],
+    "enableFiletypes": ["elisp", "lisp"],
+    "words": ["elisp"]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "Scripts used with maintaining the dictionaries.",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "sort-source": "sort-source.mjs",
+    "gen-dictionary-info": "gen-dictionary-info.mjs",
+    "update-package-json": "update-package-json.mjs",
+    "update-contributors": "update-contributors.mjs",
+    "merge": "merge.mjs",
+    "pipe-cmds": "pipe-cmds.mjs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@codetypo/codetypo-bundled-dicts": "workspace:*",
+    "commander": "^13.1.0",
+    "codetypo-lib": "workspace:*",
+    "globby": "^14.1.0",
+    "json5": "2.2.3",
+    "prettier": "^3.5.2",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "shelljs": "^0.8.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@codetypo/codetypo-types": "workspace:*",
+    "@types/mdast": "^4.0.4"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "test-codetypo-gitignore",
+  "version": "8.17.5",
+  "description": "Pure testing package for codetypo-gitignore. Its purpose is to verify codetypo-gitignore dependencies.",
+  "private": true,
+  "bin": {
+    "test-mjs": "./bin.mjs",
+    "test-rollup-cjs": "./bin.rollup.cjs",
+    "test-rollup-mjs": "./bin.rollup.mjs"
+  },
+  "type": "module",
+  "scripts": {
+    "clean": "shx rm -rf dist .rollup.cache",
+    "build": "pnpm build:ts && pnpm build:rollup",
+    "build:rollup": "rollup -c rollup.config.mjs",
+    "build:ts": "pnpm run compile && ts2mjs dist/esm",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "compile": "tsc -b .  -f",
+    "test": "pnpm test:unit && pnpm test:smoke",
+    "test:smoke": "node ./bin.mjs && node ./bin.rollup.mjs && node ./bin.rollup.cjs",
+    "test:unit": "vitest run"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "codetypo-gitignore": "workspace:*"
+  },
+  "main": "index.js",
+  "keywords": []
+}

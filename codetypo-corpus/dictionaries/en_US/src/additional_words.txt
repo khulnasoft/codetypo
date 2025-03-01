@@ -1,0 +1,63 @@
+# The CodeTypo English dictionary uses the SCOWL (Spell Checker Oriented Word Lists) dictionary as a
+# base: http://wordlist.aspell.net/
+#
+# Additionally, CodeTypo adds some extra words to that dictionary that are very common.
+#
+# There should be one entry per line.
+# Consider adding words to [shared-additional-words.txt](https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/en_shared/src/shared-additional-words.txt)
+# if they are used by all flavors of English.
+#
+# codetypo-tools: split
+anthropomorphization
+backtick
+backticks
+blazingly
+comms
+contactless
+coronavirus
+curbside
+déjà
+discretization
+discretize
+discretized
+disincentivize
+disincentivized
+disincentivizes
+disincentivizing
+draggable
+drive through
+drive thru
+drive-through
+drive-thru
+extremum
+flyout
+freemium
+infographic
+Kyiv
+multiline
+naïve
+negatable
+Orléans
+pangram
+rasterize
+reauthenticete
+rebrand
+rebranding
+retraumatization
+retraumatize
+retraumatized
+retraumatizes
+retraumatizing
+teleconverter
+ungrouped
+unmaneuverable
+unparsable
+unpatched
+unsecure
+unsecured
+unsecures
+unsecuring
+upscaled
+vendored
+vendoring
+xxxl

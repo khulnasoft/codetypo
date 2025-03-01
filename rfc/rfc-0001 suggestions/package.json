@@ -1,0 +1,16 @@
+{
+  "name": "rfc-0001-suggestions",
+  "version": "8.17.5",
+  "description": "Possible ways to support suggestion lists",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p .",
+    "test": ""
+  },
+  "files": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@codetypo/codetypo-types": "workspace:*"
+  }
+}

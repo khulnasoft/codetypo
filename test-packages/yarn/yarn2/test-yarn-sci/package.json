@@ -1,0 +1,17 @@
+{
+  "name": "test-yarn-sci",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728",
+  "scripts": {
+    "test": "yarn test:codetypo",
+    "test:codetypo": "../../../../bin.mjs README.md",
+    "update:dep": "yarn add --dev @codetypo/dict-scientific-terms-us@latest @codetypo/codetypo-types@latest"
+  },
+  "devDependencies": {
+    "@codetypo/codetypo-types": "^8.17.5",
+    "@codetypo/dict-scientific-terms-us": "^3.0.6"
+  }
+}

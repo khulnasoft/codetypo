@@ -1,0 +1,41 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
+    "version": "0.2",
+    "globRoot": "${cwd}",
+    "ignorePaths": [
+        "yarn.lock",
+        "*.json",
+        "*.mov",
+        "*.ico",
+        "*.svg",
+        "*.zip",
+        "*.woff",
+        "*.woff2",
+        "**/inYourLanguage.*",
+        "**/copy/es/**",
+        "**/copy/fa/**",
+        "**/copy/ko/**",
+        "**/copy/pt/**",
+        "**/copy/ja/**",
+        "**/copy/zh/**",
+        "**/copy/pl/**",
+        "**/copy/vo/**",
+        "**/copy/id/**"
+    ],
+    "dictionaryDefinitions": [
+        {
+            "name": "words.txt",
+            "path": "./words.txt",
+            "description": "Words in TypeScript-Website"
+        },
+        {
+            "name": "ignore-words",
+            "path": "./ignore-words.txt",
+            "description": "Words to ignore.",
+            "noSuggest": true
+        }
+    ],
+    "dictionaries": ["words.txt", "ignore-words"],
+    "ignoreWords": [],
+    "import": ["../../../../repositories/codetypo-reporter.json"]
+}

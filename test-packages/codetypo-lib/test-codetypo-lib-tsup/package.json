@@ -1,0 +1,32 @@
+{
+  "name": "test-codetypo-lib-tsup",
+  "version": "8.17.5",
+  "description": "Pure testing package for codetypo-lib.",
+  "bin": {
+    "test-bin": "test-bin.mjs"
+  },
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "build": "pnpm build:tsup",
+    "build:tsup": "tsup",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "test": "node ./test-bin.mjs"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "codetypo-lib": "workspace:*"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "codetypo": {
+    "words": [
+      "outfile",
+      "tsbuild"
+    ]
+  },
+  "keywords": []
+}

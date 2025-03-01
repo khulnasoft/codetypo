@@ -1,0 +1,52 @@
+{
+  "name": "@codetypo/dict-mn-mn",
+  "version": "1.0.0",
+  "description": "Mongolian dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 codetypo-tools-cli build",
+    "test": "pnpm test:words && pnpm test:samples",
+    "test:samples": "codetypo samples",
+    "test:words": "hunspell-reader words -n 1000 -m 0 \"src/hunspell/index.dic\" | codetypo -c ./codetypo-ext.json \"--locale=mn,mn-MN\" \"--languageId=*\" stdin",
+    "prepublishOnly": "pnpm run conditional-build && pnpm test",
+    "prepare:dictionary": "codetypo-tools-cli gzip \"dict/*.trie\"",
+    "conditional-build": "pnpm run sync && pnpm run build --conditional && pnpm run prepare:dictionary",
+    "sync": "pnpm cpy \"node_modules/dictionary-mn/*\" src/hunspell"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "mn_MN",
+    "Mongolian",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/mn_MN#readme",
+  "devDependencies": {
+    "dictionary-mn": "^3.0.0"
+  },
+  "files": [
+    "dict/mn-mn.trie.gz",
+    "codetypo-ext.json",
+    "*.js",
+    "*.d.ts"
+  ]
+}

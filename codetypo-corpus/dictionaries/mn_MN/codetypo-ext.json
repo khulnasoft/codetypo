@@ -1,0 +1,21 @@
+{
+    "id": "mn-mn",
+    "version": "0.2",
+    "name": "Mongolian",
+    "description": "Mongolian dictionary for codetypo.",
+    "readonly": true,
+    "dictionaryDefinitions": [
+        {
+            "name": "mn-mn",
+            "path": "./dict/mn-mn.trie.gz",
+            "description": "Mongolian dictionary."
+        }
+    ],
+    "languageSettings": [
+        {
+            "languageId": "*",
+            "locale": "mn,mn-MN",
+            "dictionaries": ["mn-mn"]
+        }
+    ]
+}

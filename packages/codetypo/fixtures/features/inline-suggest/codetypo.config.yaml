@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json
+
+ignorePaths:
+  - 'codetypo*.{json,yaml}'
+
+dictionaryDefinitions:
+  # codetypo:disable
+  - name: suggestions
+    suggestWords:
+      - bluelist->blueList
+      - Bluelist->BlueList
+      - blulist->blueList
+      - Blulist->BlueList
+  # codetypo:enable
+
+dictionaries:
+  - suggestions

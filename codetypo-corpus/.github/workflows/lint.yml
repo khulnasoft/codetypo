@@ -1,0 +1,47 @@
+name: Lint
+on:
+  pull_request:
+    paths:
+      - .prettier*"
+      - '**/*.js'
+      - '**/*.mjs'
+      - '**/*.md'
+      - '**/*.json'
+      - '**/*.yml'
+      - '**/*.yaml'
+  push:
+    paths:
+      - .prettier*"
+      - '**/*.js'
+      - '**/*.mjs'
+      - '**/*.md'
+      - '**/*.json'
+      - '**/*.yml'
+      - '**/*.yaml'
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Restore CodeTypo cache
+        uses: actions/cache@v4.2.1
+        with:
+          key: codetypo-cache-${{ runner.os }}-lint-${{ hashFiles('**/*.ts', '**/*.md') }}
+          path: |
+            .codetypocache
+          restore-keys: |
+            codetypo-cache-${{ runner.os }}-lint-
+            codetypo-cache-${{ runner.os }}-
+
+      - run: pnpm i
+      - run: pnpm run lint

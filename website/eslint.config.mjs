@@ -1,0 +1,74 @@
+import eslint from '@eslint/js';
+import nodePlugin from 'eslint-plugin-n';
+import tsEslint from 'typescript-eslint';
+
+// import simpleImportSort from 'eslint-plugin-simple-import-sort';
+// import unicorn from 'eslint-plugin-unicorn';
+
+// @ts-check
+
+export default tsEslint.config(
+    eslint.configs.recommended,
+    nodePlugin.configs['flat/recommended'],
+    ...tsEslint.configs.recommended,
+    {
+        ignores: [
+            '**/[Ss]amples/**', // codetypo:disable-line
+            '**/[Tt]emp/**',
+            '**/*.d.ts',
+            '**/*.map',
+            '**/coverage/**',
+            '**/dist/**',
+            '**/build/**',
+            '**/node_modules/**',
+            '**/.docusaurus/**',
+        ],
+    },
+    {
+        files: ['**/*.ts'],
+        rules: {
+            '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+            'n/no-missing-import': [
+                'warn',
+                {
+                    allowModules: ['@docusaurus/plugin-content-docs'],
+                    // resolvePaths: ['/path/to/a/modules/directory'],
+                },
+            ],
+        },
+    },
+    {
+        files: ['**/*.tsx'],
+        rules: {
+            '@typescript-eslint/no-var-requires': 'off',
+            '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+            'n/no-missing-import': [
+                'warn',
+                {
+                    allowModules: [
+                        '@docusaurus/Link',
+                        '@docusaurus/plugin-content-docs',
+                        '@docusaurus/useDocusaurusContext',
+                        '@theme/Heading',
+                        '@theme/Layout',
+                    ],
+                },
+            ],
+            'n/no-missing-require': 'warn',
+            'n/no-extraneous-require': [
+                'error',
+                {
+                    allowModules: ['@site/static'],
+                    // convertPath: { '@site/static/**': ['@site/static', './static'] },
+                },
+            ],
+        },
+    },
+    {
+        files: ['eslint.config.mjs', 'docusaurus.config.ts'],
+        rules: {
+            'n/no-extraneous-import': 'off',
+            'n/no-missing-import': 'off',
+        },
+    },
+);

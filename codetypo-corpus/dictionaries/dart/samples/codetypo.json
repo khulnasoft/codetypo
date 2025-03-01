@@ -1,0 +1,9 @@
+{
+    "import": "../codetypo-ext.json",
+    "overrides": [
+        {
+            "filename": "dart-common.txt",
+            "dictionaries": ["dart"]
+        }
+    ]
+}

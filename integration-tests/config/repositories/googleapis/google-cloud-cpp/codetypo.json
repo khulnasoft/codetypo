@@ -1,0 +1,3 @@
+{
+    "import": ["../../../../repositories/codetypo-reporter.json", "./codetypo.config.yaml"]
+}

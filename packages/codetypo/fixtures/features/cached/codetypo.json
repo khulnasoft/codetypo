@@ -1,0 +1,10 @@
+{
+    "$schema": "./../../../../../codetypo.schema.json",
+    "version": "0.2",
+    "cache": {
+        "useCache": true,
+        "cacheLocation": ".codetypocache",
+        "cacheFormat": "legacy"
+    },
+    "files": ["*.md"]
+}

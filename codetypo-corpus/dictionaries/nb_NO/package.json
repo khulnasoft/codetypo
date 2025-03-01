@@ -1,0 +1,48 @@
+{
+  "name": "@codetypo/dict-nb-no",
+  "version": "2.0.4",
+  "description": "Norwegian Bokmål dictionary for codetypo.",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "exports": {
+    ".": "./codetypo-ext.json",
+    "./codetypo": "./codetypo-ext.json",
+    "./codetypo-ext.json": "./codetypo-ext.json"
+  },
+  "scripts": {
+    "build": "codetypo-tools-cli build && pnpm gz",
+    "build:conditional": "codetypo-tools-cli build --conditional && pnpm gz",
+    "gz": "codetypo-tools-cli gzip \"*.trie\"",
+    "test-words": "pipe-cmds \"hunspell-reader words -n 1000 \\\"src/nb.dic\\\"\" \"codetypo -c ./codetypo-ext.json \\\"--locale=nb\\\" \\\"--languageId=*\\\" stdin\"",
+    "test-samples": "codetypo \"samples/**\"",
+    "test": "pnpm run test-words && pnpm run test-samples",
+    "prepublishOnly": "echo pre-publish",
+    "prepare:dictionary": "pnpm run gz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codetypo-dicts",
+    "directory": "dictionaries/nb_NO"
+  },
+  "keywords": [
+    "codetypo",
+    "codetypo-ext",
+    "nb_NO",
+    "Norwegian Bokmål",
+    "dictionary",
+    "spelling"
+  ],
+  "author": "KhulnaSoft Ltd <support@khulnasoft.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/khulnasoft/codetypo-dicts/issues"
+  },
+  "homepage": "https://github.com/khulnasoft/codetypo-dicts/blob/main/dictionaries/no_NB#readme",
+  "files": [
+    "nb.trie.gz",
+    "codetypo-ext.json",
+    "src/README_nb_NO.md"
+  ]
+}

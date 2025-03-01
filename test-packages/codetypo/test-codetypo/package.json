@@ -1,0 +1,21 @@
+{
+  "name": "test-codetypo",
+  "version": "8.17.5",
+  "description": "Pure testing package for codetypo.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "shx rm -rf dist temp coverage \"*.tsbuildInfo\"",
+    "build": "pnpm run compile",
+    "clean-build": "pnpm run clean && pnpm run build",
+    "compile": "tsc -p .",
+    "test": "node dist"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@codetypo/codetypo-types": "workspace:*",
+    "codetypo": "workspace:*"
+  },
+  "keywords": []
+}

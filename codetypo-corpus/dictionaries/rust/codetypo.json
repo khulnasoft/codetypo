@@ -1,0 +1,12 @@
+{
+    "version": "0.2",
+    "dictionaries": [
+        "rust"
+    ],
+    "import": [
+        "./codetypo-ext.json"
+    ],
+    "words": [
+        "Andreev"
+    ]
+}

@@ -1,0 +1,151 @@
+import { promises as nfs } from 'node:fs';
+
+import { createRedirectProvider, createVirtualFS, FSCapabilityFlags } from 'codetypo-io';
+import { describe, expect, test } from 'vitest';
+
+import { pathPackageSamplesURL, pathRepoTestFixturesURL } from '../../../../test-util/index.mjs';
+import { getVirtualFS } from '../../../fileSystem.js';
+import { resolveFileWithURL, toURL } from '../../../util/url.js';
+import { defaultConfigFilenames as searchPlaces } from './configLocations.js';
+import { ConfigSearch } from './configSearch.js';
+
+const virtualURL = new URL('virtual-fs://github/codetypo-io/');
+const htmlURL = new URL('https://example.com/');
+const issuesURL = new URL('issues/', pathRepoTestFixturesURL);
+
+const defaultExtensions = ['.json', '.yaml', '.yml', '.jsonc'];
+const allExtensions = [...defaultExtensions, '.js', '.cjs', '.mjs'];
+
+const allowedExtensionsByProtocol = new Map<string, readonly string[]>([
+    ['file:', allExtensions],
+    ['virtual-fs:', allExtensions],
+    ['*', defaultExtensions],
+]);
+
+describe('ConfigSearch', () => {
+    describe('searchForConfig', () => {
+        test('should return the URL of the config file if found', async () => {
+            const configSearch = new ConfigSearch(searchPlaces, allowedExtensionsByProtocol, getVirtualFS().fs);
+
+            const searchFrom = new URL('js-config/', pathPackageSamplesURL);
+            const expectedConfigUrl = new URL('codetypo.config.js', searchFrom);
+
+            const result = await configSearch.searchForConfig(searchFrom);
+
+            expect(result).toEqual(expectedConfigUrl);
+        });
+
+        test('should return undefined if config file is not found', async () => {
+            const configSearch = new ConfigSearch(searchPlaces, allowedExtensionsByProtocol, getVirtualFS().fs);
+
+            const searchFrom = u('/path/to/search/from/');
+
+            const result = await configSearch.searchForConfig(searchFrom);
+
+            expect(result).toBeUndefined();
+        });
+
+        test.each`
+            dir                                           | expected
+            ${sURLh('src/')}                              | ${sURL('.codetypo.json')}
+            ${sURLh('linked/')}                           | ${sURL('linked/codetypo.config.js')}
+            ${sURLh('linked')}                            | ${sURL('.codetypo.json')}
+            ${vURLh('src/')}                              | ${vURL('.codetypo.json')}
+            ${vURLh('linked/')}                           | ${vURL('linked/codetypo.config.js')}
+            ${vURLh('linked')}                            | ${vURL('.codetypo.json')}
+            ${uh('src/', htmlURL)}                        | ${u('.codetypo.json', htmlURL)}
+            ${uh('linked/', htmlURL)}                     | ${u('.codetypo.json', htmlURL)}
+            ${uh('linked', htmlURL)}                      | ${u('.codetypo.json', htmlURL)}
+            ${uh('/path/to/search/from/')}                | ${undefined}
+            ${'https://example.com/path/to/search/from/'} | ${u('.codetypo.json', htmlURL)}
+            ${'https://example.com/path/to/files/'}       | ${u('.codetypo.json', htmlURL)}
+            ${sURLh('package-json/nested/README.md')}     | ${sURL('package-json/package.json')}
+            ${uh('issue-5120/', issuesURL)}               | ${u('issue-5120/.config/codetypo.config.yaml', issuesURL)}
+        `('searchForConfig vfs $dir', async ({ dir, expected }) => {
+            const vfs = createVirtualFS();
+            const redirectProviderVirtual = createRedirectProvider('virtual', virtualURL, sURL('./'));
+            const redirectProviderHtml = createRedirectProvider('html', htmlURL, sURL('./'), {
+                // Do not allow directory reads.
+                capabilities: ~FSCapabilityFlags.ReadWriteDir,
+            });
+            vfs.registerFileSystemProvider(redirectProviderVirtual, redirectProviderHtml);
+            const configSearch = new ConfigSearch(searchPlaces, allowedExtensionsByProtocol, vfs.fs);
+
+            const searchFrom = toURL(dir);
+
+            const result = await configSearch.searchForConfig(searchFrom);
+
+            // console.log('%o', { searchFrom, result, expected });
+
+            expect(result?.href).toEqual(expected?.href);
+        });
+
+        test('that the same result is returned', async () => {
+            const configSearch = new ConfigSearch(searchPlaces, allowedExtensionsByProtocol, getVirtualFS().fs);
+            const result = await configSearch.searchForConfig(sURL('src/'));
+            const result2 = await configSearch.searchForConfig(sURL('.'));
+            expect(result2).toBe(result);
+            configSearch.clearCache();
+            const result3 = await configSearch.searchForConfig(sURL('.'));
+            const result4 = await configSearch.searchForConfig(sURL('src/nested/dir/'));
+            const result5 = await configSearch.searchForConfig(sURL('src'));
+            expect(result3).toStrictEqual(result);
+            expect(result4).toStrictEqual(result);
+            expect(result3).not.toBe(result);
+            expect(result4).toBe(result3);
+            expect(result5).toStrictEqual(result4);
+        });
+
+        test('symbolic links', async () => {
+            const dir = new URL('issues/issue-5120/', pathRepoTestFixturesURL);
+            const info = await nfs.readdir(dir, { withFileTypes: true });
+            const symEntries = info.filter((e) => e.isSymbolicLink());
+            expect(symEntries.map((e) => e.name)).toEqual(['.config']);
+        });
+    });
+
+    describe('clearCache', () => {
+        test('should clear the search cache', async () => {
+            const configSearch = new ConfigSearch(searchPlaces, allowedExtensionsByProtocol, getVirtualFS().fs);
+
+            const searchFrom = new URL('js-config/', pathPackageSamplesURL);
+            const expectedConfigUrl = new URL('codetypo.config.js', searchFrom);
+
+            const result = await configSearch.searchForConfig(searchFrom);
+            expect(result).toEqual(expectedConfigUrl);
+            const result2 = await configSearch.searchForConfig(new URL('text.txt', searchFrom));
+            expect(result2).toBe(result);
+
+            configSearch.clearCache();
+            const result3 = await configSearch.searchForConfig(searchFrom);
+            expect(result3).toEqual(expectedConfigUrl);
+            expect(result3).not.toBe(result);
+        });
+    });
+});
+
+function vURL(url: string): URL {
+    return u(url, virtualURL);
+}
+
+function vURLh(url: string): string {
+    return vURL(url).href;
+}
+
+function sURL(filename: string): URL {
+    return resolveFileWithURL(filename, pathPackageSamplesURL);
+}
+
+function sURLh(filename: string): string {
+    return sURL(filename).href;
+}
+
+const rootURL = new URL('/', import.meta.url);
+
+function u(url: string, baseURL = rootURL) {
+    return new URL(url, baseURL);
+}
+
+function uh(url: string, baseURL = rootURL) {
+    return u(url, baseURL).href;
+}
