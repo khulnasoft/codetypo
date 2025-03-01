@@ -1,6 +1,7 @@
 use std::collections::BTreeMap;
 use std::collections::HashSet;
 use std::io::Write;
+use codetypo::tokens::Word;
 
 #[test]
 fn codegen() {
@@ -172,7 +173,7 @@ fn entries() -> BTreeMap<String, varcon_core::Entry> {
         .filter(|e| {
             e.variants
                 .iter()
-                .all(|v| typos::tokens::Word::new(v.word, 0).is_ok())
+                .all(|v| Word::new(v.word, 0).is_ok())
         })
         .map(|e| {
             let mut e = e.into_owned();

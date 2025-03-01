@@ -1,7 +1,0 @@
-Metadata-Version: 2.2
-Name: pre_commit_placeholder_package
-Version: 0.0.0
-License-File: LICENSE-APACHE
-License-File: LICENSE-MIT
-Requires-Dist: codetypo==2.3.0
-Dynamic: requires-dist
