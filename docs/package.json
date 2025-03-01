@@ -1,8 +1,0 @@
-{
-  "name": "codetypo-docs",
-  "description": "Documentation for CodeTypo",
-  "private": true,
-  "scripts": {
-    "serve": "bundle exec jekyll serve"
-  }
-}

@@ -1,9 +1,0 @@
-!fuck
-# Prevent suggesting these words
-cacheable
-crap
-dbaeumer
-esbenp
-flagger
-flaggy
-shit

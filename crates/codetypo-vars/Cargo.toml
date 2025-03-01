@@ -1,0 +1,32 @@
+[package]
+name = "codetypo-vars"
+version = "0.9.1"
+description = "Source Code Spelling Correction"
+readme = "../../README.md"
+categories = ["development-tools", "text-processing"]
+keywords = ["development", "spelling"]
+repository.workspace = true
+license.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+include.workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
+
+[dependencies]
+dictgen = { version = "^0.3", path = "../dictgen" }
+varcon-core = { version = "^5.0", path = "../varcon-core", features = ["flags"] }
+
+[dev-dependencies]
+varcon = { version = "^1.0", path = "../varcon", features = ["flags"] }
+varcon-core = { version = "^5.0", path = "../varcon-core", features = ["flags"] }
+codetypo = { version = "^0.10", path = "../codetypo" }
+codegenrs = "3.0"
+itertools = "0.14"
+dictgen = { version = "^0.3", path = "../dictgen", features = ["codegen"] }
+snapbox = "0.6.5"
+
+[lints]
+workspace = true

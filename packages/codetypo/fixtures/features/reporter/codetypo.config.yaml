@@ -1,4 +1,0 @@
-reporters:
-  - '@codetypo/codetypo-json-reporter'
-files:
-  - '*'

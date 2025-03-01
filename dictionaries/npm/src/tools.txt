@@ -1,4 +1,0 @@
-# terms related to NPM Eco system tools
-eslintcache
-eslintignore
-prettierignore

@@ -1,7 +1,0 @@
-# Include any additional terms in this file.
-colocate
-colocated
-DARROW
-LARROW
-RARROW
-UARROW

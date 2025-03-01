@@ -1,0 +1,6 @@
+bin.name = "codetypo"
+args = "../../README.md"
+status.code = 2
+stdin = ""
+# stdout doesn't have stable order
+stderr = ""

@@ -1,0 +1,26 @@
+- id: codetypo
+  name: codetypo
+  description: Source code spell checker, binary install
+  language: python
+  entry: codetypo
+  args: [--write-changes, --force-exclude]
+  types: [text]
+  stages: [pre-commit, pre-merge-commit, pre-push, manual]
+
+- id: codetypo-docker
+  name: codetypo
+  description: Source code spell checker, Docker image
+  language: docker
+  entry: codetypo
+  args: [--write-changes, --force-exclude]
+  types: [text]
+  stages: [pre-commit, pre-merge-commit, pre-push, manual]
+
+- id: codetypo-src
+  name: codetypo
+  description: Source code spell checker, source install
+  language: rust
+  entry: codetypo
+  args: [--write-changes, --force-exclude]
+  types: [text]
+  stages: [pre-commit, pre-merge-commit, pre-push, manual]

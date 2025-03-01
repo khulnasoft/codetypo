@@ -1,6 +1,0 @@
-import:
-  - ../codetypo-ext.json
-  - ../../la/codetypo-ext.json
-language: lorem, la, en
-ignorePaths:
-  - words.txt

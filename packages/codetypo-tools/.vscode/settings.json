@@ -1,8 +1,0 @@
-{
-    "json.schemas": [
-        {
-            "fileMatch": ["**/codetypo-tools.config.json", "**/codetypo-tools.config.yaml"],
-            "url": "./codetypo-tools.config.schema.json"
-        }
-    ]
-}

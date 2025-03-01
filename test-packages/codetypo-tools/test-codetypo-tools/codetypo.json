@@ -1,7 +1,0 @@
-{
-    "noConfigSearch": true,
-    "ignorePaths": ["dict"],
-    "import": ["./codetypo.test.json"],
-    "ignoreWords": ["quic", "tsbuildinfo"],
-    "words": ["pnpm"]
-}

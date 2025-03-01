@@ -1,194 +1,190 @@
-# CodeTypo
+# codetypo
 
-[![unit tests](https://github.com/khulnasoft/codetypo/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/khulnasoft/codetypo/actions)
-[![integration tests](https://github.com/khulnasoft/codetypo/actions/workflows/integration-test.yml/badge.svg?branch=main)](https://github.com/khulnasoft/codetypo/actions)
-[![lint](https://github.com/khulnasoft/codetypo/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/khulnasoft/codetypo/actions)
-[![coverage](https://github.com/khulnasoft/codetypo/actions/workflows/coverage.yml/badge.svg?branch=main)](https://github.com/khulnasoft/codetypo/actions)
+> **Source code spell checker**
 
-[![codecov](https://codecov.io/gh/khulnasoft/codetypo/branch/main/graph/badge.svg?token=Dr4fi2Sy08)](https://codecov.io/gh/khulnasoft/codetypo)
-[![Coverage Status](https://coveralls.io/repos/github/khulnasoft/codetypo/badge.svg?branch=main)](https://coveralls.io/github/khulnasoft/codetypo)
+Finds and corrects spelling mistakes among source code:
+- Fast enough to run on monorepos
+- Low false positives so you can run on PRs
 
-The CodeTypo mono-repo, a spell checker for code.
+![Screenshot](./docs/screenshot.png)
 
-## Support Future Development
 
-<!--- @@inject: static/sponsor.md --->
+[![Downloads](https://img.shields.io/github/downloads/khulnasoft/codetypo/total.svg)](https://github.com/khulnasoft/codetypo/releases)
+[![codecov](https://codecov.io/gh/khulnasoft/codetypo/branch/master/graph/badge.svg)](https://codecov.io/gh/khulnasoft/codetypo)
+[![Documentation](https://img.shields.io/badge/docs-master-blue.svg)][Documentation]
+![License](https://img.shields.io/crates/l/codetypo.svg)
+[![Crates Status](https://img.shields.io/crates/v/codetypo.svg)][Crates.io]
 
-- [![GitHub Sponsors](https://img.shields.io/badge/-black?style=social&logo=githubsponsors&label=GitHub%20Sponsor%3A%20Street%20Side%20Software)](https://github.com/sponsors/khulnasoft)
-- [![Patreon](https://img.shields.io/badge/-black?style=social&logo=patreon&label=Patreon%3A%20Street%20Side%20Software)](https://patreon.com/khulnasoft)
-- [![PayPal](https://img.shields.io/badge/-black?style=social&logo=paypal&label=PayPal%20Donate%3A%20Street%20Side%20Software)](https://www.paypal.com/donate/?hosted_button_id=26LNBP2Q6MKCY)
-- [![Open Collective](https://img.shields.io/badge/-black?style=social&logo=opencollective&label=Open%20Collective%3A%20CodeTypo)](https://opencollective.com/codetypo)
-
-<!--- @@inject-end: static/sponsor.md --->
+Dual-licensed under [MIT](LICENSE-MIT) or [Apache 2.0](LICENSE-APACHE)
 
 ## Documentation
 
-[Documentation - CodeTypo](https://khulnasoft.github.io/codetypo/)
+- [Installation](#install)
+- [Getting Started](#getting-started)
+  - [False Positives](#false-positives)
+  - [Integrations](#integrations)
+    - [GitHub Action](docs/github-action.md)
+    - [pre-commit](docs/pre-commit.md)
+    - [Custom](#custom)
+  - [Debugging](#debugging)
+- [Reference](docs/reference.md)
+- [FAQ](#faq)
+- [Comparison with other spell checkers](docs/comparison.md)
+- [Projects using codetypo](https://github.com/khulnasoft/codetypo/wiki)
+- [Benchmarks](benchsuite/runs)
+- [Design](docs/design.md)
+- [Contribute](CONTRIBUTING.md)
+- [CHANGELOG](CHANGELOG.md)
 
-## Third-Party Video Presentations
+## Install
 
-Some videos related to CodeTypo and the [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=khulnasoft.code-spell-checker) for VS Code.
+[Download](https://github.com/khulnasoft/codetypo/releases) a pre-built binary
+(installable via [gh-install](https://github.com/khulnasoft/gh-install)).
 
-- [Spell Checking Documentation in DevOps Pipelines](https://www.youtube.com/watch?v=w8gGi3aeVpc) by Houssem Dellai
-- [Don't Worry About Spelling...VS Code Can Do It For You!!](https://www.youtube.com/watch?v=MfxFMFMsBP4) by [James Q Quick](https://www.youtube.com/@JamesQQuick)
-- [Spell Checking In VSCode - VSCode Pro Tips](https://www.youtube.com/watch?v=_GwpPJgH1Gw)
-- [Spell Check in VS Code with Code Spell Checker - Extension Highlight](https://www.youtube.com/watch?v=ZxNnOjWetH4)
-- [Spell check your code from the command line with Codetypo](https://www.youtube.com/watch?v=nwmJ9h_zPJc)
-- [How to Use VS Code Spell Checker](https://www.youtube.com/watch?v=Ix5bMd0kZeY) - Detailed walkthrough to setup and use multiple languages
-- [Code Spell Checker Extension for Visual Studio Code](https://www.youtube.com/watch?v=dUn1mrJYMrM)
+Or use rust to install:
+```console
+$ cargo install codetypo-cli
+```
 
-## Packages
+Or use [Homebrew](https://brew.sh/) to install:
+```console
+$ brew install codetypo-cli
+```
 
-- [codetypo](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo) -- codetypo command-line application
-- [@codetypo/eslint-plugin](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-eslint-plugin) -- CodeTypo ESLint Plugin
-- [codetypo-bundled-dicts](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-bundled-dicts) -- collection of dictionaries bundled with codetypo.
-- [codetypo-glob](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-glob) -- glob library.
-- [codetypo-io](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-io) -- i/o library.
-- [codetypo-lib](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-lib) -- codetypo library used for code driven spelling checking (used by the application).
-- [codetypo-types](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-types) -- codetypo types and JSON schema for codetypo configuration files.
-- [codetypo-tools](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-tools) -- tool used to compile dictionaries.
-- [codetypo-trie-lib](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-trie-lib) -- trie data structure used to store words.
-- [codetypo-trie](https://github.com/khulnasoft/codetypo/tree/main/packages/codetypo-trie) -- trie data tool used to store words.
-- [hunspell-reader](https://github.com/khulnasoft/codetypo/tree/main/packages/hunspell-reader) -- reads Hunspell files and outputs words.
+Or use [Conda](https://conda.io/) to install:
+```console
+$ conda install codetypo
+```
 
-## Related Packages
+Or use [Pacman](https://wiki.archlinux.org/title/pacman) to install:
+```console
+$ sudo pacman -S codetypo
+```
 
-- [codetypo-cli](https://github.com/khulnasoft/codetypo) -- `codetypo-cli` is useful for including `codetypo` directly from GitHub.
+## Getting Started
 
-  Example install: `npm install -g git+https://github.com/khulnasoft/codetypo`.
+Most commonly, you'll either want to see what codetypo are available with
+```console
+$ codetypo
+```
 
-  This will add the `codetypo-cli` command, which is an alias of the `codetypo` command.
+Or have them fixed
+```console
+$ codetypo --write-changes
+$ codetypo -w
+```
+If there is any ambiguity (multiple possible corrections), `codetypo` will just report it to the user and move on.
 
-## Live Discussions
+### False Positives
 
-Join us on:
+Sometimes, what looks like a typo is intentional, like with people's names, acronyms, or localized content.
 
-[<img src="./assets/images/zulip-icon-circle.svg" width="32">](https://codetypo.zulipchat.com/)
+To mark a word or an identifier (grouping of words) as valid, add it your [`_codetypo.toml`](docs/reference.md) by declaring itself as the valid spelling:
+```toml
+[default]
+extend-ignore-identifiers-re = [
+    # *sigh* this just isn't worth the cost of fixing
+    "AttributeID.*Supress.*",
+]
 
-[codetypo.zulipchat.com](https://codetypo.zulipchat.com/)
+[default.extend-identifiers]
+# *sigh* this just isn't worth the cost of fixing
+AttributeIDSupressMenu = "AttributeIDSupressMenu"
 
-## RFCs
+[default.extend-words]
+# Don't correct the surname "Teh"
+teh = "teh"
+```
+For more ways to ignore or extend the dictionary with examples, see the [config reference](docs/reference.md).
 
-| Link                                                                                                                  | Description                     | Status      |
-| --------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ----------- |
-| [rfc-0001](https://github.com/khulnasoft/codetypo/tree/main/rfc/rfc-0001%20suggestions/)                        | Fixing common misspellings      | Done        |
-| [rfc-0002](https://github.com/khulnasoft/codetypo/tree/main/rfc/rfc-0002%20improve%20dictionary%20suggestions/) | Improving Generated Suggestions | Done        |
-| [rfc-0003](https://github.com/khulnasoft/codetypo/tree/main/rfc/rfc-0003%20parsing%20files/)                    | Plug-ins: Adding file parsers   | In Progress |
-| [rfc-0004](https://github.com/khulnasoft/codetypo/tree/main/rfc/rfc-0004%20known%20issues/)                     | Support Marking Issues as Known | Not started |
+For cases like localized content, you can disable spell checking of file contents while still checking the file name:
+```toml
+[type.po]
+extend-glob = ["*.po"]
+check-file = false
+```
+(run `codetypo --type-list` to see configured file types)
 
-## CodeTypo for enterprise
+If you need some more flexibility, you can completely exclude some files from consideration:
+```toml
+[files]
+extend-exclude = ["localized/*.po"]
+```
 
-Available as part of the Tidelift Subscription.
+### Integrations
 
-The maintainers of CodeTypo and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source packages you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact packages you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-codetypo?utm_source=npm-codetypo&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+- [GitHub Actions](docs/github-action.md)
+- [pre-commit](docs/pre-commit.md)
+- [🐊Putout Processor](https://github.com/putoutjs/putout-processor-codetypo)
+- [Visual Studio Code](https://github.com/tekumara/codetypo-vscode)
+- [codetypo-lsp (Language Server Protocol server)](https://github.com/tekumara/codetypo-vscode)
 
-## Security contact information
+#### Custom
 
-To report a security vulnerability, please email <security@khulnasoft.com> or use the
-[Tidelift security contact](https://tidelift.com/security).
-Tidelift will coordinate the fix and disclosure.
+`codetypo` provides several building blocks for custom native integrations
+- `-` reads from `stdin`, `--write-changes` will be written to `stdout`
+- `--diff` to provide a diff
+- `--format json` to get jsonlines with exit code 0 on no errors, code 2 on codetypo, anything else is an error.
 
-## Versions
+Examples:
+```console
+$ # Read file from stdin, write corrected version to stdout
+$ codetypo - --write-changes
+$ # Creates a diff of what would change
+$ codetypo dir/file --diff
+$ # Fully programmatic control
+$ codetypo dir/file --format json
+```
 
-|        | version | Node    | Status                | Maintenance | End of Free Support |
-| :----- | :------ | :------ | :-------------------- | :---------- | :------------------ |
-| codetypo | 8.x     | 18.x    | In Active Development | TBD         | TBD                 |
-| codetypo | 7.x     | 16.x    | Maintenance           | 2023-10-01  | 2023-11-07          |
-| codetypo | 6.x     | 14.14.x | Paid support only[^1] | 2023-04-01  | 2023-05-01          |
-| codetypo | 5.x     | 12.x    | Paid support only[^1] | -           | 2022-10-01          |
-| codetypo | 4.x     | 10.x    | Paid support only[^1] | -           | 2022-05-01          |
+### Debugging
 
-[^1]: [Support - Street Side Software](https://khulnasoft.com/support/#maintenance-agreements)
+You can see what the effective config looks like by running
+```console
+$ codetypo --dump-config -
+```
 
-## Contributing
+You can then see how codetypo is processing your project with
+```console
+$ codetypo --files
+$ codetypo --identifiers
+$ codetypo --words
+```
 
-Contributions are welcome! See our [contribution notes](CONTRIBUTING.md). **Note:** To add or remove words in a dictionary, visit [codetypo-dicts](https://github.com/khulnasoft/codetypo/issues).
+If you need to dig in more, you can enable debug logging with `-v`
 
-🙏 _**Special thanks to all of our amazing contributors!**_ 🥰
+## FAQ
 
-<!--- @@inject: static/contributors.md --->
+### Why was ... not corrected?
 
-<!--- codetypo:disable --->
+**Does the file show up in `codetypo --files`?**
+If not, check your config with `codetypo --dump-config -`.
+The `[files]` table controls how we walk files.
+If you are using `files.extend-exclude`,
+are you running into [#593](https://github.com/khulnasoft/codetypo/issues/593)?
+If you are using `files.ignore-vcs = true`,
+is the file in your `.gitignore` but git tracks it anyways?
+Prefer allowing the file explicitly (see [#909](https://github.com/khulnasoft/codetypo/issues/909)).
 
-[<img alt="Contributor Jason3S" src="https://avatars.githubusercontent.com/u/3740137?v=4&size=128" width=64>](https://github.com/Jason3S)
-[<img alt="Contributor nschonni" src="https://avatars.githubusercontent.com/u/1297909?v=4&size=128" width=64>](https://github.com/nschonni)
-[<img alt="Contributor Jason-Rev" src="https://avatars.githubusercontent.com/u/4850573?v=4&size=128" width=64>](https://github.com/Jason-Rev)
-[<img alt="Contributor amanoji" src="https://avatars.githubusercontent.com/u/17751138?v=4&size=128" width=64>](https://github.com/amanoji)
-[<img alt="Contributor jrylan" src="https://avatars.githubusercontent.com/u/178806156?v=4&size=128" width=64>](https://github.com/jrylan)
-[<img alt="Contributor mad-gooze" src="https://avatars.githubusercontent.com/u/1188779?v=4&size=128" width=64>](https://github.com/mad-gooze)
-[<img alt="Contributor snyk-bot" src="https://avatars.githubusercontent.com/u/19733683?v=4&size=128" width=64>](https://github.com/snyk-bot)
-[<img alt="Contributor zo" src="https://avatars.githubusercontent.com/u/518711?v=4&size=128" width=64>](https://github.com/zo)
-[<img alt="Contributor dsanders11" src="https://avatars.githubusercontent.com/u/5820654?v=4&size=128" width=64>](https://github.com/dsanders11)
-[<img alt="Contributor coliff" src="https://avatars.githubusercontent.com/u/1212885?v=4&size=128" width=64>](https://github.com/coliff)
-[<img alt="Contributor dakotaJang" src="https://avatars.githubusercontent.com/u/22528264?v=4&size=128" width=64>](https://github.com/dakotaJang)
-[<img alt="Contributor bisubus" src="https://avatars.githubusercontent.com/u/2905949?v=4&size=128" width=64>](https://github.com/bisubus)
-[<img alt="Contributor aimagic" src="https://avatars.githubusercontent.com/u/40253639?v=4&size=128" width=64>](https://github.com/aimagic)
-[<img alt="Contributor abdusabri" src="https://avatars.githubusercontent.com/u/25670682?v=4&size=128" width=64>](https://github.com/abdusabri)
-[<img alt="Contributor caaatisgood" src="https://avatars.githubusercontent.com/u/12913401?v=4&size=128" width=64>](https://github.com/caaatisgood)
-[<img alt="Contributor pzmarzly" src="https://avatars.githubusercontent.com/u/8074163?v=4&size=128" width=64>](https://github.com/pzmarzly)
-[<img alt="Contributor naveensrinivasan" src="https://avatars.githubusercontent.com/u/172697?v=4&size=128" width=64>](https://github.com/naveensrinivasan)
-[<img alt="Contributor matt9ucci" src="https://avatars.githubusercontent.com/u/8044346?v=4&size=128" width=64>](https://github.com/matt9ucci)
-[<img alt="Contributor lostintangent" src="https://avatars.githubusercontent.com/u/116461?v=4&size=128" width=64>](https://github.com/lostintangent)
-[<img alt="Contributor Zamiell" src="https://avatars.githubusercontent.com/u/5511220?v=4&size=128" width=64>](https://github.com/Zamiell)
-[<img alt="Contributor dflock" src="https://avatars.githubusercontent.com/u/47756?v=4&size=128" width=64>](https://github.com/dflock)
-[<img alt="Contributor DenysVuika" src="https://avatars.githubusercontent.com/u/503991?v=4&size=128" width=64>](https://github.com/DenysVuika)
-[<img alt="Contributor benmccann" src="https://avatars.githubusercontent.com/u/322311?v=4&size=128" width=64>](https://github.com/benmccann)
-[<img alt="Contributor ScottRudiger" src="https://avatars.githubusercontent.com/u/26824724?v=4&size=128" width=64>](https://github.com/ScottRudiger)
-[<img alt="Contributor rivy" src="https://avatars.githubusercontent.com/u/80132?v=4&size=128" width=64>](https://github.com/rivy)
-[<img alt="Contributor rasa" src="https://avatars.githubusercontent.com/u/220772?v=4&size=128" width=64>](https://github.com/rasa)
-[<img alt="Contributor roman-petrov" src="https://avatars.githubusercontent.com/u/18419515?v=4&size=128" width=64>](https://github.com/roman-petrov)
-[<img alt="Contributor orta" src="https://avatars.githubusercontent.com/u/49038?v=4&size=128" width=64>](https://github.com/orta)
-[<img alt="Contributor ollelauribostrom" src="https://avatars.githubusercontent.com/u/16004130?v=4&size=128" width=64>](https://github.com/ollelauribostrom)
-[<img alt="Contributor alexandear" src="https://avatars.githubusercontent.com/u/3228886?v=4&size=128" width=64>](https://github.com/alexandear)
-[<img alt="Contributor ndelangen" src="https://avatars.githubusercontent.com/u/3070389?v=4&size=128" width=64>](https://github.com/ndelangen)
-[<img alt="Contributor nvuillam" src="https://avatars.githubusercontent.com/u/17500430?v=4&size=128" width=64>](https://github.com/nvuillam)
-[<img alt="Contributor exhuma" src="https://avatars.githubusercontent.com/u/65717?v=4&size=128" width=64>](https://github.com/exhuma)
-[<img alt="Contributor 74th" src="https://avatars.githubusercontent.com/u/1060011?v=4&size=128" width=64>](https://github.com/74th)
-[<img alt="Contributor ssbarnea" src="https://avatars.githubusercontent.com/u/102495?v=4&size=128" width=64>](https://github.com/ssbarnea)
-[<img alt="Contributor regseb" src="https://avatars.githubusercontent.com/u/1262990?v=4&size=128" width=64>](https://github.com/regseb)
-[<img alt="Contributor zwaldowski" src="https://avatars.githubusercontent.com/u/170812?v=4&size=128" width=64>](https://github.com/zwaldowski)
-[<img alt="Contributor fisker" src="https://avatars.githubusercontent.com/u/172584?v=4&size=128" width=64>](https://github.com/fisker)
-[<img alt="Contributor hzhu" src="https://avatars.githubusercontent.com/u/1811365?v=4&size=128" width=64>](https://github.com/hzhu)
-[<img alt="Contributor jonz94" src="https://avatars.githubusercontent.com/u/16042676?v=4&size=128" width=64>](https://github.com/jonz94)
-[<img alt="Contributor mrazauskas" src="https://avatars.githubusercontent.com/u/72159681?v=4&size=128" width=64>](https://github.com/mrazauskas)
-[<img alt="Contributor wtgtybhertgeghgtwtg" src="https://avatars.githubusercontent.com/u/18507762?v=4&size=128" width=64>](https://github.com/wtgtybhertgeghgtwtg)
-[<img alt="Contributor wujekbogdan" src="https://avatars.githubusercontent.com/u/533954?v=4&size=128" width=64>](https://github.com/wujekbogdan)
-[<img alt="Contributor siosio34" src="https://avatars.githubusercontent.com/u/7166022?v=4&size=128" width=64>](https://github.com/siosio34)
-[<img alt="Contributor ADTC" src="https://avatars.githubusercontent.com/u/6047296?v=4&size=128" width=64>](https://github.com/ADTC)
-[<img alt="Contributor kachkaev" src="https://avatars.githubusercontent.com/u/608862?v=4&size=128" width=64>](https://github.com/kachkaev)
-[<img alt="Contributor AlexJameson" src="https://avatars.githubusercontent.com/u/33040934?v=4&size=128" width=64>](https://github.com/AlexJameson)
-[<img alt="Contributor AlekSi" src="https://avatars.githubusercontent.com/u/11512?v=4&size=128" width=64>](https://github.com/AlekSi)
-[<img alt="Contributor alicewriteswrongs" src="https://avatars.githubusercontent.com/u/6207644?v=4&size=128" width=64>](https://github.com/alicewriteswrongs)
-[<img alt="Contributor aminya" src="https://avatars.githubusercontent.com/u/16418197?v=4&size=128" width=64>](https://github.com/aminya)
-[<img alt="Contributor screendriver" src="https://avatars.githubusercontent.com/u/149248?v=4&size=128" width=64>](https://github.com/screendriver)
-[<img alt="Contributor Namchee" src="https://avatars.githubusercontent.com/u/32661241?v=4&size=128" width=64>](https://github.com/Namchee)
-[<img alt="Contributor d2s" src="https://avatars.githubusercontent.com/u/135053?v=4&size=128" width=64>](https://github.com/d2s)
-[<img alt="Contributor dimitropoulos" src="https://avatars.githubusercontent.com/u/15232461?v=4&size=128" width=64>](https://github.com/dimitropoulos)
-[<img alt="Contributor evenstensberg" src="https://avatars.githubusercontent.com/u/16735925?v=4&size=128" width=64>](https://github.com/evenstensberg)
-[<img alt="Contributor tribut" src="https://avatars.githubusercontent.com/u/719105?v=4&size=128" width=64>](https://github.com/tribut)
-[<img alt="Contributor HoussemDellai" src="https://avatars.githubusercontent.com/u/6548359?v=4&size=128" width=64>](https://github.com/HoussemDellai)
-[<img alt="Contributor jmatsuzawa" src="https://avatars.githubusercontent.com/u/545426?v=4&size=128" width=64>](https://github.com/jmatsuzawa)
-[<img alt="Contributor joshje" src="https://avatars.githubusercontent.com/u/813784?v=4&size=128" width=64>](https://github.com/joshje)
-[<img alt="Contributor kamontat" src="https://avatars.githubusercontent.com/u/14089557?v=4&size=128" width=64>](https://github.com/kamontat)
-[<img alt="Contributor kenji-miyake" src="https://avatars.githubusercontent.com/u/31987104?v=4&size=128" width=64>](https://github.com/kenji-miyake)
-[<img alt="Contributor fughilli" src="https://avatars.githubusercontent.com/u/6869039?v=4&size=128" width=64>](https://github.com/fughilli)
-[<img alt="Contributor Ki-er" src="https://avatars.githubusercontent.com/u/32241933?v=4&size=128" width=64>](https://github.com/Ki-er)
-[<img alt="Contributor Maxim-Mazurok" src="https://avatars.githubusercontent.com/u/7756211?v=4&size=128" width=64>](https://github.com/Maxim-Mazurok)
+**Does the identifier show up in `codetypo --identifiers` or the word show up in `codetypo --words`?**
+If not, it might be subject to one of codetypo' heuristics for
+detecting non-words (like hashes) or
+unambiguous words (like words after a `\` escape).
 
-<!--- codetypo:enable --->
+If it is showing up, likely `codetypo` doesn't know about it yet.
 
-<!--- @@inject-end: static/contributors.md --->
+`codetypo` maintains a list of known typo corrections to keep the false positive
+count low so it can safely run unassisted.
 
-<!--- @@inject: static/footer.md --->
+This is in contrast to most spell checking UIs people use where there is a
+known list of valid words.  In this case, the spell checker tries to guess your
+intent by finding the closest-looking word.  It then has a gauge for when a
+word isn't close enough and assumes you know best.  The user has the
+opportunity to verify these corrections and explicitly allow or reject them.
 
-<br/>
+For more on the trade offs of these approaches, see [Design](docs/design.md).
 
----
+- To correct it locally, see also our [False Positives documentation](#false-positives).
+- To contribute your correction, see [Contribute](CONTRIBUTING.md)
 
-<p align="center">Brought to you by<a href="https://khulnasoft.com" title="Street Side Software"><img width="16" alt="Street Side Software Logo" src="https://i.imgur.com/CyduuVY.png" /> Street Side Software</a></p>
-
-<!--- @@inject-end: static/footer.md --->
-
-<!---
-codetypo:ignore Houssem Dellai
---->
+[Crates.io]: https://crates.io/crates/codetypo-cli
+[Documentation]: https://docs.rs/codetypo

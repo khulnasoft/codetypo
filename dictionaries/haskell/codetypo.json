@@ -1,6 +1,0 @@
-{
-    "files": ["**/*.{md,txt,hs}"],
-    "dictionaries": ["haskell"],
-    "import": ["./codetypo-ext.json"],
-    "ignoreWords": []
-}

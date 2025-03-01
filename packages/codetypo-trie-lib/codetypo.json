@@ -1,4 +1,0 @@
-{
-    "ignoreWords": ["COMPOUNDFLAG", "tsbuildinfo"],
-    "import": ["../../codetypo.json", "@codetypo/dict-es-es/codetypo-ext.json"]
-}

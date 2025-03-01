@@ -1,7 +1,0 @@
-{
-    "version": "0.2",
-    "files": ["**/*.{md,txt}", "**/Dockerfile"],
-    "ignorePaths": ["src"],
-    "dictionaries": [],
-    "import": ["./codetypo-ext.json"]
-}

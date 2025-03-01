@@ -1,5 +1,0 @@
-usePnP: true
-import:
-  - '@codetypo/dict-medicalterms/codetypo-ext.json'
-words:
-  - medicalterms

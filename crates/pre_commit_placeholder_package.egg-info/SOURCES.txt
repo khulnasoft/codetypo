@@ -1,0 +1,9 @@
+LICENSE-APACHE
+LICENSE-MIT
+README.md
+setup.py
+crates/pre_commit_placeholder_package.egg-info/PKG-INFO
+crates/pre_commit_placeholder_package.egg-info/SOURCES.txt
+crates/pre_commit_placeholder_package.egg-info/dependency_links.txt
+crates/pre_commit_placeholder_package.egg-info/requires.txt
+crates/pre_commit_placeholder_package.egg-info/top_level.txt

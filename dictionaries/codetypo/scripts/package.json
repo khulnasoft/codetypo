@@ -1,8 +1,0 @@
-{
-  "name": "@codetypo/dict-codetypo-scripts",
-  "private": true,
-  "bin": {
-    "build": "./build.mjs"
-  },
-  "scripts": {}
-}

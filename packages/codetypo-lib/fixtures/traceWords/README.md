@@ -1,1 +1,0 @@
-# Fixtures for traceWords test

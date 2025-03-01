@@ -1,4 +1,0 @@
-overrides:
-  - filename: sample/getting_started.md
-    words:
-      - funcignore

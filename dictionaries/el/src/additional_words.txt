@@ -1,2 +1,0 @@
-# When adding words to the CodeTypo Greek dictionary via a pull request,
-# Please add the words to this file, one term per line.

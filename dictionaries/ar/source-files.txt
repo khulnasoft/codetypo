@@ -1,2 +1,0 @@
-./src/additional_words.txt
-./src/ayaspell/ar.dic

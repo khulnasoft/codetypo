@@ -1,5 +1,0 @@
-import:
-  - ../codetypo.json
-  - '@codetypo/dict-medicalterms/codetypo-ext.json'
-words:
-  - medicalterms

@@ -1,5 +1,0 @@
-    readstring
-    resetmemorycategory
-    retargeting
-    rrotate
-    rshift

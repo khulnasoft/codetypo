@@ -1,3 +1,0 @@
-missing-file.txt
-../../../src/app/app.mts
-../../../README.md

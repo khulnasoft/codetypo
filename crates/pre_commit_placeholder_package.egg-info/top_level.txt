@@ -1,0 +1,10 @@
+codespell-dict
+codetypo
+codetypo-cli
+codetypo-dict
+codetypo-vars
+dictgen
+misspell-dict
+varcon
+varcon-core
+wikipedia-dict

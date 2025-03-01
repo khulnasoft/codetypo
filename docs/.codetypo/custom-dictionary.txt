@@ -1,7 +1,0 @@
-# Custom Dictionary Words
-codetypocache
-mswin
-pmarsceill
-khulnasoft
-webrick
-zoneinfo

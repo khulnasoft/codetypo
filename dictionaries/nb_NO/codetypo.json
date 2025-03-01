@@ -1,7 +1,0 @@
-{
-    "version": "0.2",
-    "files": ["**/*.{md,txt}"],
-    "dictionaries": ["nb-no"],
-    "import": ["./codetypo-ext.json"],
-    "words": ["demokratiindeks", "Finnmarksloven", "Myspell", "rikdomsøkning", "utenlandsoperasjoner"]
-}

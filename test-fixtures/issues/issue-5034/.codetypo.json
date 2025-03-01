@@ -1,6 +1,0 @@
-{
-    "language": "en,fr",
-    "import": [
-        "frontend/node_modules/@codetypo/dict-fr-fr/codetypo-ext.json"
-    ]
-}

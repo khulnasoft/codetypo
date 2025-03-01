@@ -1,4 +1,0 @@
-./dict/sr-latn.trie
-./source-dependencies.txt
-./source-files.txt
-./src/sr-Latn.aff

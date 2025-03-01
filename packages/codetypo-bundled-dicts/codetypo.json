@@ -1,6 +1,0 @@
-{
-    "ignoreWords": ["tsbuildinfo"],
-    "ignorePaths": ["CHANGELOG.md"],
-    "import": ["./codetypo-default.json"],
-    "words": ["monkeyc"]
-}

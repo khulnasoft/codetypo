@@ -1,9 +1,0 @@
-# template strings
-aaaabbbb
-ffffeeee
-xffff
-yyyy
-yyyymm
-yyyymmdd
-yyyymmddhhmmss
-yyyymmddhhmmssz

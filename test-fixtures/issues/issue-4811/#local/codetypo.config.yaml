@@ -1,8 +1,0 @@
-import:
-  - ../codetypo.json
-dictionaryDefinitions:
-  - name: "##local"
-    path: ./##local/words.txt
-
-dictionaries:
-  - "##local"

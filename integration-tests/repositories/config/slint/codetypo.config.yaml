@@ -1,8 +1,0 @@
-globRoot: '../..'
-import:
-  - ../../temp/slint-ui/slint/codetypo.json
-ignorePaths:
-  - pnpm-lock.yaml
-  - '*.svg'
-dictionaries:
-  - lorem-ipsum

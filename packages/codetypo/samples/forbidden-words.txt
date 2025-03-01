@@ -1,3 +1,0 @@
-!behaviour
-!flavour
-!colour

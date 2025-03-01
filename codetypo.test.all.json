@@ -1,7 +1,0 @@
-{
-    "$schema": "https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json",
-    "version": "0.2",
-    "name": "Check all files.",
-    "files": [".", ".github/**"],
-    "import": ["./codetypo.test.base.json"]
-}

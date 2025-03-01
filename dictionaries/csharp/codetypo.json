@@ -1,5 +1,0 @@
-{
-    "files": ["**/*.{md,txt}", "**/*.cs"],
-    "dictionaries": ["csharp"],
-    "import": ["./codetypo-ext.json"]
-}

@@ -1,7 +1,0 @@
-
-Repository: webdeveric/webpack-assets-manifest
-Url: "https://github.com/webdeveric/webpack-assets-manifest.git"
-Args: ["./{.github,src,test}/**/*.{js,json}","./*.{md,js}","./package.json"]
-Lines:
- CodeTypo: Files checked: 19, Issues found: 0 in 0 files.
- exit code: 0

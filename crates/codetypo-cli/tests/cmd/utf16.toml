@@ -1,0 +1,4 @@
+bin.name = "codetypo"
+stdout = """
+"""
+stderr = ""

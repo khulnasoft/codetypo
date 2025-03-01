@@ -1,4 +1,0 @@
-getpwuid
-InnoDB
-NFKD
-pythonic

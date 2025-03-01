@@ -1,0 +1,5 @@
+bin.name = "codetypo"
+args = "file.ignore ignore/file parent/ignore/file binary --force-exclude"
+stdin = ""
+stdout = ""
+stderr = ""

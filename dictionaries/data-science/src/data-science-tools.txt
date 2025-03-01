@@ -1,8 +1,0 @@
-# Data Science Related tools
-Databricks
-DeepEval
-Hadoop
-LangChain
-LangGraph
-Pytorch
-seaborn

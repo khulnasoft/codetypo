@@ -1,7 +1,0 @@
-nameof
-sbyte
-stackalloc
-struct
-typeof
-ulong
-ushort

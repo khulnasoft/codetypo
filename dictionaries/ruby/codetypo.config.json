@@ -1,6 +1,0 @@
-{
-    "files": ["**/*.{md,txt}"],
-    "dictionaries": ["ruby"],
-    "import": ["./codetypo-ext.json"],
-    "ignoreWords": []
-}

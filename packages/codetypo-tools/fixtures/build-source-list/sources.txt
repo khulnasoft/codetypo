@@ -1,3 +1,0 @@
-
-../dicts/colors.txt
-../dicts/cities.txt

@@ -1,6 +1,0 @@
-{
-    "ignorePaths": [
-        "*.ignore.md"
-    ],
-    "import":["./codetypo.config.js"]
-}

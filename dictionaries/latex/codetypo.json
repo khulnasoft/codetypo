@@ -1,6 +1,0 @@
-{
-    "files": ["**/*.{md,txt,tex}"],
-    "dictionaries": ["latex"],
-    "import": ["./codetypo-ext.json"],
-    "ignorePaths": ["snapshots"]
-}

@@ -1,0 +1,38 @@
+name: "False positive: data"
+description: Specially encoded data is being treated as a word
+labels: 'S-triage,A-exclude'
+body:
+  - type: checkboxes
+    attributes:
+      label: Please complete the following tasks
+      options:
+        - label: I have searched the [open](https://github.com/khulnasoft/codetypo/issues?q=is%3Aissue%20state%3Aopen%20label%3AA-exclude) and [rejected](https://github.com/khulnasoft/codetypo/issues?q=is%3Aissue%20state%3Aclosed%20label%3AA-exclude) issues
+          required: true
+  - type: input
+    attributes:
+      label: Example data
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Incorrect correction
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Description of data format
+      description: Sigils, length, allowed characters, etc
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Justification
+      description: Where all is this data format used
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Notes
+      description: Any other relevant information
+    validations:
+      required: false

@@ -1,6 +1,0 @@
-auth
-getopt
-long
-mysql
-omni
-undumped

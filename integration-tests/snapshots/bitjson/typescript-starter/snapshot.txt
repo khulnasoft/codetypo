@@ -1,7 +1,0 @@
-
-Repository: bitjson/typescript-starter
-Url: "https://github.com/bitjson/typescript-starter.git"
-Args: ["{README.md,.github/*.md,src/**/*.ts}"]
-Lines:
- CodeTypo: Files checked: 20, Issues found: 0 in 0 files.
- exit code: 0

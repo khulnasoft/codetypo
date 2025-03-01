@@ -1,7 +1,0 @@
-
-Repository: prettier/prettier
-Url: "https://github.com/prettier/prettier.git"
-Args: []
-Lines:
- CodeTypo: Files checked: 2208, Issues found: 0 in 0 files.
- exit code: 0

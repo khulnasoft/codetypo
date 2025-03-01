@@ -1,4 +1,0 @@
-# Sample .gitignore
-
-ignored/**
-!ignored/keepme.md

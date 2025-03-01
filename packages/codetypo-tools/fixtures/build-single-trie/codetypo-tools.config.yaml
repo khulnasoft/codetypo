@@ -1,8 +1,0 @@
-# yaml-language-server: $schema=./../../codetypo-tools.config.schema.json
-
-targets:
-  - name: cities
-    targetDirectory: ../../temp/builds/build-single-trie
-    sources:
-      - ../dicts/cities.txt
-    format: trie3

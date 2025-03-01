@@ -1,5 +1,0 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/khulnasoft/codetypo/main/codetypo.schema.json
-
-globRoot: '${cwd}'
-ignorePaths:
-  - 'ignore-me.md'

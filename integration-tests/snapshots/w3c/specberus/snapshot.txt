@@ -1,7 +1,0 @@
-
-Repository: w3c/specberus
-Url: "https://github.com/w3c/specberus.git"
-Args: ["**/*.*"]
-Lines:
- CodeTypo: Files checked: 200, Issues found: 0 in 0 files.
- exit code: 0

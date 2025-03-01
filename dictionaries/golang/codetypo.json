@@ -1,6 +1,0 @@
-{
-    "files": ["**/*.{md,txt}"],
-    "dictionaries": ["golang"],
-    "import": ["./codetypo-ext.json"],
-    "ignoreWords": ["Alek", "Alexey", "Palazhchenko"]
-}

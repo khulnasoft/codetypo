@@ -1,8 +1,0 @@
-{
-    "dictionaries": [
-        "scala"
-    ],
-    "import": [
-        "./codetypo-ext.json"
-    ]
-}
