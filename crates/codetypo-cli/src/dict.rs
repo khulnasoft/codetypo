@@ -76,7 +76,7 @@ impl BuiltIn {
 
     fn correct_word_with_dict(
         &self,
-        _word: unicase::UniCase<&str>,
+        _word: UniCase<&str>,
     ) -> Option<&'static [&'static str]> {
         None
     }
@@ -172,7 +172,7 @@ impl BuiltIn {
         Status::Corrections(corrections.iter().map(|c| Cow::Borrowed(*c)).collect())
     }
 
-    fn correct_with_vars(&self, _word: unicase::UniCase<&str>) -> Option<Status<'static>> {
+    fn correct_with_vars(&self, _word: UniCase<&str>) -> Option<Status<'static>> {
         None
     }
 }
