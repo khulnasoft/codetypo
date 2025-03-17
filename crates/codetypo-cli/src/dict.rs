@@ -74,10 +74,7 @@ impl BuiltIn {
         None
     }
 
-    fn correct_word_with_dict(
-        &self,
-        _word: UniCase<&str>,
-    ) -> Option<&'static [&'static str]> {
+    fn correct_word_with_dict(&self, _word: UniCase<&str>) -> Option<&'static [&'static str]> {
         None
     }
 }
