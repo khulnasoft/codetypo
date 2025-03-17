@@ -26,7 +26,10 @@ impl BuiltIn {
         self.correct_ident_with_dict(ident)
     }
 
-    pub fn correct_word<'s>(&'s self, word_token: codetypo::tokens::Word<'_>) -> Option<Status<'s>> {
+    pub fn correct_word<'s>(
+        &'s self,
+        word_token: codetypo::tokens::Word<'_>,
+    ) -> Option<Status<'s>> {
         if word_token.case() == Case::None {
             return None;
         }

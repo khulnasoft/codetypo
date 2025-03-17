@@ -20,7 +20,12 @@ fn found_files(bencher: divan::Bencher, sample: &data::Data) {
     bencher
         .counter(divan::counter::BytesCount::of_str(sample.content()))
         .bench_local(|| {
-            codetypo_cli::file::FoundFiles.check_file(sample_path.path(), true, &policy, &PrintSilent)
+            codetypo_cli::file::FoundFiles.check_file(
+                sample_path.path(),
+                true,
+                &policy,
+                &PrintSilent,
+            )
         });
 }
 
@@ -39,7 +44,12 @@ fn identifiers(bencher: divan::Bencher, sample: &data::Data) {
     bencher
         .counter(divan::counter::BytesCount::of_str(sample.content()))
         .bench_local(|| {
-            codetypo_cli::file::Identifiers.check_file(sample_path.path(), true, &policy, &PrintSilent)
+            codetypo_cli::file::Identifiers.check_file(
+                sample_path.path(),
+                true,
+                &policy,
+                &PrintSilent,
+            )
         });
 }
 

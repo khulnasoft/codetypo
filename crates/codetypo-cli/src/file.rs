@@ -875,7 +875,10 @@ fn is_fixable(typo: &codetypo::Typo<'_>) -> bool {
     extract_fix(typo).is_some()
 }
 
-fn fix_buffer(mut buffer: Vec<u8>, codetypo: impl Iterator<Item = codetypo::Typo<'static>>) -> Vec<u8> {
+fn fix_buffer(
+    mut buffer: Vec<u8>,
+    codetypo: impl Iterator<Item = codetypo::Typo<'static>>,
+) -> Vec<u8> {
     let mut offset = 0isize;
     for typo in codetypo {
         let fix = extract_fix(&typo).expect("Caller only provides fixable codetypo");

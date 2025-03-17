@@ -60,8 +60,11 @@ mod parse_bytes {
 
 #[divan::bench(args = data::DATA)]
 fn split(bencher: divan::Bencher, sample: &data::Data) {
-    let symbol =
-        codetypo::tokens::Identifier::new_unchecked(sample.content(), codetypo::tokens::Case::None, 0);
+    let symbol = codetypo::tokens::Identifier::new_unchecked(
+        sample.content(),
+        codetypo::tokens::Case::None,
+        0,
+    );
     bencher
         .counter(divan::counter::BytesCount::of_str(sample.content()))
         .bench_local(|| symbol.split().last());

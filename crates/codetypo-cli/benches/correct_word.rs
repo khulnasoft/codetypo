@@ -23,7 +23,10 @@ mod regular {
             let corrections = codetypo_cli::dict::BuiltIn::new(locale);
             let input = codetypo::tokens::Word::new(input, 0).unwrap();
             #[cfg(feature = "vars")]
-            assert_eq!(corrections.correct_word(input), Some(codetypo::Status::Valid));
+            assert_eq!(
+                corrections.correct_word(input),
+                Some(codetypo::Status::Valid)
+            );
             bencher
                 .with_inputs(|| input)
                 .bench_local_values(|input| corrections.correct_word(input));
