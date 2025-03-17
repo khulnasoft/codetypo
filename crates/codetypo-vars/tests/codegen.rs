@@ -172,7 +172,7 @@ fn entries() -> BTreeMap<String, varcon_core::Entry> {
         .filter(|e| {
             e.variants
                 .iter()
-                .all(|v| typos::tokens::Word::new(v.word, 0).is_ok())
+                .all(|v| codetypo::tokens::Word::new(v.word, 0).is_ok())
         })
         .map(|e| {
             let mut e = e.into_owned();

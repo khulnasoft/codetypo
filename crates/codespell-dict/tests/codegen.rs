@@ -35,7 +35,7 @@ fn compat() {
 }
 
 fn is_word(word: &str) -> bool {
-    let tokenizer = typos::tokens::Tokenizer::new();
+    let tokenizer = codetypo::tokens::Tokenizer::new();
 
     tokenizer.parse_str(word).flat_map(|t| t.split()).count() == 1 && !word.contains('_')
 }
