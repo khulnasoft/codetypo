@@ -3,7 +3,7 @@ from __future__ import annotations
 from setuptools import setup
 
 
-CODETYPO_VERSION = '2.3.0'
+CODETYPO_VERSION = '1.30.2'
 
 
 setup(

@@ -6,7 +6,7 @@ config at this repository:
 ```yaml
 repos:
   - repo: https://github.com/khulnasoft/codetypo
-    rev: v1.29.10
+    rev: v1.30.2
     hooks:
       - id: codetypo
 ```

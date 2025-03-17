@@ -33,10 +33,9 @@ fn compat() {
 
     snapbox::assert_data_eq!(content, snapbox::file!["../assets/compatible.csv"].raw());
 }
-use codetypo::tokens::Tokenizer;
 
 fn is_word(word: &str) -> bool {
-    let tokenizer = Tokenizer::new();
+    let tokenizer = typos::tokens::Tokenizer::new();
 
     tokenizer.parse_str(word).flat_map(|t| t.split()).count() == 1 && !word.contains('_')
 }

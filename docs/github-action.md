@@ -22,7 +22,7 @@ jobs:
     - name: Checkout Actions Repository
       uses: actions/checkout@v4
     - name: Spell Check Repo
-      uses: khulnasoft/codetypo@v1.29.10
+      uses: khulnasoft/codetypo@v1.30.2
 ```
 
 **Requirements:** The runner must have `wget` installed
@@ -30,6 +30,9 @@ jobs:
 [#769](https://github.com/khulnasoft/codetypo/issues/769)
 [#1191](https://github.com/khulnasoft/codetypo/issues/1191)
 ).
+
+**Notes:**
+- The tag `v1` is available but CI could fail when new releases find new codetypo
 
 ## Input
 
@@ -61,24 +64,24 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Check spelling of file.txt
-      uses: khulnasoft/codetypo@v1.29.10
+      uses: khulnasoft/codetypo@v1.30.2
       with:
         files: ./file.txt
 
     - name: Use custom config file
-      uses: khulnasoft/codetypo@v1.29.10
+      uses: khulnasoft/codetypo@v1.30.2
       with:
         files: ./file.txt
         config: ./myconfig.toml
 
     - name: Ignore implicit configuration file
-      uses: khulnasoft/codetypo@v1.29.10
+      uses: khulnasoft/codetypo@v1.30.2
       with:
         files: ./file.txt
         isolated: true
 
     - name: Writes changes in the local checkout
-      uses: khulnasoft/codetypo@v1.29.10
+      uses: khulnasoft/codetypo@v1.30.2
       with:
         write_changes: true
 ```

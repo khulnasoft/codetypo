@@ -6,6 +6,8 @@ Finds and corrects spelling mistakes among source code:
 - Fast enough to run on monorepos
 - Low false positives so you can run on PRs
 
+![Screenshot](./docs/screenshot.png)
+
 
 [![Downloads](https://img.shields.io/github/downloads/khulnasoft/codetypo/total.svg)](https://github.com/khulnasoft/codetypo/releases)
 [![codecov](https://codecov.io/gh/khulnasoft/codetypo/branch/master/graph/badge.svg)](https://codecov.io/gh/khulnasoft/codetypo)

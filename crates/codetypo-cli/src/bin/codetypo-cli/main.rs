@@ -288,8 +288,12 @@ fn run_checks(args: &args::Args) -> proc_exit::ExitResult {
             &codetypo_cli::file::FoundFiles
         } else if args.file_types {
             &codetypo_cli::file::FileTypes
+        } else if args.highlight_identifiers {
+            &codetypo_cli::file::HighlightIdentifiers
         } else if args.identifiers {
             &codetypo_cli::file::Identifiers
+        } else if args.highlight_words {
+            &codetypo_cli::file::HighlightWords
         } else if args.words {
             &codetypo_cli::file::Words
         } else if args.write_changes {

@@ -4,9 +4,9 @@ use std::io::Write as _;
 use std::sync::{atomic, Mutex};
 
 use anstream::stdout;
-use codetypo_cli::report::{Context, Message, Report, Typo};
 use serde_sarif::sarif;
 use serde_sarif::sarif::{ArtifactChange, ArtifactContent, Fix, Replacement};
+use codetypo_cli::report::{Context, Message, Report, Typo};
 use unicode_width::UnicodeWidthStr;
 
 const ERROR: anstyle::Style = anstyle::AnsiColor::BrightRed.on_default();

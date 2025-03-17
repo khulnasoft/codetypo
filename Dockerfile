@@ -1,6 +1,6 @@
 ARG DEBIAN_DIST=bullseye
 
-FROM rust:${DEBIAN_DIST} AS builder
+FROM rust:${DEBIAN_DIST} as builder
 WORKDIR /usr/src/codetypo
 COPY . .
 RUN cargo install --path ./crates/codetypo-cli

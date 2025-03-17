@@ -1,4 +1,3 @@
-use codetypo::tokens::Word;
 use std::collections::BTreeMap;
 use std::collections::HashSet;
 use std::io::Write;
@@ -170,7 +169,11 @@ fn entries() -> BTreeMap<String, varcon_core::Entry> {
         .iter()
         .filter(|c| c.verified)
         .flat_map(|c| c.entries.iter())
-        .filter(|e| e.variants.iter().all(|v| Word::new(v.word, 0).is_ok()))
+        .filter(|e| {
+            e.variants
+                .iter()
+                .all(|v| typos::tokens::Word::new(v.word, 0).is_ok())
+        })
         .map(|e| {
             let mut e = e.into_owned();
             for variant in e.variants.iter_mut() {
