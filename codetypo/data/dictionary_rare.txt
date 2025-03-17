@@ -154,8 +154,6 @@ lamdas->lambdas
 leaded->led, lead,
 leas->least, lease,
 lief->leaf, life,
-lien->line
-liens->lines
 lightening->lightning, lighting,
 loafing->loading
 lod->load, loud, lode,
@@ -220,7 +218,7 @@ protestors->protesters
 provence->province
 purportive->supportive
 purvue->purview
-ques->quest
+ques->quest, queues, cues,
 readd->re-add, read,
 readded->re-added, read,
 readding->re-adding, reading,
