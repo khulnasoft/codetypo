@@ -116,8 +116,8 @@ extend-exclude = ["localized/*.po"]
 - [GitHub Actions](docs/github-action.md)
 - [pre-commit](docs/pre-commit.md)
 - [🐊Putout Processor](https://github.com/putoutjs/putout-processor-codetypo)
-- [Visual Studio Code](https://github.com/tekumara/codetypo-vscode)
-- [codetypo-lsp (Language Server Protocol server)](https://github.com/tekumara/codetypo-vscode)
+- [Visual Studio Code](https://github.com/khulnasoft/codetypo-lsp)
+- [codetypo-lsp (Language Server Protocol server)](https://github.com/khulnasoft/codetypo-lsp)
 
 #### Custom
 
