@@ -82,6 +82,8 @@ degrate->degrade
 degrates->degrades
 dependant->dependent
 derails->details
+dervice->device, service,
+dervices->devices, services,
 descried->described
 descries->describes
 dirivative->derivative
@@ -92,6 +94,7 @@ discontentment->discontent
 discreet->discrete
 discus->discuss
 discuses->discusses
+disjointness->disjointedness
 disturbative->distributive, disruptive,
 doest->does, doesn't,
 empress->impress
@@ -144,6 +147,7 @@ infarction->infraction
 infarctions->infractions
 ingenuous->ingenious
 inly->only
+intensional->intentional
 irregardless->regardless
 joo->you
 knifes->knives
