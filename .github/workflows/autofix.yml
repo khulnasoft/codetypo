@@ -5,7 +5,7 @@ on: # yamllint disable-line rule:truthy
     types: [opened, synchronize, labeled, unlabeled]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   autofix:
