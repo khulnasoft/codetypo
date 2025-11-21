@@ -2,17 +2,31 @@
 # For general usage in your repo, see the example in codetypo.yml
 # https://github.com/khulnasoft/codetypo
 # Concurrency cancels an action on a given PR once a new commit is pushed
-name: Pytest
+name: Test Suite
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.number }}-${{ github.event.ref }}
+  group: ${{ github.workflow }}-${{ github.event.number }}-${{ github.event_ref }}
   cancel-in-progress: true
-on: [push, pull_request]
-permissions: {}
+
+on:
+  push:
+    branches: [main, master]
+    tags: ["*"]
+  pull_request:
+    branches: [main, master]
+  schedule:
+    - cron: "0 0 * * 0" # Weekly on Sunday
+
+# Set default permissions for all jobs
+permissions:
+  contents: read
+  security-events: write # For security scanning
+  actions: read # For code scanning
 jobs:
   test:
     env:
       REQUIRE_ASPELL: ${{ startsWith(matrix.os, 'ubuntu') }}
       RUFF_OUTPUT_FORMAT: github
+      COVERAGE_MIN: 90 # Minimum coverage percentage
     # Make sure we're using the latest aspell dictionary
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
@@ -64,9 +78,21 @@ jobs:
         if: startsWith(matrix.os, 'ubuntu')
       - run: pytest codetypo
         if: startsWith(matrix.os, 'windows')
-      - uses: codecov/codecov-action@v5
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+          verbose: true
+          files: ./coverage.xml
+          flags: unittests
+          name: ${{ matrix.os }}-${{ matrix.python-version }}
+
+      - name: Check coverage
+        run: |
+          coverage report --fail-under=$COVERAGE_MIN
+          coverage xml
+
       # tomli should not be required for the next two steps (and make sure it's not)
       - run: pip uninstall -yq tomli
         if: ${{ matrix.kind == 'no-toml' }}
@@ -75,7 +101,48 @@ jobs:
       - run: "! codetypo codetypo/tests/test_basic.py"
         shell: bash -e {0}
 
+  lint:
+    name: Lint and Type Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run Ruff
+        run: make ruff
+
+      - name: Run Mypy
+        run: make mypy
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Bandit security scanner
+        uses: PyCQA/bandit@main
+        with:
+          args: -r codetypo/ -n 5 --skip B101
+
+      - name: Run Safety check
+        run: |
+          pip install safety
+          safety check --full-report
+
   make-check-dictionaries:
+    needs: [test, lint, security-scan]
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -87,6 +154,14 @@ jobs:
         with:
           persist-credentials: false
       - name: Install general dependencies
-        run: pip install --upgrade pip wheel # upgrade to latest pip find 3.5 wheels; wheel to avoid errors
-      - name: Install codetypo dependencies
-        run: pip install -e ".[dev]"
+        run: |
+          python -m pip install --upgrade pip wheel
+          pip install -e ".[dev]"
+          pip install pre-commit
+          pre-commit install-hooks
+
+      - name: Check dictionary formatting
+        run: make check-dictionaries
+
+      - name: Run pre-commit on all files
+        run: pre-commit run --all-files

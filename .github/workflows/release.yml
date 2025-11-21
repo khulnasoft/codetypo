@@ -1,58 +1,154 @@
 # Upload a Python Package using Twine when a release is created
 
-name: Build
+name: Release
+
 on:
   release:
-    types: [published]
+    types: [published, created, edited]
   push:
     branches:
       - master
+      - main
   pull_request:
     branches:
       - master
+      - main
 
 permissions:
   contents: read
+  packages: write # For GitHub Packages
+  id-token: write # For OIDC auth with cloud providers
 
 jobs:
+  validate-version:
+    name: Validate Version
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate version format
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.-]+)?$ ]]; then
+            echo "::error::Invalid version format: $VERSION. Must follow semantic versioning (e.g., 1.0.0 or 1.0.0-rc.1)"
+            exit 1
+          fi
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+  check-changelog:
+    name: Check Changelog
+    runs-on: ubuntu-latest
+    needs: validate-version
+    if: github.event_name == 'release' && github.event.action == 'published'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check CHANGELOG.md
+        run: |
+          if ! grep -q "^## \[${VERSION}\]" CHANGELOG.md; then
+            echo "::error::No entry for version ${VERSION} in CHANGELOG.md"
+            exit 1
+          fi
+
   package:
+    name: Build and Test Package
+    needs: [validate-version, check-changelog]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0 # Needed for setuptools_scm
           persist-credentials: false
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.12"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install build twine
-      - name: Build package
-        run: python -m build
-      - name: Check package
-        run: twine check --strict dist/*
-      - name: Check env vars
+          pip install build twine setuptools_scm[toml] wheel
+
+      - name: Get the version
+        id: get-version
         run: |
-          echo "Triggered by: ${{ github.event_name }}"
-      - uses: actions/upload-artifact@v4
+          if [[ "${{ github.event_name }}" == "release" ]]; then
+            VERSION=${GITHUB_REF#refs/tags/v}
+          else
+            VERSION=$(python -c "import setuptools_scm; print(setuptools_scm.get_version())")
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Build package
+        run: python -m build --sdist --wheel --outdir dist/
+
+      - name: Verify package metadata
+        run: |
+          twine check --strict dist/*
+
+      - name: Run tests on built package
+        run: |
+          pip install dist/*.whl
+          python -m pytest codetypo/tests -v
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: dist
+          path: dist/
+          retention-days: 5
 
-  # PyPI on release
-  pypi:
+  # Test PyPI deployment (runs on all pushes to main/master and PRs)
+  test-pypi:
+    name: Test PyPI Deployment
     needs: package
     runs-on: ubuntu-latest
-    if: github.event_name == 'release'
+    if: github.event_name != 'release' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     steps:
       - uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
+
+      - name: Publish to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository_url: https://test.pypi.org/legacy/
+          user: __token__
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          skip_existing: true
+          verbose: true
+
+  # Production PyPI deployment (only on release)
+  pypi:
+    name: PyPI Release
+    needs: package
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
+          skip_existing: false
+          verify_metadata: true
+          verbose: true
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        if: github.event_name == 'release' && github.event.action == 'published'
+        with:
+          name: ${{ github.ref_name }}
+          body_path: CHANGELOG.md
+          draft: false
+          prerelease: ${{ contains(github.ref, '-') }}
+          files: |
+            dist/*.tar.gz
+            dist/*.whl
+            codetypo.1
