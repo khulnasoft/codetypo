@@ -16,10 +16,7 @@ Copyright (C) 2010-2011  KhulnaSoft DevOps <support@khulnasoft.com>
 Copyright (C) 2011  ProFUSION embedded systems
 """
 
-from typing import (
-    Dict,
-    Set,
-)
+from typing import Dict, Set
 
 # Pass all misspellings through this translation table to generate
 # alternative misspellings and fixes.

@@ -59727,7 +59727,7 @@ tpyes->types
 tpyical->typical
 tpyically->typically
 tpyo->typo
-tpyos->typos
+tpyos->codetypo
 trabsform->transform
 traceablity->traceability
 tracin->tracing
@@ -60877,7 +60877,7 @@ typin->typing
 typle->tuple
 typles->tuples
 typoe->typo, type, types,
-typoes->typos, types,
+typoes->codetypo, types,
 typographc->typographic
 typopgrahic->typographic
 typopgrahical->typographical
@@ -60888,7 +60888,7 @@ typpical->typical
 typpically->typically
 typping->typing
 typpo->typo
-typpos->typos
+typpos->codetypo
 tyranies->tyrannies
 tyrany->tyranny
 tyring->trying

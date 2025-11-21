@@ -14,13 +14,7 @@ from unittest import mock
 import pytest
 
 import codetypo as cs_
-from codetypo._codetypo import (
-    EX_CONFIG,
-    EX_DATAERR,
-    EX_OK,
-    EX_USAGE,
-    uri_regex_def,
-)
+from codetypo._codetypo import EX_CONFIG, EX_DATAERR, EX_OK, EX_USAGE, uri_regex_def
 
 
 def test_constants() -> None:
